@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		821F2DEE1EAC4BF70098081F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DED1EAC4BF70098081F /* main.m */; };
 		821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF01EAC4BF70098081F /* AppDelegate.m */; };
-		821F2DF41EAC4BF70098081F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF31EAC4BF70098081F /* HomePage.m */; };
 		821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821F2DF81EAC4BF70098081F /* Assets.xcassets */; };
 		821F2E071EAC4BF70098081F /* DesignAlianceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E061EAC4BF70098081F /* DesignAlianceTests.m */; };
 		821F2E121EAC4BF70098081F /* DesignAlianceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E111EAC4BF70098081F /* DesignAlianceUITests.m */; };
-		821F2E4E1EAC95500098081F /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E4D1EAC95500098081F /* DABasePage.m */; };
 		821F2E521EAC990F0098081F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E501EAC990F0098081F /* Main.storyboard */; };
+		821F2E561EACB7CF0098081F /* DABaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E551EACB7CF0098081F /* DABaseController.m */; };
+		821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E581EACB80B0098081F /* DABaseWidget.m */; };
+		821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5B1EACB8250098081F /* DABaseCell.m */; };
+		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
+		821F2E6D1EACBBD80098081F /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E6C1EACBBD80098081F /* DABasePage.m */; };
+		821F2E701EACBBEB0098081F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E6F1EACBBEB0098081F /* HomePage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		821F2DED1EAC4BF70098081F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		821F2DEF1EAC4BF70098081F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		821F2DF01EAC4BF70098081F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		821F2DF21EAC4BF70098081F /* HomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
-		821F2DF31EAC4BF70098081F /* HomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
 		821F2DF81EAC4BF70098081F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821F2DFD1EAC4BF70098081F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821F2E021EAC4BF70098081F /* DesignAlianceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignAlianceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +54,20 @@
 		821F2E1F1EAC4CF20098081F /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		821F2E281EAC4F060098081F /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		821F2E4B1EAC91E50098081F /* DesignAliance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesignAliance-Prefix.pch"; sourceTree = "<group>"; };
-		821F2E4C1EAC95500098081F /* DABasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABasePage.h; sourceTree = "<group>"; };
-		821F2E4D1EAC95500098081F /* DABasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABasePage.m; sourceTree = "<group>"; };
 		821F2E501EAC990F0098081F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		821F2E541EACB7CF0098081F /* DABaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseController.h; sourceTree = "<group>"; };
+		821F2E551EACB7CF0098081F /* DABaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseController.m; sourceTree = "<group>"; };
+		821F2E571EACB80B0098081F /* DABaseWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DABaseWidget.h; path = Widget/DABaseWidget.h; sourceTree = "<group>"; };
+		821F2E581EACB80B0098081F /* DABaseWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DABaseWidget.m; path = Widget/DABaseWidget.m; sourceTree = "<group>"; };
+		821F2E5A1EACB8250098081F /* DABaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DABaseCell.h; path = Cell/DABaseCell.h; sourceTree = "<group>"; };
+		821F2E5B1EACB8250098081F /* DABaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DABaseCell.m; path = Cell/DABaseCell.m; sourceTree = "<group>"; };
+		821F2E5D1EACB9850098081F /* DABaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseModel.h; sourceTree = "<group>"; };
+		821F2E5E1EACB9850098081F /* DABaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseModel.m; sourceTree = "<group>"; };
+		821F2E6B1EACBBD80098081F /* DABasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABasePage.h; sourceTree = "<group>"; };
+		821F2E6C1EACBBD80098081F /* DABasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABasePage.m; sourceTree = "<group>"; };
+		821F2E6E1EACBBEB0098081F /* HomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
+		821F2E6F1EACBBEB0098081F /* HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
+		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +173,11 @@
 		821F2E211EAC4DB80098081F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				821F2E541EACB7CF0098081F /* DABaseController.h */,
+				821F2E551EACB7CF0098081F /* DABaseController.m */,
+				821F2E631EACBB5D0098081F /* page */,
 				821F2E2B1EAC4FA30098081F /* Cell */,
 				821F2E2A1EAC4F980098081F /* Widget */,
-				821F2E291EAC4F910098081F /* Page */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,29 +185,31 @@
 		821F2E221EAC4DCF0098081F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				821F2E5D1EACB9850098081F /* DABaseModel.h */,
+				821F2E5E1EACB9850098081F /* DABaseModel.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		821F2E231EAC4DDA0098081F /* Network */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		821F2E241EAC4E340098081F /* DB */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = DB;
+			path = DB;
 			sourceTree = "<group>";
 		};
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		821F2E261EAC4E740098081F /* ThirdSDK */ = {
@@ -212,20 +229,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		821F2E291EAC4F910098081F /* Page */ = {
-			isa = PBXGroup;
-			children = (
-				821F2E4C1EAC95500098081F /* DABasePage.h */,
-				821F2E4D1EAC95500098081F /* DABasePage.m */,
-				821F2DF21EAC4BF70098081F /* HomePage.h */,
-				821F2DF31EAC4BF70098081F /* HomePage.m */,
-			);
-			path = Page;
-			sourceTree = "<group>";
-		};
 		821F2E2A1EAC4F980098081F /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				821F2E571EACB80B0098081F /* DABaseWidget.h */,
+				821F2E581EACB80B0098081F /* DABaseWidget.m */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -233,6 +241,8 @@
 		821F2E2B1EAC4FA30098081F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				821F2E5A1EACB8250098081F /* DABaseCell.h */,
+				821F2E5B1EACB8250098081F /* DABaseCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -264,8 +274,20 @@
 			isa = PBXGroup;
 			children = (
 				821F2E281EAC4F060098081F /* Defines.h */,
+				821F2E711EACBD8E0098081F /* URLDefine.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		821F2E631EACBB5D0098081F /* page */ = {
+			isa = PBXGroup;
+			children = (
+				821F2E6B1EACBBD80098081F /* DABasePage.h */,
+				821F2E6C1EACBBD80098081F /* DABasePage.m */,
+				821F2E6E1EACBBEB0098081F /* HomePage.h */,
+				821F2E6F1EACBBEB0098081F /* HomePage.m */,
+			);
+			path = page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,8 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821F2E4E1EAC95500098081F /* DABasePage.m in Sources */,
-				821F2DF41EAC4BF70098081F /* HomePage.m in Sources */,
+				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
+				821F2E6D1EACBBD80098081F /* DABasePage.m in Sources */,
+				821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */,
+				821F2E701EACBBEB0098081F /* HomePage.m in Sources */,
+				821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */,
+				821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
 			);
