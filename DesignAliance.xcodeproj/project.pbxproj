@@ -10,11 +10,12 @@
 		821F2DEE1EAC4BF70098081F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DED1EAC4BF70098081F /* main.m */; };
 		821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF01EAC4BF70098081F /* AppDelegate.m */; };
 		821F2DF41EAC4BF70098081F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF31EAC4BF70098081F /* HomePage.m */; };
-		821F2DF71EAC4BF70098081F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821F2DF51EAC4BF70098081F /* Main.storyboard */; };
 		821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821F2DF81EAC4BF70098081F /* Assets.xcassets */; };
-		821F2DFC1EAC4BF70098081F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821F2DFA1EAC4BF70098081F /* LaunchScreen.storyboard */; };
 		821F2E071EAC4BF70098081F /* DesignAlianceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E061EAC4BF70098081F /* DesignAlianceTests.m */; };
 		821F2E121EAC4BF70098081F /* DesignAlianceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E111EAC4BF70098081F /* DesignAlianceUITests.m */; };
+		821F2E4E1EAC95500098081F /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E4D1EAC95500098081F /* DABasePage.m */; };
+		821F2E511EAC990F0098081F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E4F1EAC990F0098081F /* LaunchScreen.storyboard */; };
+		821F2E521EAC990F0098081F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E501EAC990F0098081F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,7 @@
 		821F2DF01EAC4BF70098081F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		821F2DF21EAC4BF70098081F /* HomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
 		821F2DF31EAC4BF70098081F /* HomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
-		821F2DF61EAC4BF70098081F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		821F2DF81EAC4BF70098081F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		821F2DFB1EAC4BF70098081F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		821F2DFD1EAC4BF70098081F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821F2E021EAC4BF70098081F /* DesignAlianceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignAlianceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821F2E061EAC4BF70098081F /* DesignAlianceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignAlianceTests.m; sourceTree = "<group>"; };
@@ -53,6 +52,11 @@
 		821F2E131EAC4BF70098081F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821F2E1F1EAC4CF20098081F /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		821F2E281EAC4F060098081F /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		821F2E4B1EAC91E50098081F /* DesignAliance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesignAliance-Prefix.pch"; sourceTree = "<group>"; };
+		821F2E4C1EAC95500098081F /* DABasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABasePage.h; sourceTree = "<group>"; };
+		821F2E4D1EAC95500098081F /* DABasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABasePage.m; sourceTree = "<group>"; };
+		821F2E4F1EAC990F0098081F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		821F2E501EAC990F0098081F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +115,10 @@
 				821F2E241EAC4E340098081F /* DB */,
 				821F2E251EAC4E5E0098081F /* Utility */,
 				821F2E261EAC4E740098081F /* ThirdSDK */,
-				821F2E281EAC4F060098081F /* Defines.h */,
+				821F2E4A1EAC90100098081F /* Define */,
 				821F2DEF1EAC4BF70098081F /* AppDelegate.h */,
 				821F2DF01EAC4BF70098081F /* AppDelegate.m */,
 				821F2E271EAC4E7F0098081F /* Resources */,
-				821F2DFD1EAC4BF70098081F /* Info.plist */,
 				821F2DEC1EAC4BF70098081F /* Supporting Files */,
 			);
 			path = DesignAliance;
@@ -124,7 +127,9 @@
 		821F2DEC1EAC4BF70098081F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				821F2DFD1EAC4BF70098081F /* Info.plist */,
 				821F2DED1EAC4BF70098081F /* main.m */,
+				821F2E4B1EAC91E50098081F /* DesignAliance-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,7 +166,7 @@
 				821F2E2A1EAC4F980098081F /* Widget */,
 				821F2E291EAC4F910098081F /* Page */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		821F2E221EAC4DCF0098081F /* Model */ = {
@@ -206,7 +211,7 @@
 				821F2E2D1EAC4FBF0098081F /* Image */,
 				821F2E2E1EAC4FD30098081F /* Xib */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		821F2E291EAC4F910098081F /* Page */ = {
@@ -214,8 +219,10 @@
 			children = (
 				821F2DF21EAC4BF70098081F /* HomePage.h */,
 				821F2DF31EAC4BF70098081F /* HomePage.m */,
+				821F2E4C1EAC95500098081F /* DABasePage.h */,
+				821F2E4D1EAC95500098081F /* DABasePage.m */,
 			);
-			name = Page;
+			path = Page;
 			sourceTree = "<group>";
 		};
 		821F2E2A1EAC4F980098081F /* Widget */ = {
@@ -236,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Config;
+			path = Config;
 			sourceTree = "<group>";
 		};
 		821F2E2D1EAC4FBF0098081F /* Image */ = {
@@ -244,16 +251,24 @@
 			children = (
 				821F2DF81EAC4BF70098081F /* Assets.xcassets */,
 			);
-			name = Image;
+			path = Image;
 			sourceTree = "<group>";
 		};
 		821F2E2E1EAC4FD30098081F /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				821F2DF51EAC4BF70098081F /* Main.storyboard */,
-				821F2DFA1EAC4BF70098081F /* LaunchScreen.storyboard */,
+				821F2E4F1EAC990F0098081F /* LaunchScreen.storyboard */,
+				821F2E501EAC990F0098081F /* Main.storyboard */,
 			);
-			name = Xib;
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		821F2E4A1EAC90100098081F /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				821F2E281EAC4F060098081F /* Defines.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,9 +380,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821F2DFC1EAC4BF70098081F /* LaunchScreen.storyboard in Resources */,
+				821F2E521EAC990F0098081F /* Main.storyboard in Resources */,
 				821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */,
-				821F2DF71EAC4BF70098081F /* Main.storyboard in Resources */,
+				821F2E511EAC990F0098081F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821F2E4E1EAC95500098081F /* DABasePage.m in Sources */,
 				821F2DF41EAC4BF70098081F /* HomePage.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
@@ -428,25 +444,6 @@
 			targetProxy = 821F2E0E1EAC4BF70098081F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		821F2DF51EAC4BF70098081F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				821F2DF61EAC4BF70098081F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		821F2DFA1EAC4BF70098081F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				821F2DFB1EAC4BF70098081F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		821F2E141EAC4BF70098081F /* Debug */ = {
@@ -542,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
@@ -554,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
@@ -630,6 +629,7 @@
 				821F2E181EAC4BF70098081F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		821F2E191EAC4BF70098081F /* Build configuration list for PBXNativeTarget "DesignAlianceTests" */ = {
 			isa = XCConfigurationList;
@@ -638,6 +638,7 @@
 				821F2E1B1EAC4BF70098081F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		821F2E1C1EAC4BF70098081F /* Build configuration list for PBXNativeTarget "DesignAlianceUITests" */ = {
 			isa = XCConfigurationList;
@@ -646,6 +647,7 @@
 				821F2E1E1EAC4BF70098081F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

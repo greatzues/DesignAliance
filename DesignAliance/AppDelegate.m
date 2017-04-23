@@ -13,6 +13,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BASE_INFO_FUN(@"app start");
     return YES;
     
 }
