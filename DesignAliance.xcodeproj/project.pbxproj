@@ -19,6 +19,15 @@
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
 		821F2E6D1EACBBD80098081F /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E6C1EACBBD80098081F /* DABasePage.m */; };
 		821F2E701EACBBEB0098081F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E6F1EACBBEB0098081F /* HomePage.m */; };
+		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
+		821F2E841EAD8E200098081F /* JsonFramework in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E831EAD8E200098081F /* JsonFramework */; };
+		8250B4281EADE210000F037A /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B41F1EADE210000F037A /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8250B4291EADE210000F037A /* FxJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4211EADE210000F037A /* FxJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4231EADE210000F037A /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4251EADE210000F037A /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4271EADE210000F037A /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8250B4341EAE11DE000F037A /* DAGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4331EAE11DE000F037A /* DAGlobal.m */; };
+		8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4361EAE216F000F037A /* DAFileUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +77,23 @@
 		821F2E6E1EACBBEB0098081F /* HomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
 		821F2E6F1EACBBEB0098081F /* HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
 		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
+		821F2E7F1EACCC460098081F /* DABaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseOperation.h; sourceTree = "<group>"; };
+		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
+		821F2E831EAD8E200098081F /* JsonFramework */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JsonFramework; path = /Users/zues/DesignAliance/DesignAliance/ThirdSDK/JsonFramework; sourceTree = "<absolute>"; };
+		8250B41E1EADE210000F037A /* FxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJSON.h; sourceTree = "<group>"; };
+		8250B41F1EADE210000F037A /* FxJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJSON.m; sourceTree = "<group>"; };
+		8250B4201EADE210000F037A /* FxJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonBase.h; sourceTree = "<group>"; };
+		8250B4211EADE210000F037A /* FxJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonBase.m; sourceTree = "<group>"; };
+		8250B4221EADE210000F037A /* FxJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonParser.h; sourceTree = "<group>"; };
+		8250B4231EADE210000F037A /* FxJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonParser.m; sourceTree = "<group>"; };
+		8250B4241EADE210000F037A /* FxJsonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonUtility.h; sourceTree = "<group>"; };
+		8250B4251EADE210000F037A /* FxJsonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonUtility.m; sourceTree = "<group>"; };
+		8250B4261EADE210000F037A /* FxJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonWriter.h; sourceTree = "<group>"; };
+		8250B4271EADE210000F037A /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
+		8250B4321EAE11DE000F037A /* DAGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAGlobal.h; path = Global/DAGlobal.h; sourceTree = "<group>"; };
+		8250B4331EAE11DE000F037A /* DAGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAGlobal.m; path = Global/DAGlobal.m; sourceTree = "<group>"; };
+		8250B4351EAE216F000F037A /* DAFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAFileUtility.h; sourceTree = "<group>"; };
+		8250B4361EAE216F000F037A /* DAFileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAFileUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				821F2E201EAC4DAB0098081F /* Global */,
-				821F2E211EAC4DB80098081F /* Controller */,
 				821F2E221EAC4DCF0098081F /* Model */,
+				821F2E211EAC4DB80098081F /* Controller */,
 				821F2E231EAC4DDA0098081F /* Network */,
 				821F2E241EAC4E340098081F /* DB */,
 				821F2E251EAC4E5E0098081F /* Utility */,
@@ -166,6 +192,8 @@
 		821F2E201EAC4DAB0098081F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				8250B4321EAE11DE000F037A /* DAGlobal.h */,
+				8250B4331EAE11DE000F037A /* DAGlobal.m */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -194,6 +222,8 @@
 		821F2E231EAC4DDA0098081F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				821F2E7F1EACCC460098081F /* DABaseOperation.h */,
+				821F2E801EACCC460098081F /* DABaseOperation.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -208,6 +238,8 @@
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8250B4351EAE216F000F037A /* DAFileUtility.h */,
+				8250B4361EAE216F000F037A /* DAFileUtility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -215,8 +247,9 @@
 		821F2E261EAC4E740098081F /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8250B40E1EADDD2C000F037A /* JsonFramework */,
 			);
-			name = ThirdSDK;
+			path = ThirdSDK;
 			sourceTree = "<group>";
 		};
 		821F2E271EAC4E7F0098081F /* Resources */ = {
@@ -290,6 +323,23 @@
 			path = page;
 			sourceTree = "<group>";
 		};
+		8250B40E1EADDD2C000F037A /* JsonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				8250B41E1EADE210000F037A /* FxJSON.h */,
+				8250B41F1EADE210000F037A /* FxJSON.m */,
+				8250B4201EADE210000F037A /* FxJsonBase.h */,
+				8250B4211EADE210000F037A /* FxJsonBase.m */,
+				8250B4221EADE210000F037A /* FxJsonParser.h */,
+				8250B4231EADE210000F037A /* FxJsonParser.m */,
+				8250B4241EADE210000F037A /* FxJsonUtility.h */,
+				8250B4251EADE210000F037A /* FxJsonUtility.m */,
+				8250B4261EADE210000F037A /* FxJsonWriter.h */,
+				8250B4271EADE210000F037A /* FxJsonWriter.m */,
+			);
+			path = JsonFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,8 +347,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 821F2E161EAC4BF70098081F /* Build configuration list for PBXNativeTarget "DesignAliance" */;
 			buildPhases = (
-				821F2DE51EAC4BF70098081F /* Sources */,
 				821F2DE61EAC4BF70098081F /* Frameworks */,
+				821F2DE51EAC4BF70098081F /* Sources */,
 				821F2DE71EAC4BF70098081F /* Resources */,
 			);
 			buildRules = (
@@ -400,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821F2E521EAC990F0098081F /* Main.storyboard in Resources */,
+				821F2E841EAD8E200098081F /* JsonFramework in Resources */,
 				821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,12 +478,20 @@
 			files = (
 				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
 				821F2E6D1EACBBD80098081F /* DABasePage.m in Sources */,
+				821F2E811EACCC460098081F /* DABaseOperation.m in Sources */,
+				8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */,
 				821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */,
 				821F2E701EACBBEB0098081F /* HomePage.m in Sources */,
 				821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */,
 				821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */,
+				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
+				8250B4341EAE11DE000F037A /* DAGlobal.m in Sources */,
+				8250B4281EADE210000F037A /* FxJSON.m in Sources */,
+				8250B4291EADE210000F037A /* FxJsonBase.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
+				8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */,
+				8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +693,248 @@
 			};
 			name = Release;
 		};
+		821F2E731EACC9B60098081F /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		821F2E741EACC9B60098081F /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
+				INFOPLIST_FILE = DesignAliance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AppStore;
+		};
+		821F2E751EACC9B60098081F /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesignAliance.app/DesignAliance";
+			};
+			name = AppStore;
+		};
+		821F2E761EACC9B60098081F /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DesignAliance;
+			};
+			name = AppStore;
+		};
+		821F2E771EACC9D70098081F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		821F2E781EACC9D70098081F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
+				INFOPLIST_FILE = DesignAliance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Enterprise;
+		};
+		821F2E791EACC9D70098081F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesignAliance.app/DesignAliance";
+			};
+			name = Enterprise;
+		};
+		821F2E7A1EACC9D70098081F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DesignAliance;
+			};
+			name = Enterprise;
+		};
+		821F2E7B1EACC9E50098081F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		821F2E7C1EACC9E50098081F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
+				INFOPLIST_FILE = DesignAliance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AdHoc;
+		};
+		821F2E7D1EACC9E50098081F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesignAliance.app/DesignAliance";
+			};
+			name = AdHoc;
+		};
+		821F2E7E1EACC9E50098081F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TGSY8NT3H9;
+				INFOPLIST_FILE = DesignAlianceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAlianceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DesignAliance;
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -642,6 +943,9 @@
 			buildConfigurations = (
 				821F2E141EAC4BF70098081F /* Debug */,
 				821F2E151EAC4BF70098081F /* Release */,
+				821F2E731EACC9B60098081F /* AppStore */,
+				821F2E7B1EACC9E50098081F /* AdHoc */,
+				821F2E771EACC9D70098081F /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -651,6 +955,9 @@
 			buildConfigurations = (
 				821F2E171EAC4BF70098081F /* Debug */,
 				821F2E181EAC4BF70098081F /* Release */,
+				821F2E741EACC9B60098081F /* AppStore */,
+				821F2E7C1EACC9E50098081F /* AdHoc */,
+				821F2E781EACC9D70098081F /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -660,6 +967,9 @@
 			buildConfigurations = (
 				821F2E1A1EAC4BF70098081F /* Debug */,
 				821F2E1B1EAC4BF70098081F /* Release */,
+				821F2E751EACC9B60098081F /* AppStore */,
+				821F2E7D1EACC9E50098081F /* AdHoc */,
+				821F2E791EACC9D70098081F /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -669,6 +979,9 @@
 			buildConfigurations = (
 				821F2E1D1EAC4BF70098081F /* Debug */,
 				821F2E1E1EAC4BF70098081F /* Release */,
+				821F2E761EACC9B60098081F /* AppStore */,
+				821F2E7E1EACC9E50098081F /* AdHoc */,
+				821F2E7A1EACC9D70098081F /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

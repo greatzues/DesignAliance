@@ -12,5 +12,7 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "Defines.h"
+#import "FxJsonUtility.h"
+#import "DAFileUtility.h"
 
 #endif /* DesignAliance_Prefix_pch */
