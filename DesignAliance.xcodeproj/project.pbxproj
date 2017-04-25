@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7621EAF0DFF006832B5 /* DAActivity.m */; };
+		820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7651EAF2178006832B5 /* DAActivityIndicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		820CA76F1EAF5296006832B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820CA7691EAF5296006832B5 /* Assets.xcassets */; };
+		820CA7701EAF5296006832B5 /* Background in Resources */ = {isa = PBXBuildFile; fileRef = 820CA76A1EAF5296006832B5 /* Background */; };
+		820CA7711EAF5296006832B5 /* ColumnBar in Resources */ = {isa = PBXBuildFile; fileRef = 820CA76B1EAF5296006832B5 /* ColumnBar */; };
+		820CA7721EAF5296006832B5 /* Login in Resources */ = {isa = PBXBuildFile; fileRef = 820CA76C1EAF5296006832B5 /* Login */; };
+		820CA7731EAF5296006832B5 /* NavBar in Resources */ = {isa = PBXBuildFile; fileRef = 820CA76D1EAF5296006832B5 /* NavBar */; };
+		820CA7741EAF5296006832B5 /* TabBar in Resources */ = {isa = PBXBuildFile; fileRef = 820CA76E1EAF5296006832B5 /* TabBar */; };
 		821F2DEE1EAC4BF70098081F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DED1EAC4BF70098081F /* main.m */; };
 		821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF01EAC4BF70098081F /* AppDelegate.m */; };
 		821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821F2DF81EAC4BF70098081F /* Assets.xcassets */; };
@@ -48,6 +56,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820CA7611EAF0DFF006832B5 /* DAActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivity.h; sourceTree = "<group>"; };
+		820CA7621EAF0DFF006832B5 /* DAActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAActivity.m; sourceTree = "<group>"; };
+		820CA7641EAF2178006832B5 /* DAActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivityIndicator.h; sourceTree = "<group>"; };
+		820CA7651EAF2178006832B5 /* DAActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAActivityIndicator.m; sourceTree = "<group>"; };
+		820CA7691EAF5296006832B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		820CA76A1EAF5296006832B5 /* Background */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Background; sourceTree = "<group>"; };
+		820CA76B1EAF5296006832B5 /* ColumnBar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ColumnBar; sourceTree = "<group>"; };
+		820CA76C1EAF5296006832B5 /* Login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Login; sourceTree = "<group>"; };
+		820CA76D1EAF5296006832B5 /* NavBar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NavBar; sourceTree = "<group>"; };
+		820CA76E1EAF5296006832B5 /* TabBar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TabBar; sourceTree = "<group>"; };
 		821F2DE91EAC4BF70098081F /* DesignAliance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignAliance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821F2DED1EAC4BF70098081F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		821F2DEF1EAC4BF70098081F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,7 +166,7 @@
 				821F2E201EAC4DAB0098081F /* Global */,
 				821F2E221EAC4DCF0098081F /* Model */,
 				821F2E211EAC4DB80098081F /* Controller */,
-				821F2E231EAC4DDA0098081F /* Network */,
+				821F2E231EAC4DDA0098081F /* Operation */,
 				821F2E241EAC4E340098081F /* DB */,
 				821F2E251EAC4E5E0098081F /* Utility */,
 				821F2E261EAC4E740098081F /* ThirdSDK */,
@@ -219,12 +237,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		821F2E231EAC4DDA0098081F /* Network */ = {
+		821F2E231EAC4DDA0098081F /* Operation */ = {
 			isa = PBXGroup;
 			children = (
 				821F2E7F1EACCC460098081F /* DABaseOperation.h */,
 				821F2E801EACCC460098081F /* DABaseOperation.m */,
 			);
+			name = Operation;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -240,6 +259,10 @@
 			children = (
 				8250B4351EAE216F000F037A /* DAFileUtility.h */,
 				8250B4361EAE216F000F037A /* DAFileUtility.m */,
+				820CA7611EAF0DFF006832B5 /* DAActivity.h */,
+				820CA7621EAF0DFF006832B5 /* DAActivity.m */,
+				820CA7641EAF2178006832B5 /* DAActivityIndicator.h */,
+				820CA7651EAF2178006832B5 /* DAActivityIndicator.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -290,6 +313,12 @@
 		821F2E2D1EAC4FBF0098081F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				820CA7691EAF5296006832B5 /* Assets.xcassets */,
+				820CA76A1EAF5296006832B5 /* Background */,
+				820CA76B1EAF5296006832B5 /* ColumnBar */,
+				820CA76C1EAF5296006832B5 /* Login */,
+				820CA76D1EAF5296006832B5 /* NavBar */,
+				820CA76E1EAF5296006832B5 /* TabBar */,
 				821F2DF81EAC4BF70098081F /* Assets.xcassets */,
 			);
 			path = Image;
@@ -449,8 +478,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820CA7731EAF5296006832B5 /* NavBar in Resources */,
 				821F2E521EAC990F0098081F /* Main.storyboard in Resources */,
 				821F2E841EAD8E200098081F /* JsonFramework in Resources */,
+				820CA76F1EAF5296006832B5 /* Assets.xcassets in Resources */,
+				820CA7721EAF5296006832B5 /* Login in Resources */,
+				820CA7741EAF5296006832B5 /* TabBar in Resources */,
+				820CA7701EAF5296006832B5 /* Background in Resources */,
+				820CA7711EAF5296006832B5 /* ColumnBar in Resources */,
 				821F2DF91EAC4BF70098081F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +518,8 @@
 				821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */,
 				821F2E701EACBBEB0098081F /* HomePage.m in Sources */,
 				821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */,
+				820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */,
+				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
 				821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */,
 				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
 				8250B4341EAE11DE000F037A /* DAGlobal.m in Sources */,

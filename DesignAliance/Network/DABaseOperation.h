@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+//如何理解这个类里面也声明一个接口
 @protocol DAOperationDelegate;
 @interface DABaseOperation : NSObject{
     id<DAOperationDelegate> _delegate;
