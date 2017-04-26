@@ -2,12 +2,12 @@
 //  DABasePage.h
 //  DesignAliance
 //
-//  Created by zues on 17/4/23.
+//  Created by zues on 17/4/26.
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DABaseController.h"
 
-@interface DABasePage : UIViewController
+@interface DABasePage : DABaseController
 
 @end
