@@ -36,6 +36,7 @@
 
 @end
 
+//下面是一个协议
 @protocol DAOperationDelegate <NSObject>
 
 - (void)opSuccess:(id)data;

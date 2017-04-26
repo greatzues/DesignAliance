@@ -79,10 +79,11 @@
         return;
     }
     
-    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSMutableDictionary *dict = [FxJsonUtility jsonValueFromString:jsonString];
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]; //在这里解析数据
+    NSMutableDictionary *dict = [FxJsonUtility jsonValueFromString:jsonString]; //将数据放到字典里面
     
-    NSString *result = [dict objectForKey:NetResult];
+    NSString *result = [[dict objectForKey:NetCode] stringValue]; //将自动转化的NSDecimalNumber转化为NSString
+    
     if ([result isEqualToString:NetOk]) {
         [self parseSuccess:dict jsonString:jsonString];
     }else {
@@ -106,8 +107,8 @@
         return;
     }
     
-    //token失效后重新登录
-    if ([[dict objectForKey:NetResult] isEqualToString:NetVallidateteToken]) {
+    //token失效后重新登录,我这里是没有token的，下面一段代码其实可以不要
+    if ([[dict objectForKey:NetCode] isEqualToString:NetVallidateteToken]) {
         BASE_ERROR_FUN(NetVallidateteToken);
     }
     
@@ -145,7 +146,7 @@
     
     //成功接收：200有数据，204没有数据，206断点续传
     if (_statusCode == 200 || _statusCode == 204 || _statusCode == 206) {
-        [self parseProgress:_receiveDate];
+        [self parseData:_receiveDate];
     }else {
         NSString *errorMessage = [[NSString alloc] initWithData:_receiveDate encoding:NSUTF8StringEncoding];
         

@@ -7,13 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginPage.h"
 
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    BASE_INFO_FUN(@"app start");
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[LoginPage alloc] init];
+    
+    [self.window makeKeyAndVisible]; //展示界面，并且让它成为主要界面
+    
     return YES;
     
 }
