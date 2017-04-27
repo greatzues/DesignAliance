@@ -50,8 +50,6 @@
 		820CA7CC1EB053CB006832B5 /* TabBarShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA7BF1EB053CB006832B5 /* TabBarShadow@2x.png */; };
 		820CA7CD1EB053CB006832B5 /* VoiceIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA7C01EB053CB006832B5 /* VoiceIcon@2x.png */; };
 		820CA7CE1EB053CB006832B5 /* VoiceIconSelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA7C11EB053CB006832B5 /* VoiceIconSelect@2x.png */; };
-		820CA7E31EB0C172006832B5 /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7E21EB0C172006832B5 /* DABasePage.m */; };
-		820CA7E61EB0C1AB006832B5 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7E51EB0C1AB006832B5 /* LoginPage.m */; };
 		821F2DEE1EAC4BF70098081F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DED1EAC4BF70098081F /* main.m */; };
 		821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DF01EAC4BF70098081F /* AppDelegate.m */; };
 		821F2E071EAC4BF70098081F /* DesignAlianceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E061EAC4BF70098081F /* DesignAlianceTests.m */; };
@@ -61,7 +59,6 @@
 		821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E581EACB80B0098081F /* DABaseWidget.m */; };
 		821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5B1EACB8250098081F /* DABaseCell.m */; };
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
-		821F2E701EACBBEB0098081F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E6F1EACBBEB0098081F /* HomePage.m */; };
 		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
 		821F2E841EAD8E200098081F /* JsonFramework in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E831EAD8E200098081F /* JsonFramework */; };
 		8250B4281EADE210000F037A /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B41F1EADE210000F037A /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -138,10 +135,6 @@
 		820CA7BF1EB053CB006832B5 /* TabBarShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarShadow@2x.png"; path = "TabBar/TabBarShadow@2x.png"; sourceTree = "<group>"; };
 		820CA7C01EB053CB006832B5 /* VoiceIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VoiceIcon@2x.png"; path = "TabBar/VoiceIcon@2x.png"; sourceTree = "<group>"; };
 		820CA7C11EB053CB006832B5 /* VoiceIconSelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VoiceIconSelect@2x.png"; path = "TabBar/VoiceIconSelect@2x.png"; sourceTree = "<group>"; };
-		820CA7E11EB0C172006832B5 /* DABasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABasePage.h; sourceTree = "<group>"; };
-		820CA7E21EB0C172006832B5 /* DABasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABasePage.m; sourceTree = "<group>"; };
-		820CA7E41EB0C1AB006832B5 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPage.h; sourceTree = "<group>"; };
-		820CA7E51EB0C1AB006832B5 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPage.m; sourceTree = "<group>"; };
 		821F2DE91EAC4BF70098081F /* DesignAliance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignAliance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821F2DED1EAC4BF70098081F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		821F2DEF1EAC4BF70098081F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,8 +158,6 @@
 		821F2E5B1EACB8250098081F /* DABaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DABaseCell.m; path = Cell/DABaseCell.m; sourceTree = "<group>"; };
 		821F2E5D1EACB9850098081F /* DABaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseModel.h; sourceTree = "<group>"; };
 		821F2E5E1EACB9850098081F /* DABaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseModel.m; sourceTree = "<group>"; };
-		821F2E6E1EACBBEB0098081F /* HomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
-		821F2E6F1EACBBEB0098081F /* HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
 		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
 		821F2E7F1EACCC460098081F /* DABaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseOperation.h; sourceTree = "<group>"; };
 		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
@@ -366,7 +357,6 @@
 			children = (
 				821F2E541EACB7CF0098081F /* DABaseController.h */,
 				821F2E551EACB7CF0098081F /* DABaseController.m */,
-				821F2E631EACBB5D0098081F /* page */,
 				821F2E2B1EAC4FA30098081F /* Cell */,
 				821F2E2A1EAC4F980098081F /* Widget */,
 			);
@@ -488,19 +478,6 @@
 				821F2E711EACBD8E0098081F /* URLDefine.h */,
 			);
 			path = Define;
-			sourceTree = "<group>";
-		};
-		821F2E631EACBB5D0098081F /* page */ = {
-			isa = PBXGroup;
-			children = (
-				821F2E6E1EACBBEB0098081F /* HomePage.h */,
-				821F2E6F1EACBBEB0098081F /* HomePage.m */,
-				820CA7E11EB0C172006832B5 /* DABasePage.h */,
-				820CA7E21EB0C172006832B5 /* DABasePage.m */,
-				820CA7E41EB0C1AB006832B5 /* LoginPage.h */,
-				820CA7E51EB0C1AB006832B5 /* LoginPage.m */,
-			);
-			path = page;
 			sourceTree = "<group>";
 		};
 		8250B40E1EADDD2C000F037A /* JsonFramework */ = {
@@ -698,18 +675,15 @@
 				821F2E811EACCC460098081F /* DABaseOperation.m in Sources */,
 				8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */,
 				821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */,
-				821F2E701EACBBEB0098081F /* HomePage.m in Sources */,
 				821F2E591EACB80B0098081F /* DABaseWidget.m in Sources */,
 				820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */,
 				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
-				820CA7E31EB0C172006832B5 /* DABasePage.m in Sources */,
 				821F2E5C1EACB8250098081F /* DABaseCell.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,
 				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
 				8250B4341EAE11DE000F037A /* DAGlobal.m in Sources */,
 				8250B4281EADE210000F037A /* FxJSON.m in Sources */,
 				8250B4291EADE210000F037A /* FxJsonBase.m in Sources */,
-				820CA7E61EB0C1AB006832B5 /* LoginPage.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
 				820CA7771EB03418006832B5 /* UserModel.m in Sources */,
