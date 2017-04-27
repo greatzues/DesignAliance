@@ -33,7 +33,7 @@
            cancelTitle:(NSString *)cancelTitle
               delegate:(id)delagate;
 
-//推出
+//退出
 + (void)logout;
 
 @end

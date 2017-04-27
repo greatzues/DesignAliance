@@ -8,13 +8,28 @@
 
 #import "AppDelegate.h"
 #import "LoginPage.h"
+#import "HomePage.h"
 
 
 @implementation AppDelegate
 
++ (AppDelegate *)appDeg{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+- (void)showHomePage{
+    HomePage *page = [[HomePage alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
+    
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[LoginPage alloc] init];
     

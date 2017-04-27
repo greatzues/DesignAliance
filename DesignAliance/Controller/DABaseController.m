@@ -14,13 +14,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setNavBarImage]; //这里是基类，可以把所有导航条都加上
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setNavBarImage];
+    
+    //sharedApplication拿到application对象，设置顶部状态栏隐藏状态为NO，也就是显示状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
     [self setStatusBarStyle:UIStatusBarStyleLightContent];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
@@ -84,10 +87,10 @@
     self.navigationItem.leftBarButtonItem = item;
 }
 
-- (void)setNavigationRight:(NSString *)imageName sel:(SEL)sel{
+- (void)setNavigationRight:(NSString *)imageName{
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:[self customButton:imageName selector:@selector(doRight:)]];
     
-    self.navigationItem.leftBarButtonItem = item;
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)setStatusBarStyle:(UIStatusBarStyle)style{

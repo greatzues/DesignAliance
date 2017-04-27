@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
++ (AppDelegate *)appDeg;
+- (void)showHomePage;
 @end
 
