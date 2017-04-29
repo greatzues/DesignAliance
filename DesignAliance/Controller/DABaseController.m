@@ -19,7 +19,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self setNavBarImage];
+    //[self setNavBarImage];
     
     //sharedApplication拿到application对象，设置顶部状态栏隐藏状态为NO，也就是显示状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:NO];

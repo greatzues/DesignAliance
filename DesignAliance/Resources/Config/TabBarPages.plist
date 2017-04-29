@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ClassName</key>
+		<string>MapPage</string>
+		<key>Title</key>
+		<string>首页</string>
+		<key>Image</key>
+		<string>DiscoveryIcon.png</string>
+		<key>SelectImage</key>
+		<string>DiscoveryIconSelect.png</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>NewsPage</string>
+		<key>Title</key>
+		<string>资讯</string>
+		<key>Image</key>
+		<string>NewsIcon.png</string>
+		<key>SelectImage</key>
+		<string>NewsIconSelect.png</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>MyPage</string>
+		<key>Title</key>
+		<string>我</string>
+		<key>Image</key>
+		<string>MyIcon.png</string>
+		<key>SelectImage</key>
+		<string>MyIconSelect.png</string>
+		<key>Unload</key>
+		<false/>
+	</dict>
+</array>
+</plist>

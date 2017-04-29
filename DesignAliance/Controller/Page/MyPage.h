@@ -1,13 +1,13 @@
 //
-//  HomePage.h
+//  MyPage.h
 //  DesignAliance
 //
-//  Created by zues on 17/4/23.
+//  Created by zues on 17/4/27.
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
 #import "DABasePage.h"
 
-@interface HomePage : UITabBarController
+@interface MyPage : DABasePage
 
 @end

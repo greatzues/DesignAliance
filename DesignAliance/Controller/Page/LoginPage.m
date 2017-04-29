@@ -19,7 +19,7 @@
     self.title = LoginTitle;
     
     [super viewDidLoad];
-    [self setNavigationRight:@"NavigationBack.png"];
+    [self setNavigationLeft:@"NavigationBack.png" sel:nil];
     
 }
 
@@ -28,7 +28,9 @@
 }
 
 - (IBAction)doLoginEvent:(id)sender{
+    
     [[AppDelegate appDeg] showHomePage];
+
     if(![self checkValidate]){
         return ;
     }
@@ -37,8 +39,6 @@
     NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",username.text,password.text];
     NSDictionary *opInfo = @{@"url":LoginURL,
                              @"body":body};
-    
-    _operation = [[DALogin alloc] initWithDelegate:self opInfo:opInfo];
     [_operation executeOp];
 }
 

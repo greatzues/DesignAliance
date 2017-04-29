@@ -73,6 +73,10 @@
 #define DesignIconPrex      @"DesignIcon_%@"
 #define DADBFile            @"DesignAliance.db"
 
+//资讯页面
+#define TitleArray          @[@"设计资讯", @"设计任务", @"设计人才"]
+#define ViewArray           @[@"DADesignNewsWidget", @"DADesignMissionWidget", @"DADesignTalentsWidget"]
+
 //高德地图
 #define AMapKey             @"843b615d0689c272594bb226b4efa96d"
 

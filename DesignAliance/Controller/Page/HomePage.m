@@ -7,9 +7,22 @@
 //
 
 #import "HomePage.h"
+#import "NewsPage.h"
+#import "MyPage.h"
+#import "MapPage.h"
+#import "PageModel.h"
 
 
 @implementation HomePage
+
+- (id)init{
+    self  = [super init];
+    if (self){
+        [self addTabControllers];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     self.title = LoginTitle;
@@ -21,10 +34,10 @@
     [super didReceiveMemoryWarning];
 }
 
-
-- (IBAction)TestButton :(id)sender{
+- (void)addTabControllers{
+    self.tabBar.tintColor = [UIColor redColor]; //设置顶部选中的字体颜色
+    self.viewControllers = [PageModel pageControllers]; //设置底部导航栏
     
 }
-
 
 @end
