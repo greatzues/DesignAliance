@@ -53,7 +53,7 @@
 #define NetOk               @"20000"
 #define NetData             @"data"
 #define NetMessage          @"message"
-#define NetDataList         @"datalist"
+#define NetDataList         @"dataList"
 #define NetVallidateteToken @"invalidatetoken"
 #define HTTPSchema          @"http:"
 #define HTTPGET             @"GET"
@@ -70,7 +70,7 @@
 //文件缓存路径
 #define RootPath            @"/Library/.DesignAliance"
 #define CacheImagePath      @"CacheImages"
-#define DesignIconPrex      @"DesignIcon_%@"
+#define NewsIconPrex        @"DesignIcon_%@"
 #define DADBFile            @"DesignAliance.db"
 
 //资讯页面
@@ -83,14 +83,28 @@
 
 //提示信息
 #define LoginingTip         @"登录中..."
-#define loadingTip          @"加载中"
+#define LoadingTip          @"加载中"
 #define LoginCheckTip       @"用户名和密码不能为空"
 #define LoginTitle          @"登录网易新闻"
+
+// 消息通知
+#define RegisterNotify(_name, _selector)                    \
+[[NSNotificationCenter defaultCenter] addObserver:self  \
+selector:_selector name:_name object:nil];
+
+#define RemoveNofify            \
+[[NSNotificationCenter defaultCenter] removeObserver:self];
+
+#define SendNotify(_name, _object)  \
+[[NSNotificationCenter defaultCenter] postNotificationName:_name object:_object];
 
 // 其他常量
 #define AnimationSecond     1.0
 #define NavBarHeight        44
 #define NavBarHeight7       64
 #define LocationDistance    100
+
+// 消息通知Key
+#define NofifyNewsIcon      @"NewsIcon"
 
 

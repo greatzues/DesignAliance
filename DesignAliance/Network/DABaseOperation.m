@@ -68,7 +68,6 @@
 
 
 - (void)executeOp{
-    //这里建议我使用NSSURLSession，但是我没找到对应的方法，所以这个后面之后再修改
     _connection = [[NSURLConnection alloc] initWithRequest:[self urlRequest] delegate:self];
 }
 
@@ -102,16 +101,15 @@
 }
 
 - (void)parseFail:(id)dict{
+    NSString *result = [[dict objectForKey:NetCode] stringValue];
     if([dict isKindOfClass:[NSString class]]) {
         [_delegate opFail:(NSString *)dict];
         return;
     }
     
-    //token失效后重新登录,我这里是没有token的，下面一段代码其实可以不要
-    if ([[dict objectForKey:NetCode] isEqualToString:NetVallidateteToken]) {
-        BASE_ERROR_FUN(NetVallidateteToken);
-    }
-    
+//    if ([result isEqualToString:@"40000"]){
+//        BASE_ERROR_FUN([dict objectForKey:NetMessage]);
+//    }
     [_delegate opFail:[dict objectForKey:NetMessage]];
 }
 

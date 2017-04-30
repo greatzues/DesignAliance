@@ -19,15 +19,37 @@
 
 //上线记得要将Host和Port改回来
 #if ProductType == 0
-#define BaseHost     @"http://"
-#define BasePort    @""
+#define BaseHost        @"http://"
+#define BasePort        @""
 #else
-#define BaseHost    @"http://139.199.165.150"
-#define BasePort    @":8080"
+#define BaseHost        @"http://139.199.165.150"
+#define BasePort        @":8080"
 #endif
 
-#define BaseServer  BaseHost BasePort
-#define BaseURLPath "/Design/"
-#define BaseURL     BaseServer BaseURLPath
+#define BaseServer      BaseHost BasePort
+#define BaseURLPath     "/Design/"
+#define BaseURL         BaseServer BaseURLPath
 
-#define LoginURL    BaseURL "Home/User/login"
+//post url
+#define LoginURL        BaseURL "Home/User/login"
+#define Register        BaseURL "Home/User/register"
+
+#define NewsURL         BaseURL "Home/DesignAdvice/showDesignAdvice"
+#define MissionURL      BaseURL "Home/DesignMission/showDesignMission"
+#define TalentsURl      BaseURL "Home/DesignPerson/showDesignPerson"
+
+#define ModifyPassword  BaseURL "Home/User/modifyPassword"
+#define CheckUpdate     BaseURL "Home/User/checkUpdate"
+#define Logout          BaseURL "Home/User/logout"
+#define ModifyInfo      BaseURL "Home/UserInfo/modifyUserInfo"
+#define UploadAvatar    BaseURL "Home/UserInfo/uploadAvatar"
+#define GetUserInfo     BaseURL "Home/UserInfo/getUserInfo"
+
+
+//get image url
+#define GetAvatarImage  BaseURL "Home/UserInfo/getAvatarImage/%@"
+#define ImageAvatar     BaseURL "Avatar/%@"
+#define ImageNews       BaseURL "DesignAdvice/%@"
+#define ImageMission    BaseURL "DesignMission/%@"
+#define ImageTalents    BaseURL "DesignPerson/%@"
+

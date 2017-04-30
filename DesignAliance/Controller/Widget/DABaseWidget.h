@@ -6,9 +6,14 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DABaseController.h"
 
-@interface DABaseWidget : UIViewController
+@interface DABaseWidget : DABaseController
 
+@property(strong, nonatomic) NSMutableArray     *listData;
+
+- (void)updateUI;
+- (void)reloadData;
+- (BOOL)isReloadLocalData;
 
 @end

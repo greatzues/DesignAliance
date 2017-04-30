@@ -1,10 +1,11 @@
 //
-//  SecondViewController.m
-//  cbsSegmentView
+//  DADesignMissionWidget.m
+//  DesignAliance
 //
-//  Created by 陈秉慎 on 4/16/16.
-//  Copyright © 2016 cbs. All rights reserved.
+//  Created by zues on 17/4/23.
+//  Copyright © 2017年 zues. All rights reserved.
 //
+
 
 #import "DADesignMissionWidget.h"
 
@@ -25,14 +26,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

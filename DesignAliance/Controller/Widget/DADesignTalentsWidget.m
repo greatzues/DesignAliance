@@ -1,9 +1,9 @@
 //
-//  ThirdViewController.m
-//  cbsSegmentView
+//  DADesignTalentsWidget.m
+//  DesignAliance
 //
-//  Created by 陈秉慎 on 4/16/16.
-//  Copyright © 2016 cbs. All rights reserved.
+//  Created by zues on 17/4/23.
+//  Copyright © 2017年 zues. All rights reserved.
 //
 
 #import "DADesignTalentsWidget.h"
