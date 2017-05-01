@@ -1,13 +1,18 @@
 //
-//  FirstViewController.h
-//  cbsSegmentView
+//  DADesignNewsWidget.h
+//  DesignAliance
 //
-//  Created by 陈秉慎 on 4/16/16.
-//  Copyright © 2016 cbs. All rights reserved.
+//  Created by zues on 17/4/23.
+//  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DATableWidget.h"
 
-@interface DADesignNewsWidget : UIViewController
+@interface DADesignNewsWidget : DATableWidget{
+    BOOL        _hasNextPage;
+    NSInteger   _pageNo;    //当前页书
+    NSInteger   _pageSize;  //显示的item条数
+}
+
 
 @end

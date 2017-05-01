@@ -17,6 +17,7 @@
     user.name = [dict objectForKey:@"username"];
     user.sex = [dict objectForKey:@"sex"];
     user.avatar = [dict objectForKey:@"avatar"];
+    user.desc = [dict objectForKey:@"description"];
     
     return user;
 }

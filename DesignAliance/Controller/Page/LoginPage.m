@@ -51,6 +51,12 @@
     [[AppDelegate appDeg] showHomePage];
 }
 
+- (void)opFail:(NSString *)errorMessage{
+    [super opFail:errorMessage];
+    [self alertView:errorMessage];
+}
+
+
 - (BOOL)checkValidate{
     BOOL validate = YES;
     

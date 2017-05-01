@@ -22,6 +22,13 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)alertView:(NSString *)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip  message:message preferredStyle:UIAlertControllerStyleAlert];
+    //UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 
+}
 
 @end

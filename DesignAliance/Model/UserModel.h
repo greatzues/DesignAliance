@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *sex;
 @property (nonatomic, strong) NSString *avatar;
+@property (nonatomic, strong) NSString *desc;
 
 @end

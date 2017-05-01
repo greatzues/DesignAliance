@@ -90,6 +90,17 @@
 		8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4251EADE210000F037A /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4271EADE210000F037A /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4361EAE216F000F037A /* DAFileUtility.m */; };
+		82AD19681EB61016007C36FE /* MyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19671EB61016007C36FE /* MyPage.xib */; };
+		82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD196A1EB61449007C36FE /* DAGetUserInfo.m */; };
+		82AD196D1EB6BB4E007C36FE /* UserBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD196C1EB6BB4E007C36FE /* UserBackground@2x.png */; };
+		82AD19771EB6D662007C36FE /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD196F1EB6D662007C36FE /* about@2x.png */; };
+		82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19701EB6D662007C36FE /* contactUs@2x.png */; };
+		82AD19791EB6D662007C36FE /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19711EB6D662007C36FE /* logo@2x.png */; };
+		82AD197A1EB6D662007C36FE /* modifyPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19721EB6D662007C36FE /* modifyPassword@2x.png */; };
+		82AD197B1EB6D662007C36FE /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19731EB6D662007C36FE /* share@2x.png */; };
+		82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19741EB6D662007C36FE /* suggestion@2x.png */; };
+		82AD197D1EB6D662007C36FE /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19751EB6D662007C36FE /* update@2x.png */; };
+		82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19761EB6D662007C36FE /* vip@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +249,18 @@
 		8250B4271EADE210000F037A /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
 		8250B4351EAE216F000F037A /* DAFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAFileUtility.h; sourceTree = "<group>"; };
 		8250B4361EAE216F000F037A /* DAFileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAFileUtility.m; sourceTree = "<group>"; };
+		82AD19671EB61016007C36FE /* MyPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPage.xib; sourceTree = "<group>"; };
+		82AD19691EB61449007C36FE /* DAGetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGetUserInfo.h; sourceTree = "<group>"; };
+		82AD196A1EB61449007C36FE /* DAGetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGetUserInfo.m; sourceTree = "<group>"; };
+		82AD196C1EB6BB4E007C36FE /* UserBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserBackground@2x.png"; sourceTree = "<group>"; };
+		82AD196F1EB6D662007C36FE /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
+		82AD19701EB6D662007C36FE /* contactUs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactUs@2x.png"; sourceTree = "<group>"; };
+		82AD19711EB6D662007C36FE /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		82AD19721EB6D662007C36FE /* modifyPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modifyPassword@2x.png"; sourceTree = "<group>"; };
+		82AD19731EB6D662007C36FE /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		82AD19741EB6D662007C36FE /* suggestion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestion@2x.png"; sourceTree = "<group>"; };
+		82AD19751EB6D662007C36FE /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@2x.png"; sourceTree = "<group>"; };
+		82AD19761EB6D662007C36FE /* vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +291,7 @@
 		820CA7801EB052CB006832B5 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				82AD196C1EB6BB4E007C36FE /* UserBackground@2x.png */,
 				820CA8331EB1CFB2006832B5 /* Icon60@2x.png */,
 				820CA8341EB1CFB2006832B5 /* NewsDefault@2x.png */,
 				820CA8351EB1CFB2006832B5 /* WeatherBack@2x.png */,
@@ -473,6 +497,8 @@
 				820CA7791EB0368A006832B5 /* DALogin.m */,
 				8217323B1EB48F85006B3387 /* DANews.h */,
 				8217323C1EB48F85006B3387 /* DANews.m */,
+				82AD19691EB61449007C36FE /* DAGetUserInfo.h */,
+				82AD196A1EB61449007C36FE /* DAGetUserInfo.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -559,6 +585,7 @@
 		821F2E2D1EAC4FBF0098081F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				82AD196E1EB6D642007C36FE /* MyPage */,
 				820CA7841EB05317006832B5 /* TabBar */,
 				820CA7831EB0530F006832B5 /* NavBar */,
 				820CA7821EB05307006832B5 /* Login */,
@@ -577,6 +604,7 @@
 				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
 				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
 				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
+				82AD19671EB61016007C36FE /* MyPage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -605,6 +633,21 @@
 				8250B4271EADE210000F037A /* FxJsonWriter.m */,
 			);
 			path = JsonFramework;
+			sourceTree = "<group>";
+		};
+		82AD196E1EB6D642007C36FE /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				82AD196F1EB6D662007C36FE /* about@2x.png */,
+				82AD19701EB6D662007C36FE /* contactUs@2x.png */,
+				82AD19711EB6D662007C36FE /* logo@2x.png */,
+				82AD19721EB6D662007C36FE /* modifyPassword@2x.png */,
+				82AD19731EB6D662007C36FE /* share@2x.png */,
+				82AD19741EB6D662007C36FE /* suggestion@2x.png */,
+				82AD19751EB6D662007C36FE /* update@2x.png */,
+				82AD19761EB6D662007C36FE /* vip@2x.png */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -716,11 +759,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AD196D1EB6BB4E007C36FE /* UserBackground@2x.png in Resources */,
 				820CA8191EB1CF99006832B5 /* NavBarWhite44@2x.png in Resources */,
 				820CA8051EB1CF90006832B5 /* NewsIconSelect@2x.png in Resources */,
+				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
 				820CA82A1EB1CFA2006832B5 /* home_page_line_vertical@2x.png in Resources */,
 				820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
+				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
 				820CA81F1EB1CF99006832B5 /* NavigationBell@2x.png in Resources */,
 				820CA8081EB1CF90006832B5 /* tabbar_icon_media_highlight@2x.png in Resources */,
 				820CA82D1EB1CFA2006832B5 /* login_password_icon@2x.png in Resources */,
@@ -728,6 +774,7 @@
 				820CA8171EB1CF99006832B5 /* NavBarAlpha.png in Resources */,
 				820CA80A1EB1CF90006832B5 /* TabBarShadow@2x.png in Resources */,
 				820CA83A1EB1CFB2006832B5 /* WeatherBack@2x.png in Resources */,
+				82AD197A1EB6D662007C36FE /* modifyPassword@2x.png in Resources */,
 				821732421EB4D446006B3387 /* DesignNewsCell.xib in Resources */,
 				820CA81B1EB1CF99006832B5 /* NavigationBack@2x.png in Resources */,
 				820CA81D1EB1CF99006832B5 /* NavigationBar44@2x.png in Resources */,
@@ -750,15 +797,21 @@
 				823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */,
 				820CA8071EB1CF90006832B5 /* ReaderIconSelect@2x.png in Resources */,
 				820CA80B1EB1CF90006832B5 /* VoiceIcon@2x.png in Resources */,
+				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
+				82AD19791EB6D662007C36FE /* logo@2x.png in Resources */,
 				820CA80C1EB1CF90006832B5 /* VoiceIconSelect@2x.png in Resources */,
+				82AD19771EB6D662007C36FE /* about@2x.png in Resources */,
 				820CA81E1EB1CF99006832B5 /* NavigationBar64@2x.png in Resources */,
 				820CA82C1EB1CFA2006832B5 /* login_forgot_button@2x.png in Resources */,
 				821F2E841EAD8E200098081F /* JsonFramework in Resources */,
 				820CA8181EB1CF99006832B5 /* NavBarIcon@2x.png in Resources */,
 				820CA82E1EB1CFA2006832B5 /* login_username_icon@2x.png in Resources */,
+				82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */,
 				820CA8381EB1CFB2006832B5 /* Icon60@2x.png in Resources */,
 				820CA76F1EAF5296006832B5 /* Assets.xcassets in Resources */,
+				82AD19681EB61016007C36FE /* MyPage.xib in Resources */,
 				820CA8031EB1CF90006832B5 /* MyIconSelect@2x.png in Resources */,
+				82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */,
 				820CA83C1EB1CFB2006832B5 /* WeatherShare@2x.png in Resources */,
 				821732471EB58209006B3387 /* DADesignNewsWidget.xib in Resources */,
 			);
@@ -808,6 +861,7 @@
 				8250B4281EADE210000F037A /* FxJSON.m in Sources */,
 				8250B4291EADE210000F037A /* FxJsonBase.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
+				82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */,
 				823EE70D1EB37694001B98B4 /* NewsPage.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
 				823EE70A1EB37694001B98B4 /* LoginPage.m in Sources */,

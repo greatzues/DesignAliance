@@ -15,7 +15,7 @@
     [super viewDidLoad];
     [self setNavigationLeft:@"NavigationBell.png" sel:nil];
     [self setNavigationRight:@"NavigationSquare.png"];
-    [self setNavigationTitleImage:@"NavBarIcon.png"]; //设置顶部标题的背景图片
+    [self setNavigationTitleImage:@"logo.png"]; //设置顶部标题的背景图片
 
     [self initColumnBar];
 }

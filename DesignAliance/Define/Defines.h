@@ -77,6 +77,10 @@
 #define TitleArray          @[@"设计资讯", @"设计任务", @"设计人才"]
 #define ViewArray           @[@"DADesignNewsWidget", @"DADesignMissionWidget", @"DADesignTalentsWidget"]
 
+//用户页面
+#define MyPageArray         @[@"成为vip",@"修改密码",@"版本更新",@"联系我们",@"意见反馈",@"关于",@"分享应用"]
+#define MyPageIconArray     @[@"vip.png",@"modifyPassword.png",@"update.png",@"contactUs.png",@"suggestion.png",@"about.png",@"share.png"]
+
 //高德地图
 #define AMapKey             @"843b615d0689c272594bb226b4efa96d"
 
@@ -86,6 +90,7 @@
 #define LoadingTip          @"加载中"
 #define LoginCheckTip       @"用户名和密码不能为空"
 #define LoginTitle          @"登录网易新闻"
+#define AlertTip            @"提示"
 
 // 消息通知
 #define RegisterNotify(_name, _selector)                    \
