@@ -89,8 +89,9 @@
 #define LoginingTip         @"登录中..."
 #define LoadingTip          @"加载中"
 #define LoginCheckTip       @"用户名和密码不能为空"
-#define LoginTitle          @"登录网易新闻"
+#define LoginTitle          @"登录设计联盟"
 #define AlertTip            @"提示"
+#define AlertTitle          @"确定"
 
 // 消息通知
 #define RegisterNotify(_name, _selector)                    \

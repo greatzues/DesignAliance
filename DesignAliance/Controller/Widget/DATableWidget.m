@@ -51,7 +51,7 @@
         cell = [Objects objectAtIndex:0];
         [cell initCell];
     }
-    
+    //这行代码触发cell的设置列表数据函数，只要继承DABaseWidget，都可以将返回的dataList整条传入
     [cell setCellData:[self.listData objectAtIndex:indexPath.row]];
     
     return cell;

@@ -80,6 +80,10 @@
     [self hideIndicator];
 }
 
+- (void)opFail:(NSString *)errorMessage{
+    [super opFail:errorMessage];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return indexPath.row < self.listData.count ? _cellHeight:44;
@@ -118,6 +122,7 @@
     return cell;
 }
 
+//这个是item点击之后的监听
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    DetailPage *page = [[DetailPage alloc] init];

@@ -9,6 +9,7 @@
 #import "MyPage.h"
 #import "DAGetUserInfo.h"
 #import "UserModel.h"
+#import "DAUploadAvatarWidget.h"
 
 @implementation MyPage
 @synthesize list = _list;
@@ -33,6 +34,9 @@
     self.list = MyPageArray;
     self.IconList = MyPageIconArray;
     
+    //添加头像按钮的监听事件
+    [UserAvatar addTarget:self action:@selector(avatarPress:) forControlEvents:UIControlEventTouchUpInside];
+    
     NSDictionary *opInfo = @{@"url":GetUserInfo,
                              @"body":@""};
     
@@ -46,16 +50,18 @@
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,data.avatar];
     //这样加载图片超慢，需要修改一下加载的方式
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-    UserAvatar.image = [UIImage imageWithData:imageData];
+    
+    //加载
+    [UserAvatar setBackgroundImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
-    
+    //实现cell复用
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
-    }
+    }	
     
     //设置cell标题和图片
     NSUInteger row = [indexPath row];
@@ -77,6 +83,14 @@
 //cell的点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self alertView:[self.list objectAtIndex:[indexPath row]]];
+}
+
+//头像的点击事件
+- (IBAction)avatarPress:(id)sender{
+    DAUploadAvatarWidget *page = [[DAUploadAvatarWidget alloc] init];
+    //[self.navigationController pushViewController:page animated:YES];
+    //[page changeImg];
+    [self presentViewController:page animated:true completion:nil];
 }
 
 @end

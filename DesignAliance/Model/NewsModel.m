@@ -21,7 +21,7 @@
     
     return info;
 }
-
+//重写父类的arrayFromDict方法，由于接口不统一，这里接收的数据由data改为datalist
 + (NSArray *)arrayFromDict:(NSDictionary *)dict{
     NSArray *array = [dict objectForKey:NetDataList];
     return [[self class] arrayFromArray:array];

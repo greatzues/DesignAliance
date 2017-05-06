@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

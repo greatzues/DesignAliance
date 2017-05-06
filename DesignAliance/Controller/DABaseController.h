@@ -26,5 +26,6 @@
 - (void)setNavigationRight:(NSString *)imageName;
 - (void)setStatusBarStyle:(UIStatusBarStyle)style;
 - (IBAction)doBack:(id)sender;
+- (IBAction)doRight:(id)sender;
 
 @end

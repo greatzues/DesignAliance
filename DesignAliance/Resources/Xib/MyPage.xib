@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPage">
             <connections>
-                <outlet property="UserAvatar" destination="BZY-WT-gaU" id="q6W-hC-8kn"/>
+                <outlet property="UserAvatar" destination="h5i-Tb-FFL" id="8eL-TV-J4G"/>
                 <outlet property="UserName" destination="YsH-Ot-hcs" id="Tt9-DS-IVH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rAa-Gq-8OB"/>
             </connections>
@@ -22,13 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5N0-PK-cif">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZY-WT-gaU">
-                    <rect key="frame" x="31" y="41" width="60" height="60"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-Tb-FFL">
+                    <rect key="frame" x="33" y="46" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                    <state key="normal" backgroundImage="userDefaultAvatar.png"/>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="zues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsH-Ot-hcs">
                     <rect key="frame" x="115" y="51" width="200" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-th-MIX">
-                    <rect key="frame" x="0.0" y="162" width="315" height="403"/>
+                    <rect key="frame" x="0.0" y="147" width="375" height="308"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -52,5 +53,6 @@
     </objects>
     <resources>
         <image name="UserBackground.png" width="200" height="114"/>
+        <image name="userDefaultAvatar.png" width="50" height="50"/>
     </resources>
 </document>

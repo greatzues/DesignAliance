@@ -9,8 +9,8 @@
 #import "DABasePage.h"
 
 @interface MyPage : DABasePage<UITableViewDelegate, UITableViewDataSource> {
-    IBOutlet UIImageView    *UserAvatar;
     IBOutlet UILabel        *UserName;
+    IBOutlet UIButton       *UserAvatar;
 }
 
 @property(strong, nonatomic) NSArray *list;

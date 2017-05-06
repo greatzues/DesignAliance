@@ -31,6 +31,8 @@
     _descLabel.numberOfLines = 2;
     _descLabel.text = info.content; //到时再显示时间
     
+//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:info.cover]];
+//    _imageView.image = [UIImage imageWithData:imageData];
     [[DADownload download] setNewsicon:info imageView:_imageView];
 }
 

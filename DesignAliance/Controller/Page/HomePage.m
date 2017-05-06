@@ -7,10 +7,10 @@
 //
 
 #import "HomePage.h"
-#import "NewsPage.h"
-#import "MyPage.h"
-#import "MapPage.h"
 #import "PageModel.h"
+#import "DALogin.h"
+#import "LoginUtility.h"
+
 
 
 @implementation HomePage

@@ -45,6 +45,10 @@
 #define UploadAvatar    BaseURL "Home/UserInfo/uploadAvatar"
 #define GetUserInfo     BaseURL "Home/UserInfo/getUserInfo"
 
+//Company Post
+#define SearchCompanyDefault        BaseURL "Home/Company/searchCompanyLimit"
+#define SearchCompanyByKey          BaseURL "Home/Company/searchCompanyByKey"
+#define SearchCompanyById           BaseURL "Home/Company/searchCompanyById"
 
 //get image url
 #define GetAvatarImage  BaseURL "Home/UserInfo/getAvatarImage/%@"

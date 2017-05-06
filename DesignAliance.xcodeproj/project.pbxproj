@@ -50,6 +50,14 @@
 		820CA83A1EB1CFB2006832B5 /* WeatherBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA8351EB1CFB2006832B5 /* WeatherBack@2x.png */; };
 		820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA8361EB1CFB2006832B5 /* WeatherLocation@2x.png */; };
 		820CA83C1EB1CFB2006832B5 /* WeatherShare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820CA8371EB1CFB2006832B5 /* WeatherShare@2x.png */; };
+		8212A89C1EB9BC0A00CBD43F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A89B1EB9BC0A00CBD43F /* Security.framework */; };
+		8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A89E1EB9BD0B00CBD43F /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8A11EB9BD7300CBD43F /* LoginUtility.m */; };
+		8212A8A41EBC487700CBD43F /* userDefaultAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8A31EBC487700CBD43F /* userDefaultAvatar@2x.png */; };
+		8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */; };
+		8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */; };
+		8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */; };
+		8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */; };
 		8217321A1EB42174006B3387 /* DAButtonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 821732191EB42174006B3387 /* DAButtonHelper.m */; };
 		821732201EB42635006B3387 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217321F1EB42635006B3387 /* NewsModel.m */; };
 		8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217322D1EB44560006B3387 /* DAColumnViewController.m */; };
@@ -101,6 +109,10 @@
 		82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19741EB6D662007C36FE /* suggestion@2x.png */; };
 		82AD197D1EB6D662007C36FE /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19751EB6D662007C36FE /* update@2x.png */; };
 		82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19761EB6D662007C36FE /* vip@2x.png */; };
+		82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19831EB6FADC007C36FE /* SearchModel.m */; };
+		82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19861EB6FC64007C36FE /* DASearchInfo.m */; };
+		82AD19971EB862EF007C36FE /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19961EB862EF007C36FE /* SearchPage.m */; };
+		CC81CE6B2B61E31669A02C38 /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6160919A32FB443E89311C3A /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +133,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6160919A32FB443E89311C3A /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820CA7611EAF0DFF006832B5 /* DAActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivity.h; sourceTree = "<group>"; };
 		820CA7621EAF0DFF006832B5 /* DAActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAActivity.m; sourceTree = "<group>"; };
 		820CA7641EAF2178006832B5 /* DAActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivityIndicator.h; sourceTree = "<group>"; };
@@ -168,6 +182,19 @@
 		820CA8351EB1CFB2006832B5 /* WeatherBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeatherBack@2x.png"; sourceTree = "<group>"; };
 		820CA8361EB1CFB2006832B5 /* WeatherLocation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeatherLocation@2x.png"; sourceTree = "<group>"; };
 		820CA8371EB1CFB2006832B5 /* WeatherShare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeatherShare@2x.png"; sourceTree = "<group>"; };
+		8212A89B1EB9BC0A00CBD43F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8212A89D1EB9BD0B00CBD43F /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		8212A89E1EB9BD0B00CBD43F /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		8212A8A01EB9BD7300CBD43F /* LoginUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtility.h; sourceTree = "<group>"; };
+		8212A8A11EB9BD7300CBD43F /* LoginUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUtility.m; sourceTree = "<group>"; };
+		8212A8A31EBC487700CBD43F /* userDefaultAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefaultAvatar@2x.png"; sourceTree = "<group>"; };
+		8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailsPage.h; sourceTree = "<group>"; };
+		8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailsPage.m; sourceTree = "<group>"; };
+		8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDetailsPage.xib; sourceTree = "<group>"; };
+		8212A8AA1EBC62A700CBD43F /* DAUploadAvatarWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAUploadAvatarWidget.h; sourceTree = "<group>"; };
+		8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatarWidget.m; sourceTree = "<group>"; };
+		8212A8AD1EBC6A4600CBD43F /* DAUploadAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAUploadAvatar.h; sourceTree = "<group>"; };
+		8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatar.m; sourceTree = "<group>"; };
 		821732181EB42174006B3387 /* DAButtonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAButtonHelper.h; sourceTree = "<group>"; };
 		821732191EB42174006B3387 /* DAButtonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAButtonHelper.m; sourceTree = "<group>"; };
 		8217321E1EB42635006B3387 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
@@ -261,6 +288,16 @@
 		82AD19741EB6D662007C36FE /* suggestion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestion@2x.png"; sourceTree = "<group>"; };
 		82AD19751EB6D662007C36FE /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@2x.png"; sourceTree = "<group>"; };
 		82AD19761EB6D662007C36FE /* vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip@2x.png"; sourceTree = "<group>"; };
+		82AD19821EB6FADC007C36FE /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		82AD19831EB6FADC007C36FE /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		82AD19851EB6FC64007C36FE /* DASearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASearchInfo.h; sourceTree = "<group>"; };
+		82AD19861EB6FC64007C36FE /* DASearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASearchInfo.m; sourceTree = "<group>"; };
+		82AD19951EB862EF007C36FE /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPage.h; sourceTree = "<group>"; };
+		82AD19961EB862EF007C36FE /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPage.m; sourceTree = "<group>"; };
+		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
+		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
+		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
+		FA7D26864F2A2E2478F900EE /* Pods-DesignAliance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +305,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8212A89C1EB9BC0A00CBD43F /* Security.framework in Frameworks */,
+				CC81CE6B2B61E31669A02C38 /* libPods-DesignAliance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +415,23 @@
 				823EE7051EB37694001B98B4 /* MyPage.m */,
 				823EE7061EB37694001B98B4 /* NewsPage.h */,
 				823EE7071EB37694001B98B4 /* NewsPage.m */,
+				82AD19951EB862EF007C36FE /* SearchPage.h */,
+				82AD19961EB862EF007C36FE /* SearchPage.m */,
+				8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */,
+				8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */,
 			);
 			path = Page;
+			sourceTree = "<group>";
+		};
+		8212A8941EB9B17C00CBD43F /* LoginUtility */ = {
+			isa = PBXGroup;
+			children = (
+				8212A89D1EB9BD0B00CBD43F /* KeychainItemWrapper.h */,
+				8212A89E1EB9BD0B00CBD43F /* KeychainItemWrapper.m */,
+				8212A8A01EB9BD7300CBD43F /* LoginUtility.h */,
+				8212A8A11EB9BD7300CBD43F /* LoginUtility.m */,
+			);
+			path = LoginUtility;
 			sourceTree = "<group>";
 		};
 		821F2DE01EAC4BF70098081F = {
@@ -388,6 +442,8 @@
 				821F2E051EAC4BF70098081F /* DesignAlianceTests */,
 				821F2E101EAC4BF70098081F /* DesignAlianceUITests */,
 				821F2DEA1EAC4BF70098081F /* Products */,
+				A67E72253C7CF948CE596AB9 /* Pods */,
+				F504B9663D4057E58BACDA1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -484,6 +540,8 @@
 				823EE6EF1EB34150001B98B4 /* PageModel.m */,
 				8217321E1EB42635006B3387 /* NewsModel.h */,
 				8217321F1EB42635006B3387 /* NewsModel.m */,
+				82AD19821EB6FADC007C36FE /* SearchModel.h */,
+				82AD19831EB6FADC007C36FE /* SearchModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -499,6 +557,10 @@
 				8217323C1EB48F85006B3387 /* DANews.m */,
 				82AD19691EB61449007C36FE /* DAGetUserInfo.h */,
 				82AD196A1EB61449007C36FE /* DAGetUserInfo.m */,
+				82AD19851EB6FC64007C36FE /* DASearchInfo.h */,
+				82AD19861EB6FC64007C36FE /* DASearchInfo.m */,
+				8212A8AD1EBC6A4600CBD43F /* DAUploadAvatar.h */,
+				8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -514,6 +576,7 @@
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8212A8941EB9B17C00CBD43F /* LoginUtility */,
 				821732181EB42174006B3387 /* DAButtonHelper.h */,
 				821732191EB42174006B3387 /* DAButtonHelper.m */,
 				8250B4351EAE216F000F037A /* DAFileUtility.h */,
@@ -557,6 +620,8 @@
 				821732301EB446F7006B3387 /* DADesignTalentsWidget.m */,
 				821732431EB4FBD7006B3387 /* DATableWidget.h */,
 				821732441EB4FBD7006B3387 /* DATableWidget.m */,
+				8212A8AA1EBC62A700CBD43F /* DAUploadAvatarWidget.h */,
+				8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -585,6 +650,7 @@
 		821F2E2D1EAC4FBF0098081F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				82AD198B1EB71C21007C36FE /* Search */,
 				82AD196E1EB6D642007C36FE /* MyPage */,
 				820CA7841EB05317006832B5 /* TabBar */,
 				820CA7831EB0530F006832B5 /* NavBar */,
@@ -605,6 +671,7 @@
 				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
 				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
 				82AD19671EB61016007C36FE /* MyPage.xib */,
+				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -638,6 +705,7 @@
 		82AD196E1EB6D642007C36FE /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				8212A8A31EBC487700CBD43F /* userDefaultAvatar@2x.png */,
 				82AD196F1EB6D662007C36FE /* about@2x.png */,
 				82AD19701EB6D662007C36FE /* contactUs@2x.png */,
 				82AD19711EB6D662007C36FE /* logo@2x.png */,
@@ -650,6 +718,34 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		82AD198B1EB71C21007C36FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		A67E72253C7CF948CE596AB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA7D26864F2A2E2478F900EE /* Pods-DesignAliance.debug.xcconfig */,
+				9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */,
+				7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */,
+				9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */,
+				B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F504B9663D4057E58BACDA1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8212A89B1EB9BC0A00CBD43F /* Security.framework */,
+				6160919A32FB443E89311C3A /* libPods-DesignAliance.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -657,9 +753,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 821F2E161EAC4BF70098081F /* Build configuration list for PBXNativeTarget "DesignAliance" */;
 			buildPhases = (
-				821F2DE61EAC4BF70098081F /* Frameworks */,
+				0FD647EE489E9766958419BC /* [CP] Check Pods Manifest.lock */,
 				821F2DE51EAC4BF70098081F /* Sources */,
+				821F2DE61EAC4BF70098081F /* Frameworks */,
 				821F2DE71EAC4BF70098081F /* Resources */,
+				3B2F0D406F1DFFC3A2B04D54 /* [CP] Embed Pods Frameworks */,
+				61DD3F8EBF7CF08E7742FDEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -766,6 +865,7 @@
 				820CA82A1EB1CFA2006832B5 /* home_page_line_vertical@2x.png in Resources */,
 				820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
+				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
 				820CA81F1EB1CF99006832B5 /* NavigationBell@2x.png in Resources */,
 				820CA8081EB1CF90006832B5 /* tabbar_icon_media_highlight@2x.png in Resources */,
@@ -807,6 +907,7 @@
 				820CA8181EB1CF99006832B5 /* NavBarIcon@2x.png in Resources */,
 				820CA82E1EB1CFA2006832B5 /* login_username_icon@2x.png in Resources */,
 				82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */,
+				8212A8A41EBC487700CBD43F /* userDefaultAvatar@2x.png in Resources */,
 				820CA8381EB1CFB2006832B5 /* Icon60@2x.png in Resources */,
 				820CA76F1EAF5296006832B5 /* Assets.xcassets in Resources */,
 				82AD19681EB61016007C36FE /* MyPage.xib in Resources */,
@@ -833,11 +934,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FD647EE489E9766958419BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3B2F0D406F1DFFC3A2B04D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DD3F8EBF7CF08E7742FDEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		821F2DE51EAC4BF70098081F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
 				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
@@ -849,12 +999,17 @@
 				823EE6F01EB34150001B98B4 /* PageModel.m in Sources */,
 				820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */,
 				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
+				82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */,
+				82AD19971EB862EF007C36FE /* SearchPage.m in Sources */,
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
+				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
+				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
+				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,
 				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
 				8217323D1EB48F85006B3387 /* DANews.m in Sources */,
@@ -868,6 +1023,8 @@
 				8217321A1EB42174006B3387 /* DAButtonHelper.m in Sources */,
 				820CA7771EB03418006832B5 /* UserModel.m in Sources */,
 				8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */,
+				8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */,
+				8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */,
 				823EE70C1EB37694001B98B4 /* MyPage.m in Sources */,
 				821732361EB446F7006B3387 /* DADesignTalentsWidget.m in Sources */,
 				8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */,
@@ -1000,6 +1157,7 @@
 		};
 		821F2E171EAC4BF70098081F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA7D26864F2A2E2478F900EE /* Pods-DesignAliance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1014,6 +1172,7 @@
 		};
 		821F2E181EAC4BF70098081F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1119,6 +1278,7 @@
 		};
 		821F2E741EACC9B60098081F /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1200,6 +1360,7 @@
 		};
 		821F2E781EACC9D70098081F /* Enterprise */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1281,6 +1442,7 @@
 		};
 		821F2E7C1EACC9E50098081F /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

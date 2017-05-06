@@ -10,7 +10,6 @@
 #import "LoginPage.h"
 #import "HomePage.h"
 
-
 @implementation AppDelegate
 
 + (AppDelegate *)appDeg{
@@ -29,6 +28,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AMapServices sharedServices].apiKey = AMapKey;
+    
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //下面三行代码可以将LoginPage的的顶部tab显示出来，看上去会比较美观
@@ -41,7 +42,6 @@
     return YES;
     
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     
