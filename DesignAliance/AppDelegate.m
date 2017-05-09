@@ -10,6 +10,7 @@
 #import "LoginPage.h"
 #import "HomePage.h"
 
+
 @implementation AppDelegate
 
 + (AppDelegate *)appDeg{
@@ -29,6 +30,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = AMapKey;
+    //[Bmob registerWithAppKey:BombKey];
     
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

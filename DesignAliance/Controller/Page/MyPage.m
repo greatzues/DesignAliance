@@ -10,6 +10,7 @@
 #import "DAGetUserInfo.h"
 #import "UserModel.h"
 #import "DAUploadAvatarWidget.h"
+#import "RegisterPage.h" //测试注册界面
 
 @implementation MyPage
 @synthesize list = _list;
@@ -87,10 +88,12 @@
 
 //头像的点击事件
 - (IBAction)avatarPress:(id)sender{
-    DAUploadAvatarWidget *page = [[DAUploadAvatarWidget alloc] init];
+    //DAUploadAvatarWidget *page = [[DAUploadAvatarWidget alloc] init];
     //[self.navigationController pushViewController:page animated:YES];
-    //[page changeImg];
-    [self presentViewController:page animated:true completion:nil];
+    //[self presentViewController:page animated:true completion:nil];
+    
+    RegisterPage *page = [[RegisterPage alloc] init];
+    [self.navigationController pushViewController:page animated:YES];
 }
 
 @end

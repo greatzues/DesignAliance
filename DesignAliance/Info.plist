@@ -7,9 +7,9 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>定位到当前位置</string>
 	<key>NSCameraUsageDescription</key>
-	<string>拍照</string>
+	<string>$(PRODUCT_NAME) camera use</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>访问相册</string>
+	<string>$(PRODUCT_NAME) photo use</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

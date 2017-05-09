@@ -83,7 +83,8 @@
 
 //高德地图
 #define AMapKey             @"843b615d0689c272594bb226b4efa96d"
-
+//Bmob短信验证
+#define BombKey             @"a7960f4f28ff203105d06b1997bb4800"
 
 //提示信息
 #define LoginingTip         @"登录中..."

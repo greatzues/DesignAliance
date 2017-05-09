@@ -11,6 +11,7 @@
 #import "UserModel.h"
 #import "AppDelegate.h"
 #import "LoginUtility.h"
+#import "RegisterPage.h"
 
 
 @implementation LoginPage
