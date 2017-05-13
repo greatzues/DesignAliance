@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginPage.h"
 #import "HomePage.h"
+#import <BmobSDK/Bmob.h>
 
 
 @implementation AppDelegate
@@ -30,7 +31,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = AMapKey;
-    //[Bmob registerWithAppKey:BombKey];
+    [Bmob registerWithAppKey:BombKey];
     
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

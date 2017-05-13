@@ -9,20 +9,20 @@
 #import "DesignNewsCell.h"
 #import "NewsModel.h"
 #import "DADownload.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 //暂时先不用Download图片到本地，后面成功添加了新闻列表再加
 @implementation DesignNewsCell
 
 - (void)initCell{
     [super initCell];
-    RegisterNotify(NofifyNewsIcon, @selector(downloadIcon:)); //下载图片暂时先不加上去
+    //RegisterNotify(NofifyNewsIcon, @selector(downloadIcon:)); //下载图片暂时先不加上去
 }
 
-- (void)dealloc
-{
-    RemoveNofify;
-}
+//- (void)dealloc
+//{
+//    RemoveNofify;
+//}
 
 - (void)setCellData:(NewsModel *)info
 {
@@ -31,22 +31,13 @@
     _descLabel.numberOfLines = 2;
     _descLabel.text = info.content; //到时再显示时间
     
-//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:info.cover]];
-//    _imageView.image = [UIImage imageWithData:imageData];
-    [[DADownload download] setNewsicon:info imageView:_imageView];
+    NSString *imageURL = [NSString stringWithFormat:ImageNews,info.cover];
+
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
+    
+//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]]];
+//    _imageView.image = image;
 }
 
-- (void)downloadIcon:(NSNotification *)notification
-{
-//    NSDictionary *dict = [notification object];
-//    NewsModel *info = [dict objectForKey:@"info"];
-//    
-//    if ([info.ID isEqualToString:self.cellInfo.ID]) {
-//        UIImage *image = [dict objectForKey:@"data"];
-//        _imageView.image = image;
-//    }
-    NSDictionary *dict = [notification object];
-    UIImage *image = [dict objectForKey:@"cover"];
-    _imageView.image = image;
-}
+
 @end

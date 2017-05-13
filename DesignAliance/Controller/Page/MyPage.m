@@ -12,6 +12,8 @@
 #import "DAUploadAvatarWidget.h"
 #import "RegisterPage.h" //测试注册界面
 
+#import <SDWebImage/UIButton+WebCache.h>
+
 @implementation MyPage
 @synthesize list = _list;
 @synthesize IconList = _IconList;
@@ -49,11 +51,8 @@
     [super opSuccess:data];
     [UserName setText:data.name];
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,data.avatar];
-    //这样加载图片超慢，需要修改一下加载的方式
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
     
-    //加载
-    [UserAvatar setBackgroundImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
+    [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

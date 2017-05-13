@@ -8,7 +8,6 @@
 
 #import "NewsPage.h"
 
-
 @implementation NewsPage
 
 - (void)viewDidLoad {

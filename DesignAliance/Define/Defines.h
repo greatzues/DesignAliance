@@ -44,6 +44,9 @@
 #define IsiPhone6   (IsiPhone && ScreenMaxLength == 667.0)
 #define IsiPhone6P  (IsiPhone && ScreenMaxLength == 736.0)
 
+//系统版本号是否大于8.0,低于8.0的系统版本中使用UIAlertController会崩溃
+#define IS_SystemVersionGreaterThanEight  ([UIDevice currentDevice].systemVersion.doubleValue >= 8.0)
+
 /*网络请求，这里需要根据服务器进行修改
  {result:ok, data:data}
  {result:error,message:""}
@@ -85,6 +88,8 @@
 #define AMapKey             @"843b615d0689c272594bb226b4efa96d"
 //Bmob短信验证
 #define BombKey             @"a7960f4f28ff203105d06b1997bb4800"
+#define VericationCodeTitle @"获取验证码"
+#define VericationTemplate  @"设计联盟"
 
 //提示信息
 #define LoginingTip         @"登录中..."

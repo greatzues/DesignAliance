@@ -7,9 +7,19 @@
 //
 
 #import "DABasePage.h"
+#import "SearchModel.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface MapPage : DABasePage
+
+@property(nonatomic, strong)   SearchModel          *search;
+@property(nonatomic, strong)   MAMapView            *mapView;
+@property(nonatomic, strong)   MAUserLocation       *currentUserLoaction;
+@property(nonatomic, strong)   MAPointAnnotation    *pointAnnotation;
+
+@property(nonatomic, strong)   NSMutableArray       *pointArray;
+
+@property (nonatomic,assign) CLLocationCoordinate2D coordinate;  //!< 要导航的坐标
 
 @end

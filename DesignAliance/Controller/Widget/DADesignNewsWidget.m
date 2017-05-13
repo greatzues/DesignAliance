@@ -10,6 +10,7 @@
 #import "DADesignNewsWidget.h"
 #import "DANews.h"
 #import "DABaseCell.h"
+#import "DetailsNewsPage.h"
 
 
 @implementation DADesignNewsWidget
@@ -123,16 +124,16 @@
 }
 
 //这个是item点击之后的监听
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    DetailPage *page = [[DetailPage alloc] init];
-//    
-//    page.newsInfo = [self.listData objectAtIndex:indexPath.row];
-//    page.hidesBottomBarWhenPushed = YES;
-//    
-//    UIViewController *owner =  self.owner;
-//    [owner.navigationController pushViewController:page animated:YES];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"--------------->>>>>>>>");
+    DetailsNewsPage *page = [[DetailsNewsPage alloc] init];
+    
+    page.newsInfo = [self.listData objectAtIndex:indexPath.row];
+    page.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:page animated:YES];
+}
 
 
 @end

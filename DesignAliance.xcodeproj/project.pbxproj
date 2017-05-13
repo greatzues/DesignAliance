@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
+		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
+		820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCA1EC4179500CA4951 /* mapMark@2x.png */; };
+		820C9CCD1EC4179500CA4951 /* mapNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCB1EC4179500CA4951 /* mapNormal@2x.png */; };
+		820C9CD11EC5971500CA4951 /* DetailsCompanyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */; };
+		820C9CD21EC5971500CA4951 /* DetailsCompanyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */; };
+		820C9CD51EC6BAD300CA4951 /* DetailsNewsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */; };
+		820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */; };
 		820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7621EAF0DFF006832B5 /* DAActivity.m */; };
 		820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 820CA7651EAF2178006832B5 /* DAActivityIndicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		820CA76F1EAF5296006832B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820CA7691EAF5296006832B5 /* Assets.xcassets */; };
@@ -98,6 +106,7 @@
 		821F2E841EAD8E200098081F /* JsonFramework in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E831EAD8E200098081F /* JsonFramework */; };
 		822FD3A51EC09B5D00E6840E /* RegisterPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822FD3A41EC09B5D00E6840E /* RegisterPage.xib */; };
 		822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3AE1EC173D400E6840E /* UIButton+countDown.m */; };
+		822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3BC1EC1DE4400E6840E /* DARegister.m */; };
 		823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823EE6EC1EB33BAB001B98B4 /* TabBarPages.plist */; };
 		823EE6F01EB34150001B98B4 /* PageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE6EF1EB34150001B98B4 /* PageModel.m */; };
 		823EE7081EB37694001B98B4 /* DABasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE6FD1EB37694001B98B4 /* DABasePage.m */; };
@@ -128,7 +137,7 @@
 		82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19831EB6FADC007C36FE /* SearchModel.m */; };
 		82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19861EB6FC64007C36FE /* DASearchInfo.m */; };
 		82AD19971EB862EF007C36FE /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19961EB862EF007C36FE /* SearchPage.m */; };
-		CC81CE6B2B61E31669A02C38 /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6160919A32FB443E89311C3A /* libPods-DesignAliance.a */; };
+		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,8 +158,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6160919A32FB443E89311C3A /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
+		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		820C9CC51EC4110800CA4951 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		820C9CC71EC412A800CA4951 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		820C9CCA1EC4179500CA4951 /* mapMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapMark@2x.png"; sourceTree = "<group>"; };
+		820C9CCB1EC4179500CA4951 /* mapNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapNormal@2x.png"; sourceTree = "<group>"; };
+		820C9CCE1EC5971500CA4951 /* DetailsCompanyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsCompanyPage.h; sourceTree = "<group>"; };
+		820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsCompanyPage.m; sourceTree = "<group>"; };
+		820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsCompanyPage.xib; path = ../../Controller/Page/DetailsCompanyPage.xib; sourceTree = "<group>"; };
+		820C9CD31EC6BAD300CA4951 /* DetailsNewsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsNewsPage.h; sourceTree = "<group>"; };
+		820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsNewsPage.m; sourceTree = "<group>"; };
+		820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsNewsPage.xib; sourceTree = "<group>"; };
 		820CA7611EAF0DFF006832B5 /* DAActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivity.h; sourceTree = "<group>"; };
 		820CA7621EAF0DFF006832B5 /* DAActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAActivity.m; sourceTree = "<group>"; };
 		820CA7641EAF2178006832B5 /* DAActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAActivityIndicator.h; sourceTree = "<group>"; };
@@ -283,6 +304,8 @@
 		822FD3A41EC09B5D00E6840E /* RegisterPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPage.xib; sourceTree = "<group>"; };
 		822FD3AD1EC173D400E6840E /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		822FD3AE1EC173D400E6840E /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
+		822FD3BB1EC1DE4400E6840E /* DARegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARegister.h; sourceTree = "<group>"; };
+		822FD3BC1EC1DE4400E6840E /* DARegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARegister.m; sourceTree = "<group>"; };
 		823EE6EC1EB33BAB001B98B4 /* TabBarPages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TabBarPages.plist; sourceTree = "<group>"; };
 		823EE6EE1EB34150001B98B4 /* PageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageModel.h; sourceTree = "<group>"; };
 		823EE6EF1EB34150001B98B4 /* PageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageModel.m; sourceTree = "<group>"; };
@@ -347,7 +370,7 @@
 				8212A8C71EBEF72400CBD43F /* JavaScriptCore.framework in Frameworks */,
 				8212A8C51EBEF71B00CBD43F /* SystemConfiguration.framework in Frameworks */,
 				8212A89C1EB9BC0A00CBD43F /* Security.framework in Frameworks */,
-				CC81CE6B2B61E31669A02C38 /* libPods-DesignAliance.a in Frameworks */,
+				DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +485,10 @@
 				8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */,
 				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
 				8212A8D01EBEF90600CBD43F /* RegisterPage.m */,
+				820C9CCE1EC5971500CA4951 /* DetailsCompanyPage.h */,
+				820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */,
+				820C9CD31EC6BAD300CA4951 /* DetailsNewsPage.h */,
+				820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -641,6 +668,8 @@
 				82AD19861EB6FC64007C36FE /* DASearchInfo.m */,
 				8212A8AD1EBC6A4600CBD43F /* DAUploadAvatar.h */,
 				8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */,
+				822FD3BB1EC1DE4400E6840E /* DARegister.h */,
+				822FD3BC1EC1DE4400E6840E /* DARegister.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -704,6 +733,8 @@
 				821732441EB4FBD7006B3387 /* DATableWidget.m */,
 				8212A8AA1EBC62A700CBD43F /* DAUploadAvatarWidget.h */,
 				8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */,
+				820C9CC71EC412A800CA4951 /* CustomAnnotationView.h */,
+				820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -717,6 +748,8 @@
 				821732391EB466AB006B3387 /* DesignNewsCell.m */,
 				821732481EB5859F006B3387 /* NewsMoreCell.h */,
 				821732491EB5859F006B3387 /* NewsMoreCell.m */,
+				820C9CC41EC4110800CA4951 /* CustomCalloutView.h */,
+				820C9CC51EC4110800CA4951 /* CustomCalloutView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -733,7 +766,7 @@
 			isa = PBXGroup;
 			children = (
 				8212A8B41EBDB9A100CBD43F /* CyclePlay */,
-				82AD198B1EB71C21007C36FE /* Search */,
+				82AD198B1EB71C21007C36FE /* Map */,
 				82AD196E1EB6D642007C36FE /* MyPage */,
 				820CA7841EB05317006832B5 /* TabBar */,
 				820CA7831EB0530F006832B5 /* NavBar */,
@@ -748,6 +781,7 @@
 		821F2E2E1EAC4FD30098081F /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */,
 				821946CC1EB23D6200EB68F3 /* Main.storyboard */,
 				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
 				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
@@ -756,6 +790,7 @@
 				82AD19671EB61016007C36FE /* MyPage.xib */,
 				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
 				822FD3A41EC09B5D00E6840E /* RegisterPage.xib */,
+				820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -802,11 +837,13 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
-		82AD198B1EB71C21007C36FE /* Search */ = {
+		82AD198B1EB71C21007C36FE /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				820C9CCA1EC4179500CA4951 /* mapMark@2x.png */,
+				820C9CCB1EC4179500CA4951 /* mapNormal@2x.png */,
 			);
-			name = Search;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		A67E72253C7CF948CE596AB9 /* Pods */ = {
@@ -828,7 +865,7 @@
 				8212A8C61EBEF72400CBD43F /* JavaScriptCore.framework */,
 				8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */,
 				8212A89B1EB9BC0A00CBD43F /* Security.framework */,
-				6160919A32FB443E89311C3A /* libPods-DesignAliance.a */,
+				795BDE456E6989D296C79584 /* libPods-DesignAliance.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -905,6 +942,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = TGSY8NT3H9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					821F2E011EAC4BF70098081F = {
 						CreatedOnToolsVersion = 8.2;
@@ -945,6 +987,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820C9CCD1EC4179500CA4951 /* mapNormal@2x.png in Resources */,
 				82AD196D1EB6BB4E007C36FE /* UserBackground@2x.png in Resources */,
 				820CA8191EB1CF99006832B5 /* NavBarWhite44@2x.png in Resources */,
 				820CA8051EB1CF90006832B5 /* NewsIconSelect@2x.png in Resources */,
@@ -952,6 +995,7 @@
 				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
 				820CA82A1EB1CFA2006832B5 /* home_page_line_vertical@2x.png in Resources */,
 				820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */,
+				820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
@@ -962,6 +1006,7 @@
 				820CA77F1EB0389E006832B5 /* LoginPage.xib in Resources */,
 				820CA8171EB1CF99006832B5 /* NavBarAlpha.png in Resources */,
 				820CA80A1EB1CF90006832B5 /* TabBarShadow@2x.png in Resources */,
+				820C9CD21EC5971500CA4951 /* DetailsCompanyPage.xib in Resources */,
 				820CA83A1EB1CFB2006832B5 /* WeatherBack@2x.png in Resources */,
 				82AD197A1EB6D662007C36FE /* modifyPassword@2x.png in Resources */,
 				821732421EB4D446006B3387 /* DesignNewsCell.xib in Resources */,
@@ -981,6 +1026,7 @@
 				820CA8391EB1CFB2006832B5 /* NewsDefault@2x.png in Resources */,
 				820CA8001EB1CF90006832B5 /* DiscoveryIcon@2x.png in Resources */,
 				8212A8BE1EBDBA3700CBD43F /* cycle_image1.png in Resources */,
+				820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */,
 				820CA8041EB1CF90006832B5 /* NewsIcon@2x.png in Resources */,
 				820CA8061EB1CF90006832B5 /* ReaderIcon@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
@@ -1099,6 +1145,7 @@
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
 				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,
+				820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
@@ -1106,13 +1153,17 @@
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
+				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
+				820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,
 				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
 				8217323D1EB48F85006B3387 /* DANews.m in Sources */,
 				8250B4281EADE210000F037A /* FxJSON.m in Sources */,
 				8250B4291EADE210000F037A /* FxJsonBase.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
+				820C9CD11EC5971500CA4951 /* DetailsCompanyPage.m in Sources */,
 				82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */,
+				820C9CD51EC6BAD300CA4951 /* DetailsNewsPage.m in Sources */,
 				823EE70D1EB37694001B98B4 /* NewsPage.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
 				823EE70A1EB37694001B98B4 /* LoginPage.m in Sources */,
@@ -1270,8 +1321,10 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1292,8 +1345,10 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1406,8 +1461,10 @@
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1495,8 +1552,10 @@
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1583,8 +1642,10 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -9,6 +9,7 @@
 #import "SearchPage.h"
 #import "SearchModel.h"
 #import "DASearchInfo.h"
+#import "MapPage.h"
 
 @interface SearchPage ()<UITableViewDelegate,UITableViewDataSource,UISearchResultsUpdating,UISearchBarDelegate>
 
@@ -115,11 +116,9 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     if (self.searchController.active) {
-        NSLog(@"%ld", (long)[self.searchListArry count]);
         return [self.searchListArry count];
     }
     else{
-        NSLog(@"%ld", (long)[self.dataListArry count]);
         return [self.dataListArry count];
     }
 }
@@ -146,11 +145,15 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.searchController.active) {
         SearchModel *a = [self.searchListArry objectAtIndex:indexPath.row];
-        [self alertView:a.name];
+        MapPage *map =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+        map.search = a;
+        [self.navigationController popToViewController:map animated:YES];
     }
     else{
         SearchModel *s = [self.dataListArry objectAtIndex:indexPath.row];
-        [self alertView:s.name];
+        MapPage *map =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+        map.search = s;
+        [self.navigationController popToViewController:map animated:YES];
     }
 
 }
