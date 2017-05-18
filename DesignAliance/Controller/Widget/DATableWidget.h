@@ -7,6 +7,7 @@
 //
 
 #import "DABaseWidget.h"
+#import "DABasePage.h"
 
 @interface DATableWidget : DABaseWidget {
     IBOutlet UITableView    *_tableView;

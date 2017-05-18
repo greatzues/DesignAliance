@@ -11,18 +11,16 @@
 #import "DADownload.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-//暂时先不用Download图片到本地，后面成功添加了新闻列表再加
 @implementation DesignNewsCell
 
 - (void)initCell{
     [super initCell];
-    //RegisterNotify(NofifyNewsIcon, @selector(downloadIcon:)); //下载图片暂时先不加上去
 }
 
-//- (void)dealloc
-//{
-//    RemoveNofify;
-//}
+- (void)dealloc
+{
+    RemoveNofify;
+}
 
 - (void)setCellData:(NewsModel *)info
 {
@@ -35,8 +33,6 @@
 
     [_imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
     
-//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]]];
-//    _imageView.image = image;
 }
 
 

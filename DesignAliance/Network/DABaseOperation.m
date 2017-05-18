@@ -102,14 +102,15 @@
 
 - (void)parseFail:(id)dict{
     NSString *result = [[dict objectForKey:NetCode] stringValue];
-    if([dict isKindOfClass:[NSString class]]) {
-        [_delegate opFail:(NSString *)dict];
-        return;
-    }
-    
-//    if ([result isEqualToString:@"40000"]){
-//        BASE_ERROR_FUN([dict objectForKey:NetMessage]);
+//    if([dict isKindOfClass:[NSString class]]) {
+//        [_delegate opFail:(NSString *)dict];
+//        return;
 //    }
+    
+    if ([result isEqualToString:@"40000"]){
+        [_delegate opFail:[dict objectForKey:NetMessage]];
+        return ;
+    }
     [_delegate opFail:[dict objectForKey:NetMessage]];
 }
 

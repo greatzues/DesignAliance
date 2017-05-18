@@ -91,6 +91,7 @@
         [self.mapView removeAnnotation:_pointAnnotation];
     
         SearchPage *page = [[SearchPage alloc] init];
+        page.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:page animated:YES];
 }
 

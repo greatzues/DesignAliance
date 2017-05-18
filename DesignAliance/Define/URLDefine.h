@@ -22,8 +22,8 @@
 #define BaseHost        @"http://"
 #define BasePort        @""
 #else
-#define BaseHost        @"http://139.199.165.150"
-#define BasePort        @":8080"
+#define BaseHost        @"http://119.29.14.160"
+#define BasePort        @":80"
 #endif
 
 #define BaseServer      BaseHost BasePort
