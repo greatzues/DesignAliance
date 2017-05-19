@@ -8,21 +8,60 @@
 
 #import "DATableWidget.h"
 #import "DABaseCell.h"
+#import "DABasePage.h"
 
 
 @implementation DATableWidget
 
+-(void)viewDidLoad{
+    _cellHeight = 80;
+    _pageNo = 1;
+    _pageSize = 10;
+    
+    //初始化DABasepage
+    _page = [[DABasePage alloc] init];
+    //初始化下拉刷新头部
+    self.header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    //初始化下拉刷新尾部
+    self.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+    _tableView.mj_header = self.header;
+    _tableView.mj_footer = self.footer;
+    [_tableView.mj_header beginRefreshing];
+}
+
 - (void)updateUI{
     [_tableView reloadData];
 }
+
+#pragma mark - Refresh methods
+- (void)loadNewData{
+    
+};
+
+- (void)loadMoreData{
+    
+};
 
 #pragma mark - DAOperationDelegate methods
 
 - (void)opSuccess:(id)data{
     [super opSuccess:data];
     
-    self.listData = data;
+    //self.listData = data;
+    
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
     [self updateUI];
+}
+
+- (void)opFail:(NSString *)errorMessage{
+    [super opFail:errorMessage];
+    [self.footer setTitle:errorMessage forState:MJRefreshStateIdle];
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
+    
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource methods
@@ -57,8 +96,17 @@
     return cell;
 }
 
+- (void)initToDetails:(DABasePage *)page{
+    _page = page;
+    _page.hidesBottomBarWhenPushed = YES; //隐藏底部tab
+    
+    [self.navigationController pushViewController:_page animated:YES];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+
 }
 
 
