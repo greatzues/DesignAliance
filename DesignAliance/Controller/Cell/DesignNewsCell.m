@@ -8,7 +8,6 @@
 
 #import "DesignNewsCell.h"
 #import "NewsModel.h"
-#import "DADownload.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation DesignNewsCell

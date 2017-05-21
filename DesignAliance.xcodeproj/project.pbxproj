@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18397B881ED11CD500334AB3 /* DADesignMissionWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */; };
+		18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */; };
+		18397B8E1ED13FBE00334AB3 /* DAAdvertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */; };
+		187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D01ED02206006B2EF9 /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		187C45DA1ED02206006B2EF9 /* FxJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D21ED02206006B2EF9 /* FxJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D41ED02206006B2EF9 /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		187C45DC1ED02206006B2EF9 /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D61ED02206006B2EF9 /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		187C45DD1ED02206006B2EF9 /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D81ED02206006B2EF9 /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45DF1ED035C5006B2EF9 /* MissionModel.m */; };
+		187C45E21ED03A70006B2EF9 /* DesignMissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */; };
+		187C45E51ED04367006B2EF9 /* DAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45E41ED04367006B2EF9 /* DAMission.m */; };
+		187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */; };
 		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
 		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
 		820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCA1EC4179500CA4951 /* mapMark@2x.png */; };
@@ -71,8 +83,6 @@
 		8212A8BF1EBDBA3700CBD43F /* cycle_image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8B91EBDBA3700CBD43F /* cycle_image2.png */; };
 		8212A8C01EBDBA3700CBD43F /* cycle_image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8BA1EBDBA3700CBD43F /* cycle_image3.png */; };
 		8212A8C11EBDBA3700CBD43F /* cycle_image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8BB1EBDBA3700CBD43F /* cycle_image4.png */; };
-		8212A8C21EBDBA3700CBD43F /* cycle_image5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8BC1EBDBA3700CBD43F /* cycle_image5.png */; };
-		8212A8C31EBDBA3700CBD43F /* cycle_image6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8BD1EBDBA3700CBD43F /* cycle_image6.png */; };
 		8212A8C51EBEF71B00CBD43F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */; };
 		8212A8C71EBEF72400CBD43F /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A8C61EBEF72400CBD43F /* JavaScriptCore.framework */; };
 		8212A8C91EBEF72F00CBD43F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A8C81EBEF72F00CBD43F /* CoreLocation.framework */; };
@@ -103,7 +113,6 @@
 		821F2E561EACB7CF0098081F /* DABaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E551EACB7CF0098081F /* DABaseController.m */; };
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
 		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
-		821F2E841EAD8E200098081F /* JsonFramework in Resources */ = {isa = PBXBuildFile; fileRef = 821F2E831EAD8E200098081F /* JsonFramework */; };
 		822FD3A51EC09B5D00E6840E /* RegisterPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822FD3A41EC09B5D00E6840E /* RegisterPage.xib */; };
 		822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3AE1EC173D400E6840E /* UIButton+countDown.m */; };
 		822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3BC1EC1DE4400E6840E /* DARegister.m */; };
@@ -117,11 +126,6 @@
 		823EE70D1EB37694001B98B4 /* NewsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE7071EB37694001B98B4 /* NewsPage.m */; };
 		823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE70F1EB37710001B98B4 /* DABaseCell.m */; };
 		823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE7121EB37724001B98B4 /* DABaseWidget.m */; };
-		8250B4281EADE210000F037A /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B41F1EADE210000F037A /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8250B4291EADE210000F037A /* FxJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4211EADE210000F037A /* FxJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4231EADE210000F037A /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4251EADE210000F037A /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4271EADE210000F037A /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4361EAE216F000F037A /* DAFileUtility.m */; };
 		82AD19681EB61016007C36FE /* MyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19671EB61016007C36FE /* MyPage.xib */; };
 		82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD196A1EB61449007C36FE /* DAGetUserInfo.m */; };
@@ -158,6 +162,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DADesignMissionWidget.xib; sourceTree = "<group>"; };
+		18397B891ED13EA000334AB3 /* AdvertisementModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementModel.h; sourceTree = "<group>"; };
+		18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementModel.m; sourceTree = "<group>"; };
+		18397B8C1ED13FBE00334AB3 /* DAAdvertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAdvertisement.h; sourceTree = "<group>"; };
+		18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAdvertisement.m; sourceTree = "<group>"; };
+		187C45CF1ED02206006B2EF9 /* FxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJSON.h; sourceTree = "<group>"; };
+		187C45D01ED02206006B2EF9 /* FxJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJSON.m; sourceTree = "<group>"; };
+		187C45D11ED02206006B2EF9 /* FxJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonBase.h; sourceTree = "<group>"; };
+		187C45D21ED02206006B2EF9 /* FxJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonBase.m; sourceTree = "<group>"; };
+		187C45D31ED02206006B2EF9 /* FxJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonParser.h; sourceTree = "<group>"; };
+		187C45D41ED02206006B2EF9 /* FxJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonParser.m; sourceTree = "<group>"; };
+		187C45D51ED02206006B2EF9 /* FxJsonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonUtility.h; sourceTree = "<group>"; };
+		187C45D61ED02206006B2EF9 /* FxJsonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonUtility.m; sourceTree = "<group>"; };
+		187C45D71ED02206006B2EF9 /* FxJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonWriter.h; sourceTree = "<group>"; };
+		187C45D81ED02206006B2EF9 /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
+		187C45DE1ED035C5006B2EF9 /* MissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionModel.h; sourceTree = "<group>"; };
+		187C45DF1ED035C5006B2EF9 /* MissionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionModel.m; sourceTree = "<group>"; };
+		187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignMissionCell.xib; sourceTree = "<group>"; };
+		187C45E31ED04367006B2EF9 /* DAMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAMission.h; sourceTree = "<group>"; };
+		187C45E41ED04367006B2EF9 /* DAMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAMission.m; sourceTree = "<group>"; };
+		187C45E61ED043C5006B2EF9 /* DesignMissionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignMissionCell.h; sourceTree = "<group>"; };
+		187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignMissionCell.m; sourceTree = "<group>"; };
 		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
@@ -238,8 +264,6 @@
 		8212A8B91EBDBA3700CBD43F /* cycle_image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image2.png; sourceTree = "<group>"; };
 		8212A8BA1EBDBA3700CBD43F /* cycle_image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image3.png; sourceTree = "<group>"; };
 		8212A8BB1EBDBA3700CBD43F /* cycle_image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image4.png; sourceTree = "<group>"; };
-		8212A8BC1EBDBA3700CBD43F /* cycle_image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image5.png; sourceTree = "<group>"; };
-		8212A8BD1EBDBA3700CBD43F /* cycle_image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image6.png; sourceTree = "<group>"; };
 		8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8212A8C61EBEF72400CBD43F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		8212A8C81EBEF72F00CBD43F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -300,7 +324,6 @@
 		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
 		821F2E7F1EACCC460098081F /* DABaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseOperation.h; sourceTree = "<group>"; };
 		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
-		821F2E831EAD8E200098081F /* JsonFramework */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JsonFramework; path = /Users/zues/DesignAliance/DesignAliance/ThirdSDK/JsonFramework; sourceTree = "<absolute>"; };
 		822FD3A41EC09B5D00E6840E /* RegisterPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPage.xib; sourceTree = "<group>"; };
 		822FD3AD1EC173D400E6840E /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		822FD3AE1EC173D400E6840E /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
@@ -325,16 +348,6 @@
 		823EE70F1EB37710001B98B4 /* DABaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseCell.m; sourceTree = "<group>"; };
 		823EE7111EB37724001B98B4 /* DABaseWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseWidget.h; sourceTree = "<group>"; };
 		823EE7121EB37724001B98B4 /* DABaseWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseWidget.m; sourceTree = "<group>"; };
-		8250B41E1EADE210000F037A /* FxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJSON.h; sourceTree = "<group>"; };
-		8250B41F1EADE210000F037A /* FxJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJSON.m; sourceTree = "<group>"; };
-		8250B4201EADE210000F037A /* FxJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonBase.h; sourceTree = "<group>"; };
-		8250B4211EADE210000F037A /* FxJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonBase.m; sourceTree = "<group>"; };
-		8250B4221EADE210000F037A /* FxJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonParser.h; sourceTree = "<group>"; };
-		8250B4231EADE210000F037A /* FxJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonParser.m; sourceTree = "<group>"; };
-		8250B4241EADE210000F037A /* FxJsonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonUtility.h; sourceTree = "<group>"; };
-		8250B4251EADE210000F037A /* FxJsonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonUtility.m; sourceTree = "<group>"; };
-		8250B4261EADE210000F037A /* FxJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonWriter.h; sourceTree = "<group>"; };
-		8250B4271EADE210000F037A /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
 		8250B4351EAE216F000F037A /* DAFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAFileUtility.h; sourceTree = "<group>"; };
 		8250B4361EAE216F000F037A /* DAFileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAFileUtility.m; sourceTree = "<group>"; };
 		82AD19671EB61016007C36FE /* MyPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPage.xib; sourceTree = "<group>"; };
@@ -391,6 +404,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187C45CE1ED021CD006B2EF9 /* JsonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				187C45CF1ED02206006B2EF9 /* FxJSON.h */,
+				187C45D01ED02206006B2EF9 /* FxJSON.m */,
+				187C45D11ED02206006B2EF9 /* FxJsonBase.h */,
+				187C45D21ED02206006B2EF9 /* FxJsonBase.m */,
+				187C45D31ED02206006B2EF9 /* FxJsonParser.h */,
+				187C45D41ED02206006B2EF9 /* FxJsonParser.m */,
+				187C45D51ED02206006B2EF9 /* FxJsonUtility.h */,
+				187C45D61ED02206006B2EF9 /* FxJsonUtility.m */,
+				187C45D71ED02206006B2EF9 /* FxJsonWriter.h */,
+				187C45D81ED02206006B2EF9 /* FxJsonWriter.m */,
+			);
+			path = JsonFramework;
+			sourceTree = "<group>";
+		};
 		820CA7801EB052CB006832B5 /* Background */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,8 +552,6 @@
 				8212A8B91EBDBA3700CBD43F /* cycle_image2.png */,
 				8212A8BA1EBDBA3700CBD43F /* cycle_image3.png */,
 				8212A8BB1EBDBA3700CBD43F /* cycle_image4.png */,
-				8212A8BC1EBDBA3700CBD43F /* cycle_image5.png */,
-				8212A8BD1EBDBA3700CBD43F /* cycle_image6.png */,
 			);
 			path = CyclePlay;
 			sourceTree = "<group>";
@@ -649,6 +677,10 @@
 				8217321F1EB42635006B3387 /* NewsModel.m */,
 				82AD19821EB6FADC007C36FE /* SearchModel.h */,
 				82AD19831EB6FADC007C36FE /* SearchModel.m */,
+				187C45DE1ED035C5006B2EF9 /* MissionModel.h */,
+				187C45DF1ED035C5006B2EF9 /* MissionModel.m */,
+				18397B891ED13EA000334AB3 /* AdvertisementModel.h */,
+				18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -670,6 +702,10 @@
 				8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */,
 				822FD3BB1EC1DE4400E6840E /* DARegister.h */,
 				822FD3BC1EC1DE4400E6840E /* DARegister.m */,
+				187C45E31ED04367006B2EF9 /* DAMission.h */,
+				187C45E41ED04367006B2EF9 /* DAMission.m */,
+				18397B8C1ED13FBE00334AB3 /* DAAdvertisement.h */,
+				18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -703,7 +739,7 @@
 		821F2E261EAC4E740098081F /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				8250B40E1EADDD2C000F037A /* JsonFramework */,
+				187C45CE1ED021CD006B2EF9 /* JsonFramework */,
 			);
 			path = ThirdSDK;
 			sourceTree = "<group>";
@@ -746,6 +782,8 @@
 				823EE70F1EB37710001B98B4 /* DABaseCell.m */,
 				821732381EB466AB006B3387 /* DesignNewsCell.h */,
 				821732391EB466AB006B3387 /* DesignNewsCell.m */,
+				187C45E61ED043C5006B2EF9 /* DesignMissionCell.h */,
+				187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */,
 				821732481EB5859F006B3387 /* NewsMoreCell.h */,
 				821732491EB5859F006B3387 /* NewsMoreCell.m */,
 				820C9CC41EC4110800CA4951 /* CustomCalloutView.h */,
@@ -784,13 +822,15 @@
 				820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */,
 				821946CC1EB23D6200EB68F3 /* Main.storyboard */,
 				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
-				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
 				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
+				18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */,
 				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
 				82AD19671EB61016007C36FE /* MyPage.xib */,
 				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
 				822FD3A41EC09B5D00E6840E /* RegisterPage.xib */,
 				820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */,
+				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
+				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -802,23 +842,6 @@
 				821F2E711EACBD8E0098081F /* URLDefine.h */,
 			);
 			path = Define;
-			sourceTree = "<group>";
-		};
-		8250B40E1EADDD2C000F037A /* JsonFramework */ = {
-			isa = PBXGroup;
-			children = (
-				8250B41E1EADE210000F037A /* FxJSON.h */,
-				8250B41F1EADE210000F037A /* FxJSON.m */,
-				8250B4201EADE210000F037A /* FxJsonBase.h */,
-				8250B4211EADE210000F037A /* FxJsonBase.m */,
-				8250B4221EADE210000F037A /* FxJsonParser.h */,
-				8250B4231EADE210000F037A /* FxJsonParser.m */,
-				8250B4241EADE210000F037A /* FxJsonUtility.h */,
-				8250B4251EADE210000F037A /* FxJsonUtility.m */,
-				8250B4261EADE210000F037A /* FxJsonWriter.h */,
-				8250B4271EADE210000F037A /* FxJsonWriter.m */,
-			);
-			path = JsonFramework;
 			sourceTree = "<group>";
 		};
 		82AD196E1EB6D642007C36FE /* MyPage */ = {
@@ -995,6 +1018,7 @@
 				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
 				820CA82A1EB1CFA2006832B5 /* home_page_line_vertical@2x.png in Resources */,
 				820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */,
+				187C45E21ED03A70006B2EF9 /* DesignMissionCell.xib in Resources */,
 				820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
@@ -1019,6 +1043,7 @@
 				820CA8281EB1CFA2006832B5 /* account_snslogin_icon_1@2x.png in Resources */,
 				820CA8011EB1CF90006832B5 /* DiscoveryIconSelect@2x.png in Resources */,
 				820CA8291EB1CFA2006832B5 /* account_snslogin_icon_3@2x.png in Resources */,
+				18397B881ED11CD500334AB3 /* DADesignMissionWidget.xib in Resources */,
 				8212A8C11EBDBA3700CBD43F /* cycle_image4.png in Resources */,
 				821946CD1EB23D6200EB68F3 /* Main.storyboard in Resources */,
 				820CA8321EB1CFAA006832B5 /* ColumnBarRight@2x.png in Resources */,
@@ -1036,12 +1061,10 @@
 				820CA80B1EB1CF90006832B5 /* VoiceIcon@2x.png in Resources */,
 				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
 				82AD19791EB6D662007C36FE /* logo@2x.png in Resources */,
-				8212A8C21EBDBA3700CBD43F /* cycle_image5.png in Resources */,
 				820CA80C1EB1CF90006832B5 /* VoiceIconSelect@2x.png in Resources */,
 				82AD19771EB6D662007C36FE /* about@2x.png in Resources */,
 				820CA81E1EB1CF99006832B5 /* NavigationBar64@2x.png in Resources */,
 				820CA82C1EB1CFA2006832B5 /* login_forgot_button@2x.png in Resources */,
-				821F2E841EAD8E200098081F /* JsonFramework in Resources */,
 				820CA8181EB1CF99006832B5 /* NavBarIcon@2x.png in Resources */,
 				820CA82E1EB1CFA2006832B5 /* login_username_icon@2x.png in Resources */,
 				82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */,
@@ -1052,7 +1075,6 @@
 				82AD19681EB61016007C36FE /* MyPage.xib in Resources */,
 				820CA8031EB1CF90006832B5 /* MyIconSelect@2x.png in Resources */,
 				82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */,
-				8212A8C31EBDBA3700CBD43F /* cycle_image6.png in Resources */,
 				820CA83C1EB1CFB2006832B5 /* WeatherShare@2x.png in Resources */,
 				821732471EB58209006B3387 /* DADesignNewsWidget.xib in Resources */,
 			);
@@ -1130,6 +1152,7 @@
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
+				187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */,
 				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
 				8217323A1EB466AB006B3387 /* DesignNewsCell.m in Sources */,
 				823EE7091EB37694001B98B4 /* HomePage.m in Sources */,
@@ -1141,26 +1164,28 @@
 				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
 				8212A8DF1EBF062000CBD43F /* JVFloatLabeledTextField.m in Sources */,
 				82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */,
+				18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */,
 				82AD19971EB862EF007C36FE /* SearchPage.m in Sources */,
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
 				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,
+				18397B8E1ED13FBE00334AB3 /* DAAdvertisement.m in Sources */,
 				820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
+				187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */,
 				8212A8D11EBEF90600CBD43F /* RegisterPage.m in Sources */,
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
 				820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */,
+				187C45E51ED04367006B2EF9 /* DAMission.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,
-				8250B42A1EADE210000F037A /* FxJsonParser.m in Sources */,
 				8217323D1EB48F85006B3387 /* DANews.m in Sources */,
-				8250B4281EADE210000F037A /* FxJSON.m in Sources */,
-				8250B4291EADE210000F037A /* FxJsonBase.m in Sources */,
 				821F2DF11EAC4BF70098081F /* AppDelegate.m in Sources */,
+				187C45DA1ED02206006B2EF9 /* FxJsonBase.m in Sources */,
 				820C9CD11EC5971500CA4951 /* DetailsCompanyPage.m in Sources */,
 				82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */,
 				820C9CD51EC6BAD300CA4951 /* DetailsNewsPage.m in Sources */,
@@ -1169,20 +1194,22 @@
 				823EE70A1EB37694001B98B4 /* LoginPage.m in Sources */,
 				8217321A1EB42174006B3387 /* DAButtonHelper.m in Sources */,
 				820CA7771EB03418006832B5 /* UserModel.m in Sources */,
-				8250B42B1EADE211000F037A /* FxJsonUtility.m in Sources */,
 				8212A8E11EBF062000CBD43F /* NSString+TextDirectionality.m in Sources */,
 				8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */,
 				8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */,
 				8212A8B71EBDBA2A00CBD43F /* CCCycleScrollView.m in Sources */,
 				823EE70C1EB37694001B98B4 /* MyPage.m in Sources */,
 				821732361EB446F7006B3387 /* DADesignTalentsWidget.m in Sources */,
-				8250B42C1EADE211000F037A /* FxJsonWriter.m in Sources */,
 				822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */,
 				8212A8E01EBF062000CBD43F /* JVFloatLabeledTextView.m in Sources */,
+				187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */,
 				821732351EB446F7006B3387 /* DADesignNewsWidget.m in Sources */,
+				187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */,
 				821732541EB58B1F006B3387 /* DADownload.m in Sources */,
 				8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */,
 				821732551EB58B1F006B3387 /* DAGlobal.m in Sources */,
+				187C45DD1ED02206006B2EF9 /* FxJsonWriter.m in Sources */,
+				187C45DC1ED02206006B2EF9 /* FxJsonUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

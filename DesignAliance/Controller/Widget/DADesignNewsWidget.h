@@ -7,9 +7,9 @@
 //
 
 #import "DATableWidget.h"
-#import "MJRefresh.h"
+#import "CCCycleScrollView.h"
+
 
 @interface DADesignNewsWidget : DATableWidget
-
 
 @end

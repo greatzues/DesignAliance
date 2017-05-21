@@ -58,9 +58,6 @@
     [super opSuccess:data];
 }
 
-- (void)opFail:(NSString *)errorMessage{
-    [super opFail:errorMessage];
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

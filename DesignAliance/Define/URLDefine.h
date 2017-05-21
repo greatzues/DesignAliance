@@ -37,6 +37,7 @@
 #define NewsURL         BaseURL "Home/DesignAdvice/showDesignAdvice"
 #define MissionURL      BaseURL "Home/DesignMission/showDesignMission"
 #define TalentsURl      BaseURL "Home/DesignPerson/showDesignPerson"
+#define Advertisement   BaseURL "Home/Advertisement/showAdvertisement"
 
 #define ModifyPassword  BaseURL "Home/User/modifyPassword"
 #define CheckUpdate     BaseURL "Home/User/checkUpdate"
@@ -56,4 +57,5 @@
 #define ImageNews       BaseURL "DesignAdvice/%@"
 #define ImageMission    BaseURL "DesignMission/%@"
 #define ImageTalents    BaseURL "DesignPerson/%@"
+#define ImageAD         BaseURL "Advertisement/%@"
 
