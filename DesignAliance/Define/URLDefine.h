@@ -51,6 +51,12 @@
 #define SearchCompanyByKey          BaseURL "Home/Company/searchCompanyByKey"
 #define SearchCompanyById           BaseURL "Home/Company/searchCompanyById"
 
+//searchByKey
+#define SearchDesignNew             BaseURL "Home/DesignAdvice/searchDesignAdviceByTitle"
+#define SearchDesignMission         BaseURL "Home/DesignMission/searchDesignMissionByTitle"
+#define SearchDesignTalents         BaseURL "Home/DesignPerson/searchDesignPersonBySkill"
+
+
 //get image url
 #define GetAvatarImage  BaseURL "Home/UserInfo/getAvatarImage/%@"
 #define ImageAvatar     BaseURL "Avatar/%@"

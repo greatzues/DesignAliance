@@ -8,7 +8,10 @@
 
 #import "DABasePage.h"
 #import "DAColumnViewController.h"
+#import "DABaseSearchPage.h"
 
 @interface NewsPage : DAColumnViewController
+
+@property (nonatomic, strong) DABaseSearchPage     *page;
 
 @end

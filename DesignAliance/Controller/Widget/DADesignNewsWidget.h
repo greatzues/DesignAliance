@@ -7,7 +7,10 @@
 //
 
 #import "DATableWidget.h"
+#import "NewsModel.h"
 
 @interface DADesignNewsWidget : DATableWidget
+
+@property(nonatomic, strong)   NewsModel          *search;
 
 @end

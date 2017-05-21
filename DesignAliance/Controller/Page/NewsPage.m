@@ -7,11 +7,17 @@
 //
 
 #import "NewsPage.h"
+#import "SearchNewsPage.h"
+#import "SearchMissionPage.h"
+#import "SearchTalentsPage.h"
 
 @implementation NewsPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SearchNewsPage  *NewsPage = [[SearchNewsPage alloc] init];
+    self.page = NewsPage;
+    
     [self setNavigationLeft:@"NavigationBell.png" sel:nil];
     [self setNavigationRight:@"NavigationSquare.png"];
     [self setNavigationTitleImage:@"NavBarIcon.png"]; //设置顶部标题的背景图片
@@ -42,7 +48,34 @@
 //设置顶部三个tab点中事件的响应
 - (void)didSelectSegmentIndex:(NSInteger)index
 {
-    NSLog(@"-->>%ld", (long)index);
+    switch (index) {
+        case 0:
+            {
+                SearchNewsPage  *NewsPage = [[SearchNewsPage alloc] init];
+                self.page = NewsPage;
+            }
+            break;
+        case 1:
+            {
+                SearchMissionPage *MissionPage = [[SearchMissionPage alloc] init];
+                self.page = MissionPage;
+            }
+            break;
+        case 2:
+        {
+            SearchTalentsPage *TalentsPage = [[SearchTalentsPage alloc] init];
+            self.page = TalentsPage;
+        }
+            break;
+        default:
+            break;
+    }
+    
+}
+
+-(void)doRight:(id)sender{
+    self.page.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:self.page animated:YES];
 }
 
 @end

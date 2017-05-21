@@ -24,9 +24,10 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     self.searchListArry = [NSMutableArray array];
     self.dataListArry = [NSMutableArray arrayWithCapacity:100];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     //初始化数据
     [self initData];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,15 +132,16 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
 }
 
-//点击单元格之后的监听
+#pragma 点击单元格之后的监听
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 }
 
-//谓词搜索过滤
+#pragma 谓词搜索过滤
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    
-
+    self.searchString = [self.searchController.searchBar text];
+    if (self.searchListArry!= nil) {
+        [self.searchListArry removeAllObjects];
+    }
 }
-
 @end

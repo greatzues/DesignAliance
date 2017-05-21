@@ -7,7 +7,10 @@
 //
 
 #import "DATableWidget.h"
+#import "TalentsModel.h"
 
 @interface DADesignTalentsWidget : DATableWidget
+
+@property(nonatomic, strong)   TalentsModel          *search;
 
 @end

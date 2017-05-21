@@ -16,6 +16,9 @@
 		18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */; };
 		18397B9F1ED19DF400334AB3 /* DADesignTalentsWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */; };
 		18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */; };
+		18397BA81ED1C53B00334AB3 /* SearchNewsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397BA71ED1C53B00334AB3 /* SearchNewsPage.m */; };
+		18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397BAA1ED1C55500334AB3 /* SearchMissionPage.m */; };
+		18397BAE1ED1C57700334AB3 /* SearchTalentsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397BAD1ED1C57700334AB3 /* SearchTalentsPage.m */; };
 		187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D01ED02206006B2EF9 /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		187C45DA1ED02206006B2EF9 /* FxJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D21ED02206006B2EF9 /* FxJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D41ED02206006B2EF9 /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -145,7 +148,7 @@
 		82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19761EB6D662007C36FE /* vip@2x.png */; };
 		82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19831EB6FADC007C36FE /* SearchModel.m */; };
 		82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19861EB6FC64007C36FE /* DASearchInfo.m */; };
-		82AD19971EB862EF007C36FE /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19961EB862EF007C36FE /* SearchPage.m */; };
+		82AD19971EB862EF007C36FE /* SearchMapPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD19961EB862EF007C36FE /* SearchMapPage.m */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +185,12 @@
 		18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DADesignTalentsWidget.xib; sourceTree = "<group>"; };
 		18397BA31ED1A1CD00334AB3 /* DABaseSearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseSearchPage.h; sourceTree = "<group>"; };
 		18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseSearchPage.m; sourceTree = "<group>"; };
+		18397BA61ED1C53B00334AB3 /* SearchNewsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNewsPage.h; sourceTree = "<group>"; };
+		18397BA71ED1C53B00334AB3 /* SearchNewsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNewsPage.m; sourceTree = "<group>"; };
+		18397BA91ED1C55500334AB3 /* SearchMissionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMissionPage.h; sourceTree = "<group>"; };
+		18397BAA1ED1C55500334AB3 /* SearchMissionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMissionPage.m; sourceTree = "<group>"; };
+		18397BAC1ED1C57700334AB3 /* SearchTalentsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTalentsPage.h; sourceTree = "<group>"; };
+		18397BAD1ED1C57700334AB3 /* SearchTalentsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTalentsPage.m; sourceTree = "<group>"; };
 		187C45CF1ED02206006B2EF9 /* FxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJSON.h; sourceTree = "<group>"; };
 		187C45D01ED02206006B2EF9 /* FxJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJSON.m; sourceTree = "<group>"; };
 		187C45D11ED02206006B2EF9 /* FxJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonBase.h; sourceTree = "<group>"; };
@@ -379,8 +388,8 @@
 		82AD19831EB6FADC007C36FE /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		82AD19851EB6FC64007C36FE /* DASearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASearchInfo.h; sourceTree = "<group>"; };
 		82AD19861EB6FC64007C36FE /* DASearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASearchInfo.m; sourceTree = "<group>"; };
-		82AD19951EB862EF007C36FE /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPage.h; path = DesignAliance/Controller/Page/SearchPage.h; sourceTree = SOURCE_ROOT; };
-		82AD19961EB862EF007C36FE /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPage.m; path = DesignAliance/Controller/Page/SearchPage.m; sourceTree = SOURCE_ROOT; };
+		82AD19951EB862EF007C36FE /* SearchMapPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchMapPage.h; path = DesignAliance/Controller/Page/SearchMapPage.h; sourceTree = SOURCE_ROOT; };
+		82AD19961EB862EF007C36FE /* SearchMapPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchMapPage.m; path = DesignAliance/Controller/Page/SearchMapPage.m; sourceTree = SOURCE_ROOT; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -422,8 +431,14 @@
 			children = (
 				18397BA31ED1A1CD00334AB3 /* DABaseSearchPage.h */,
 				18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */,
-				82AD19951EB862EF007C36FE /* SearchPage.h */,
-				82AD19961EB862EF007C36FE /* SearchPage.m */,
+				82AD19951EB862EF007C36FE /* SearchMapPage.h */,
+				82AD19961EB862EF007C36FE /* SearchMapPage.m */,
+				18397BA61ED1C53B00334AB3 /* SearchNewsPage.h */,
+				18397BA71ED1C53B00334AB3 /* SearchNewsPage.m */,
+				18397BA91ED1C55500334AB3 /* SearchMissionPage.h */,
+				18397BAA1ED1C55500334AB3 /* SearchMissionPage.m */,
+				18397BAC1ED1C57700334AB3 /* SearchTalentsPage.h */,
+				18397BAD1ED1C57700334AB3 /* SearchTalentsPage.m */,
 			);
 			path = SearchPage;
 			sourceTree = "<group>";
@@ -1175,6 +1190,7 @@
 				18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */,
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
+				18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
 				18397B951ED1997B00334AB3 /* DesignTalentsCell.m in Sources */,
 				187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */,
@@ -1190,7 +1206,7 @@
 				8212A8DF1EBF062000CBD43F /* JVFloatLabeledTextField.m in Sources */,
 				82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */,
 				18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */,
-				82AD19971EB862EF007C36FE /* SearchPage.m in Sources */,
+				82AD19971EB862EF007C36FE /* SearchMapPage.m in Sources */,
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
 				18397B981ED199F300334AB3 /* TalentsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
@@ -1199,6 +1215,7 @@
 				820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
+				18397BAE1ED1C57700334AB3 /* SearchTalentsPage.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
 				187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */,
 				8212A8D11EBEF90600CBD43F /* RegisterPage.m in Sources */,
@@ -1206,6 +1223,7 @@
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
+				18397BA81ED1C53B00334AB3 /* SearchNewsPage.m in Sources */,
 				820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */,
 				187C45E51ED04367006B2EF9 /* DAMission.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,

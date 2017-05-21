@@ -23,6 +23,8 @@
 @property (nonatomic,strong) NSMutableArray *dataListArry;
 @property (nonatomic,strong) NSMutableArray *searchListArry;
 
+@property (nonatomic,strong) NSString       *searchString;
+
 - (void)initData;
 
 

@@ -7,7 +7,7 @@
 //
 
 #import "MapPage.h"
-#import "SearchPage.h"
+#import "SearchMapPage.h"
 #import "SearchModel.h"
 #import "DASearchInfo.h"
 #import "CustomAnnotationView.h"
@@ -91,7 +91,7 @@
         //先删掉一组气泡
         [self.mapView removeAnnotation:_pointAnnotation];
     
-        SearchPage *page = [[SearchPage alloc] init];
+        SearchMapPage *page = [[SearchMapPage alloc] init];
         page.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:page animated:YES];
 }

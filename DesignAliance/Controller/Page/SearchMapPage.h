@@ -6,14 +6,11 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "DABasePage.h"
+#import "DABaseSearchPage.h"
 #import "SearchModel.h"
-#import "DASearchInfo.h"
 #import "MapPage.h"
 
-@interface SearchPage : DABasePage{
-    NSInteger   _pageSize;  //显示的item条数
-}
+@interface SearchMapPage : DABaseSearchPage
 
 @property(nonatomic, strong) SearchModel    *model;
 @property(nonatomic, strong) MapPage        *mapPage;
