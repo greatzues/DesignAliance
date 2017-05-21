@@ -8,22 +8,21 @@
 
 
 #import "DADesignMissionWidget.h"
-#import "CCCycleScrollView.h"
 #import "MissionModel.h"
+#import "AdvertisementModel.h"
 #import "DAMission.h"
+#import "DAAdvertisement.h"
 #import "DesignMissionCell.h"
 #import "DetailsNewsPage.h"
-#import "MJRefresh.h"
-#import "AdvertisementModel.h"
-#import "DAAdvertisement.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "SDCycleScrollView.h"
 
 @implementation DADesignMissionWidget
 
 - (void)viewDidLoad {
     _getAD = YES;
     self.cellIdentifier = @"DesignMissionCell";
-    self.listData = [[NSMutableArray alloc] init];
+    self.listData = [[NSMutableArray alloc] init];  //初始化设计任务数组
+    self.AdlistData = [[NSMutableArray alloc] init]; //初始化轮播图数组
     [self getAdlistData];
     [super viewDidLoad];
 }   
@@ -59,7 +58,8 @@
     _operation = [[DAMission alloc] initWithDelegate:self opInfo:dictInfo];
     [_operation executeOp];
 }
-//获取轮播图广告
+
+#pragma 获取轮播图广告
 - (void)getAdlistData{
     NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
     NSDictionary *dictInfo = @{@"url":Advertisement,
@@ -76,10 +76,9 @@
     
     if(_getAD){
         [self.AdlistData addObjectsFromArray:data];
-        [self cycleScrollView];//初始化轮播图
+        [self initCycleScrollView];//初始化轮播图
         return ;
     }
-    
     
     if (_pageNo == 1) {
         [self.listData removeAllObjects];
@@ -94,7 +93,9 @@
     NSString *cellIdentifier = nil;
     DABaseModel *info = nil;
     
-    tableView.tableHeaderView = self.cyclePlayView;//加载轮播图到tableView的第一条cell
+    if (indexPath.row == 0) {
+        tableView.tableHeaderView = self.cycleScrollView;//加载轮播图到tableView的第一条cell
+    }
     
     cellIdentifier = self.cellIdentifier;
     info = [self.listData objectAtIndex:indexPath.row];
@@ -113,35 +114,37 @@
     return cell;
 }
 
-//这个是item点击之后的监听
+# pragma 初始化轮播图
+- (void)initCycleScrollView
+{
+    AdvertisementModel *ad;
+    NSString  *imageURL;
+    NSMutableArray *images = [[NSMutableArray alloc]init];
+    for (NSInteger i = 0; i < self.AdlistData.count; i++) {
+        ad = self.AdlistData[i];
+        imageURL = [NSString stringWithFormat:ImageAD,ad.cover];
+        [images addObject:imageURL];
+    }
+    
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 180) delegate:self placeholderImage:[UIImage imageNamed:@"NewsDefault.png"]];
+    self.cycleScrollView.imageURLStringsGroup = images;
+}
+
+# pragma 轮播图点击事件
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    
+//    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+}
+
+#pragma item点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailsNewsPage *page = [[DetailsNewsPage alloc] init];
     
     page.newsInfo = [self.listData objectAtIndex:indexPath.row];
     [super initToDetails:page];
-}
-
-# pragma 初始化轮播图
-- (void)cycleScrollView
-{
-    
-    NSMutableArray *images = [[NSMutableArray alloc]init];
-    for (NSInteger i = 1; i <= 4; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"cycle_image%ld",(long)i]];
-        [images addObject:image];
-    }
-    
-    self.cyclePlayView = [[CCCycleScrollView alloc]initWithImages:images];
-    self.cyclePlayView.pageDescrips = @[@"大海",@"花",@"长灯",@"阳光下的身影"];
-    self.cyclePlayView.delegate = self;
-    self.cyclePlayView.backgroundColor = [UIColor grayColor];
-}
-
-# pragma 轮播图点击事件
-- (void)cyclePageClickAction:(NSInteger)clickIndex
-{
-    NSLog(@"点击了第%ld个图片:%@",clickIndex,self.cyclePlayView.pageDescrips[clickIndex]);
 }
 
 

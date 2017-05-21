@@ -7,6 +7,9 @@
 //
 
 #import "DADesignTalentsWidget.h"
+#import "DABaseCell.h"
+#import "DATalents.h"
+#import "TalentsModel.h"
 
 @interface DADesignTalentsWidget ()
 
@@ -15,24 +18,83 @@
 @implementation DADesignTalentsWidget
 
 - (void)viewDidLoad {
+    self.cellIdentifier = @"DesignTalentsCell";
+    self.listData = [[NSMutableArray alloc] init];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    
+    _cellHeight = 109;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loadNewData
+{
+    _pageNo = 1;
+    
+    NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
+    NSDictionary *dictInfo = @{@"url":TalentsURl,
+                               @"body":body,
+                               };
+    
+    _operation = [[DATalents alloc] initWithDelegate:self opInfo:dictInfo];
+    [_operation executeOp];
 }
-*/
+
+- (void)loadMoreData
+{
+    ++_pageNo;
+    
+    NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
+    NSDictionary *dictInfo = @{@"url":TalentsURl,
+                               @"body":body
+                               };
+    
+    _operation = [[DATalents alloc] initWithDelegate:self opInfo:dictInfo];
+    [_operation executeOp];
+}
+
+- (void)opSuccess:(NSArray *)data
+{
+    _operation = nil;
+    
+    if (_pageNo == 1) {
+        [self.listData removeAllObjects];
+    }
+    [self.listData addObjectsFromArray:data];
+    [super opSuccess:data];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = nil;
+    DABaseModel *info = nil;
+    
+    cellIdentifier = self.cellIdentifier;
+    info = [self.listData objectAtIndex:indexPath.row];
+    
+    DABaseCell *cell = (DABaseCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        NSArray* Objects = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:tableView options:nil];
+        
+        cell = [Objects objectAtIndex:0];
+        [cell initCell];
+    }
+    
+    [cell setCellData:info];
+    
+    return cell;
+}
+
+//这个是item点击之后的监听
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
 
 @end

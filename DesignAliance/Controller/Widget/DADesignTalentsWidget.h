@@ -6,8 +6,8 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DATableWidget.h"
 
-@interface DADesignTalentsWidget : UIViewController
+@interface DADesignTalentsWidget : DATableWidget
 
 @end

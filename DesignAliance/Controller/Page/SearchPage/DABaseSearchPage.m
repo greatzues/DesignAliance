@@ -1,34 +1,20 @@
 //
-//  SearchPage.m
+//  DABaseSearchPage.m
 //  DesignAliance
 //
-//  Created by zues on 17/5/1.
+//  Created by Apple on 2017/5/21.
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "SearchPage.h"
-#import "SearchModel.h"
-#import "DASearchInfo.h"
-#import "MapPage.h"
+#import "DABaseSearchPage.h"
 
-@interface SearchPage ()<UITableViewDelegate,UITableViewDataSource,UISearchResultsUpdating,UISearchBarDelegate>
-
-//searchController
-@property (nonatomic,retain) UISearchController *searchController;
-
-//tableView
-@property (nonatomic,strong) UITableView *skTableView;
-
-//数据源
-@property (nonatomic,strong) NSMutableArray *dataListArry;
-@property (nonatomic,strong) NSMutableArray *searchListArry;
+@interface DABaseSearchPage ()
 
 @end
 
 static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
-
-@implementation SearchPage
+@implementation DABaseSearchPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,7 +60,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     self.searchController.dimsBackgroundDuringPresentation = NO;
     
     self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
-
+    
     
     // 添加 searchbar 到 headerview
     self.skTableView.tableHeaderView = self.searchController.searchBar;
@@ -82,16 +68,6 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     [self.view addSubview: self.skTableView];
     
     self.definesPresentationContext=YES;
-}
-
-- (void)initData{
-    _pageSize = 10;
-    NSString *body = [NSString stringWithFormat:@"pageSize=%ld",_pageSize];
-    NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
-                             @"body":body};
-    
-    _operation = [[DASearchInfo alloc] initWithDelegate:self opInfo:opInfo];
-    [_operation executeOp];
 }
 
 - (void)opSuccess:(id)data{
@@ -121,60 +97,6 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     }
 }
 
-//返回单元格内容
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *flag=@"cell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
-    if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
-    }
-    if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
-    }
-    else{
-        self.model = [self.dataListArry objectAtIndex:indexPath.row];
-    }
-    [cell.textLabel setText:self.model.name];
-    return cell;
-}
-
-//点击单元格之后的监听
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
-    }
-    else{
-        self.model = [self.dataListArry objectAtIndex:indexPath.row];
-    }
-    
-    self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.mapPage.search = self.model;
-    [self.navigationController popToViewController:self.mapPage animated:YES];
-
-}
-
-
-//谓词搜索过滤
--(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    
-    NSLog(@"updateSearchResultsForSearchController");
-    NSString *searchString = [self.searchController.searchBar text];
-    if (self.searchListArry!= nil) {
-        [self.searchListArry removeAllObjects];
-    }
-    
-    if (![searchString  isEqual: @""]){
-        NSString *body = [NSString stringWithFormat:@"key=%@",searchString];
-        NSDictionary *opInfo = @{@"url":SearchCompanyByKey,
-                                 @"body":body};
-    
-        _operation = [[DASearchInfo alloc] initWithDelegate:self opInfo:opInfo];
-        [_operation executeOp];
-        
-    }
-}
-
-
 
 #pragma mark - UISearchControllerDelegate代理
 //测试UISearchController的执行过程
@@ -203,4 +125,21 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 {
     NSLog(@"presentSearchController");
 }
+
+#pragma 需要复写的方法
+- (void)initData{
+
+}
+
+//点击单元格之后的监听
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+}
+
+//谓词搜索过滤
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+
+}
+
 @end

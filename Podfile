@@ -8,4 +8,5 @@ pod 'MJRefresh'
 pod 'SDWebImage', '~>3.8'
 
 pod 'BmobSDK'
+pod 'SDCycleScrollView','~> 1.64'
 end

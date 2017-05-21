@@ -10,6 +10,12 @@
 		18397B881ED11CD500334AB3 /* DADesignMissionWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */; };
 		18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */; };
 		18397B8E1ED13FBE00334AB3 /* DAAdvertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */; };
+		18397B951ED1997B00334AB3 /* DesignTalentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B941ED1997B00334AB3 /* DesignTalentsCell.m */; };
+		18397B981ED199F300334AB3 /* TalentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B971ED199F300334AB3 /* TalentsModel.m */; };
+		18397B9B1ED19B0200334AB3 /* DATalents.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397B9A1ED19B0200334AB3 /* DATalents.m */; };
+		18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */; };
+		18397B9F1ED19DF400334AB3 /* DADesignTalentsWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */; };
+		18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */; };
 		187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D01ED02206006B2EF9 /* FxJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		187C45DA1ED02206006B2EF9 /* FxJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D21ED02206006B2EF9 /* FxJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45D41ED02206006B2EF9 /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -78,7 +84,6 @@
 		8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */; };
 		8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */; };
 		8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */; };
-		8212A8B71EBDBA2A00CBD43F /* CCCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8B61EBDBA2A00CBD43F /* CCCycleScrollView.m */; };
 		8212A8BE1EBDBA3700CBD43F /* cycle_image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8B81EBDBA3700CBD43F /* cycle_image1.png */; };
 		8212A8BF1EBDBA3700CBD43F /* cycle_image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8B91EBDBA3700CBD43F /* cycle_image2.png */; };
 		8212A8C01EBDBA3700CBD43F /* cycle_image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8BA1EBDBA3700CBD43F /* cycle_image3.png */; };
@@ -167,6 +172,16 @@
 		18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementModel.m; sourceTree = "<group>"; };
 		18397B8C1ED13FBE00334AB3 /* DAAdvertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAdvertisement.h; sourceTree = "<group>"; };
 		18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAdvertisement.m; sourceTree = "<group>"; };
+		18397B931ED1997B00334AB3 /* DesignTalentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignTalentsCell.h; sourceTree = "<group>"; };
+		18397B941ED1997B00334AB3 /* DesignTalentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignTalentsCell.m; sourceTree = "<group>"; };
+		18397B961ED199F300334AB3 /* TalentsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalentsModel.h; sourceTree = "<group>"; };
+		18397B971ED199F300334AB3 /* TalentsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentsModel.m; sourceTree = "<group>"; };
+		18397B991ED19B0200334AB3 /* DATalents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATalents.h; sourceTree = "<group>"; };
+		18397B9A1ED19B0200334AB3 /* DATalents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATalents.m; sourceTree = "<group>"; };
+		18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignTalentsCell.xib; sourceTree = "<group>"; };
+		18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DADesignTalentsWidget.xib; sourceTree = "<group>"; };
+		18397BA31ED1A1CD00334AB3 /* DABaseSearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseSearchPage.h; sourceTree = "<group>"; };
+		18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseSearchPage.m; sourceTree = "<group>"; };
 		187C45CF1ED02206006B2EF9 /* FxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJSON.h; sourceTree = "<group>"; };
 		187C45D01ED02206006B2EF9 /* FxJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJSON.m; sourceTree = "<group>"; };
 		187C45D11ED02206006B2EF9 /* FxJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonBase.h; sourceTree = "<group>"; };
@@ -258,8 +273,6 @@
 		8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatarWidget.m; sourceTree = "<group>"; };
 		8212A8AD1EBC6A4600CBD43F /* DAUploadAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAUploadAvatar.h; sourceTree = "<group>"; };
 		8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatar.m; sourceTree = "<group>"; };
-		8212A8B51EBDBA2A00CBD43F /* CCCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCycleScrollView.h; sourceTree = "<group>"; };
-		8212A8B61EBDBA2A00CBD43F /* CCCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCycleScrollView.m; sourceTree = "<group>"; };
 		8212A8B81EBDBA3700CBD43F /* cycle_image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image1.png; sourceTree = "<group>"; };
 		8212A8B91EBDBA3700CBD43F /* cycle_image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image2.png; sourceTree = "<group>"; };
 		8212A8BA1EBDBA3700CBD43F /* cycle_image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image3.png; sourceTree = "<group>"; };
@@ -366,8 +379,8 @@
 		82AD19831EB6FADC007C36FE /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		82AD19851EB6FC64007C36FE /* DASearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASearchInfo.h; sourceTree = "<group>"; };
 		82AD19861EB6FC64007C36FE /* DASearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASearchInfo.m; sourceTree = "<group>"; };
-		82AD19951EB862EF007C36FE /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPage.h; sourceTree = "<group>"; };
-		82AD19961EB862EF007C36FE /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPage.m; sourceTree = "<group>"; };
+		82AD19951EB862EF007C36FE /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPage.h; path = DesignAliance/Controller/Page/SearchPage.h; sourceTree = SOURCE_ROOT; };
+		82AD19961EB862EF007C36FE /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPage.m; path = DesignAliance/Controller/Page/SearchPage.m; sourceTree = SOURCE_ROOT; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -404,6 +417,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18397B8F1ED1681A00334AB3 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				18397BA31ED1A1CD00334AB3 /* DABaseSearchPage.h */,
+				18397BA41ED1A1CD00334AB3 /* DABaseSearchPage.m */,
+				82AD19951EB862EF007C36FE /* SearchPage.h */,
+				82AD19961EB862EF007C36FE /* SearchPage.m */,
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
 		187C45CE1ED021CD006B2EF9 /* JsonFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +523,7 @@
 			children = (
 				823EE6FC1EB37694001B98B4 /* DABasePage.h */,
 				823EE6FD1EB37694001B98B4 /* DABasePage.m */,
+				18397B8F1ED1681A00334AB3 /* SearchPage */,
 				823EE6FE1EB37694001B98B4 /* HomePage.h */,
 				823EE6FF1EB37694001B98B4 /* HomePage.m */,
 				823EE7001EB37694001B98B4 /* LoginPage.h */,
@@ -509,8 +534,6 @@
 				823EE7051EB37694001B98B4 /* MyPage.m */,
 				823EE7061EB37694001B98B4 /* NewsPage.h */,
 				823EE7071EB37694001B98B4 /* NewsPage.m */,
-				82AD19951EB862EF007C36FE /* SearchPage.h */,
-				82AD19961EB862EF007C36FE /* SearchPage.m */,
 				8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */,
 				8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */,
 				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
@@ -534,15 +557,6 @@
 				8212A8A11EB9BD7300CBD43F /* LoginUtility.m */,
 			);
 			path = LoginUtility;
-			sourceTree = "<group>";
-		};
-		8212A8B01EBDB95D00CBD43F /* CyclePlay */ = {
-			isa = PBXGroup;
-			children = (
-				8212A8B51EBDBA2A00CBD43F /* CCCycleScrollView.h */,
-				8212A8B61EBDBA2A00CBD43F /* CCCycleScrollView.m */,
-			);
-			path = CyclePlay;
 			sourceTree = "<group>";
 		};
 		8212A8B41EBDB9A100CBD43F /* CyclePlay */ = {
@@ -681,6 +695,8 @@
 				187C45DF1ED035C5006B2EF9 /* MissionModel.m */,
 				18397B891ED13EA000334AB3 /* AdvertisementModel.h */,
 				18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */,
+				18397B961ED199F300334AB3 /* TalentsModel.h */,
+				18397B971ED199F300334AB3 /* TalentsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -706,6 +722,8 @@
 				187C45E41ED04367006B2EF9 /* DAMission.m */,
 				18397B8C1ED13FBE00334AB3 /* DAAdvertisement.h */,
 				18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */,
+				18397B991ED19B0200334AB3 /* DATalents.h */,
+				18397B9A1ED19B0200334AB3 /* DATalents.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -722,7 +740,6 @@
 			isa = PBXGroup;
 			children = (
 				8212A8D61EBF05C700CBD43F /* JVFloatLabeledTextField */,
-				8212A8B01EBDB95D00CBD43F /* CyclePlay */,
 				8212A8941EB9B17C00CBD43F /* LoginUtility */,
 				821732181EB42174006B3387 /* DAButtonHelper.h */,
 				821732191EB42174006B3387 /* DAButtonHelper.m */,
@@ -788,6 +805,8 @@
 				821732491EB5859F006B3387 /* NewsMoreCell.m */,
 				820C9CC41EC4110800CA4951 /* CustomCalloutView.h */,
 				820C9CC51EC4110800CA4951 /* CustomCalloutView.m */,
+				18397B931ED1997B00334AB3 /* DesignTalentsCell.h */,
+				18397B941ED1997B00334AB3 /* DesignTalentsCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -824,6 +843,7 @@
 				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
 				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
 				18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */,
+				18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */,
 				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
 				82AD19671EB61016007C36FE /* MyPage.xib */,
 				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
@@ -831,6 +851,7 @@
 				820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */,
 				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
 				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
+				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -1037,6 +1058,7 @@
 				820CA81B1EB1CF99006832B5 /* NavigationBack@2x.png in Resources */,
 				820CA81D1EB1CF99006832B5 /* NavigationBar44@2x.png in Resources */,
 				820CA8021EB1CF90006832B5 /* MyIcon@2x.png in Resources */,
+				18397B9F1ED19DF400334AB3 /* DADesignTalentsWidget.xib in Resources */,
 				820CA8311EB1CFAA006832B5 /* ColumnBarLeft@2x.png in Resources */,
 				820CA8091EB1CF90006832B5 /* tabbar_icon_media_normal@2x.png in Resources */,
 				8217324C1EB585F4006B3387 /* NewsMoreCell.xib in Resources */,
@@ -1053,6 +1075,7 @@
 				8212A8BE1EBDBA3700CBD43F /* cycle_image1.png in Resources */,
 				820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */,
 				820CA8041EB1CF90006832B5 /* NewsIcon@2x.png in Resources */,
+				18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */,
 				820CA8061EB1CF90006832B5 /* ReaderIcon@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
 				820CA81A1EB1CF99006832B5 /* NavBarWhite64@2x.png in Resources */,
@@ -1149,9 +1172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */,
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
+				18397B951ED1997B00334AB3 /* DesignTalentsCell.m in Sources */,
 				187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */,
 				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
 				8217323A1EB466AB006B3387 /* DesignNewsCell.m in Sources */,
@@ -1167,6 +1192,7 @@
 				18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */,
 				82AD19971EB862EF007C36FE /* SearchPage.m in Sources */,
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
+				18397B981ED199F300334AB3 /* TalentsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
 				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,
 				18397B8E1ED13FBE00334AB3 /* DAAdvertisement.m in Sources */,
@@ -1197,7 +1223,6 @@
 				8212A8E11EBF062000CBD43F /* NSString+TextDirectionality.m in Sources */,
 				8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */,
 				8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */,
-				8212A8B71EBDBA2A00CBD43F /* CCCycleScrollView.m in Sources */,
 				823EE70C1EB37694001B98B4 /* MyPage.m in Sources */,
 				821732361EB446F7006B3387 /* DADesignTalentsWidget.m in Sources */,
 				822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */,
@@ -1205,6 +1230,7 @@
 				187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */,
 				821732351EB446F7006B3387 /* DADesignNewsWidget.m in Sources */,
 				187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */,
+				18397B9B1ED19B0200334AB3 /* DATalents.m in Sources */,
 				821732541EB58B1F006B3387 /* DADownload.m in Sources */,
 				8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */,
 				821732551EB58B1F006B3387 /* DAGlobal.m in Sources */,

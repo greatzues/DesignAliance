@@ -10,6 +10,7 @@
 
 @interface DABasePage : DABaseController
 
+
 - (void)alertView:(NSString *)message;
 
 @end

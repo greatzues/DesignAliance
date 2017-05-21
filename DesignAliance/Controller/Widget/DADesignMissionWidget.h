@@ -8,14 +8,13 @@
 
 
 #import "DATableWidget.h"
-#import "CCCycleScrollView.h"
+#import "SDCycleScrollView.h"
 
 
-@interface DADesignMissionWidget : DATableWidget <CCCycleScrollViewClickActionDeleage>
+@interface DADesignMissionWidget : DATableWidget <SDCycleScrollViewDelegate>
 
-@property (nonatomic, strong)CCCycleScrollView *cyclePlayView;
-
-@property (nonatomic, assign)BOOL              getAD;
-@property (nonatomic, strong)NSMutableArray    *AdlistData;
+@property (nonatomic, strong)SDCycleScrollView  *cycleScrollView;
+@property (nonatomic, assign)BOOL               getAD;
+@property (nonatomic, strong)NSMutableArray     *AdlistData;
 
 @end

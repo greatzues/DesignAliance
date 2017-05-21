@@ -86,6 +86,7 @@
     _pointAnnotation = [[MAPointAnnotation alloc] init];
 }
 
+#pragma 导航右键点击事件监听
 - (void)doRight:(id)sender{
         //先删掉一组气泡
         [self.mapView removeAnnotation:_pointAnnotation];
