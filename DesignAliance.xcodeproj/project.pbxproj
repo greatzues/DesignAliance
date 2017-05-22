@@ -28,6 +28,10 @@
 		187C45E21ED03A70006B2EF9 /* DesignMissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */; };
 		187C45E51ED04367006B2EF9 /* DAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45E41ED04367006B2EF9 /* DAMission.m */; };
 		187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */; };
+		18C2E2921ED275FB00F75167 /* DABaseDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2911ED275FB00F75167 /* DABaseDetailsPage.m */; };
+		18C2E2951ED2B89900F75167 /* DetailsMissionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */; };
+		18C2E2981ED2B8D400F75167 /* DetailsTalentsWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */; };
+		18C2E29A1ED2B92600F75167 /* DetailsMissionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */; };
 		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
 		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
 		820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCA1EC4179500CA4951 /* mapMark@2x.png */; };
@@ -208,6 +212,13 @@
 		187C45E41ED04367006B2EF9 /* DAMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAMission.m; sourceTree = "<group>"; };
 		187C45E61ED043C5006B2EF9 /* DesignMissionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignMissionCell.h; sourceTree = "<group>"; };
 		187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignMissionCell.m; sourceTree = "<group>"; };
+		18C2E2901ED275FB00F75167 /* DABaseDetailsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseDetailsPage.h; sourceTree = "<group>"; };
+		18C2E2911ED275FB00F75167 /* DABaseDetailsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseDetailsPage.m; sourceTree = "<group>"; };
+		18C2E2931ED2B89900F75167 /* DetailsMissionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsMissionPage.h; sourceTree = "<group>"; };
+		18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMissionPage.m; sourceTree = "<group>"; };
+		18C2E2961ED2B8D400F75167 /* DetailsTalentsWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTalentsWidget.h; sourceTree = "<group>"; };
+		18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTalentsWidget.m; sourceTree = "<group>"; };
+		18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsMissionPage.xib; sourceTree = "<group>"; };
 		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
@@ -460,6 +471,25 @@
 			path = JsonFramework;
 			sourceTree = "<group>";
 		};
+		18C2E28F1ED271BB00F75167 /* DetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				18C2E2901ED275FB00F75167 /* DABaseDetailsPage.h */,
+				18C2E2911ED275FB00F75167 /* DABaseDetailsPage.m */,
+				8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */,
+				8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */,
+				820C9CCE1EC5971500CA4951 /* DetailsCompanyPage.h */,
+				820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */,
+				820C9CD31EC6BAD300CA4951 /* DetailsNewsPage.h */,
+				820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */,
+				18C2E2931ED2B89900F75167 /* DetailsMissionPage.h */,
+				18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */,
+				18C2E2961ED2B8D400F75167 /* DetailsTalentsWidget.h */,
+				18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */,
+			);
+			name = DetailsPage;
+			sourceTree = "<group>";
+		};
 		820CA7801EB052CB006832B5 /* Background */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +568,7 @@
 			children = (
 				823EE6FC1EB37694001B98B4 /* DABasePage.h */,
 				823EE6FD1EB37694001B98B4 /* DABasePage.m */,
+				18C2E28F1ED271BB00F75167 /* DetailsPage */,
 				18397B8F1ED1681A00334AB3 /* SearchPage */,
 				823EE6FE1EB37694001B98B4 /* HomePage.h */,
 				823EE6FF1EB37694001B98B4 /* HomePage.m */,
@@ -549,14 +580,8 @@
 				823EE7051EB37694001B98B4 /* MyPage.m */,
 				823EE7061EB37694001B98B4 /* NewsPage.h */,
 				823EE7071EB37694001B98B4 /* NewsPage.m */,
-				8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */,
-				8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */,
 				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
 				8212A8D01EBEF90600CBD43F /* RegisterPage.m */,
-				820C9CCE1EC5971500CA4951 /* DetailsCompanyPage.h */,
-				820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */,
-				820C9CD31EC6BAD300CA4951 /* DetailsNewsPage.h */,
-				820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -867,6 +892,7 @@
 				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
 				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
 				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
+				18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -1060,6 +1086,7 @@
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
 				820CA81F1EB1CF99006832B5 /* NavigationBell@2x.png in Resources */,
+				18C2E29A1ED2B92600F75167 /* DetailsMissionPage.xib in Resources */,
 				820CA8081EB1CF90006832B5 /* tabbar_icon_media_highlight@2x.png in Resources */,
 				820CA82D1EB1CFA2006832B5 /* login_password_icon@2x.png in Resources */,
 				8212A8C01EBDBA3700CBD43F /* cycle_image3.png in Resources */,
@@ -1189,6 +1216,7 @@
 			files = (
 				18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */,
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
+				18C2E2981ED2B8D400F75167 /* DetailsTalentsWidget.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
@@ -1204,10 +1232,12 @@
 				820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */,
 				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
 				8212A8DF1EBF062000CBD43F /* JVFloatLabeledTextField.m in Sources */,
+				18C2E2951ED2B89900F75167 /* DetailsMissionPage.m in Sources */,
 				82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */,
 				18397B8B1ED13EA000334AB3 /* AdvertisementModel.m in Sources */,
 				82AD19971EB862EF007C36FE /* SearchMapPage.m in Sources */,
 				821732201EB42635006B3387 /* NewsModel.m in Sources */,
+				18C2E2921ED275FB00F75167 /* DABaseDetailsPage.m in Sources */,
 				18397B981ED199F300334AB3 /* TalentsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
 				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,

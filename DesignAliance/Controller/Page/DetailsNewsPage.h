@@ -6,14 +6,14 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "DABasePage.h"
+#import "DABaseDetailsPage.h"
 #import "NewsModel.h"
 
-@interface DetailsNewsPage : DABasePage{
-
-    IBOutlet UIImageView    *imageView;
+@interface DetailsNewsPage : DABaseDetailsPage {
+    UIWebView       *webView;
 }
 
+@property(nonatomic, strong)    UIActivityIndicatorView     *activityIndicator;
 @property(nonatomic, strong)    NewsModel       *newsInfo;
 
 @end
