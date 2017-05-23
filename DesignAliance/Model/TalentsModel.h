@@ -12,14 +12,14 @@
  "message": "查询成功",
  "data": 1,
  "dataList": [
- {
- "id": 1,
- "name": "Clanner",
- "sex": "m",
- "phone": "13692190638",
- "avatar": "暂无",
- "skill": "安卓开发，java程序员",
- "companyId": 1
+ {"id":2,
+ "name":"zero",
+ "sex":"m",
+ "phone":"13692190630",
+ "avatar":"4d638e20716ec2088a00034c.jpg",
+ "skill":"php",
+ "education":"本科",
+ "description":"前端工程师，熟悉javascript，html，css"
  }
  ]
  }
@@ -33,7 +33,8 @@
 @property(nonatomic, strong) NSString *phone;
 @property(nonatomic, strong) NSString *avatar;
 @property(nonatomic, strong) NSString *skill;
-@property(nonatomic, strong) NSString *companyId;
+@property(nonatomic, strong) NSString *education;
+@property(nonatomic, strong) NSString *desc;
 
 
 @end

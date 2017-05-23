@@ -13,8 +13,8 @@
 #import "DAMission.h"
 #import "DAAdvertisement.h"
 #import "DesignMissionCell.h"
-#import "DetailsNewsPage.h"
 #import "SDCycleScrollView.h"
+#import "DetailsMissionPage.h"
 
 @implementation DADesignMissionWidget
 
@@ -141,9 +141,9 @@
 #pragma item点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailsNewsPage *page = [[DetailsNewsPage alloc] init];
+    DetailsMissionPage *page = [[DetailsMissionPage alloc] init];
     
-    page.newsInfo = [self.listData objectAtIndex:indexPath.row];
+    page.model = [self.listData objectAtIndex:indexPath.row];
     [super initToDetails:page];
 }
 

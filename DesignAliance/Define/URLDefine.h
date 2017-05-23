@@ -45,6 +45,7 @@
 #define ModifyInfo      BaseURL "Home/UserInfo/modifyUserInfo"
 #define UploadAvatar    BaseURL "Home/UserInfo/uploadAvatar"
 #define GetUserInfo     BaseURL "Home/UserInfo/getUserInfo"
+#define GetCountup      BaseURL "Home/DesignMission/countUp"
 
 //Company Post
 #define SearchCompanyDefault        BaseURL "Home/Company/searchCompanyLimit"

@@ -18,7 +18,8 @@
     info.phone = [dict objectForKey:@"phone"];
     info.avatar = [dict objectForKey:@"avatar"];
     info.skill = [dict objectForKey:@"skill"];
-    info.companyId = [dict objectForKey:@"companyId"];
+    info.education = [dict objectForKey:@"education"];
+    info.desc = [dict objectForKey:@"description"];
     
     return info;
 }

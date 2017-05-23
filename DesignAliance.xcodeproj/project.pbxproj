@@ -30,8 +30,11 @@
 		187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */; };
 		18C2E2921ED275FB00F75167 /* DABaseDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2911ED275FB00F75167 /* DABaseDetailsPage.m */; };
 		18C2E2951ED2B89900F75167 /* DetailsMissionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */; };
-		18C2E2981ED2B8D400F75167 /* DetailsTalentsWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */; };
+		18C2E2981ED2B8D400F75167 /* DetailsTalentsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2971ED2B8D400F75167 /* DetailsTalentsPage.m */; };
 		18C2E29A1ED2B92600F75167 /* DetailsMissionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */; };
+		18C2E2DE1ED3CD4700F75167 /* DAGetCountUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */; };
+		18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */; };
+		18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */; };
 		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
 		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
 		820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCA1EC4179500CA4951 /* mapMark@2x.png */; };
@@ -125,7 +128,6 @@
 		821F2E561EACB7CF0098081F /* DABaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E551EACB7CF0098081F /* DABaseController.m */; };
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
 		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
-		822FD3A51EC09B5D00E6840E /* RegisterPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822FD3A41EC09B5D00E6840E /* RegisterPage.xib */; };
 		822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3AE1EC173D400E6840E /* UIButton+countDown.m */; };
 		822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3BC1EC1DE4400E6840E /* DARegister.m */; };
 		823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823EE6EC1EB33BAB001B98B4 /* TabBarPages.plist */; };
@@ -216,9 +218,13 @@
 		18C2E2911ED275FB00F75167 /* DABaseDetailsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseDetailsPage.m; sourceTree = "<group>"; };
 		18C2E2931ED2B89900F75167 /* DetailsMissionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsMissionPage.h; sourceTree = "<group>"; };
 		18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMissionPage.m; sourceTree = "<group>"; };
-		18C2E2961ED2B8D400F75167 /* DetailsTalentsWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTalentsWidget.h; sourceTree = "<group>"; };
-		18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTalentsWidget.m; sourceTree = "<group>"; };
+		18C2E2961ED2B8D400F75167 /* DetailsTalentsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTalentsPage.h; sourceTree = "<group>"; };
+		18C2E2971ED2B8D400F75167 /* DetailsTalentsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTalentsPage.m; sourceTree = "<group>"; };
 		18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsMissionPage.xib; sourceTree = "<group>"; };
+		18C2E2DC1ED3CD4700F75167 /* DAGetCountUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGetCountUp.h; sourceTree = "<group>"; };
+		18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGetCountUp.m; sourceTree = "<group>"; };
+		18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTalentsPage.xib; sourceTree = "<group>"; };
+		18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPage.xib; sourceTree = "<group>"; };
 		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
@@ -357,7 +363,6 @@
 		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
 		821F2E7F1EACCC460098081F /* DABaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseOperation.h; sourceTree = "<group>"; };
 		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
-		822FD3A41EC09B5D00E6840E /* RegisterPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPage.xib; sourceTree = "<group>"; };
 		822FD3AD1EC173D400E6840E /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		822FD3AE1EC173D400E6840E /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
 		822FD3BB1EC1DE4400E6840E /* DARegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARegister.h; sourceTree = "<group>"; };
@@ -484,10 +489,46 @@
 				820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */,
 				18C2E2931ED2B89900F75167 /* DetailsMissionPage.h */,
 				18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */,
-				18C2E2961ED2B8D400F75167 /* DetailsTalentsWidget.h */,
-				18C2E2971ED2B8D400F75167 /* DetailsTalentsWidget.m */,
+				18C2E2961ED2B8D400F75167 /* DetailsTalentsPage.h */,
+				18C2E2971ED2B8D400F75167 /* DetailsTalentsPage.m */,
 			);
 			name = DetailsPage;
+			sourceTree = "<group>";
+		};
+		18C2E2E71ED4095C00F75167 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
+				18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */,
+				18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */,
+			);
+			name = widget;
+			sourceTree = "<group>";
+		};
+		18C2E2E81ED4096D00F75167 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */,
+				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
+				82AD19671EB61016007C36FE /* MyPage.xib */,
+				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
+				820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */,
+				18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */,
+				18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */,
+				18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */,
+			);
+			name = page;
+			sourceTree = "<group>";
+		};
+		18C2E2E91ED4098500F75167 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
+				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
+				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
+				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		820CA7801EB052CB006832B5 /* Background */ = {
@@ -764,6 +805,8 @@
 				18397B8D1ED13FBE00334AB3 /* DAAdvertisement.m */,
 				18397B991ED19B0200334AB3 /* DATalents.h */,
 				18397B9A1ED19B0200334AB3 /* DATalents.m */,
+				18C2E2DC1ED3CD4700F75167 /* DAGetCountUp.h */,
+				18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -878,21 +921,10 @@
 		821F2E2E1EAC4FD30098081F /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				820C9CD01EC5971500CA4951 /* DetailsCompanyPage.xib */,
 				821946CC1EB23D6200EB68F3 /* Main.storyboard */,
-				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
-				821732461EB58209006B3387 /* DADesignNewsWidget.xib */,
-				18397B871ED11CD500334AB3 /* DADesignMissionWidget.xib */,
-				18397B9E1ED19DF400334AB3 /* DADesignTalentsWidget.xib */,
-				8217324B1EB585F4006B3387 /* NewsMoreCell.xib */,
-				82AD19671EB61016007C36FE /* MyPage.xib */,
-				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
-				822FD3A41EC09B5D00E6840E /* RegisterPage.xib */,
-				820C9CD61EC6BE1D00CA4951 /* DetailsNewsPage.xib */,
-				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
-				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
-				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
-				18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */,
+				18C2E2E91ED4098500F75167 /* cell */,
+				18C2E2E81ED4096D00F75167 /* page */,
+				18C2E2E71ED4095C00F75167 /* widget */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -1076,7 +1108,6 @@
 				82AD196D1EB6BB4E007C36FE /* UserBackground@2x.png in Resources */,
 				820CA8191EB1CF99006832B5 /* NavBarWhite44@2x.png in Resources */,
 				820CA8051EB1CF90006832B5 /* NewsIconSelect@2x.png in Resources */,
-				822FD3A51EC09B5D00E6840E /* RegisterPage.xib in Resources */,
 				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
 				820CA82A1EB1CFA2006832B5 /* home_page_line_vertical@2x.png in Resources */,
 				820CA83B1EB1CFB2006832B5 /* WeatherLocation@2x.png in Resources */,
@@ -1084,6 +1115,7 @@
 				820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
+				18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
 				820CA81F1EB1CF99006832B5 /* NavigationBell@2x.png in Resources */,
 				18C2E29A1ED2B92600F75167 /* DetailsMissionPage.xib in Resources */,
@@ -1127,6 +1159,7 @@
 				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
 				82AD19791EB6D662007C36FE /* logo@2x.png in Resources */,
 				820CA80C1EB1CF90006832B5 /* VoiceIconSelect@2x.png in Resources */,
+				18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */,
 				82AD19771EB6D662007C36FE /* about@2x.png in Resources */,
 				820CA81E1EB1CF99006832B5 /* NavigationBar64@2x.png in Resources */,
 				820CA82C1EB1CFA2006832B5 /* login_forgot_button@2x.png in Resources */,
@@ -1216,7 +1249,7 @@
 			files = (
 				18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */,
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
-				18C2E2981ED2B8D400F75167 /* DetailsTalentsWidget.m in Sources */,
+				18C2E2981ED2B8D400F75167 /* DetailsTalentsPage.m in Sources */,
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
@@ -1247,6 +1280,7 @@
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
 				18397BAE1ED1C57700334AB3 /* SearchTalentsPage.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
+				18C2E2DE1ED3CD4700F75167 /* DAGetCountUp.m in Sources */,
 				187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */,
 				8212A8D11EBEF90600CBD43F /* RegisterPage.m in Sources */,
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,

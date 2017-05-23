@@ -10,6 +10,7 @@
 #import "DABaseCell.h"
 #import "DATalents.h"
 #import "TalentsModel.h"
+#import "DetailsTalentsPage.h"
 
 @interface DADesignTalentsWidget ()
 
@@ -93,7 +94,10 @@
 //这个是item点击之后的监听
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    DetailsTalentsPage *page = [[DetailsTalentsPage alloc] init];
+    
+    page.model = [self.listData objectAtIndex:indexPath.row];
+    [super initToDetails:page];
 }
 
 
