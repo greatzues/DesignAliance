@@ -35,6 +35,19 @@
 		18C2E2DE1ED3CD4700F75167 /* DAGetCountUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */; };
 		18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */; };
 		18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */; };
+		18FED9291ED907F000C5FE4E /* DABaseMyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9281ED907F000C5FE4E /* DABaseMyPage.m */; };
+		18FED92D1ED9085600C5FE4E /* ModifyPasswordPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED92C1ED9085600C5FE4E /* ModifyPasswordPage.m */; };
+		18FED9301ED9087A00C5FE4E /* BecomeVipPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED92F1ED9087A00C5FE4E /* BecomeVipPage.m */; };
+		18FED9331ED9095E00C5FE4E /* CheckUpdatePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9321ED9095E00C5FE4E /* CheckUpdatePage.m */; };
+		18FED9361ED9097500C5FE4E /* ContactUsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9351ED9097500C5FE4E /* ContactUsPage.m */; };
+		18FED9391ED9099300C5FE4E /* UserSuggestPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9381ED9099300C5FE4E /* UserSuggestPage.m */; };
+		18FED93C1ED909A800C5FE4E /* AboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED93B1ED909A800C5FE4E /* AboutPage.m */; };
+		18FED93E1ED909F400C5FE4E /* ModifyPasswordPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED93D1ED909F400C5FE4E /* ModifyPasswordPage.xib */; };
+		18FED9411ED926C400C5FE4E /* DAModifyPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9401ED926C400C5FE4E /* DAModifyPassword.m */; };
+		18FED9441ED94ED000C5FE4E /* ContactUsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED9431ED94ED000C5FE4E /* ContactUsPage.xib */; };
+		18FED9461ED9643000C5FE4E /* UserSuggestPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED9451ED9643000C5FE4E /* UserSuggestPage.xib */; };
+		18FED9491ED978D500C5FE4E /* UserInfoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9481ED978D500C5FE4E /* UserInfoPage.m */; };
+		18FED94B1ED978F100C5FE4E /* UserInfoPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */; };
 		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
 		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
 		820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCA1EC4179500CA4951 /* mapMark@2x.png */; };
@@ -225,6 +238,28 @@
 		18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGetCountUp.m; sourceTree = "<group>"; };
 		18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTalentsPage.xib; sourceTree = "<group>"; };
 		18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPage.xib; sourceTree = "<group>"; };
+		18FED9271ED907F000C5FE4E /* DABaseMyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseMyPage.h; sourceTree = "<group>"; };
+		18FED9281ED907F000C5FE4E /* DABaseMyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseMyPage.m; sourceTree = "<group>"; };
+		18FED92B1ED9085600C5FE4E /* ModifyPasswordPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordPage.h; sourceTree = "<group>"; };
+		18FED92C1ED9085600C5FE4E /* ModifyPasswordPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordPage.m; sourceTree = "<group>"; };
+		18FED92E1ED9087A00C5FE4E /* BecomeVipPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BecomeVipPage.h; sourceTree = "<group>"; };
+		18FED92F1ED9087A00C5FE4E /* BecomeVipPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BecomeVipPage.m; sourceTree = "<group>"; };
+		18FED9311ED9095E00C5FE4E /* CheckUpdatePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUpdatePage.h; sourceTree = "<group>"; };
+		18FED9321ED9095E00C5FE4E /* CheckUpdatePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdatePage.m; sourceTree = "<group>"; };
+		18FED9341ED9097500C5FE4E /* ContactUsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsPage.h; sourceTree = "<group>"; };
+		18FED9351ED9097500C5FE4E /* ContactUsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsPage.m; sourceTree = "<group>"; };
+		18FED9371ED9099300C5FE4E /* UserSuggestPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSuggestPage.h; sourceTree = "<group>"; };
+		18FED9381ED9099300C5FE4E /* UserSuggestPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSuggestPage.m; sourceTree = "<group>"; };
+		18FED93A1ED909A800C5FE4E /* AboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPage.h; sourceTree = "<group>"; };
+		18FED93B1ED909A800C5FE4E /* AboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPage.m; sourceTree = "<group>"; };
+		18FED93D1ED909F400C5FE4E /* ModifyPasswordPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPasswordPage.xib; sourceTree = "<group>"; };
+		18FED93F1ED926C400C5FE4E /* DAModifyPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAModifyPassword.h; sourceTree = "<group>"; };
+		18FED9401ED926C400C5FE4E /* DAModifyPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAModifyPassword.m; sourceTree = "<group>"; };
+		18FED9431ED94ED000C5FE4E /* ContactUsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactUsPage.xib; sourceTree = "<group>"; };
+		18FED9451ED9643000C5FE4E /* UserSuggestPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSuggestPage.xib; sourceTree = "<group>"; };
+		18FED9471ED978D500C5FE4E /* UserInfoPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoPage.h; sourceTree = "<group>"; };
+		18FED9481ED978D500C5FE4E /* UserInfoPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoPage.m; sourceTree = "<group>"; };
+		18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoPage.xib; sourceTree = "<group>"; };
 		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
@@ -516,6 +551,10 @@
 				18C2E2991ED2B92600F75167 /* DetailsMissionPage.xib */,
 				18C2E2E51ED3E5BE00F75167 /* DetailsTalentsPage.xib */,
 				18C2E2EA1ED40FB700F75167 /* RegisterPage.xib */,
+				18FED93D1ED909F400C5FE4E /* ModifyPasswordPage.xib */,
+				18FED9431ED94ED000C5FE4E /* ContactUsPage.xib */,
+				18FED9451ED9643000C5FE4E /* UserSuggestPage.xib */,
+				18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */,
 			);
 			name = page;
 			sourceTree = "<group>";
@@ -529,6 +568,48 @@
 				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		18FED9261ED9077700C5FE4E /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				18FED9271ED907F000C5FE4E /* DABaseMyPage.h */,
+				18FED9281ED907F000C5FE4E /* DABaseMyPage.m */,
+				18FED92B1ED9085600C5FE4E /* ModifyPasswordPage.h */,
+				18FED92C1ED9085600C5FE4E /* ModifyPasswordPage.m */,
+				18FED92E1ED9087A00C5FE4E /* BecomeVipPage.h */,
+				18FED92F1ED9087A00C5FE4E /* BecomeVipPage.m */,
+				18FED9311ED9095E00C5FE4E /* CheckUpdatePage.h */,
+				18FED9321ED9095E00C5FE4E /* CheckUpdatePage.m */,
+				18FED9341ED9097500C5FE4E /* ContactUsPage.h */,
+				18FED9351ED9097500C5FE4E /* ContactUsPage.m */,
+				18FED9371ED9099300C5FE4E /* UserSuggestPage.h */,
+				18FED9381ED9099300C5FE4E /* UserSuggestPage.m */,
+				18FED93A1ED909A800C5FE4E /* AboutPage.h */,
+				18FED93B1ED909A800C5FE4E /* AboutPage.m */,
+				18FED9471ED978D500C5FE4E /* UserInfoPage.h */,
+				18FED9481ED978D500C5FE4E /* UserInfoPage.m */,
+			);
+			name = MyPage;
+			sourceTree = "<group>";
+		};
+		18FED9421ED94E6F00C5FE4E /* NormalPage */ = {
+			isa = PBXGroup;
+			children = (
+				823EE6FE1EB37694001B98B4 /* HomePage.h */,
+				823EE6FF1EB37694001B98B4 /* HomePage.m */,
+				823EE7001EB37694001B98B4 /* LoginPage.h */,
+				823EE7011EB37694001B98B4 /* LoginPage.m */,
+				823EE7021EB37694001B98B4 /* MapPage.h */,
+				823EE7031EB37694001B98B4 /* MapPage.m */,
+				823EE7041EB37694001B98B4 /* MyPage.h */,
+				823EE7051EB37694001B98B4 /* MyPage.m */,
+				823EE7061EB37694001B98B4 /* NewsPage.h */,
+				823EE7071EB37694001B98B4 /* NewsPage.m */,
+				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
+				8212A8D01EBEF90600CBD43F /* RegisterPage.m */,
+			);
+			name = NormalPage;
 			sourceTree = "<group>";
 		};
 		820CA7801EB052CB006832B5 /* Background */ = {
@@ -609,20 +690,10 @@
 			children = (
 				823EE6FC1EB37694001B98B4 /* DABasePage.h */,
 				823EE6FD1EB37694001B98B4 /* DABasePage.m */,
+				18FED9421ED94E6F00C5FE4E /* NormalPage */,
+				18FED9261ED9077700C5FE4E /* MyPage */,
 				18C2E28F1ED271BB00F75167 /* DetailsPage */,
 				18397B8F1ED1681A00334AB3 /* SearchPage */,
-				823EE6FE1EB37694001B98B4 /* HomePage.h */,
-				823EE6FF1EB37694001B98B4 /* HomePage.m */,
-				823EE7001EB37694001B98B4 /* LoginPage.h */,
-				823EE7011EB37694001B98B4 /* LoginPage.m */,
-				823EE7021EB37694001B98B4 /* MapPage.h */,
-				823EE7031EB37694001B98B4 /* MapPage.m */,
-				823EE7041EB37694001B98B4 /* MyPage.h */,
-				823EE7051EB37694001B98B4 /* MyPage.m */,
-				823EE7061EB37694001B98B4 /* NewsPage.h */,
-				823EE7071EB37694001B98B4 /* NewsPage.m */,
-				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
-				8212A8D01EBEF90600CBD43F /* RegisterPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -807,6 +878,8 @@
 				18397B9A1ED19B0200334AB3 /* DATalents.m */,
 				18C2E2DC1ED3CD4700F75167 /* DAGetCountUp.h */,
 				18C2E2DD1ED3CD4700F75167 /* DAGetCountUp.m */,
+				18FED93F1ED926C400C5FE4E /* DAModifyPassword.h */,
+				18FED9401ED926C400C5FE4E /* DAModifyPassword.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -1114,6 +1187,7 @@
 				187C45E21ED03A70006B2EF9 /* DesignMissionCell.xib in Resources */,
 				820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
+				18FED9441ED94ED000C5FE4E /* ContactUsPage.xib in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
 				18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
@@ -1149,6 +1223,8 @@
 				8212A8BE1EBDBA3700CBD43F /* cycle_image1.png in Resources */,
 				820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */,
 				820CA8041EB1CF90006832B5 /* NewsIcon@2x.png in Resources */,
+				18FED94B1ED978F100C5FE4E /* UserInfoPage.xib in Resources */,
+				18FED9461ED9643000C5FE4E /* UserSuggestPage.xib in Resources */,
 				18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */,
 				820CA8061EB1CF90006832B5 /* ReaderIcon@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
@@ -1159,6 +1235,7 @@
 				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
 				82AD19791EB6D662007C36FE /* logo@2x.png in Resources */,
 				820CA80C1EB1CF90006832B5 /* VoiceIconSelect@2x.png in Resources */,
+				18FED93E1ED909F400C5FE4E /* ModifyPasswordPage.xib in Resources */,
 				18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */,
 				82AD19771EB6D662007C36FE /* about@2x.png in Resources */,
 				820CA81E1EB1CF99006832B5 /* NavigationBar64@2x.png in Resources */,
@@ -1264,6 +1341,7 @@
 				823EE6F01EB34150001B98B4 /* PageModel.m in Sources */,
 				820CA7661EAF2178006832B5 /* DAActivityIndicator.m in Sources */,
 				820CA7631EAF0DFF006832B5 /* DAActivity.m in Sources */,
+				18FED9331ED9095E00C5FE4E /* CheckUpdatePage.m in Sources */,
 				8212A8DF1EBF062000CBD43F /* JVFloatLabeledTextField.m in Sources */,
 				18C2E2951ED2B89900F75167 /* DetailsMissionPage.m in Sources */,
 				82AD19841EB6FADC007C36FE /* SearchModel.m in Sources */,
@@ -1273,9 +1351,13 @@
 				18C2E2921ED275FB00F75167 /* DABaseDetailsPage.m in Sources */,
 				18397B981ED199F300334AB3 /* TalentsModel.m in Sources */,
 				823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */,
+				18FED92D1ED9085600C5FE4E /* ModifyPasswordPage.m in Sources */,
 				8212A8A21EB9BD7300CBD43F /* LoginUtility.m in Sources */,
 				18397B8E1ED13FBE00334AB3 /* DAAdvertisement.m in Sources */,
+				18FED9391ED9099300C5FE4E /* UserSuggestPage.m in Sources */,
+				18FED9291ED907F000C5FE4E /* DABaseMyPage.m in Sources */,
 				820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */,
+				18FED9491ED978D500C5FE4E /* UserInfoPage.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
 				18397BAE1ED1C57700334AB3 /* SearchTalentsPage.m in Sources */,
@@ -1285,9 +1367,13 @@
 				8212A8D11EBEF90600CBD43F /* RegisterPage.m in Sources */,
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
+				18FED9411ED926C400C5FE4E /* DAModifyPassword.m in Sources */,
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
+				18FED9361ED9097500C5FE4E /* ContactUsPage.m in Sources */,
 				18397BA81ED1C53B00334AB3 /* SearchNewsPage.m in Sources */,
+				18FED93C1ED909A800C5FE4E /* AboutPage.m in Sources */,
+				18FED9301ED9087A00C5FE4E /* BecomeVipPage.m in Sources */,
 				820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */,
 				187C45E51ED04367006B2EF9 /* DAMission.m in Sources */,
 				820CA77A1EB0368A006832B5 /* DALogin.m in Sources */,

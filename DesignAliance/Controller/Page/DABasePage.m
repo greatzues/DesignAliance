@@ -31,4 +31,10 @@
 
 }
 
+- (void)initToDetails:(DABasePage *)page{
+    _page = page;
+    _page.hidesBottomBarWhenPushed = YES; //隐藏底部tab
+    [self.navigationController pushViewController:_page animated:YES];
+}
+
 @end

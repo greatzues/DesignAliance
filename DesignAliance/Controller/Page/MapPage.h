@@ -20,6 +20,6 @@
 
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
 
-@property (nonatomic,assign) CLLocationCoordinate2D coordinate;  //!< 要导航的坐标
+- (void)butClick;
 
 @end

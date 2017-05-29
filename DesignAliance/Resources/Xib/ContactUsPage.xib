@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactUsPage">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="MeG-do-vA5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suggestion.png" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-Vn-mGa">
+                    <rect key="frame" x="147" y="197.5" width="80" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="1Wy-EX-4a4"/>
+                        <constraint firstAttribute="height" constant="72" id="twR-O8-Fmh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17G-Pd-3Qu">
+                    <rect key="frame" x="166" y="274.5" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="7A8-DV-fli"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywg-98-pKS">
+                    <rect key="frame" x="62" y="305.5" width="250" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="资讯热线：0750-3936712" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-kP-5pO">
+                            <rect key="frame" x="8" y="4" width="205" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="AA1-Fj-qd5"/>
+                                <constraint firstAttribute="width" constant="205" id="SLp-6H-faW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-qN-TfO">
+                            <rect key="frame" x="215" y="-6" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="LEy-Zv-KI5"/>
+                                <constraint firstAttribute="height" constant="45" id="kW7-m0-SbT"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="suggestion.png"/>
+                            <connections>
+                                <action selector="contactUs:" destination="-1" eventType="touchUpInside" id="qLj-RC-ke7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lZ1-qN-TfO" firstAttribute="top" secondItem="Ywg-98-pKS" secondAttribute="top" constant="-6" id="8LK-Uk-nQE"/>
+                        <constraint firstAttribute="trailing" secondItem="lZ1-qN-TfO" secondAttribute="trailing" constant="-10" id="FyP-H8-Fi2"/>
+                        <constraint firstAttribute="width" constant="250" id="IeY-Be-cKf"/>
+                        <constraint firstItem="zyj-kP-5pO" firstAttribute="leading" secondItem="Ywg-98-pKS" secondAttribute="leading" constant="8" id="Jo8-is-WYc"/>
+                        <constraint firstItem="zyj-kP-5pO" firstAttribute="top" secondItem="Ywg-98-pKS" secondAttribute="top" constant="4" id="NTK-N7-UoY"/>
+                        <constraint firstAttribute="height" constant="30" id="fS9-XP-Pdj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="17G-Pd-3Qu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9zD-oQ-9rp"/>
+                <constraint firstItem="mmZ-Vn-mGa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SGw-7s-bM1"/>
+                <constraint firstItem="17G-Pd-3Qu" firstAttribute="top" secondItem="mmZ-Vn-mGa" secondAttribute="bottom" constant="5" id="Uoa-LZ-5ti"/>
+                <constraint firstItem="Ywg-98-pKS" firstAttribute="top" secondItem="17G-Pd-3Qu" secondAttribute="bottom" constant="10" id="kyW-kZ-jzK"/>
+                <constraint firstItem="mmZ-Vn-mGa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="uQu-xz-Hk6"/>
+                <constraint firstItem="Ywg-98-pKS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vTv-WJ-5Ov"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="suggestion.png" width="100" height="100"/>
+    </resources>
+</document>

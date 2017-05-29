@@ -10,7 +10,14 @@
 #import "DAGetUserInfo.h"
 #import "UserModel.h"
 #import "DAUploadAvatarWidget.h"
-#import "RegisterPage.h" //测试注册界面
+#import "UserInfoPage.h" //测试注册界面
+
+#import "ModifyPasswordPage.h"
+#import "ContactUsPage.h"
+#import "BecomeVipPage.h"
+#import "CheckUpdatePage.h"
+#import "AboutPage.h"
+#import "UserSuggestPage.h"
 
 #import <SDWebImage/UIButton+WebCache.h>
 
@@ -31,6 +38,7 @@
     [super viewDidUnload];
     self.list = nil;
     self.IconList = nil;
+    self.page = [[UserInfoPage alloc] init];
 }
 
 - (void)initData{
@@ -49,6 +57,8 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
+    self.page.model = data; //将拿到的数据赋值给model
+    
     [UserName setText:data.name];
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,data.avatar];
     
@@ -82,17 +92,65 @@
 
 //cell的点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self alertView:[self.list objectAtIndex:[indexPath row]]];
+    switch ([indexPath row]) {
+        case 0:
+        {
+            //成为vip
+            BecomeVipPage *modityPassword = [[BecomeVipPage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 1:
+        {
+            //修改密码
+            ModifyPasswordPage *modityPassword = [[ModifyPasswordPage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 2:
+        {
+            //版本更新
+            CheckUpdatePage *modityPassword = [[CheckUpdatePage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 3:
+        {
+            //联系我们
+            ContactUsPage *modityPassword = [[ContactUsPage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 4:
+        {
+            //意见反馈
+            UserSuggestPage *modityPassword = [[UserSuggestPage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 5:
+        {
+            //关于
+            AboutPage *modityPassword = [[AboutPage alloc] init];
+            [self initToDetails:modityPassword];
+        }
+            break;
+        case 6:
+        {
+            //分享应用
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 //头像的点击事件
-- (IBAction)avatarPress:(id)sender{
-    //DAUploadAvatarWidget *page = [[DAUploadAvatarWidget alloc] init];
-    //[self.navigationController pushViewController:page animated:YES];
-    //[self presentViewController:page animated:true completion:nil];
-    
-    RegisterPage *page = [[RegisterPage alloc] init];
-    [self.navigationController pushViewController:page animated:YES];
+- (IBAction)avatarPress:(id)sender{    
+
+    [self initToDetails:self.page];
 }
 
 @end

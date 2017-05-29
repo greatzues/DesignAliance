@@ -11,7 +11,6 @@
 
 @interface CustomCalloutView()
 
-@property (nonatomic,strong) UIImageView * thumbnailImageView;  //!< 缩略图
 @property (nonatomic,strong) UILabel * titleLabel;  //!< 标题Label
 @property (nonatomic,strong) UILabel * addressLabel;  //!< 地址Label
 
@@ -26,12 +25,6 @@
         
         //其他控件的初始化写在这里
         self.backgroundColor = [UIColor clearColor];
-        
-        //初始化缩略图,距离边距为5，宽度为70，高度为50
-        //self.thumbnailImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 70, 50)];
-        self.thumbnailImageView = [[UIImageView alloc] initWithFrame:CGRectMake(178, 8, 15, 15)];
-        self.thumbnailImageView.backgroundColor =  [UIColor whiteColor];
-        [self addSubview:self.thumbnailImageView];
         
         //初始化标题Label,如果添加缩略图，则用注释的代码代替下一行的代码
         //self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5+70+5, 5, 120-8, 20)];
@@ -49,6 +42,17 @@
         self.addressLabel.textColor =  [UIColor lightGrayColor];
         self.addressLabel.text = @"address";
         [self addSubview:self.addressLabel];
+        
+        //_button的监听事件在MapPage上处理
+        MapPage *page = [[MapPage alloc] init];
+        _button = [[UIButton alloc] initWithFrame:CGRectMake(200, 8, 45, 45)];
+        _button.backgroundColor =  [UIColor whiteColor];
+        _button.titleLabel.font = [UIFont systemFontOfSize: 14.0];
+        [_button setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
+        [_button setTitle:@"详情" forState:UIControlStateNormal];
+        //[_button setImage:[UIImage imageNamed:@"mapNormal"] forState:UIControlStateNormal];
+        [_button addTarget:page action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_button];
     }
     return self;
 }
@@ -61,11 +65,6 @@
 - (void)setAddress:(NSString *)address
 {
     self.addressLabel.text = address;
-}
-
-- (void)setThumbnail:(UIImage *)thumbnail
-{
-    self.thumbnailImageView.image = thumbnail;
 }
 
 
@@ -128,5 +127,7 @@
     //阴影的偏移
     self.layer.shadowOffset = CGSizeMake(0, 0);
 }
+
+
 
 @end

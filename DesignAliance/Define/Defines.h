@@ -115,6 +115,7 @@ selector:_selector name:_name object:nil];
 #define NavBarHeight        44
 #define NavBarHeight7       64
 #define LocationDistance    100
+#define ContactUsNumber     "0750-3536712"
 
 // 消息通知Key
 #define NofifyNewsIcon      @"NewsIcon"

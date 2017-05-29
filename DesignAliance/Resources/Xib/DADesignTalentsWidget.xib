@@ -20,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-LX-74W">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-LX-74W">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="x2B-Zt-ySg"/>
@@ -31,6 +30,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rOZ-LX-74W" secondAttribute="bottom" id="9R8-O9-jGN"/>
+                <constraint firstAttribute="trailing" secondItem="rOZ-LX-74W" secondAttribute="trailing" id="Cfp-Tv-oS8"/>
+                <constraint firstItem="rOZ-LX-74W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Dk8-w0-Egz"/>
+                <constraint firstItem="rOZ-LX-74W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jGA-Gr-kLn"/>
+            </constraints>
         </view>
     </objects>
 </document>

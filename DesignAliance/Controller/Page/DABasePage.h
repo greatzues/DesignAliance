@@ -10,7 +10,12 @@
 
 @interface DABasePage : DABaseController
 
+@property(nonatomic, strong) DABasePage *page;
 
 - (void)alertView:(NSString *)message;
+/*
+ 跳转到详情页面
+ */
+- (void)initToDetails:(DABasePage *)page;
 
 @end

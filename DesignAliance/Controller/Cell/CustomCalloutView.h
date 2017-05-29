@@ -10,8 +10,8 @@
 
 @interface CustomCalloutView : UIView
 
-@property (nonatomic,strong) UIImage * thumbnail;  //!< 缩略图片
 @property (nonatomic,copy) NSString * title;  //!< 标题
 @property (nonatomic,copy) NSString * address; //!< 地址
+@property (strong, nonatomic) IBOutlet UIButton *button;
 
 @end

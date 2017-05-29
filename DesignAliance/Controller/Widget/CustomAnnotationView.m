@@ -19,7 +19,7 @@
         //如果气泡为空则初始化气泡
         if (self.calloutView == nil) {
             
-            self.calloutView = [[CustomCalloutView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
+            self.calloutView = [[CustomCalloutView alloc] initWithFrame:CGRectMake(0, 0, 250, 70)];
             
             //设置气泡的中心点,正的偏移使view朝右下方移动，负的朝左上方，单位是屏幕坐标
             CGFloat center_x = self.bounds.size.width/2;
@@ -28,9 +28,9 @@
         }
         
         //给calloutView赋值
-        self.calloutView.thumbnail = [UIImage imageNamed:@"mapNormal"]; //设置展示的图片
         self.calloutView.title = self.annotation.title;
         self.calloutView.address = self.annotation.subtitle;
+    
         
         [self addSubview:self.calloutView];
         
@@ -40,6 +40,26 @@
     }
     
     [super setSelected:selected animated:animated];
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    
+        UIView *view = [super hitTest:point withEvent:event];
+    
+        if (view == nil) {
+    
+            CGPoint tempoint = [self.calloutView.button convertPoint:point fromView:self];
+    
+            if (CGRectContainsPoint(self.calloutView.button.bounds, tempoint))
+    
+            {
+                view = self.calloutView.button;
+            }
+    
+        }
+        
+        return view;
+    
 }
 
 @end

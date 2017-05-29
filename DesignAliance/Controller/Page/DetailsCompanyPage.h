@@ -7,7 +7,25 @@
 //
 
 #import "DABasePage.h"
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "SearchModel.h"
 
-@interface DetailsCompanyPage : DABasePage
+
+@interface DetailsCompanyPage : DABasePage <MAMapViewDelegate, UIActionSheetDelegate>
+
+@property (strong, nonatomic) IBOutlet UIView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *manager;
+@property (weak, nonatomic) IBOutlet UILabel *phone;
+@property (weak, nonatomic) IBOutlet UILabel *desc;
+@property (weak, nonatomic) IBOutlet UILabel *location;
+
+@property (nonatomic,assign) CLLocationCoordinate2D coordinate;  //!< 要导航的坐标
+
+@property(nonatomic, strong)   SearchModel          *search;
+@property(nonatomic, strong)   MAMapView            *AmapView;
+@property(nonatomic, strong)   MAUserLocation       *currentUserLoaction;
+@property(nonatomic, strong)   MAPointAnnotation    *pointAnnotation;
 
 @end
