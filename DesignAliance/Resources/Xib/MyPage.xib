@@ -98,7 +98,7 @@
         </view>
     </objects>
     <resources>
-        <image name="UserBackground.png" width="200" height="114"/>
+        <image name="UserBackground.png" width="375" height="208"/>
         <image name="userDefaultAvatar.png" width="50" height="50"/>
     </resources>
 </document>

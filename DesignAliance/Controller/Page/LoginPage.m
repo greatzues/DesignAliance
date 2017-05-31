@@ -20,9 +20,11 @@
     [self autoLogin];
     
     [super viewDidLoad];
-    [self setNavigationLeft:@"NavigationBack.png" sel:nil];
-    self.title = LoginTitle;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,4 +89,8 @@
     [_operation executeOp];
 }
 
+- (IBAction)registerAccount:(id)sender {
+    RegisterPage *page = [[RegisterPage alloc] init];
+    [self initToDetails:page];
+}
 @end

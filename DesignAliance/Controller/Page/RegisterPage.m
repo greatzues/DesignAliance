@@ -29,23 +29,6 @@
 {
     [super viewDidLoad];
     
-    
-//    JVFloatLabeledTextField *titleField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width-100, 30)];
-//    //textField类型
-//    titleField.borderStyle = UITextBorderStyleRoundedRect;
-//    titleField.font = [UIFont systemFontOfSize:16];
-//    //placeholder 的属性设置
-//    titleField.attributedPlaceholder =[[NSAttributedString alloc] initWithString:NSLocalizedString(@"Title", @"")attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
-//    //弹上去的字体大小、颜色
-//    titleField.floatingLabelFont = [UIFont boldSystemFontOfSize:10];
-//    titleField.floatingLabelTextColor = [UIColor brownColor];
-//    //是否有清除按钮
-//    titleField.clearButtonMode = UITextFieldViewModeWhileEditing;
-//    [self.view addSubview:titleField];
-//    //这个属性是约束Autosizing控制，当打开约束的时候，要约束条件完全，否则可能试图丢失。
-//    //    titleField.translatesAutoresizingMaskIntoConstraints = NO;
-//    titleField.keepBaseline = YES;
-//    //    [titleField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +36,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
 //开启倒计时效果
 - (IBAction)openCountdown:(id)sender{

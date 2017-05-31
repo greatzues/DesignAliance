@@ -13,7 +13,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //给所有页面设置背景图片
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"WeatherBack.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DefaultBackground.png"]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, AMapRoutePOISearchType)
     AMapRoutePOISearchTypeMaintenanceStation = 1,   ///< 维修站
     AMapRoutePOISearchTypeATM                = 2,   ///< ATM
     AMapRoutePOISearchTypeToilet             = 3,   ///< 厕所
+    AMapRoutePOISearchTypeGasAirStation      = 4,   ///< 加气站
+    AMapRoutePOISearchTypeParkStation        = 5,   ///< 服务区
 };
 
 ///天气查询类型
@@ -47,7 +49,7 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @interface AMapPOISearchBaseRequest : AMapSearchObject
 ///类型，多个类型用“|”分割 可选值:文本分类、分类代码
 @property (nonatomic, copy)   NSString  *types;
-///排序规则, 0-距离排序；1-综合排序, 默认1
+///排序规则, 0-距离排序；1-综合排序, 默认0
 @property (nonatomic, assign) NSInteger  sortrule;
 ///每页记录数, 范围1-50, [default = 20]
 @property (nonatomic, assign) NSInteger  offset;
@@ -74,7 +76,7 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 ///查询城市，可选值：cityname（中文或中文全拼）、citycode、adcode.(注：台湾地区一律设置为【台湾】，不具体到市。)
 @property (nonatomic, copy)   NSString *city; 
 ///强制城市限制功能 默认NO，例如：在上海搜索天安门，如果citylimit为true，将不返回北京的天安门相关的POI
-@property (nonatomic, assign) BOOL cityLimit; 
+@property (nonatomic, assign) BOOL cityLimit;
 
 @end
 
@@ -107,7 +109,7 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @end
 
 #pragma mark - AMapPOIRouteSearchRequest
-///沿途搜索
+///沿途搜索, 注意起点和终点不能相距太远(大概70公里)，否则可能搜索结果为空
 @interface AMapRoutePOISearchRequest : AMapSearchObject
 ///中心点坐标
 @property (nonatomic, copy)   AMapGeoPoint *origin; 
@@ -118,7 +120,12 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 ///驾车导航策略，同驾车路径规划请求的策略（5 多策略除外）
 @property (nonatomic, assign) NSInteger strategy;
 ///道路周围搜索范围,单位米,[0-500]，默认250。
-@property (nonatomic, assign) NSInteger range; 
+@property (nonatomic, assign) NSInteger range;
+///用户自己规划的路线,在origine、destination未填入时为必填.格式为:"经度,维度;经度,维度;...". 目前限制个数最多为100个点
+@property (nonatomic, strong) NSString *polylineStr;
+///用户自己规划的路线,在origine、destination未填入且polylineStr未填入时为必填. 目前限制个数最多为100个点
+@property (nonatomic, strong) NSArray<AMapGeoPoint*> *polyline;
+
 @end
 
 ///沿途搜索返回
@@ -181,7 +188,9 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 ///中心点坐标。
 @property (nonatomic, copy)   AMapGeoPoint *location; 
 ///查询半径，单位米，范围0~3000，默认1000。
-@property (nonatomic, assign) NSInteger     radius; 
+@property (nonatomic, assign) NSInteger     radius;
+///指定返回结果poi数组中的POI类型，在requireExtension=YES时生效。输入为typecode, 支持传入多个typecode, 多值时用“|”分割
+@property (nonatomic, copy) NSString *poitype;
 @end
 
 ///逆地理编码返回
@@ -301,6 +310,11 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @property (nonatomic, copy) NSString *destinationtype;
 ///是否返回扩展信息，默认为 NO
 @property (nonatomic, assign) BOOL requireExtension;
+///车牌省份，用汉字填入车牌省份缩写。用于判断是否限行
+@property (nonatomic, copy) NSString *plateProvince;
+///车牌详情,填入除省份及标点之外的字母和数字（需大写）。用于判断是否限行。
+@property (nonatomic, copy) NSString *plateNumber;
+
 @end
 
 #pragma mark - AMapWalkingRouteSearchRequest
@@ -324,7 +338,7 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 ///是否包含夜班车，默认为 NO
 @property (nonatomic, assign) BOOL nightflag; 
 ///是否返回扩展信息，默认为 NO
-@property (nonatomic, assign) BOOL requireExtension; 
+@property (nonatomic, assign) BOOL requireExtension;
 @end
 
 #pragma mark - AMapRidingRouteSearchRequest
@@ -343,7 +357,11 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @property (nonatomic, strong) AMapRoute *route; 
 @end
 
-#pragma mark - AMapWeatherSearchWeather
+///骑行路径规划返回
+@interface AMapRidingRouteSearchResponse : AMapRouteSearchResponse
+@end
+
+#pragma mark - AMapWeatherSearchRequest
 
 ///天气查询请求
 @interface AMapWeatherSearchRequest : AMapSearchObject
@@ -359,6 +377,24 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @property (nonatomic, strong) NSArray<AMapLocalWeatherLive *> *lives; 
 ///预报天气数据信息 AMapLocalWeatherForecast 数组，仅在请求预报天气时有返回
 @property (nonatomic, strong) NSArray<AMapLocalWeatherForecast *> *forecasts; 
+
+@end
+
+#pragma mark - AMapRoadTrafficSearchRequest
+///道路实时路况查询请求 since 5.1.0
+@interface AMapRoadTrafficSearchRequest : AMapSearchObject
+///道路名称，可通过逆地理编码查询获取
+@property (nonatomic, copy)   NSString *roadName;
+///adcode，可通过逆地理编码查询获取
+@property (nonatomic, copy)   NSString *adcode;
+///是否返回扩展信息，默认为 NO
+@property (nonatomic, assign) BOOL requireExtension;
+@end
+
+///道路实时路况查询返回 since 5.1.0
+@interface AMapRoadTrafficSearchResponse : AMapSearchObject
+///路况信息
+@property (nonatomic, strong) AMapTrafficInfo *trafficInfo;
 
 @end
 

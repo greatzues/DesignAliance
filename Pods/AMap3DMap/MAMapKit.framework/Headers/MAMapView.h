@@ -177,8 +177,11 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///停止/开启 OpenGLES绘制, 默认NO. 对应回调是 - (void)mapView:(MAMapView *) didChangeOpenGLESDisabled:(BOOL)
 @property (nonatomic, assign) BOOL openGLESDisabled;
 
-///地图的视图锚点。坐标系归一化，(0, 0)为MAMapView左上角，(1, 1)为右下角。默认为(0.5, 0.5)，即当前地图的视图中心 since V5.0.0
-@property (nonatomic) CGPoint screenAnchor;
+///地图的视图锚点。坐标系归一化，(0, 0)为MAMapView左上角，(1, 1)为右下角。默认为(0.5, 0.5)，即当前地图的视图中心 （since 5.0.0）
+@property (nonatomic, assign) CGPoint screenAnchor;
+
+///地图渲染的runloop mode，默认为NSRunLoopCommonModes。如果是和UIScrollView一起使用且不希望地图在scrollView拖动时渲染，请设置此值为NSDefaultRunLoopMode。（since 5.1.0）
+@property (nonatomic, copy) NSRunLoopMode runLoopMode;
 
 /**
  * @brief 设定当前地图的经纬度范围，该范围可能会被调整为适合地图窗口显示的范围
@@ -371,7 +374,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///annotation 可见区域
 @property (nonatomic, readonly) CGRect annotationVisibleRect;
 
-///是否允许对annotationView根据zIndex进行排序，默认为YES 注意：当annotationView数量比较大时可能会引起性能问题，可以设置此属性为NO
+///是否允许对annotationView根据zIndex进行排序，默认为NO 注意：如果设置为YES，慎重重载MAAnnoationView的willMoveToSuperview:，内部排序时会调用removeFromSuperView
 @property (nonatomic, assign) BOOL allowsAnnotationViewSorting;
 
 /**
@@ -670,7 +673,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 @property (nonatomic, assign) BOOL customMapStyleEnabled;
 
 /**
- * @brief 自定义地图样式, 目前仅支持自定义标准类型. 默认不生效，调用mapCustomEnable=YES使生效.
+ * @brief 自定义地图样式, 目前仅支持自定义标准类型. 默认不生效，调用customMapStyleEnabled=YES使生效.
  * @param customJson 自定义的JSON格式数据.
  */
 - (void)setCustomMapStyle:(NSData*)customJson;
@@ -806,7 +809,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 - (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error;
 
 /**
- * @brief 拖动annotation view时view的状态变化，ios3.2以后支持
+ * @brief 拖动annotation view时view的状态变化
  * @param mapView 地图View
  * @param view annotation view
  * @param newState 新状态

@@ -9,4 +9,17 @@ pod 'SDWebImage', '~>3.8'
 
 pod 'BmobSDK'
 pod 'SDCycleScrollView','~> 1.64'
+
+pod 'ShareSDK3'
+pod 'MOBFoundation'
+pod 'ShareSDK3/ShareSDKUI'
+pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+pod 'ShareSDK3/ShareSDKPlatforms/Mail'
+pod 'ShareSDK3/ShareSDKPlatforms/SMS'
+
+pod 'ShareSDK3/ShareSDKConfigurationFile'
+pod 'ShareSDK3/ShareSDKExtension'
+
 end

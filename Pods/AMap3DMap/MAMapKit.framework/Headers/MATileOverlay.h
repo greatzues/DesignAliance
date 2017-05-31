@@ -12,8 +12,8 @@
 ///该类是覆盖在球面墨卡托投影上的图片tiles的数据源
 @interface MATileOverlay : NSObject <MAOverlay>
 
-///默认tileSize 256x256
-@property (readonly) CGSize tileSize;
+///瓦片大小，默认是256x256, 最小支持64*64
+@property (nonatomic, assign) CGSize tileSize;
 
 ///tileOverlay的可见最小Zoom值
 @property NSInteger minimumZ;

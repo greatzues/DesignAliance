@@ -25,8 +25,14 @@ typedef void(^MAFinishCallback)(NSArray<MATracePoint *> *points, double distance
 ///失败回调
 typedef void(^MAFailedCallback)(int errorCode, NSString *errorDesc);
 
+
 ///轨迹纠偏管理类
 @interface MATraceManager : NSObject
+
+/**
+ * @brief 单例方法
+ */
++ (instancetype)sharedInstance;
 
 /**
  * @brief 获取纠偏后的经纬度点集

@@ -19,7 +19,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //[self setNavBarImage];
     
     //sharedApplication拿到application对象，设置顶部状态栏隐藏状态为NO，也就是显示状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
@@ -33,7 +32,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    //StatisOutPage(GetPageName()); //友盟统计
+    
 }
 
 - (void)dealloc{
