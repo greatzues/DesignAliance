@@ -18,10 +18,8 @@
     SearchNewsPage  *NewsPage = [[SearchNewsPage alloc] init];
     self.page = NewsPage;
     
-    [self setNavigationLeft:@"NavigationBell.png" sel:nil];
     [self setNavigationRight:@"NavigationSquare.png"];
-    [self setNavigationTitleImage:@"NavBarIcon.png"]; //设置顶部标题的背景图片
-
+    [self setNavigationTitleImage:@"logo.png"];
     [self initColumnBar];
 }
 

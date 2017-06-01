@@ -6,48 +6,47 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DesignMissionCell" rowHeight="90" id="93q-Kt-Uxf" userLabel="DesignMissionCell" customClass="DesignMissionCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="93q-Kt-Uxf" id="eIb-Eo-4dV">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Och-Wj-ygg">
-                        <rect key="frame" x="20" y="37" width="300" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9N-4g-WoH">
+                        <rect key="frame" x="20" y="11" width="280" height="1.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN7-hB-Dgj">
-                        <rect key="frame" x="20" y="8" width="292" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-hW-Ivf">
+                        <rect key="frame" x="20" y="22.5" width="280" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="TY1-id-wpe"/>
+                            <constraint firstAttribute="height" constant="21" id="n7B-Uo-dI3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Och-Wj-ygg" secondAttribute="trailing" id="CI7-b2-72S"/>
-                    <constraint firstItem="XN7-hB-Dgj" firstAttribute="top" secondItem="eIb-Eo-4dV" secondAttribute="topMargin" id="MU8-2p-Cgv"/>
-                    <constraint firstAttribute="bottom" secondItem="Och-Wj-ygg" secondAttribute="bottom" constant="0.5" id="a3f-8k-ty8"/>
-                    <constraint firstItem="Och-Wj-ygg" firstAttribute="top" secondItem="XN7-hB-Dgj" secondAttribute="bottom" constant="8" id="e4o-4a-SJm"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="XN7-hB-Dgj" secondAttribute="trailing" id="sxM-Gk-eWb"/>
-                    <constraint firstItem="XN7-hB-Dgj" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leadingMargin" constant="12" id="uHp-aI-hho"/>
-                    <constraint firstItem="Och-Wj-ygg" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" constant="20" id="x9i-6Z-mv7"/>
+                    <constraint firstAttribute="bottom" secondItem="xfc-hW-Ivf" secondAttribute="bottom" constant="10" id="HlW-eR-kBN"/>
+                    <constraint firstItem="xfc-hW-Ivf" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" constant="20" id="JIB-gx-fT1"/>
+                    <constraint firstItem="l9N-4g-WoH" firstAttribute="top" secondItem="eIb-Eo-4dV" secondAttribute="top" constant="11" id="Kps-3P-O2A"/>
+                    <constraint firstItem="xfc-hW-Ivf" firstAttribute="top" secondItem="l9N-4g-WoH" secondAttribute="bottom" constant="10" id="Qfm-Jm-srY"/>
+                    <constraint firstItem="l9N-4g-WoH" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" constant="20" id="SGx-VN-3CO"/>
+                    <constraint firstAttribute="trailing" secondItem="xfc-hW-Ivf" secondAttribute="trailing" constant="20" id="jcs-0R-WQG"/>
+                    <constraint firstAttribute="trailing" secondItem="l9N-4g-WoH" secondAttribute="trailing" constant="20" id="kFl-ha-cNs"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="_descLabel" destination="Och-Wj-ygg" id="vBj-cj-ksi"/>
-                <outlet property="_titleLabel" destination="XN7-hB-Dgj" id="SU4-2F-BLh"/>
+                <outlet property="_descLabel" destination="xfc-hW-Ivf" id="LKS-wB-o1a"/>
+                <outlet property="_titleLabel" destination="l9N-4g-WoH" id="jn5-sR-vVU"/>
             </connections>
             <point key="canvasLocation" x="-43" y="-130"/>
         </tableViewCell>

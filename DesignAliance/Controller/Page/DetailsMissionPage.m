@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getCount];
+    [self setTitle:@"设计任务"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,12 +28,12 @@
 
 - (void)initMissionPage{
     self.missionTitle.text = self.model.name;
-    self.missionTime.text = self.model.time.stringValue; //后面再转化时间戳
+    self.missionTime.text = [self dateToTime: self.model.time.stringValue];
     self.missionCount.text = self.model.count.stringValue;
-    self.missionDetails.numberOfLines = 5;
+    self.missionDetails.numberOfLines = 6;
     self.missionDetails.text = self.model.details;
-    self.missionIssuer.text = self.model.issuer;
-    self.missionContact.text = self.model.contact;
+    self.missionIssuer.text = [NSString stringWithFormat:@"发布者：%@",self.model.issuer];
+    self.missionContact.text = [NSString stringWithFormat:@"联系方式：%@",self.model.contact];
     
     NSString *imageURL = [NSString stringWithFormat:ImageMission,self.model.cover];
     [self.missionCover sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];

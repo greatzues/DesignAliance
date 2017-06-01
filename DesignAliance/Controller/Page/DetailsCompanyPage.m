@@ -16,6 +16,7 @@
     [super viewDidLoad];
     [self initData];
     [self initMap];
+    [self setTitle:self.search.name];
 }
 
 - (void)didReceiveMemoryWarning {

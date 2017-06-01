@@ -26,8 +26,6 @@
     [self setStatusBarStyle:UIStatusBarStyleLightContent];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
-    //友盟统计，暂时没接入进去
-    //StatisIntoPage(GetPageName());
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

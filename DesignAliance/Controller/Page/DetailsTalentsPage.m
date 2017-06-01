@@ -8,12 +8,14 @@
 
 #import "DetailsTalentsPage.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImage+extension.h"
 
 @implementation DetailsTalentsPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initPage];
+    [self setTitle:@"设计人才"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +32,9 @@
     self.education.text = self.model.education;
     
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
-    [self.avatar sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
+//    [self.avatar sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
+    
+    [self.avatar was_setCircleImageWithUrl:[NSURL URLWithString:imageURL] placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
 }
 
 @end

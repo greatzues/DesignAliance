@@ -6,13 +6,13 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "DABasePage.h"
+#import "DABaseDetailsPage.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "SearchModel.h"
 
 
-@interface DetailsCompanyPage : DABasePage <MAMapViewDelegate, UIActionSheetDelegate>
+@interface DetailsCompanyPage : DABaseDetailsPage <MAMapViewDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *name;

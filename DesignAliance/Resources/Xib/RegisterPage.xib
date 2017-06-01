@@ -127,6 +127,17 @@
                                 <constraint firstAttribute="height" constant="1" id="a0L-bu-utK"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-xu-vwY">
+                            <rect key="frame" x="130" y="-25" width="66" height="66"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="Nqu-HD-x3G"/>
+                                <constraint firstAttribute="width" constant="66" id="nTx-ET-ZA7"/>
+                            </constraints>
+                            <state key="normal" image="RegisterButton.png"/>
+                            <connections>
+                                <action selector="backToLoginPage:" destination="-1" eventType="touchUpInside" id="VCk-Z2-HYa"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="vPY-1K-j6E" secondAttribute="trailing" constant="28" id="2QF-jj-8SA"/>
@@ -145,8 +156,10 @@
                         <constraint firstItem="UO0-XA-3ru" firstAttribute="leading" secondItem="ZwR-q3-cg7" secondAttribute="leading" constant="46" id="Jax-Ug-h1Z"/>
                         <constraint firstItem="Avc-52-hIs" firstAttribute="leading" secondItem="ZwR-q3-cg7" secondAttribute="leading" constant="46" id="LZH-6X-vP1"/>
                         <constraint firstItem="cxx-0j-24r" firstAttribute="leading" secondItem="ZwR-q3-cg7" secondAttribute="leading" constant="46" id="Nz2-1O-9lf"/>
+                        <constraint firstItem="LOC-xu-vwY" firstAttribute="top" secondItem="ZwR-q3-cg7" secondAttribute="top" constant="-25" id="PqS-Mc-Olq"/>
                         <constraint firstAttribute="trailing" secondItem="PNU-lB-Qmc" secondAttribute="trailing" constant="84" id="Ssk-KI-GL8"/>
                         <constraint firstItem="INH-aw-2uQ" firstAttribute="leading" secondItem="ZwR-q3-cg7" secondAttribute="leading" id="T0C-p7-bFM"/>
+                        <constraint firstItem="LOC-xu-vwY" firstAttribute="centerX" secondItem="ZwR-q3-cg7" secondAttribute="centerX" id="Vle-3T-jc2"/>
                         <constraint firstItem="vPY-1K-j6E" firstAttribute="leading" secondItem="ZwR-q3-cg7" secondAttribute="leading" constant="46" id="Waf-IJ-If0"/>
                         <constraint firstItem="gA1-Uy-5kl" firstAttribute="top" secondItem="ZwR-q3-cg7" secondAttribute="top" constant="36" id="XhI-7g-tN0"/>
                         <constraint firstItem="7nC-ui-1Sv" firstAttribute="top" secondItem="cxx-0j-24r" secondAttribute="bottom" id="Ycb-tO-sr3"/>
@@ -183,6 +196,7 @@
         </view>
     </objects>
     <resources>
+        <image name="RegisterButton.png" width="66" height="66"/>
         <image name="background.png" width="375" height="667"/>
         <image name="codeButton.png" width="92" height="41"/>
         <image name="loginWindow.png" width="332" height="349"/>

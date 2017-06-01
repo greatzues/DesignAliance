@@ -16,9 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lR8-tn-rPc" id="cJx-9x-EF7">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talentCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="4zJ-Dd-mpn">
+                        <rect key="frame" x="7" y="6" width="306" height="102.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nX-sy-F5K">
                         <rect key="frame" x="93" y="15" width="227" height="21"/>
                         <constraints>
@@ -43,7 +46,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D4D-ry-SV9">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D4D-ry-SV9">
                         <rect key="frame" x="25" y="24" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="TWi-tG-T56"/>
@@ -56,7 +59,8 @@
                     <constraint firstItem="meJ-Bb-ahP" firstAttribute="leading" secondItem="D4D-ry-SV9" secondAttribute="trailing" constant="8" id="95M-4l-Pia"/>
                     <constraint firstItem="yqR-HS-lRx" firstAttribute="leading" secondItem="D4D-ry-SV9" secondAttribute="trailing" constant="8" id="HgF-5N-dd5"/>
                     <constraint firstItem="meJ-Bb-ahP" firstAttribute="top" secondItem="yqR-HS-lRx" secondAttribute="bottom" constant="8" id="Imn-jC-xE7"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="D4D-ry-SV9" secondAttribute="bottom" constant="16.5" id="JDE-nH-Ouo"/>
+                    <constraint firstAttribute="bottom" secondItem="4zJ-Dd-mpn" secondAttribute="bottom" id="IvS-8z-hYE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="D4D-ry-SV9" secondAttribute="bottom" constant="25" id="JDE-nH-Ouo"/>
                     <constraint firstAttribute="trailing" secondItem="yqR-HS-lRx" secondAttribute="trailing" id="JUP-uT-OCm"/>
                     <constraint firstItem="yqR-HS-lRx" firstAttribute="top" secondItem="6nX-sy-F5K" secondAttribute="bottom" constant="8" id="KDr-ls-Cbg"/>
                     <constraint firstItem="D4D-ry-SV9" firstAttribute="leading" secondItem="cJx-9x-EF7" secondAttribute="leadingMargin" constant="17" id="RIa-yk-tdD"/>
@@ -64,6 +68,9 @@
                     <constraint firstItem="6nX-sy-F5K" firstAttribute="leading" secondItem="D4D-ry-SV9" secondAttribute="trailing" constant="8" id="cZC-EH-oNf"/>
                     <constraint firstAttribute="trailing" secondItem="meJ-Bb-ahP" secondAttribute="trailing" id="gEC-5c-7z6"/>
                     <constraint firstAttribute="trailing" secondItem="6nX-sy-F5K" secondAttribute="trailing" id="ge8-0a-mwh"/>
+                    <constraint firstAttribute="trailing" secondItem="4zJ-Dd-mpn" secondAttribute="trailing" constant="7" id="nW1-WJ-R64"/>
+                    <constraint firstItem="4zJ-Dd-mpn" firstAttribute="top" secondItem="cJx-9x-EF7" secondAttribute="top" constant="6" id="qKa-ly-g5P"/>
+                    <constraint firstItem="4zJ-Dd-mpn" firstAttribute="leading" secondItem="cJx-9x-EF7" secondAttribute="leading" constant="7" id="vz9-pd-v3Q"/>
                     <constraint firstItem="D4D-ry-SV9" firstAttribute="top" secondItem="cJx-9x-EF7" secondAttribute="topMargin" constant="16" id="yzV-G5-uLd"/>
                 </constraints>
             </tableViewCellContentView>
@@ -76,4 +83,7 @@
             <point key="canvasLocation" x="-43" y="-115.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="talentCard.png" width="363" height="93"/>
+    </resources>
 </document>

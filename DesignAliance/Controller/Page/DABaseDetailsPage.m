@@ -22,6 +22,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (NSString *)dateToTime:(NSString *)d{
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    NSString * timeStampString = d;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeStampString doubleValue] / 1000];
+    
+    NSString *myDate = [objDateformat stringFromDate: date];
+    return myDate;
+}
 
-
+#pragma 重写设置顶部logo的方法，将顶部的logo删掉
+- (void)setNavigationTitleImage:(NSString *)imageName{
+    
+}
 @end

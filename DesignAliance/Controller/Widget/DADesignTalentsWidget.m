@@ -22,7 +22,6 @@
     self.cellIdentifier = @"DesignTalentsCell";
     self.listData = [[NSMutableArray alloc] init];
     [super viewDidLoad];
-    
     _cellHeight = 109;
 }
 

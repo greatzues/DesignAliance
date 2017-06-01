@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
+    [self setNavigationRight:@"logout.png"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,6 +152,18 @@
 - (IBAction)avatarPress:(id)sender{    
 
     [self initToDetails:self.page];
+}
+
+- (void)setNavBarImage{
+    UIImage *image = [UIImage imageNamed:@"UserTopBackground.png"];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    NSDictionary *attribute = @{NSForegroundColorAttributeName:[UIColor whiteColor],
+                                NSFontAttributeName:[UIFont systemFontOfSize:18]
+                                };
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:attribute];
 }
 
 @end

@@ -16,6 +16,8 @@
 #import "SDCycleScrollView.h"
 #import "DetailsMissionPage.h"
 
+static int CycleScrollViewHeight = 156; //定义轮播图高度
+
 @implementation DADesignMissionWidget
 
 - (void)viewDidLoad {
@@ -126,7 +128,7 @@
         [images addObject:imageURL];
     }
     
-    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 180) delegate:self placeholderImage:[UIImage imageNamed:@"NewsDefault.png"]];
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, self.view.bounds.size.width, CycleScrollViewHeight) delegate:self placeholderImage:[UIImage imageNamed:@"NewsDefault.png"]];
     self.cycleScrollView.imageURLStringsGroup = images;
 }
 

@@ -23,9 +23,7 @@
 - (void)setCellData:(MissionModel *)info
 {
     [super setCellData:info];
-    
-    _descLabel.numberOfLines = 2;
-    _descLabel.text = info.count.stringValue; //到时再显示时间
+    _descLabel.text = [NSString stringWithFormat:@"%@次浏览",info.count.stringValue];
     
 }
 
