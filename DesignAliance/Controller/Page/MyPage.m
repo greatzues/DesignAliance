@@ -29,6 +29,7 @@
     [super viewDidLoad];
     [self initData];
     [self setNavigationRight:@"logout.png"];
+    [self setNavBarImage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +40,6 @@
     [super viewDidUnload];
     self.list = nil;
     self.IconList = nil;
-    self.page = [[UserInfoPage alloc] init];
 }
 
 - (void)initData{
@@ -58,10 +58,10 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
-    self.page.model = data; //将拿到的数据赋值给model
+    self.model = data; //将拿到的数据赋值给model
     
-    [UserName setText:data.name];
-    NSString *imageURL = [NSString stringWithFormat:ImageAvatar,data.avatar];
+    [UserName setText:self.model.name];
+    NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
     
     [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
 }
@@ -150,8 +150,9 @@
 
 //头像的点击事件
 - (IBAction)avatarPress:(id)sender{    
-
-    [self initToDetails:self.page];
+    UserInfoPage *page =  [[UserInfoPage alloc] init];
+    page.model = self.model;
+    [self initToDetails:page];
 }
 
 - (void)setNavBarImage{

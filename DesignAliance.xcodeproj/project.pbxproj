@@ -176,6 +176,8 @@
 		82E88D9A1EE0482F00AF0137 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88D991EE0482F00AF0137 /* UIImage+extension.m */; };
 		82E88D9C1EE056D700AF0137 /* NavigationSquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D9B1EE056D700AF0137 /* NavigationSquare@2x.png */; };
 		82E88D9E1EE05DB400AF0137 /* education@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D9D1EE05DB400AF0137 /* education@2x.png */; };
+		82E88DA21EE1691100AF0137 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA11EE1691100AF0137 /* UserInfoCell.xib */; };
+		82E88DA51EE16CF100AF0137 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DA41EE16CF100AF0137 /* UserInfoCell.m */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -458,6 +460,9 @@
 		82E88D991EE0482F00AF0137 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
 		82E88D9B1EE056D700AF0137 /* NavigationSquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationSquare@2x.png"; sourceTree = "<group>"; };
 		82E88D9D1EE05DB400AF0137 /* education@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "education@2x.png"; sourceTree = "<group>"; };
+		82E88DA11EE1691100AF0137 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
+		82E88DA31EE16CF100AF0137 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		82E88DA41EE16CF100AF0137 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -583,6 +588,7 @@
 				821732411EB4D446006B3387 /* DesignNewsCell.xib */,
 				187C45E11ED03A70006B2EF9 /* DesignMissionCell.xib */,
 				18397B9C1ED19CB300334AB3 /* DesignTalentsCell.xib */,
+				82E88DA11EE1691100AF0137 /* UserInfoCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -958,6 +964,8 @@
 				820C9CC51EC4110800CA4951 /* CustomCalloutView.m */,
 				18397B931ED1997B00334AB3 /* DesignTalentsCell.h */,
 				18397B941ED1997B00334AB3 /* DesignTalentsCell.m */,
+				82E88DA31EE16CF100AF0137 /* UserInfoCell.h */,
+				82E88DA41EE16CF100AF0137 /* UserInfoCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1221,6 +1229,7 @@
 				82E88D9C1EE056D700AF0137 /* NavigationSquare@2x.png in Resources */,
 				820C9CD71EC6BE1D00CA4951 /* DetailsNewsPage.xib in Resources */,
 				820CA82B1EB1CFA2006832B5 /* login_button@2x.png in Resources */,
+				82E88DA21EE1691100AF0137 /* UserInfoCell.xib in Resources */,
 				18FED9441ED94ED000C5FE4E /* ContactUsPage.xib in Resources */,
 				82E88D8F1EDFC6B000AF0137 /* toHere@2x.png in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
@@ -1394,6 +1403,7 @@
 				18FED9491ED978D500C5FE4E /* UserInfoPage.m in Sources */,
 				823EE7081EB37694001B98B4 /* DABasePage.m in Sources */,
 				821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */,
+				82E88DA51EE16CF100AF0137 /* UserInfoCell.m in Sources */,
 				18397BAE1ED1C57700334AB3 /* SearchTalentsPage.m in Sources */,
 				823EE70B1EB37694001B98B4 /* MapPage.m in Sources */,
 				18C2E2DE1ED3CD4700F75167 /* DAGetCountUp.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "DABasePage.h"
-#import "UserInfoPage.h"
+#import "UserModel.h"
 
 @interface MyPage : DABasePage<UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UILabel        *UserName;
@@ -17,6 +17,6 @@
 @property(strong, nonatomic) NSArray *list;
 @property(strong, nonatomic) NSArray *IconList;
 
-@property (nonatomic, strong) UserInfoPage      *page;
+@property (nonatomic, strong) UserModel      *model;
 
 @end

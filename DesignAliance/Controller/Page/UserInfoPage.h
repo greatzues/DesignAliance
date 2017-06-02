@@ -10,15 +10,20 @@
 #import "UserModel.h"
 
 
-@interface UserInfoPage : DABaseMyPage
-
-@property (weak, nonatomic) IBOutlet UIImageView *UserAvatar;
-@property (weak, nonatomic) IBOutlet UILabel *UserName;
-@property (weak, nonatomic) IBOutlet UILabel *UserSex;
-@property (weak, nonatomic) IBOutlet UILabel *UserEducation;
-@property (weak, nonatomic) IBOutlet UILabel *UserSkill;
-@property (weak, nonatomic) IBOutlet UILabel *UserDescript;
+@interface UserInfoPage : DABaseMyPage 
 
 @property (nonatomic, strong) UserModel      *model;
+
+@property (weak, nonatomic) IBOutlet UITableView *topUserInfoTable;
+@property (weak, nonatomic) IBOutlet UITextView *userSkill;
+@property (weak, nonatomic) IBOutlet UITextView *userDescription;
+
+@property (nonatomic, strong) NSString          *username;
+@property (nonatomic, strong) NSString          *sex;
+@property (nonatomic, strong) NSString          *decr;
+@property (nonatomic, strong) NSString          *skill;
+@property (nonatomic, strong) NSString          *education;
+
+@property (nonatomic, strong) NSArray           *array;
 
 @end
