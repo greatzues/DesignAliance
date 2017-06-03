@@ -34,7 +34,7 @@
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
 //    [self.avatar sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
     
-    [self.avatar was_setCircleImageWithUrl:[NSURL URLWithString:imageURL] placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
+    [self.avatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
 }
 
 @end

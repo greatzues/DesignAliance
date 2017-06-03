@@ -138,7 +138,7 @@ static const int toolBarHeight = 44;
         {
             NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
             self.userAvatar = cell.userAvatar;
-            [cell.userAvatar was_setCircleImageWithUrl:[NSURL URLWithString:imageURL] placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
+            [cell.userAvatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
         }
             break;
         case 1:
@@ -269,6 +269,7 @@ static const int toolBarHeight = 44;
     
 }
 
+
 #pragma PickerImage delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
@@ -277,6 +278,7 @@ static const int toolBarHeight = 44;
     [DAUploadAvatar upload:newPhoto];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 #pragma NavigationRight Action
 - (void)doRight:(id)sender{

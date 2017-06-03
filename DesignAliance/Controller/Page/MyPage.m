@@ -10,7 +10,7 @@
 #import "DAGetUserInfo.h"
 #import "UserModel.h"
 #import "DAUploadAvatarWidget.h"
-#import "UserInfoPage.h" //测试注册界面
+#import "UserInfoPage.h"
 
 #import "ModifyPasswordPage.h"
 #import "ContactUsPage.h"
@@ -20,6 +20,10 @@
 #import "UserSuggestPage.h"
 
 #import <SDWebImage/UIButton+WebCache.h>
+#import "UIImage+extension.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
 
 @implementation MyPage
 @synthesize list = _list;
@@ -29,7 +33,7 @@
     [super viewDidLoad];
     [self initData];
     [self setNavigationRight:@"logout.png"];
-    [self setNavBarImage];
+//    [self setNavBarImage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,8 +69,11 @@
     self.model = data; //将拿到的数据赋值给model
     
     [UserName setText:self.model.name];
+    [UserSkill setText:self.model.skill];
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
     
+//    [UserAvatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"userDefaultAvatar.png"] forState:UIControlStateNormal];
+
     [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
 }
 
@@ -143,7 +150,7 @@
         case 6:
         {
             //分享应用
-            
+            [self shareApp];
         }
             break;
             
@@ -169,6 +176,55 @@
                                 };
     
     [self.navigationController.navigationBar setTitleTextAttributes:attribute];
+}
+
+- (void)shareApp{
+    NSArray* imageArray = @[[UIImage imageNamed:@"logo.png"]];
+    
+    if (imageArray) {
+        
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:@"分享内容"
+                                         images:imageArray
+                                            url:[NSURL URLWithString:@"http://mob.com"]
+                                          title:@"分享标题"
+                                           type:SSDKContentTypeAuto];
+        
+        [ShareSDK showShareActionSheet:nil
+                                 items:nil
+                           shareParams:shareParams
+                   onShareStateChanged:^(SSDKResponseState state,
+                                         SSDKPlatformType platformType,
+                                         NSDictionary *userData,
+                                         SSDKContentEntity *contentEntity,
+                                         NSError *error,
+                                         BOOL end) {
+                       switch (state) {
+                           case SSDKResponseStateSuccess:
+                           {
+                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功"
+                                                                                   message:nil
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"确定"
+                                                                         otherButtonTitles:nil];
+                               [alertView show];
+                               break;
+                           }
+                           case SSDKResponseStateFail:
+                           {
+                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败"
+                                                                               message:[NSString stringWithFormat:@"%@",error]
+                                                                              delegate:nil
+                                                                     cancelButtonTitle:@"OK"
+                                                                     otherButtonTitles:nil, nil];
+                               [alert show];
+                               break;
+                           }
+                           default:
+                               break;
+                       }
+                   }];
+                }
 }
 
 @end

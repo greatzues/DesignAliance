@@ -178,6 +178,11 @@
 		82E88D9E1EE05DB400AF0137 /* education@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D9D1EE05DB400AF0137 /* education@2x.png */; };
 		82E88DA21EE1691100AF0137 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA11EE1691100AF0137 /* UserInfoCell.xib */; };
 		82E88DA51EE16CF100AF0137 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DA41EE16CF100AF0137 /* UserInfoCell.m */; };
+		82E88DAB1EE2BB0100AF0137 /* talentItemWindow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA61EE2BB0100AF0137 /* talentItemWindow@2x.png */; };
+		82E88DAC1EE2BB0100AF0137 /* talentLeftLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA71EE2BB0100AF0137 /* talentLeftLine@2x.png */; };
+		82E88DAD1EE2BB0100AF0137 /* talentName@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA81EE2BB0100AF0137 /* talentName@2x.png */; };
+		82E88DAE1EE2BB0100AF0137 /* talentPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */; };
+		82E88DAF1EE2BB0100AF0137 /* talentSkill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -463,6 +468,11 @@
 		82E88DA11EE1691100AF0137 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
 		82E88DA31EE16CF100AF0137 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
 		82E88DA41EE16CF100AF0137 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		82E88DA61EE2BB0100AF0137 /* talentItemWindow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentItemWindow@2x.png"; sourceTree = "<group>"; };
+		82E88DA71EE2BB0100AF0137 /* talentLeftLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentLeftLine@2x.png"; sourceTree = "<group>"; };
+		82E88DA81EE2BB0100AF0137 /* talentName@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentName@2x.png"; sourceTree = "<group>"; };
+		82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentPhone@2x.png"; sourceTree = "<group>"; };
+		82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentSkill@2x.png"; sourceTree = "<group>"; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -1054,6 +1064,11 @@
 		82E88D901EE040F500AF0137 /* NewsPage */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DA61EE2BB0100AF0137 /* talentItemWindow@2x.png */,
+				82E88DA71EE2BB0100AF0137 /* talentLeftLine@2x.png */,
+				82E88DA81EE2BB0100AF0137 /* talentName@2x.png */,
+				82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */,
+				82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */,
 				82E88D911EE0410D00AF0137 /* talentCard@2x.png */,
 				82E88D921EE0410D00AF0137 /* talentCard@3x.png */,
 				82E88D931EE0410D00AF0137 /* talentCardLeft@2x.png */,
@@ -1220,6 +1235,7 @@
 				82E88D9E1EE05DB400AF0137 /* education@2x.png in Resources */,
 				820CA8191EB1CF99006832B5 /* NavBarWhite44@2x.png in Resources */,
 				820CA8051EB1CF90006832B5 /* NewsIconSelect@2x.png in Resources */,
+				82E88DAC1EE2BB0100AF0137 /* talentLeftLine@2x.png in Resources */,
 				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
 				82E88D771EDFB72100AF0137 /* DefaultBackground@3x.png in Resources */,
 				82559C461EDE97CF008B149F /* signUpWindow@2x.png in Resources */,
@@ -1251,10 +1267,12 @@
 				82559C501EDF0CBE008B149F /* logo.png in Resources */,
 				82E88D851EDFBE5900AF0137 /* about@3x.png in Resources */,
 				820CA81B1EB1CF99006832B5 /* NavigationBack@2x.png in Resources */,
+				82E88DAE1EE2BB0100AF0137 /* talentPhone@2x.png in Resources */,
 				820CA81D1EB1CF99006832B5 /* NavigationBar44@2x.png in Resources */,
 				820CA8021EB1CF90006832B5 /* MyIcon@2x.png in Resources */,
 				82E88D8B1EDFBE5900AF0137 /* update@3x.png in Resources */,
 				18397B9F1ED19DF400334AB3 /* DADesignTalentsWidget.xib in Resources */,
+				82E88DAB1EE2BB0100AF0137 /* talentItemWindow@2x.png in Resources */,
 				8217324C1EB585F4006B3387 /* NewsMoreCell.xib in Resources */,
 				820CA8011EB1CF90006832B5 /* DiscoveryIconSelect@2x.png in Resources */,
 				82E88D871EDFBE5900AF0137 /* logout@3x.png in Resources */,
@@ -1271,12 +1289,14 @@
 				18FED9461ED9643000C5FE4E /* UserSuggestPage.xib in Resources */,
 				18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */,
 				82E88D8C1EDFBE5900AF0137 /* UserBackground@3x.png in Resources */,
+				82E88DAF1EE2BB0100AF0137 /* talentSkill@2x.png in Resources */,
 				82E88D941EE0410D00AF0137 /* talentCard@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
 				820CA81A1EB1CF99006832B5 /* NavBarWhite64@2x.png in Resources */,
 				82E88D961EE0410D00AF0137 /* talentCardLeft@2x.png in Resources */,
 				823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */,
 				82559C4C1EDEE3EF008B149F /* background@3x.png in Resources */,
+				82E88DAD1EE2BB0100AF0137 /* talentName@2x.png in Resources */,
 				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
 				18FED93E1ED909F400C5FE4E /* ModifyPasswordPage.xib in Resources */,
 				18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */,

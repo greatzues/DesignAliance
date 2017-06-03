@@ -12,6 +12,7 @@
 @interface MyPage : DABasePage<UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UILabel        *UserName;
     IBOutlet UIButton       *UserAvatar;
+    __weak IBOutlet UILabel *UserSkill;
 }
 
 @property(strong, nonatomic) NSArray *list;
