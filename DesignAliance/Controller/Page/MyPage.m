@@ -42,6 +42,10 @@
     self.IconList = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self initData];
+}
+
 - (void)initData{
     self.list = MyPageArray;
     self.IconList = MyPageIconArray;

@@ -27,22 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //创建一个imgv  来测试图片的更改
-    UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     
-    imgV.backgroundColor = [UIColor grayColor];
-    
-    self.imgV = imgV;
-    
-    imgV.userInteractionEnabled = YES;
-    [self.view addSubview:imgV];
-    
-    
-    //    创建一个点击事件
-    UITapGestureRecognizer *tag = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeImg)];
-    [imgV addGestureRecognizer:tag];
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

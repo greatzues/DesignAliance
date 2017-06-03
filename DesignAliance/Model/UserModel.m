@@ -18,6 +18,8 @@
     user.sex = [dict objectForKey:@"sex"];
     user.avatar = [dict objectForKey:@"avatar"];
     user.desc = [dict objectForKey:@"description"];
+    user.skill = [dict objectForKey:@"skill"];
+    user.education = [dict objectForKey:@"education"];
     
     return user;
 }

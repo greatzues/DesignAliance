@@ -10,81 +10,123 @@
 #import "UserInfoCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImage+extension.h"
+#import "DARegister.h"
+#import "MyPage.h"
 
-@interface UserInfoPage () <UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDelegate>
+#import "DAUploadAvatar.h"
+
+//相机返回的结果  如果结果为0 则获取相机成功  为1  则获取相机失败   下边会有说明
+#if TARGET_IPHONE_SIMULATOR
+#define SIMULATOR 1
+#elif TARGET_OS_IPHONE
+#define SIMULATOR 0
+#endif
+
+@interface UserInfoPage () <UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define BACKGROUND_BLACK_COLOR [UIColor colorWithRed:0.412 green:0.412 blue:0.412 alpha:0.7]
+static const int pickerViewHeight = 250;
+static const int toolBarHeight = 44;
 
 @implementation UserInfoPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
+    [self setNavigationRight:@"NavigationBell.png"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)initData{
-    self.topUserInfoTable.delegate = self;
-    self.topUserInfoTable.dataSource = self;
-}
 
-- (void)initPickView{
-    UIPickerView *pickView = [[UIPickerView alloc] initWithFrame:CGRectMake(50, 100, ScreenWidth, ScreenHeight)];
-    self.array = [NSArray arrayWithObjects:@"本科",@"大学", nil];
+
+- (void)initData{
+    self.topUserInfoTable.delegate      = self;
+    self.topUserInfoTable.dataSource    = self;
+    self.userDescription.delegate       = self;
+    self.userSkill.delegate             = self;
     
+    self.userEducation.text = self.model.education;
+    self.userSkill.text = self.model.skill;
+    
+    self.username = self.model.name;
+    self.education = self.model.education;
+    if(self.model.sex == NULL){
+        self.sex = @"m";
+    }else{
+        self.sex = self.model.sex;
+    }
+}
+#pragma 绘制弹出的pickerView界面
+- (void)initPickView{
+    self.array = [NSArray arrayWithObjects:@"中专",@"大专",@"本科",@"硕士",@"博士",@"博士后", nil];
+    
+    self.containerView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - pickerViewHeight, SCREEN_WIDTH, pickerViewHeight)];
+    self.containerView.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *btnOK = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH -70, 5, 40, 30)];
+    btnOK.titleLabel.font = [UIFont systemFontOfSize:18.0];
+    [btnOK setTitle:@"确定" forState:UIControlStateNormal];
+    [btnOK setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btnOK addTarget:self action:@selector(pickerViewBtnOk:) forControlEvents:UIControlEventTouchUpInside];
+    [self.containerView addSubview:btnOK];
+    
+    UIButton *btnCancel = [[UIButton alloc] initWithFrame:CGRectMake(30, 5, 40, 30)];
+    btnCancel.titleLabel.font = [UIFont systemFontOfSize:18.0];
+    [btnCancel setTitle:@"取消" forState:UIControlStateNormal];
+    [btnCancel setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btnCancel addTarget:self action:@selector(pickerViewBtnCancel:) forControlEvents:UIControlEventTouchUpInside];
+    [self.containerView addSubview:btnCancel];
+    
+    UIPickerView *pickView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 32, SCREEN_WIDTH, pickerViewHeight - toolBarHeight)];
+    pickView.backgroundColor = [UIColor whiteColor];
     pickView.delegate = self;
     pickView.dataSource = self;
-    [self.view addSubview:pickView];
+    [self.containerView addSubview:pickView];
+    
+    self.view.backgroundColor = BACKGROUND_BLACK_COLOR;
+    [self.view addSubview:self.containerView];
 }
 
 - (IBAction)chooseEducation:(id)sender {
-    
+    [self initPickView];
 }
 
 #pragma UIPickerView
-//UIPickerViewDataSource中定义的方法，该方法的返回值决定该控件包含的列数
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView
 {
-    return 1; // 返回1表明该控件只包含1列
+    return 1;
 }
 
-//UIPickerViewDataSource中定义的方法，该方法的返回值决定该控件指定列包含多少个列表项
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    // 由于该控件只包含一列，因此无须理会列序号参数component
-    // 该方法返回teams.count，表明teams包含多少个元素，该控件就包含多少行
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return self.array.count;
 }
 
 
-// UIPickerViewDelegate中定义的方法，该方法返回的NSString将作为UIPickerView
-// 中指定列和列表项的标题文本
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    // 由于该控件只包含一列，因此无须理会列序号参数component
-    // 该方法根据row参数返回teams中的元素，row参数代表列表项的编号，
-    // 因此该方法表示第几个列表项，就使用teams中的第几个元素
-    
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [self.array objectAtIndex:row];
 }
 
-// 当用户选中UIPickerViewDataSource中指定列和列表项时激发该方法
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:
-(NSInteger)row inComponent:(NSInteger)component
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    // 使用一个UIAlertView来显示用户选中的列表项
-    UIAlertView* alert = [[UIAlertView alloc]
-                          initWithTitle:@"提示"
-                          message:[NSString stringWithFormat:@"你选中的球队是：%@"
-                                   , [ self.array objectAtIndex:row]]
-                          delegate:nil
-                          cancelButtonTitle:@"确定"
-                          otherButtonTitles:nil];
-    [alert show];
+    _userEducation.text = [self.array objectAtIndex:row];
+    self.educationTemp = [self.array objectAtIndex:row];
+}
+
+#pragma mark - UIPickerView event response
+- (void)pickerViewBtnOk:(UIButton *)btn{
+    self.education = self.educationTemp;
+    [self.containerView removeFromSuperview];
+}
+
+- (void)pickerViewBtnCancel:(UIButton *)btn{
+    [self.containerView removeFromSuperview];
 }
 
 #pragma UITableView method
@@ -94,8 +136,8 @@
     switch (indexPath.row) {
         case 0:
         {
-            NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
-            
+            NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
+            self.userAvatar = cell.userAvatar;
             [cell.userAvatar was_setCircleImageWithUrl:[NSURL URLWithString:imageURL] placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
         }
             break;
@@ -104,12 +146,15 @@
             break;
         case 2:
         {
-            //NSArray *sexItem = @[@"男",@"女"];
-            //cell.userSex = [[UISegmentedControl alloc] initWithItems:sexItem];
+            if([self.model.sex isEqualToString:@"f"]){
+                cell.userSex.selectedSegmentIndex = 1;
+            }else{
+                cell.userSex.selectedSegmentIndex = 0;
+            }
+            
             [cell.userSex addTarget:self action:@selector(didClicksegmentedControlAction:) forControlEvents:UIControlEventValueChanged];
         }
             break;
-            
         default:
             break;
             
@@ -121,12 +166,140 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 3;
 }
-//拿到性别
-- (void)didClicksegmentedControlAction:(UISegmentedControl *)Seg{
-    NSInteger se = Seg.selectedSegmentIndex;
-    self.sex = [Seg titleForSegmentAtIndex:se];
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch ([indexPath row]) {
+        case 0:
+        {
+            //更换头像
+            [self changeImg];
+        }
+            break;
+        case 1:
+        {
+            //修改名字
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"修改名字" message:@"请输入你喜欢的名字" preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
+                textField.placeholder = @"请输入你喜欢的名字";
+            }];
+            
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction *okAction     = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                UITextField *Username = alertController.textFields.firstObject;
+                self.username = Username.text;
+                
+                UserInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                cell.userName.text = Username.text;
+            }];
+            
+            [alertController addAction:cancelAction];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+            break;
+        case 2:
+        {
+            //设置性别
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 
+#pragma segmentedControl Action
+- (void)didClicksegmentedControlAction:(UISegmentedControl *)Seg{
+    NSInteger se = Seg.selectedSegmentIndex;
+    if(se == 0){
+        self.sex = @"m";
+    }else{
+        self.sex = @"f";
+    }
+}
+
+#pragma UITextView method
+- (void)textViewDidChange:(UITextView *)textView{
+    if(textView.tag == 0){
+        self.userSkill.text = textView.text;
+    }else{
+        self.userDescription.text = textView.text;
+    }
+}
+
+#pragma Uplpad Avatar method
+- (void)changeImg{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    //按钮：从相册选择，类型：UIAlertActionStyleDefault
+    [alert addAction:[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
+        //获取方式1：通过相册（呈现全部相册），UIImagePickerControllerSourceTypePhotoLibrary
+        //获取方式2，通过相机，UIImagePickerControllerSourceTypeCamera
+        //获取方法3，通过相册（呈现全部图片），UIImagePickerControllerSourceTypeSavedPhotosAlbum
+        PickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        PickerImage.allowsEditing = YES;
+        PickerImage.delegate = self;
+        [self presentViewController:PickerImage animated:YES completion:nil];
+    }]];
+    //按钮：拍照，类型：UIAlertActionStyleDefault
+    [alert addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+        //等于0 则说明获取相机成功
+        if(SIMULATOR == 0){
+            UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
+            PickerImage.sourceType = UIImagePickerControllerSourceTypeCamera;
+            PickerImage.allowsEditing = YES;
+            PickerImage.delegate = self;
+            [self presentViewController:PickerImage animated:YES completion:nil];
+        }
+        
+        if(SIMULATOR == 1){
+            UIAlertController *alertpz = [UIAlertController alertControllerWithTitle: @"DSB?" message:@"别乱点人家，模拟器上有相机？" preferredStyle:UIAlertControllerStyleAlert];
+            [alertpz addAction:[UIAlertAction actionWithTitle:@"我错了" style:UIAlertActionStyleCancel handler:nil]];
+            
+            [self presentViewController:alertpz animated:YES completion:nil];
+        }
+        
+    }
+    ]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
+#pragma PickerImage delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    self.userAvatar.image = newPhoto;
+    
+    [DAUploadAvatar upload:newPhoto];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma NavigationRight Action
+- (void)doRight:(id)sender{
+    NSString *body = [NSString stringWithFormat:@"username=%@&sex=%@&description=%@&skill=%@&education=%@",
+                      self.username,
+                      self.sex,
+                      self.userDescription.text,
+                      self.userSkill.text,
+                      self.education];
+    
+    
+    NSDictionary *opInfo = @{@"url":ModifyInfo,
+                             @"body":body};
+    _operation = [[DARegister alloc] initWithDelegate:self opInfo:opInfo];
+    [_operation executeOp];
+}
+
+-(void)opSuccess:(id)data{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)opFail:(NSString *)errorMessage{
+    [self alertView:@"修改信息出错，请检查网络后重试！"];
+}
 
 @end

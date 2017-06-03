@@ -86,7 +86,7 @@
 
 - (void)setNavigationRight:(NSString *)imageName{
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:[self customButton:imageName selector:@selector(doRight:)]];
-    
+
     self.navigationItem.rightBarButtonItem = item;
 }
 

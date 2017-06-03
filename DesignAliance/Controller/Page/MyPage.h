@@ -19,4 +19,6 @@
 
 @property (nonatomic, strong) UserModel      *model;
 
+- (void)initData;
+
 @end

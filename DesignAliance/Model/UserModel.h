@@ -13,5 +13,7 @@
 @property (nonatomic, strong) NSString *sex;
 @property (nonatomic, strong) NSString *avatar;
 @property (nonatomic, strong) NSString *desc;
+@property (nonatomic, strong) NSString *skill;
+@property (nonatomic, strong) NSString *education;
 
 @end
