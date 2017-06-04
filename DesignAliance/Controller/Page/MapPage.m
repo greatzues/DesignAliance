@@ -49,17 +49,27 @@
     _pointArray = [NSMutableArray arrayWithCapacity:10];
     int i;
     for(i=0;i<[data count];i++){
-        _search = [data objectAtIndex:i];
+        SearchModel  *s = [data objectAtIndex:i];
+//        
+//        //默认定位中心为返回的第一个返回的
+//        if(i==0){
+//            _mapView.centerCoordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
+//        }
+//        
+//        _pointAnnotation.coordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
+//        _pointAnnotation.title = self.search.name;
+//        _pointAnnotation.subtitle = self.search.desc;
+//        [_pointArray addObject:_pointAnnotation];
         
-        //默认定位中心为返回的第一个返回的
         if(i==0){
-            _mapView.centerCoordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
+            _mapView.centerCoordinate = CLLocationCoordinate2DMake(s.longitude.doubleValue, s.latitude.doubleValue);
         }
         
-        _pointAnnotation.coordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
-        _pointAnnotation.title = self.search.name;
-        _pointAnnotation.subtitle = self.search.desc;
-        [_pointArray addObject:_pointAnnotation];
+        MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
+        point.coordinate = CLLocationCoordinate2DMake(s.longitude.doubleValue, s.latitude.doubleValue);
+        point.title = s.name;
+        point.subtitle = s.desc;
+        [_pointArray addObject:point];
     }
     
     [_mapView addAnnotations:_pointArray];
@@ -111,6 +121,7 @@
 //接受返回的参数
 - (void)viewDidAppear:(BOOL)animated{
     //先删除原来的大头针
+    [_mapView removeAnnotations:_pointArray];
     
     if(!animated){
         return ;
@@ -153,6 +164,10 @@
         
     }
     return nil;
+}
+
+- (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+    
 }
 
 #pragma 标注气泡点击事件

@@ -12,13 +12,12 @@
 #import "AppDelegate.h"
 #import "LoginUtility.h"
 #import "RegisterPage.h"
-
+#import "ForgetPasswordPage.h"
 
 @implementation LoginPage
 
 - (void)viewDidLoad {
-    [self autoLogin];
-    
+    //[self autoLogin];
     [super viewDidLoad];
 }
 
@@ -51,11 +50,11 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
-    //上面两行代码可以进行页面跳转，不过，这里跳转成功之后顶部状态栏会出现返回按钮，要设置为主要界面才可以，因此还是用下面的
     [[AppDelegate appDeg] showHomePage];
 }
 
 - (void)opFail:(NSString *)errorMessage{
+    [LoginUtility saveUserName:@"" PassWord:@""];
     [super opFail:errorMessage];
     [self alertView:errorMessage];
 }
@@ -93,4 +92,15 @@
     RegisterPage *page = [[RegisterPage alloc] init];
     [self initToDetails:page];
 }
+
+- (IBAction)forgetPassword:(id)sender {
+    ForgetPasswordPage *page = [[ForgetPasswordPage alloc] init];
+    [self initToDetails:page];
+}
+
+- (IBAction)txt_DidEndOnExit:(JVFloatLabeledTextField *)sender {
+    [sender resignFirstResponder];
+}
+
+
 @end

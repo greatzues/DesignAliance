@@ -46,14 +46,17 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axY-7u-o57" customClass="JVFloatLabeledTextField">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="axY-7u-o57" customClass="JVFloatLabeledTextField">
                             <rect key="frame" x="54" y="80" width="264" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="fRF-LF-02K"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <action selector="txt_DidEndOnExit:" destination="-1" eventType="editingDidEndOnExit" id="N4T-Xe-Uyb"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eER-yG-sKj" customClass="JVFloatLabeledTextField">
                             <rect key="frame" x="54" y="145" width="264" height="30"/>
@@ -62,7 +65,10 @@
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            <connections>
+                                <action selector="txt_DidEndOnExit:" destination="-1" eventType="editingDidEndOnExit" id="RDo-PT-Ttz"/>
+                            </connections>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-vm-e3e">
                             <rect key="frame" x="54" y="110" width="264" height="1"/>
@@ -157,13 +163,26 @@
                         <constraint firstItem="axY-7u-o57" firstAttribute="top" secondItem="wZA-lR-Sw2" secondAttribute="bottom" constant="24" id="z0I-nm-zhd"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rk-MM-lcl">
+                    <rect key="frame" x="169" y="686" width="77" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ngI-AO-bqg"/>
+                        <constraint firstAttribute="width" constant="77" id="o82-lW-bnr"/>
+                    </constraints>
+                    <state key="normal" title="忘记密码？"/>
+                    <connections>
+                        <action selector="forgetPassword:" destination="-1" eventType="touchUpInside" id="Vbc-V9-z03"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="p3Z-VJ-9ag" firstAttribute="leading" secondItem="2Bf-Lx-Evm" secondAttribute="leading" constant="23" id="3cL-VJ-qPh"/>
+                <constraint firstItem="4rk-MM-lcl" firstAttribute="centerX" secondItem="2Bf-Lx-Evm" secondAttribute="centerX" id="A8j-Pe-wp9"/>
                 <constraint firstAttribute="trailing" secondItem="p3Z-VJ-9ag" secondAttribute="trailing" constant="23" id="KbP-cc-gpb"/>
                 <constraint firstAttribute="trailing" secondItem="P3v-pk-g1G" secondAttribute="trailing" id="QoM-hD-146"/>
                 <constraint firstItem="P3v-pk-g1G" firstAttribute="leading" secondItem="2Bf-Lx-Evm" secondAttribute="leading" id="UV0-AV-Dap"/>
+                <constraint firstAttribute="bottom" secondItem="4rk-MM-lcl" secondAttribute="bottom" constant="20" id="X9z-kG-Mbp"/>
                 <constraint firstItem="p3Z-VJ-9ag" firstAttribute="top" secondItem="2Bf-Lx-Evm" secondAttribute="top" constant="129" id="ad4-Fq-89u"/>
                 <constraint firstItem="P3v-pk-g1G" firstAttribute="top" secondItem="2Bf-Lx-Evm" secondAttribute="top" id="iPG-56-UB4"/>
                 <constraint firstAttribute="bottom" secondItem="P3v-pk-g1G" secondAttribute="bottom" id="rNe-7c-25o"/>

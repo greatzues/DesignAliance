@@ -183,6 +183,10 @@
 		82E88DAD1EE2BB0100AF0137 /* talentName@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA81EE2BB0100AF0137 /* talentName@2x.png */; };
 		82E88DAE1EE2BB0100AF0137 /* talentPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */; };
 		82E88DAF1EE2BB0100AF0137 /* talentSkill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */; };
+		82E88DB11EE3FA2B00AF0137 /* ForgetPasswordPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DB01EE3FA2B00AF0137 /* ForgetPasswordPage.xib */; };
+		82E88DB41EE3FCA400AF0137 /* ForgetPasswordPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DB31EE3FCA400AF0137 /* ForgetPasswordPage.m */; };
+		82E88DB81EE4093900AF0137 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DB71EE4093900AF0137 /* UIView+YSTextInputKeyboard.m */; };
+		82E88DBB1EE44B9000AF0137 /* DetailsAdvertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DBA1EE44B9000AF0137 /* DetailsAdvertisement.m */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -473,6 +477,13 @@
 		82E88DA81EE2BB0100AF0137 /* talentName@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentName@2x.png"; sourceTree = "<group>"; };
 		82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentPhone@2x.png"; sourceTree = "<group>"; };
 		82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentSkill@2x.png"; sourceTree = "<group>"; };
+		82E88DB01EE3FA2B00AF0137 /* ForgetPasswordPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordPage.xib; sourceTree = "<group>"; };
+		82E88DB21EE3FCA400AF0137 /* ForgetPasswordPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordPage.h; sourceTree = "<group>"; };
+		82E88DB31EE3FCA400AF0137 /* ForgetPasswordPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordPage.m; sourceTree = "<group>"; };
+		82E88DB61EE4093900AF0137 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
+		82E88DB71EE4093900AF0137 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		82E88DB91EE44B9000AF0137 /* DetailsAdvertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsAdvertisement.h; sourceTree = "<group>"; };
+		82E88DBA1EE44B9000AF0137 /* DetailsAdvertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsAdvertisement.m; sourceTree = "<group>"; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -554,6 +565,8 @@
 				820C9CCF1EC5971500CA4951 /* DetailsCompanyPage.m */,
 				820C9CD31EC6BAD300CA4951 /* DetailsNewsPage.h */,
 				820C9CD41EC6BAD300CA4951 /* DetailsNewsPage.m */,
+				82E88DB91EE44B9000AF0137 /* DetailsAdvertisement.h */,
+				82E88DBA1EE44B9000AF0137 /* DetailsAdvertisement.m */,
 				18C2E2931ED2B89900F75167 /* DetailsMissionPage.h */,
 				18C2E2941ED2B89900F75167 /* DetailsMissionPage.m */,
 				18C2E2961ED2B8D400F75167 /* DetailsTalentsPage.h */,
@@ -575,6 +588,7 @@
 		18C2E2E81ED4096D00F75167 /* page */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DB01EE3FA2B00AF0137 /* ForgetPasswordPage.xib */,
 				820CA77E1EB0389E006832B5 /* LoginPage.xib */,
 				82AD19671EB61016007C36FE /* MyPage.xib */,
 				8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */,
@@ -641,6 +655,8 @@
 				823EE7071EB37694001B98B4 /* NewsPage.m */,
 				8212A8CF1EBEF90600CBD43F /* RegisterPage.h */,
 				8212A8D01EBEF90600CBD43F /* RegisterPage.m */,
+				82E88DB21EE3FCA400AF0137 /* ForgetPasswordPage.h */,
+				82E88DB31EE3FCA400AF0137 /* ForgetPasswordPage.m */,
 			);
 			name = NormalPage;
 			sourceTree = "<group>";
@@ -905,6 +921,7 @@
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DB51EE408D500AF0137 /* YSTextInputKeyboard */,
 				82E88D971EE047D800AF0137 /* RoundImage */,
 				8212A8D61EBF05C700CBD43F /* JVFloatLabeledTextField */,
 				8212A8941EB9B17C00CBD43F /* LoginUtility */,
@@ -1084,6 +1101,15 @@
 				82E88D991EE0482F00AF0137 /* UIImage+extension.m */,
 			);
 			name = RoundImage;
+			sourceTree = "<group>";
+		};
+		82E88DB51EE408D500AF0137 /* YSTextInputKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				82E88DB61EE4093900AF0137 /* UIView+YSTextInputKeyboard.h */,
+				82E88DB71EE4093900AF0137 /* UIView+YSTextInputKeyboard.m */,
+			);
+			path = YSTextInputKeyboard;
 			sourceTree = "<group>";
 		};
 		A67E72253C7CF948CE596AB9 /* Pods */ = {
@@ -1293,6 +1319,7 @@
 				82E88D941EE0410D00AF0137 /* talentCard@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
 				820CA81A1EB1CF99006832B5 /* NavBarWhite64@2x.png in Resources */,
+				82E88DB11EE3FA2B00AF0137 /* ForgetPasswordPage.xib in Resources */,
 				82E88D961EE0410D00AF0137 /* talentCardLeft@2x.png in Resources */,
 				823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */,
 				82559C4C1EDEE3EF008B149F /* background@3x.png in Resources */,
@@ -1432,6 +1459,7 @@
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
 				18FED9411ED926C400C5FE4E /* DAModifyPassword.m in Sources */,
+				82E88DBB1EE44B9000AF0137 /* DetailsAdvertisement.m in Sources */,
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
 				18FED9361ED9097500C5FE4E /* ContactUsPage.m in Sources */,
@@ -1460,6 +1488,7 @@
 				821732361EB446F7006B3387 /* DADesignTalentsWidget.m in Sources */,
 				822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */,
 				8212A8E01EBF062000CBD43F /* JVFloatLabeledTextView.m in Sources */,
+				82E88DB81EE4093900AF0137 /* UIView+YSTextInputKeyboard.m in Sources */,
 				187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */,
 				821732351EB446F7006B3387 /* DADesignNewsWidget.m in Sources */,
 				187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */,
@@ -1468,6 +1497,7 @@
 				8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */,
 				821732551EB58B1F006B3387 /* DAGlobal.m in Sources */,
 				187C45DD1ED02206006B2EF9 /* FxJsonWriter.m in Sources */,
+				82E88DB41EE3FCA400AF0137 /* ForgetPasswordPage.m in Sources */,
 				187C45DC1ED02206006B2EF9 /* FxJsonUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

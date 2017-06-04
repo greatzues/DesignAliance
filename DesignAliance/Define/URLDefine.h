@@ -33,6 +33,7 @@
 //post url
 #define LoginURL        BaseURL "Home/User/login"
 #define Register        BaseURL "Home/User/register"
+#define ForgetPassword  BaseURL "Home/User/forgetPassword"
 
 #define NewsURL         BaseURL "Home/DesignAdvice/showDesignAdvice"
 #define MissionURL      BaseURL "Home/DesignMission/showDesignMission"

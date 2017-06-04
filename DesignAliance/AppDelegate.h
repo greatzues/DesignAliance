@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DABaseOperation.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, DAOperationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

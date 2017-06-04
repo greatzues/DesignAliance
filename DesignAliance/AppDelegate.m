@@ -10,18 +10,15 @@
 #import "LoginPage.h"
 #import "HomePage.h"
 #import <BmobSDK/Bmob.h>
+#import "LoginUtility.h"
+#import "DABaseOperation.h"
+#import "DALogin.h"
 
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
-
-//腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-
-//微信SDK头文件
 #import "WXApi.h"
-
-//新浪微博SDK头文件
 #import "WeiboSDK.h"
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 
@@ -45,15 +42,9 @@
     [Bmob registerWithAppKey:BombKey];
     
     [self initShareSDK];
-    
+
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //下面三行代码可以将LoginPage的的顶部tab显示出来，看上去会比较美观
-    LoginPage *page = [[LoginPage alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
-    self.window.rootViewController = navController;
-    
-    [self.window makeKeyAndVisible]; //展示界面，并且让它成为主要界面
+    [self autoLogin];
     
     return YES;
     
@@ -83,6 +74,51 @@
     
 }
 
+
+- (void)autoLogin{
+    DABaseOperation *_operation;
+    NSString *U = [LoginUtility readUserName];
+    NSString *P = [LoginUtility readPassWord];
+    
+    
+    if([U isEqualToString:@""] && [P isEqualToString:@""]){
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        
+        LoginPage *page = [[LoginPage alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
+        self.window.rootViewController = navController;
+        
+        return [self.window makeKeyAndVisible];
+    }
+    
+    NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",U,P];
+    NSDictionary *opInfo = @{@"url":LoginURL,
+                             @"body":body};
+    _operation = [[DALogin alloc] initWithDelegate:self opInfo:opInfo];
+    [_operation executeOp];
+}
+
+- (void)opSuccess:(id)data{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    HomePage *page = [[HomePage alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
+}
+
+- (void)opFail:(NSString *)errorMessage{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    LoginPage *page = [[LoginPage alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
+}
+
+#pragma initial ShareSDK
 - (void)initShareSDK{
     [ShareSDK registerApp:@"1e44ead1fb198"
      

@@ -1,15 +1,15 @@
 //
-//  RegisterPage.h
+//  ForgetPasswordPage.h
 //  DesignAliance
 //
-//  Created by zues on 17/5/6.
+//  Created by zues on 2017/6/4.
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
 #import "DABasePage.h"
 #import "JVFloatLabeledTextField.h"
 
-@interface RegisterPage : DABasePage{
+@interface ForgetPasswordPage : DABasePage{
     IBOutlet    JVFloatLabeledTextField     *phoneNumber;
     IBOutlet    JVFloatLabeledTextField     *passwordNumber;
     IBOutlet    JVFloatLabeledTextField     *confirmNumber;

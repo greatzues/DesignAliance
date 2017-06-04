@@ -15,6 +15,7 @@
 #import "DesignMissionCell.h"
 #import "SDCycleScrollView.h"
 #import "DetailsMissionPage.h"
+#import "DetailsAdvertisement.h"
 
 static int CycleScrollViewHeight = 156; //定义轮播图高度
 
@@ -135,9 +136,10 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
 # pragma 轮播图点击事件
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    NSLog(@"---点击了第%ld张图片", (long)index);
+    DetailsAdvertisement *page = [[DetailsAdvertisement alloc] init];
     
-//    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+    page.model = [self.AdlistData objectAtIndex:index];
+    [super initToDetails:page];
 }
 
 #pragma item点击事件

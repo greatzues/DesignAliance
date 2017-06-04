@@ -1,12 +1,12 @@
 //
-//  RegisterPage.m
+//  ForgetPasswordPage.m
 //  DesignAliance
 //
-//  Created by zues on 17/5/6.
+//  Created by zues on 2017/6/4.
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "RegisterPage.h"
+#import "ForgetPasswordPage.h"
 #import "JVFloatLabeledTextField.h"
 #import "JVFloatLabeledTextView.h"
 #import "UIButton+countDown.h"
@@ -14,13 +14,13 @@
 #import <BmobSDK/BmobSMS.h>
 
 
-@implementation RegisterPage
+@implementation ForgetPasswordPage
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"注册", @"");
+        self.title = NSLocalizedString(@"忘记密码", @"");
     }
     return self;
 }
@@ -79,7 +79,7 @@
     }];
     
     NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",phoneNumber.text,passwordNumber.text];
-    NSDictionary *opInfo = @{@"url":Register,
+    NSDictionary *opInfo = @{@"url":ForgetPassword,
                              @"body":body};
     _operation = [[DARegister alloc] initWithDelegate:self opInfo:opInfo];
     [_operation executeOp];
@@ -90,7 +90,7 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [self alertView:@"注册失败，请检查网络后重试"];
+    [self alertView:@"修改密码失败，请检查网络后重试"];
 }
 
 //查询短信短信验证码状态
