@@ -84,7 +84,7 @@
 }
 
 - (void)initShareSDK{
-    [ShareSDK registerApp:@"iosv1101"
+    [ShareSDK registerApp:@"1e44ead1fb198"
      
           activePlatforms:@[
                             @(SSDKPlatformTypeSinaWeibo),
@@ -118,7 +118,7 @@
                  //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
                  [appInfo SSDKSetupSinaWeiboByAppKey:@"1404108835"
                                            appSecret:@"608e5e37446f555407a6e6059f99f1aa"
-                                         redirectUri:@""
+                                         redirectUri:@"http://119.29.14.160/Design/manager/login.html"
                                             authType:SSDKAuthTypeBoth];
                  break;
              case SSDKPlatformTypeWechat:

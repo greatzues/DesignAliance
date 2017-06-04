@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NC-xX-8wR">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-3U-50b">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
@@ -75,7 +75,7 @@
                                     </constraints>
                                 </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVG-Xu-flg">
-                                    <rect key="frame" x="0.0" y="227" width="375" height="273"/>
+                                    <rect key="frame" x="0.0" y="227" width="375" height="333"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="Ipy-df-S3u"/>
@@ -86,7 +86,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="LVG-Xu-flg" secondAttribute="bottom" id="2TN-HM-jJ1"/>
-                                <constraint firstAttribute="height" constant="500" id="4Cp-Jm-Jkt"/>
+                                <constraint firstAttribute="height" constant="560" id="4Cp-Jm-Jkt"/>
                                 <constraint firstItem="Uee-3U-50b" firstAttribute="leading" secondItem="1NC-xX-8wR" secondAttribute="leading" id="CaH-vC-thQ"/>
                                 <constraint firstAttribute="trailing" secondItem="Uee-3U-50b" secondAttribute="trailing" id="LzX-Cu-ueI"/>
                                 <constraint firstItem="LVG-Xu-flg" firstAttribute="top" secondItem="Uee-3U-50b" secondAttribute="bottom" id="PYL-ZS-8aC"/>

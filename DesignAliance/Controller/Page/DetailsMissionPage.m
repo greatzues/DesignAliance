@@ -9,6 +9,8 @@
 #import "DetailsMissionPage.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DAGetCountUp.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
 
 @interface DetailsMissionPage ()
 
@@ -20,6 +22,7 @@
     [super viewDidLoad];
     [self getCount];
     [self setTitle:@"设计任务"];
+    [self setNavigationRight:@"NavigationSquare.png"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +55,50 @@
     [super opSuccess:data];
     [self initMissionPage];
     
+}
+
+#pragma share news
+- (void)doRight:(id)sender{
+    [self shareNews];
+}
+
+- (void)shareNews{
+    NSArray* imageArray = @[[NSString stringWithFormat:ImageMission,self.model.cover]];
+    
+    if (imageArray) {
+        
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:self.model.details
+                                         images:imageArray
+                                            url:[NSURL URLWithString:@"http://zuesblog.xyz/"]//后面记得改回来
+                                          title:self.model.name
+                                           type:SSDKContentTypeAuto];
+        
+        [ShareSDK showShareActionSheet:nil
+                                 items:nil
+                           shareParams:shareParams
+                   onShareStateChanged:^(SSDKResponseState state,
+                                         SSDKPlatformType platformType,
+                                         NSDictionary *userData,
+                                         SSDKContentEntity *contentEntity,
+                                         NSError *error,
+                                         BOOL end) {
+                       switch (state) {
+                           case SSDKResponseStateSuccess:
+                           {
+                               [self alertView:@"分享成功"];
+                               break;
+                           }
+                           case SSDKResponseStateFail:
+                           {
+                               [self alertView:@"分享失败"];
+                               break;
+                           }
+                           default:
+                               break;
+                       }
+                   }];
+    }
 }
 
 @end

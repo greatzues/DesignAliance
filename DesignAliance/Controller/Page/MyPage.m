@@ -184,9 +184,9 @@
     if (imageArray) {
         
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        [shareParams SSDKSetupShareParamsByText:@"分享内容"
+        [shareParams SSDKSetupShareParamsByText:@"Share SDK http://www.mob.com/"
                                          images:imageArray
-                                            url:[NSURL URLWithString:@"http://mob.com"]
+                                            url:[NSURL URLWithString:@"http://zuesblog.xyz/"]
                                           title:@"分享标题"
                                            type:SSDKContentTypeAuto];
         
