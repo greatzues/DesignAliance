@@ -129,7 +129,7 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
         [images addObject:imageURL];
     }
     
-    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, self.view.bounds.size.width, CycleScrollViewHeight) delegate:self placeholderImage:[UIImage imageNamed:@"NewsDefault.png"]];
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, self.view.bounds.size.width, CycleScrollViewHeight) delegate:self placeholderImage:[UIImage imageNamed:@"BigPictureHolder.png"]];
     self.cycleScrollView.imageURLStringsGroup = images;
 }
 

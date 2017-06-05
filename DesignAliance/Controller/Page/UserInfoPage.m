@@ -138,7 +138,7 @@ static const int toolBarHeight = 44;
         {
             NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
             self.userAvatar = cell.userAvatar;
-            [cell.userAvatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"NewsDefault.png"] fillColor:[UIColor whiteColor]];
+            [cell.userAvatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"LittlePictureHolder.png"] fillColor:[UIColor whiteColor]];
         }
             break;
         case 1:

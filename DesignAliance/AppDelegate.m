@@ -82,6 +82,7 @@
     
     
     if([U isEqualToString:@""] && [P isEqualToString:@""]){
+        
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         
         LoginPage *page = [[LoginPage alloc] init];
@@ -99,23 +100,13 @@
 }
 
 - (void)opSuccess:(id)data{
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
     HomePage *page = [[HomePage alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
-    self.window.rootViewController = navController;
-    
+    self.window.rootViewController = page;
     [self.window makeKeyAndVisible];
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    LoginPage *page = [[LoginPage alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
-    self.window.rootViewController = navController;
-    
-    [self.window makeKeyAndVisible];
+    BASE_ERROR_FUN(errorMessage);
 }
 
 #pragma initial ShareSDK

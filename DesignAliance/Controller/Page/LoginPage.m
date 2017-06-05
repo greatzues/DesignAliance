@@ -17,8 +17,8 @@
 @implementation LoginPage
 
 - (void)viewDidLoad {
-    //[self autoLogin];
     [super viewDidLoad];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -54,7 +54,7 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [LoginUtility saveUserName:@"" PassWord:@""];
+    [LoginUtility quitLogin];
     [super opFail:errorMessage];
     [self alertView:errorMessage];
 }
@@ -69,23 +69,6 @@
     }
     
     return validate;
-}
-
-//判断是否已经登录过
-- (void)autoLogin{
-    NSString *U = [LoginUtility readUserName];
-    NSString *P = [LoginUtility readPassWord];
-    
-    
-    if([U isEqualToString:@""] && [P isEqualToString:@""]){
-        return ;
-    }
-    
-    NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",U,P];
-    NSDictionary *opInfo = @{@"url":LoginURL,
-                             @"body":body};
-    _operation = [[DALogin alloc] initWithDelegate:self opInfo:opInfo];
-    [_operation executeOp];
 }
 
 - (IBAction)registerAccount:(id)sender {

@@ -187,6 +187,10 @@
 		82E88DB41EE3FCA400AF0137 /* ForgetPasswordPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DB31EE3FCA400AF0137 /* ForgetPasswordPage.m */; };
 		82E88DB81EE4093900AF0137 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DB71EE4093900AF0137 /* UIView+YSTextInputKeyboard.m */; };
 		82E88DBB1EE44B9000AF0137 /* DetailsAdvertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88DBA1EE44B9000AF0137 /* DetailsAdvertisement.m */; };
+		82E88DBF1EE5510600AF0137 /* LittlePictureHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DBC1EE5510500AF0137 /* LittlePictureHolder@2x.png */; };
+		82E88DC01EE5510600AF0137 /* BigPictureHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */; };
+		82E88DC11EE5510600AF0137 /* redDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DBE1EE5510600AF0137 /* redDot@2x.png */; };
+		82E88DC31EE5601D00AF0137 /* PhoneUs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -484,6 +488,10 @@
 		82E88DB71EE4093900AF0137 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
 		82E88DB91EE44B9000AF0137 /* DetailsAdvertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsAdvertisement.h; sourceTree = "<group>"; };
 		82E88DBA1EE44B9000AF0137 /* DetailsAdvertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsAdvertisement.m; sourceTree = "<group>"; };
+		82E88DBC1EE5510500AF0137 /* LittlePictureHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LittlePictureHolder@2x.png"; sourceTree = "<group>"; };
+		82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BigPictureHolder@2x.png"; sourceTree = "<group>"; };
+		82E88DBE1EE5510600AF0137 /* redDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redDot@2x.png"; sourceTree = "<group>"; };
+		82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PhoneUs@2x.png"; sourceTree = "<group>"; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -664,6 +672,10 @@
 		820CA7801EB052CB006832B5 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */,
+				82E88DBC1EE5510500AF0137 /* LittlePictureHolder@2x.png */,
+				82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */,
+				82E88DBE1EE5510600AF0137 /* redDot@2x.png */,
 				82E88D761EDFB72100AF0137 /* DefaultBackground@3x.png */,
 				189A1A411EDD5F3E0083484B /* DefaultBackground@2x.png */,
 				82559C4D1EDF0CBE008B149F /* logo.png */,
@@ -1259,10 +1271,12 @@
 				820C9CCD1EC4179500CA4951 /* mapNormal@2x.png in Resources */,
 				189A1A3F1EDD5E6E0083484B /* UserBackground@2x.png in Resources */,
 				82E88D9E1EE05DB400AF0137 /* education@2x.png in Resources */,
+				82E88DC31EE5601D00AF0137 /* PhoneUs@2x.png in Resources */,
 				820CA8191EB1CF99006832B5 /* NavBarWhite44@2x.png in Resources */,
 				820CA8051EB1CF90006832B5 /* NewsIconSelect@2x.png in Resources */,
 				82E88DAC1EE2BB0100AF0137 /* talentLeftLine@2x.png in Resources */,
 				82AD197D1EB6D662007C36FE /* update@2x.png in Resources */,
+				82E88DBF1EE5510600AF0137 /* LittlePictureHolder@2x.png in Resources */,
 				82E88D771EDFB72100AF0137 /* DefaultBackground@3x.png in Resources */,
 				82559C461EDE97CF008B149F /* signUpWindow@2x.png in Resources */,
 				82E88D791EDFBBCF00AF0137 /* NavigationBar44@3x.png in Resources */,
@@ -1287,10 +1301,12 @@
 				820CA80A1EB1CF90006832B5 /* TabBarShadow@2x.png in Resources */,
 				82559C541EDF9A6E008B149F /* RegisterButton@2x.png in Resources */,
 				820C9CD21EC5971500CA4951 /* DetailsCompanyPage.xib in Resources */,
+				82E88DC01EE5510600AF0137 /* BigPictureHolder@2x.png in Resources */,
 				82559C481EDEE3B0008B149F /* background@2x.png in Resources */,
 				82AD197A1EB6D662007C36FE /* modifyPassword@2x.png in Resources */,
 				821732421EB4D446006B3387 /* DesignNewsCell.xib in Resources */,
 				82559C501EDF0CBE008B149F /* logo.png in Resources */,
+				82E88DC11EE5510600AF0137 /* redDot@2x.png in Resources */,
 				82E88D851EDFBE5900AF0137 /* about@3x.png in Resources */,
 				820CA81B1EB1CF99006832B5 /* NavigationBack@2x.png in Resources */,
 				82E88DAE1EE2BB0100AF0137 /* talentPhone@2x.png in Resources */,

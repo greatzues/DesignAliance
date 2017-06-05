@@ -18,6 +18,8 @@
 #import "CheckUpdatePage.h"
 #import "AboutPage.h"
 #import "UserSuggestPage.h"
+#import "LoginUtility.h"
+#import "LoginPage.h"
 
 #import <SDWebImage/UIButton+WebCache.h>
 #import "UIImage+extension.h"
@@ -72,8 +74,6 @@
     [UserSkill setText:self.model.skill];
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
     
-//    [UserAvatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"userDefaultAvatar.png"] forState:UIControlStateNormal];
-
     [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
 }
 
@@ -108,8 +108,7 @@
         case 0:
         {
             //成为vip
-            BecomeVipPage *modityPassword = [[BecomeVipPage alloc] init];
-            [self initToDetails:modityPassword];
+            [self alertView:@"该功能暂未开放！"];
         }
             break;
         case 1:
@@ -122,8 +121,7 @@
         case 2:
         {
             //版本更新
-            CheckUpdatePage *modityPassword = [[CheckUpdatePage alloc] init];
-            [self initToDetails:modityPassword];
+            [self alertView:@"请到App store下载最新版本！"];
         }
             break;
         case 3:
@@ -159,7 +157,17 @@
     }
 }
 
-//头像的点击事件
+#pragma doRight action
+- (void)doRight:(id)sender{
+    [LoginUtility quitLogin];
+    LoginPage *page = [[LoginPage alloc] init];
+    
+    page.hidesBottomBarWhenPushed = YES;
+    self.tabBarController.selectedIndex = 0;
+    [[self.tabBarController.viewControllers objectAtIndex:0] pushViewController:page animated:YES];
+}
+
+#pragma avatar click action
 - (IBAction)avatarPress:(id)sender{    
     UserInfoPage *page =  [[UserInfoPage alloc] init];
     page.model = self.model;

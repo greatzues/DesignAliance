@@ -39,7 +39,7 @@
     self.missionContact.text = [NSString stringWithFormat:@"联系方式：%@",self.model.contact];
     
     NSString *imageURL = [NSString stringWithFormat:ImageMission,self.model.cover];
-    [self.missionCover sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
+    [self.missionCover sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"LittlePictureHolder.png"] options:SDWebImageRetryFailed];
 }
 
 - (void)getCount{

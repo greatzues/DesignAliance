@@ -12,6 +12,7 @@
 @interface UserSuggestPage : DABaseMyPage
 
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *UserMail;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *SuggestContent;
+@property (weak, nonatomic) IBOutlet UITextView *SuggestContent;
+
 
 @end
