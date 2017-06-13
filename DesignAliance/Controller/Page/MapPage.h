@@ -10,6 +10,7 @@
 #import "SearchModel.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
 @interface MapPage : DABasePage
 
@@ -18,7 +19,10 @@
 @property(nonatomic, strong)   MAUserLocation       *currentUserLoaction;
 @property(nonatomic, strong)   MAPointAnnotation    *pointAnnotation;
 
+
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
+
+@property(nonatomic, strong)   AMapLocationManager  *locationManager;
 
 - (void)butClick;
 

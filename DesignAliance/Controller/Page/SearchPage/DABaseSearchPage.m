@@ -98,6 +98,13 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     }
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *flag=@"cell";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
+    
+    return cell;
+}
+
 
 #pragma mark - UISearchControllerDelegate代理
 //测试UISearchController的执行过程

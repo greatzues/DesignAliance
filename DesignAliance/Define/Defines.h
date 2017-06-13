@@ -82,7 +82,7 @@
 
 //用户页面
 #define MyPageArray         @[@"成为vip",@"修改密码",@"版本更新",@"联系我们",@"意见反馈",@"关于",@"分享应用"]
-#define MyPageIconArray     @[@"vip.png",@"modifyPassword.png",@"update.png",@"contactUs.png",@"suggestion.png",@"about.png",@"share.png"]
+#define MyPageIconArray     @[@"vip.png",@"modifyPassword.png",@"update.png",@"contactUs.png",@"suggestion.png",@"about.png",@"shareBlack.png"]
 
 //高德地图
 #define AMapKey             @"843b615d0689c272594bb226b4efa96d"

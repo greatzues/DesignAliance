@@ -22,7 +22,7 @@
     [super viewDidLoad];
     [self getCount];
     [self setTitle:@"设计任务"];
-    [self setNavigationRight:@"NavigationSquare.png"];
+    [self setNavigationRight:@"share.png"];
 }
 
 - (void)didReceiveMemoryWarning {

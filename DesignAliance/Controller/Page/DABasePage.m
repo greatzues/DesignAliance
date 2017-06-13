@@ -22,8 +22,6 @@
 }
 
 - (void)alertView:(NSString *)message{
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"名字"  message:message preferredStyle:UIAlertControllerStyleAlert];
-    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okAction];

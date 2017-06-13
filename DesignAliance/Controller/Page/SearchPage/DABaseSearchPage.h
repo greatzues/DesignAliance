@@ -26,6 +26,6 @@
 @property (nonatomic,strong) NSString       *searchString;
 
 - (void)initData;
-
+- (void)initTableView;
 
 @end

@@ -35,7 +35,6 @@
     [super viewDidLoad];
     [self initData];
     [self setNavigationRight:@"logout.png"];
-//    [self setNavBarImage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,13 +67,19 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
-    self.model = data; //将拿到的数据赋值给model
+    self.model = data;
     
-    [UserName setText:self.model.name];
-    [UserSkill setText:self.model.skill];
+    if(![self.model.name isEqual:[NSNull null]]){
+        [UserName setText:self.model.name];
+    }
+    
+    if(![self.model.skill isEqual:[NSNull null]]){
+        [UserSkill setText:self.model.skill];
+    }
     NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
     
     [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -83,7 +88,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
-    }	
+    }
     
     //设置cell标题和图片
     NSUInteger row = [indexPath row];

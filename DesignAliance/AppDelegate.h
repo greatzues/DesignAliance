@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DABaseOperation.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import "LoginPage.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, DAOperationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow  *window;
+@property (strong, nonatomic) LoginPage *loginPage;
 
 + (AppDelegate *)appDeg;
 - (void)showHomePage;

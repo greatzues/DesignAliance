@@ -45,20 +45,30 @@ static const int toolBarHeight = 44;
 }
 
 
-
 - (void)initData{
     self.topUserInfoTable.delegate      = self;
     self.topUserInfoTable.dataSource    = self;
     self.userDescription.delegate       = self;
-    self.userSkill.delegate             = self;
+    //self.userSkill.delegate             = self;
     
-    self.userEducation.text = self.model.education;
-    self.userSkill.text = self.model.skill;
+    if(![self.model.education isEqual:[NSNull null]]){
+        self.userEducation.text = self.model.education;
+    }
     
-    self.username = self.model.name;
-    self.education = self.model.education;
-    if(self.model.sex == NULL){
-        self.sex = @"m";
+    if(![self.model.skill isEqual:[NSNull null]]){
+        self.userSkill.text = self.model.skill;
+    }
+    
+    if(![self.model.name isEqual:[NSNull null]]){
+        self.username = self.model.name;
+    }
+    
+    if(![self.model.education isEqual:[NSNull null]]){
+        self.education = self.model.education;
+    }
+    
+    if([self.model.sex isEqual:[NSNull null]]){
+        self.model.sex = @"m";
     }else{
         self.sex = self.model.sex;
     }
@@ -142,7 +152,9 @@ static const int toolBarHeight = 44;
         }
             break;
         case 1:
-            cell.userName.text = self.model.name;
+            if(![self.model.name isEqual:[NSNull null]]){
+                cell.userName.text = self.model.name;
+            }
             break;
         case 2:
         {

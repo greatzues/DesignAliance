@@ -8,9 +8,10 @@
 
 #import <MAMapKit/MAMapKit.h>
 #import "CustomCalloutView.h"
+#import "SearchModel.h"
 
 @interface CustomAnnotationView : MAAnnotationView
 
-@property (nonatomic,strong) CustomCalloutView * calloutView;
+@property (nonatomic,readonly) CustomCalloutView * calloutView;
 
 @end

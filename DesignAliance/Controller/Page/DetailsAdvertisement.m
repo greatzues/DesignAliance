@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [self setTitle:self.model.name];
     [self initWebView];
-    [self setNavigationRight:@"NavigationSquare.png"];
+    [self setNavigationRight:@"share.png"];
 }
 
 - (void)didReceiveMemoryWarning {

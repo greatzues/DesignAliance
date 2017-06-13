@@ -85,8 +85,8 @@
         
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         
-        LoginPage *page = [[LoginPage alloc] init];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:page];
+        _loginPage = [[LoginPage alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_loginPage];
         self.window.rootViewController = navController;
         
         return [self.window makeKeyAndVisible];
@@ -106,7 +106,19 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    BASE_ERROR_FUN(errorMessage);
+    [LoginUtility quitLogin];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        _loginPage = [[LoginPage alloc] init];
+        self.window.rootViewController = _loginPage;
+        [self.window makeKeyAndVisible];
+        
+    }];
+    
+    [alert addAction:okAction];
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma initial ShareSDK

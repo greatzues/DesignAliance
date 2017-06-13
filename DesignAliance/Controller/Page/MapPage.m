@@ -13,12 +13,14 @@
 #import "CustomAnnotationView.h"
 #import <MapKit/MapKit.h>
 #import "DetailsCompanyPage.h"
+#import <AMapLocationKit/AMapLocationKit.h>
 
-#import "RegisterPage.h"
 
+@interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate, AMapLocationManagerDelegate>{
 
-@interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate>
-
+    NSMutableDictionary *companyInfo;
+    
+}
 @end
 
 @implementation MapPage
@@ -26,12 +28,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationRight:@"NavigationSquare.png"];
+    [self configLocationManager]; //开启定位
     [self initMap];
     [self initData];
+    //初始化储存公司信息的字典
+    companyInfo = [[NSMutableDictionary alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [self stopSerialLocation];
 }
 
 - (void)initData{
@@ -46,29 +55,16 @@
 
 - (void)opSuccess:(id)data{
     [super opSuccess:data];
-    _pointArray = [NSMutableArray arrayWithCapacity:10];
-    int i;
-    for(i=0;i<[data count];i++){
-        SearchModel  *s = [data objectAtIndex:i];
-//        
-//        //默认定位中心为返回的第一个返回的
-//        if(i==0){
-//            _mapView.centerCoordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
-//        }
-//        
-//        _pointAnnotation.coordinate = CLLocationCoordinate2DMake(_search.longitude.doubleValue, _search.latitude.doubleValue);
-//        _pointAnnotation.title = self.search.name;
-//        _pointAnnotation.subtitle = self.search.desc;
-//        [_pointArray addObject:_pointAnnotation];
-        
-        if(i==0){
-            _mapView.centerCoordinate = CLLocationCoordinate2DMake(s.longitude.doubleValue, s.latitude.doubleValue);
-        }
+    _pointArray = [[NSMutableArray alloc] init];
+    for(SearchModel * s in data){
         
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.longitude.doubleValue, s.latitude.doubleValue);
         point.title = s.name;
         point.subtitle = s.desc;
+        
+        [companyInfo setObject:s forKey:point.title];
+        
         [_pointArray addObject:point];
     }
     
@@ -90,7 +86,7 @@
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
     
     //设置缩放距离
-    [_mapView setZoomLevel:12];
+    [_mapView setZoomLevel:14];
     //设置代理
     _mapView.delegate = self;
     //初始化点标记
@@ -99,29 +95,16 @@
 
 #pragma 导航右键点击事件监听
 - (void)doRight:(id)sender{
-        //先删掉一组气泡
-        [self.mapView removeAnnotation:_pointAnnotation];
     
-        SearchMapPage *page = [[SearchMapPage alloc] init];
-        page.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:page animated:YES];
-}
-
-//添加默认样式的点标记，即大头针
-- (void) addPointAnnotationWithLatitude:(double)lati andLongitude:(double) longi Title:(NSString *) title Subtitle:(NSString *) subtitle
-{
-    
-    _pointAnnotation.coordinate = CLLocationCoordinate2DMake(lati, longi);
-    _pointAnnotation.title = title;
-    _pointAnnotation.subtitle = subtitle;
-    
-    [self.mapView addAnnotation:_pointAnnotation];
+    SearchMapPage *page = [[SearchMapPage alloc] init];
+    page.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:page animated:YES];
 }
 
 //接受返回的参数
 - (void)viewDidAppear:(BOOL)animated{
     //先删除原来的大头针
-    [_mapView removeAnnotations:_pointArray];
+    //[_mapView removeAnnotations:_pointArray];
     
     if(!animated){
         return ;
@@ -155,7 +138,6 @@
             annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
             
             annotationView.image = [UIImage imageNamed:@"mapMark"];
-            
             ///设置中心点偏移，使得标注底部中间点成为经纬度对应点
             annotationView.centerOffset = CGPointMake(0, -15);
             
@@ -166,8 +148,10 @@
     return nil;
 }
 
-- (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
-    
+-(void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+    mapView.centerCoordinate = CLLocationCoordinate2DMake(view.annotation.coordinate.longitude,view.annotation.coordinate.latitude);
+    self.search = [companyInfo objectForKey:view.annotation.title];
+    BASE_INFO_FUN(view.annotation.title);
 }
 
 #pragma 标注气泡点击事件
@@ -175,6 +159,45 @@
     DetailsCompanyPage *detailsCompanyPage = [[DetailsCompanyPage alloc] init];
     detailsCompanyPage.search = self.search;
     [self initToDetails:detailsCompanyPage];
+}
+
+#pragma Location delegate
+- (void)configLocationManager
+{
+    self.locationManager = [[AMapLocationManager alloc] init];
+    
+    [self.locationManager setDelegate:self];
+    
+    [self.locationManager setPausesLocationUpdatesAutomatically:NO];
+    
+    [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+    
+    self.locationManager.distanceFilter = 200; //设置定位最小更新距离方法
+    
+    [self startSerialLocation];
+}
+
+- (void)startSerialLocation
+{
+    //开始定位
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)stopSerialLocation
+{
+    //停止定位
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
+{
+    //定位错误
+    NSLog(@"%s, amapLocationManager = %@, error = %@", __func__, [manager class], error);
+}
+#pragma 接收定位更新
+- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location
+{
+    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.longitude, location.coordinate.latitude, location.horizontalAccuracy);
 }
 
 @end

@@ -7,11 +7,17 @@
 //
 
 #import "CustomAnnotationView.h"
+#import "MapPage.h"
+
+@interface CustomAnnotationView ()
+
+@property (nonatomic, strong, readwrite) CustomCalloutView *calloutView;
+
+@end
 
 @implementation CustomAnnotationView
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated{
-    
     if (self.selected == selected) {
         return;
     }
@@ -27,11 +33,11 @@
             self.calloutView.center = CGPointMake(center_x, center_y);
         }
         
+        MapPage *page = [[MapPage alloc] init];
         //给calloutView赋值
         self.calloutView.title = self.annotation.title;
         self.calloutView.address = self.annotation.subtitle;
-    
-        
+        [self.calloutView.button addTarget:page action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.calloutView];
         
     } else {

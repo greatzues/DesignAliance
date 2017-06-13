@@ -13,9 +13,18 @@
 
 @implementation SearchMapPage
 
+- (void)initTableView{
+    [super initTableView];
+    
+    self.searchController.searchBar.scopeButtonTitles = @[@"第一个",@"第二个",@"第三个"];
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.showsScopeBar = YES;
+    //self.definesPresentationContext = NO;
+}
+
 - (void)initData{
     _pageSize = 10;
-    NSString *body = [NSString stringWithFormat:@"pageSize=%ld",_pageSize];
+    NSString *body = [NSString stringWithFormat:@"pageSize=%ld",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
                              @"body":body};
     

@@ -7,7 +7,6 @@
 //
 
 #import "CustomCalloutView.h"
-#import "MapPage.h"
 
 @interface CustomCalloutView()
 
@@ -43,15 +42,11 @@
         self.addressLabel.text = @"address";
         [self addSubview:self.addressLabel];
         
-        //_button的监听事件在MapPage上处理
-        MapPage *page = [[MapPage alloc] init];
         _button = [[UIButton alloc] initWithFrame:CGRectMake(200, 8, 45, 45)];
         _button.backgroundColor =  [UIColor whiteColor];
         _button.titleLabel.font = [UIFont systemFontOfSize: 14.0];
         [_button setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
         [_button setTitle:@"详情" forState:UIControlStateNormal];
-        //[_button setImage:[UIImage imageNamed:@"mapNormal"] forState:UIControlStateNormal];
-        [_button addTarget:page action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_button];
     }
     return self;

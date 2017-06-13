@@ -18,7 +18,7 @@
     [super viewDidLoad];
     [self initPage];
     [self setTitle:@"设计人才"];
-    [self setNavigationRight:@"NavigationSquare.png"];
+    [self setNavigationRight:@"share.png"];
 }
 
 - (void)didReceiveMemoryWarning {

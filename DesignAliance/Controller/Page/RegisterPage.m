@@ -61,7 +61,6 @@
 }
 //验证短信验证码
 - (IBAction)registerAccount:(id)sender {
-    [self alertView:@"test"];
     if(![passwordNumber.text isEqualToString:confirmNumber.text]){
         [self alertView:@"确认密码不一致，请重新输入"];
         return ;
@@ -73,8 +72,7 @@
             NSLog(@"%@",@"验证成功，可执行用户请求的操作");
         } else {
             NSLog(@"%@",error);
-            [self alertView:@"短信验证失败，请重新输入验证码"];
-            return ;
+            return [self alertView:@"短信验证失败，请重新输入验证码"];
         }
     }];
     
@@ -91,18 +89,19 @@
 
 - (void)opFail:(NSString *)errorMessage{
     [self alertView:@"注册失败，请检查网络后重试"];
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
-//查询短信短信验证码状态
-- (void)querySMSCode:(int)smsId{
-    [BmobSMS querySMSCodeStateInBackgroundWithSMSId:smsId resultBlock:^(NSDictionary *dic, NSError *error) {
-        if (dic) {
-            NSLog(@"-------->>>>>>%@",dic);
-        } else {
-            NSLog(@"%@",error);
-        }
-    }];
-}
+////查询短信短信验证码状态
+//- (void)querySMSCode:(int)smsId{
+//    [BmobSMS querySMSCodeStateInBackgroundWithSMSId:smsId resultBlock:^(NSDictionary *dic, NSError *error) {
+//        if (dic) {
+//            NSLog(@"-------->>>>>>%@",dic);
+//        } else {
+//            NSLog(@"%@",error);
+//        }
+//    }];
+//}
 
 - (IBAction)backToLoginPage:(id)sender {
     [[self navigationController] popViewControllerAnimated:YES];

@@ -145,12 +145,13 @@
 		82559C511EDF0CBE008B149F /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C4E1EDF0CBE008B149F /* logo@2x.png */; };
 		82559C521EDF0CBE008B149F /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C4F1EDF0CBE008B149F /* logo@3x.png */; };
 		82559C541EDF9A6E008B149F /* RegisterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C531EDF9A6E008B149F /* RegisterButton@2x.png */; };
+		82A31F121EF01AA6007C17B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82A31F141EF01AA6007C17B2 /* InfoPlist.strings */; };
 		82AD19681EB61016007C36FE /* MyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19671EB61016007C36FE /* MyPage.xib */; };
 		82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD196A1EB61449007C36FE /* DAGetUserInfo.m */; };
 		82AD19771EB6D662007C36FE /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD196F1EB6D662007C36FE /* about@2x.png */; };
 		82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19701EB6D662007C36FE /* contactUs@2x.png */; };
 		82AD197A1EB6D662007C36FE /* modifyPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19721EB6D662007C36FE /* modifyPassword@2x.png */; };
-		82AD197B1EB6D662007C36FE /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19731EB6D662007C36FE /* share@2x.png */; };
+		82AD197B1EB6D662007C36FE /* shareBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19731EB6D662007C36FE /* shareBlack@2x.png */; };
 		82AD197C1EB6D662007C36FE /* suggestion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19741EB6D662007C36FE /* suggestion@2x.png */; };
 		82AD197D1EB6D662007C36FE /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19751EB6D662007C36FE /* update@2x.png */; };
 		82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AD19761EB6D662007C36FE /* vip@2x.png */; };
@@ -164,7 +165,7 @@
 		82E88D861EDFBE5900AF0137 /* contactUs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D7D1EDFBE5900AF0137 /* contactUs@3x.png */; };
 		82E88D871EDFBE5900AF0137 /* logout@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D7E1EDFBE5900AF0137 /* logout@3x.png */; };
 		82E88D881EDFBE5900AF0137 /* modifyPassword@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D7F1EDFBE5900AF0137 /* modifyPassword@3x.png */; };
-		82E88D891EDFBE5900AF0137 /* share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D801EDFBE5900AF0137 /* share@3x.png */; };
+		82E88D891EDFBE5900AF0137 /* shareBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D801EDFBE5900AF0137 /* shareBlack@3x.png */; };
 		82E88D8A1EDFBE5900AF0137 /* suggestion@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D811EDFBE5900AF0137 /* suggestion@3x.png */; };
 		82E88D8B1EDFBE5900AF0137 /* update@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D821EDFBE5900AF0137 /* update@3x.png */; };
 		82E88D8C1EDFBE5900AF0137 /* UserBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D831EDFBE5900AF0137 /* UserBackground@3x.png */; };
@@ -191,6 +192,11 @@
 		82E88DC01EE5510600AF0137 /* BigPictureHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */; };
 		82E88DC11EE5510600AF0137 /* redDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DBE1EE5510600AF0137 /* redDot@2x.png */; };
 		82E88DC31EE5601D00AF0137 /* PhoneUs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */; };
+		82E88DC61EE6ACDC00AF0137 /* AboutUsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC41EE6ACDC00AF0137 /* AboutUsBackground.png */; };
+		82E88DC71EE6ACDC00AF0137 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC51EE6ACDC00AF0137 /* share@2x.png */; };
+		82E88DCA1EE6ACF500AF0137 /* AboutUsTextViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC81EE6ACF500AF0137 /* AboutUsTextViewBackground@2x.png */; };
+		82E88DCB1EE6ACF500AF0137 /* AboutUsTopLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC91EE6ACF500AF0137 /* AboutUsTopLogo@2x.png */; };
+		82E88DCD1EE6AE1400AF0137 /* AboutPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DCC1EE6AE1400AF0137 /* AboutPage.xib */; };
 		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
@@ -437,13 +443,15 @@
 		82559C4E1EDF0CBE008B149F /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		82559C4F1EDF0CBE008B149F /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		82559C531EDF9A6E008B149F /* RegisterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RegisterButton@2x.png"; sourceTree = "<group>"; };
+		82A31F131EF01AA6007C17B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82A31F151EF01AC3007C17B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		82AD19671EB61016007C36FE /* MyPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPage.xib; sourceTree = "<group>"; };
 		82AD19691EB61449007C36FE /* DAGetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGetUserInfo.h; sourceTree = "<group>"; };
 		82AD196A1EB61449007C36FE /* DAGetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGetUserInfo.m; sourceTree = "<group>"; };
 		82AD196F1EB6D662007C36FE /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
 		82AD19701EB6D662007C36FE /* contactUs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactUs@2x.png"; sourceTree = "<group>"; };
 		82AD19721EB6D662007C36FE /* modifyPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modifyPassword@2x.png"; sourceTree = "<group>"; };
-		82AD19731EB6D662007C36FE /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		82AD19731EB6D662007C36FE /* shareBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareBlack@2x.png"; sourceTree = "<group>"; };
 		82AD19741EB6D662007C36FE /* suggestion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestion@2x.png"; sourceTree = "<group>"; };
 		82AD19751EB6D662007C36FE /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@2x.png"; sourceTree = "<group>"; };
 		82AD19761EB6D662007C36FE /* vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip@2x.png"; sourceTree = "<group>"; };
@@ -460,7 +468,7 @@
 		82E88D7D1EDFBE5900AF0137 /* contactUs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactUs@3x.png"; sourceTree = "<group>"; };
 		82E88D7E1EDFBE5900AF0137 /* logout@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout@3x.png"; sourceTree = "<group>"; };
 		82E88D7F1EDFBE5900AF0137 /* modifyPassword@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modifyPassword@3x.png"; sourceTree = "<group>"; };
-		82E88D801EDFBE5900AF0137 /* share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@3x.png"; sourceTree = "<group>"; };
+		82E88D801EDFBE5900AF0137 /* shareBlack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareBlack@3x.png"; sourceTree = "<group>"; };
 		82E88D811EDFBE5900AF0137 /* suggestion@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestion@3x.png"; sourceTree = "<group>"; };
 		82E88D821EDFBE5900AF0137 /* update@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@3x.png"; sourceTree = "<group>"; };
 		82E88D831EDFBE5900AF0137 /* UserBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserBackground@3x.png"; sourceTree = "<group>"; };
@@ -492,6 +500,11 @@
 		82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BigPictureHolder@2x.png"; sourceTree = "<group>"; };
 		82E88DBE1EE5510600AF0137 /* redDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redDot@2x.png"; sourceTree = "<group>"; };
 		82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PhoneUs@2x.png"; sourceTree = "<group>"; };
+		82E88DC41EE6ACDC00AF0137 /* AboutUsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutUsBackground.png; sourceTree = "<group>"; };
+		82E88DC51EE6ACDC00AF0137 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		82E88DC81EE6ACF500AF0137 /* AboutUsTextViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutUsTextViewBackground@2x.png"; sourceTree = "<group>"; };
+		82E88DC91EE6ACF500AF0137 /* AboutUsTopLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutUsTopLogo@2x.png"; sourceTree = "<group>"; };
+		82E88DCC1EE6AE1400AF0137 /* AboutPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPage.xib; sourceTree = "<group>"; };
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -609,6 +622,7 @@
 				18FED9431ED94ED000C5FE4E /* ContactUsPage.xib */,
 				18FED9451ED9643000C5FE4E /* UserSuggestPage.xib */,
 				18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */,
+				82E88DCC1EE6AE1400AF0137 /* AboutPage.xib */,
 			);
 			name = page;
 			sourceTree = "<group>";
@@ -672,6 +686,8 @@
 		820CA7801EB052CB006832B5 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DC41EE6ACDC00AF0137 /* AboutUsBackground.png */,
+				82E88DC51EE6ACDC00AF0137 /* share@2x.png */,
 				82E88DC21EE5601D00AF0137 /* PhoneUs@2x.png */,
 				82E88DBC1EE5510500AF0137 /* LittlePictureHolder@2x.png */,
 				82E88DBD1EE5510600AF0137 /* BigPictureHolder@2x.png */,
@@ -821,6 +837,7 @@
 				821F2DFD1EAC4BF70098081F /* Info.plist */,
 				821F2DED1EAC4BF70098081F /* main.m */,
 				821F2E4B1EAC91E50098081F /* DesignAliance-Prefix.pch */,
+				82A31F141EF01AA6007C17B2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1055,12 +1072,14 @@
 		82AD196E1EB6D642007C36FE /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				82E88DC81EE6ACF500AF0137 /* AboutUsTextViewBackground@2x.png */,
+				82E88DC91EE6ACF500AF0137 /* AboutUsTopLogo@2x.png */,
 				82E88D9D1EE05DB400AF0137 /* education@2x.png */,
 				82E88D7C1EDFBE5900AF0137 /* about@3x.png */,
 				82E88D7D1EDFBE5900AF0137 /* contactUs@3x.png */,
 				82E88D7E1EDFBE5900AF0137 /* logout@3x.png */,
 				82E88D7F1EDFBE5900AF0137 /* modifyPassword@3x.png */,
-				82E88D801EDFBE5900AF0137 /* share@3x.png */,
+				82E88D801EDFBE5900AF0137 /* shareBlack@3x.png */,
 				82E88D811EDFBE5900AF0137 /* suggestion@3x.png */,
 				82E88D821EDFBE5900AF0137 /* update@3x.png */,
 				82E88D831EDFBE5900AF0137 /* UserBackground@3x.png */,
@@ -1072,7 +1091,7 @@
 				82AD196F1EB6D662007C36FE /* about@2x.png */,
 				82AD19701EB6D662007C36FE /* contactUs@2x.png */,
 				82AD19721EB6D662007C36FE /* modifyPassword@2x.png */,
-				82AD19731EB6D662007C36FE /* share@2x.png */,
+				82AD19731EB6D662007C36FE /* shareBlack@2x.png */,
 				82AD19741EB6D662007C36FE /* suggestion@2x.png */,
 				82AD19751EB6D662007C36FE /* update@2x.png */,
 				82AD19761EB6D662007C36FE /* vip@2x.png */,
@@ -1247,6 +1266,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 821F2DE01EAC4BF70098081F;
 			productRefGroup = 821F2DEA1EAC4BF70098081F /* Products */;
@@ -1265,6 +1285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E88DCA1EE6ACF500AF0137 /* AboutUsTextViewBackground@2x.png in Resources */,
 				82559C441EDE97CF008B149F /* loginWindow@2x.png in Resources */,
 				82E88D951EE0410D00AF0137 /* talentCard@3x.png in Resources */,
 				82559C511EDF0CBE008B149F /* logo@2x.png in Resources */,
@@ -1280,6 +1301,7 @@
 				82E88D771EDFB72100AF0137 /* DefaultBackground@3x.png in Resources */,
 				82559C461EDE97CF008B149F /* signUpWindow@2x.png in Resources */,
 				82E88D791EDFBBCF00AF0137 /* NavigationBar44@3x.png in Resources */,
+				82E88DCB1EE6ACF500AF0137 /* AboutUsTopLogo@2x.png in Resources */,
 				189A1A3E1EDD5E6E0083484B /* logout@2x.png in Resources */,
 				187C45E21ED03A70006B2EF9 /* DesignMissionCell.xib in Resources */,
 				82E88D9C1EE056D700AF0137 /* NavigationSquare@2x.png in Resources */,
@@ -1290,6 +1312,7 @@
 				82E88D8F1EDFC6B000AF0137 /* toHere@2x.png in Resources */,
 				8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */,
 				82E88D861EDFBE5900AF0137 /* contactUs@3x.png in Resources */,
+				82E88DC71EE6ACDC00AF0137 /* share@2x.png in Resources */,
 				18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */,
 				189A1A401EDD5E6E0083484B /* UserTopBackground@2x.png in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
@@ -1320,12 +1343,13 @@
 				82E88D871EDFBE5900AF0137 /* logout@3x.png in Resources */,
 				18397B881ED11CD500334AB3 /* DADesignMissionWidget.xib in Resources */,
 				821946CD1EB23D6200EB68F3 /* Main.storyboard in Resources */,
+				82E88DCD1EE6AE1400AF0137 /* AboutPage.xib in Resources */,
 				820CA8391EB1CFB2006832B5 /* NewsDefault@2x.png in Resources */,
 				820CA8001EB1CF90006832B5 /* DiscoveryIcon@2x.png in Resources */,
 				820C9CCC1EC4179500CA4951 /* mapMark@2x.png in Resources */,
 				82559C451EDE97CF008B149F /* signUpButton@2x.png in Resources */,
 				82559C4B1EDEE3EF008B149F /* background.png in Resources */,
-				82E88D891EDFBE5900AF0137 /* share@3x.png in Resources */,
+				82E88D891EDFBE5900AF0137 /* shareBlack@3x.png in Resources */,
 				820CA8041EB1CF90006832B5 /* NewsIcon@2x.png in Resources */,
 				18FED94B1ED978F100C5FE4E /* UserInfoPage.xib in Resources */,
 				18FED9461ED9643000C5FE4E /* UserSuggestPage.xib in Resources */,
@@ -1340,8 +1364,9 @@
 				823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */,
 				82559C4C1EDEE3EF008B149F /* background@3x.png in Resources */,
 				82E88DAD1EE2BB0100AF0137 /* talentName@2x.png in Resources */,
-				82AD197B1EB6D662007C36FE /* share@2x.png in Resources */,
+				82AD197B1EB6D662007C36FE /* shareBlack@2x.png in Resources */,
 				18FED93E1ED909F400C5FE4E /* ModifyPasswordPage.xib in Resources */,
+				82E88DC61EE6ACDC00AF0137 /* AboutUsBackground.png in Resources */,
 				18C2E2E61ED3E5BE00F75167 /* DetailsTalentsPage.xib in Resources */,
 				82AD19771EB6D662007C36FE /* about@2x.png in Resources */,
 				820CA81E1EB1CF99006832B5 /* NavigationBar64@2x.png in Resources */,
@@ -1357,6 +1382,7 @@
 				82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */,
 				82559C521EDF0CBE008B149F /* logo@3x.png in Resources */,
 				82E88D881EDFBE5900AF0137 /* modifyPassword@3x.png in Resources */,
+				82A31F121EF01AA6007C17B2 /* InfoPlist.strings in Resources */,
 				821732471EB58209006B3387 /* DADesignNewsWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1549,11 +1575,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		82A31F141EF01AA6007C17B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82A31F131EF01AA6007C17B2 /* en */,
+				82A31F151EF01AC3007C17B2 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		821F2E141EAC4BF70098081F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1601,6 +1640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1740,6 +1780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1831,6 +1872,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1922,6 +1964,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
