@@ -121,6 +121,7 @@
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
 		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
 		8220E6971EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */; };
+		8220E69A1EF2C62500D6BF57 /* AdviserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8220E6991EF2C62500D6BF57 /* AdviserModel.m */; };
 		822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3AE1EC173D400E6840E /* UIButton+countDown.m */; };
 		822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3BC1EC1DE4400E6840E /* DARegister.m */; };
 		823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823EE6EC1EB33BAB001B98B4 /* TabBarPages.plist */; };
@@ -409,6 +410,8 @@
 		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
 		8220E6951EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		8220E6981EF2C62500D6BF57 /* AdviserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviserModel.h; sourceTree = "<group>"; };
+		8220E6991EF2C62500D6BF57 /* AdviserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviserModel.m; sourceTree = "<group>"; };
 		822FD3AD1EC173D400E6840E /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		822FD3AE1EC173D400E6840E /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
 		822FD3BB1EC1DE4400E6840E /* DARegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARegister.h; sourceTree = "<group>"; };
@@ -907,6 +910,8 @@
 				18397B8A1ED13EA000334AB3 /* AdvertisementModel.m */,
 				18397B961ED199F300334AB3 /* TalentsModel.h */,
 				18397B971ED199F300334AB3 /* TalentsModel.m */,
+				8220E6981EF2C62500D6BF57 /* AdviserModel.h */,
+				8220E6991EF2C62500D6BF57 /* AdviserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1518,6 +1523,7 @@
 				8212A89F1EB9BD0B00CBD43F /* KeychainItemWrapper.m in Sources */,
 				822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */,
 				18FED9361ED9097500C5FE4E /* ContactUsPage.m in Sources */,
+				8220E69A1EF2C62500D6BF57 /* AdviserModel.m in Sources */,
 				18397BA81ED1C53B00334AB3 /* SearchNewsPage.m in Sources */,
 				18FED93C1ED909A800C5FE4E /* AboutPage.m in Sources */,
 				18FED9301ED9087A00C5FE4E /* BecomeVipPage.m in Sources */,

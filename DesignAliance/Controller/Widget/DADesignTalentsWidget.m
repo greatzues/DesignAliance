@@ -35,7 +35,7 @@
     _pageNo = 1;
     
     NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
-    NSDictionary *dictInfo = @{@"url":TalentsURl,
+    NSDictionary *dictInfo = @{@"url":ShowDesignPersion,
                                @"body":body,
                                };
     
@@ -48,7 +48,7 @@
     ++_pageNo;
     
     NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
-    NSDictionary *dictInfo = @{@"url":TalentsURl,
+    NSDictionary *dictInfo = @{@"url":ShowDesignPersion,
                                @"body":body
                                };
     

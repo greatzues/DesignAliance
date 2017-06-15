@@ -8,6 +8,7 @@
 
 #import "SearchMissionPage.h"
 #import "DAMission.h"
+#import "DetailsMissionPage.h"
 
 @interface SearchMissionPage ()
 
@@ -51,9 +52,9 @@
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
     
-    self.page =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.page.search = self.model;
-    [self.navigationController popToViewController:self.page animated:YES];
+    DetailsMissionPage *page = [[DetailsMissionPage alloc] init];
+    page.model = self.model;
+    [super initToDetails:page];
     
 }
 

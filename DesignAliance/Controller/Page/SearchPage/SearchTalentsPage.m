@@ -8,13 +8,14 @@
 
 #import "SearchTalentsPage.h"
 #import "DATalents.h"
+#import "DetailsTalentsPage.h"
 
 @implementation SearchTalentsPage
 
 - (void)initData{
     _pageSize = 10;
     NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
-    NSDictionary *opInfo = @{@"url":TalentsURl,    //拿到10条新闻资讯
+    NSDictionary *opInfo = @{@"url":ShowDesignPersion,    //拿到10条新闻资讯
                              @"body":body};
     
     _operation = [[DATalents alloc] initWithDelegate:self opInfo:opInfo];
@@ -47,9 +48,9 @@
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
     
-    self.page =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.page.search = self.model;
-    [self.navigationController popToViewController:self.page animated:YES];
+    DetailsTalentsPage *page = [[DetailsTalentsPage alloc] init];
+    page.model = self.model;
+    [super initToDetails:page];
     
 }
 

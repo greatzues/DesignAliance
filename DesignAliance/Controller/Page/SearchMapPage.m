@@ -30,7 +30,6 @@
     
     self.searchController.searchBar.scopeButtonTitles = @[@"设计公司",@"设计顾问",@"技术顾问"];
     self.searchController.searchBar.delegate = self;
-    //self.searchController.searchBar.showsScopeBar = YES; // 这行代码导致搜索bar状态栏重叠
 }
 
 - (void)initData{
@@ -132,11 +131,9 @@
 - (BOOL)navigationShouldPopOnBackButton{
     self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     self.mapPage.pointArray = self.pointArray;
-    //返回时触发定位方法
-    //[self.mapPage locationClick];
     [self.navigationController popToViewController:self.mapPage animated:true];
     
-    return NO;
+    return YES;
 }
 
 @end

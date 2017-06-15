@@ -8,7 +8,7 @@
 
 #import "SearchNewsPage.h"
 #import "DANews.h"
-
+#import "DetailsNewsPage.h"
 
 @implementation SearchNewsPage
 
@@ -47,10 +47,10 @@
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
-    
-    self.page =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.page.search = self.model;
-    [self.navigationController popToViewController:self.page animated:YES];
+        
+    DetailsNewsPage *page = [[DetailsNewsPage alloc] init];
+    page.newsInfo = self.model;
+    [super initToDetails:page];
     
 }
 
