@@ -18,6 +18,12 @@
 
 @implementation SearchMapPage
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    _selectTitleBody = @"key_word";
+    _selectTitleUrl = SearchCompanyByKey;
+}
+
 - (void)initTableView{
     
     [super initTableView];
@@ -28,9 +34,6 @@
 }
 
 - (void)initData{
-    _selectTitleBody = [NSString stringWithFormat:@"key_word=%@",self.searchString];
-    _selectTitleUrl = SearchCompanyByKey;
-    
     _pageSize = 15;
     NSString *body = [NSString stringWithFormat:@"pageSize=%ld",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
@@ -87,13 +90,10 @@
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     [super updateSearchResultsForSearchController:searchController];
     
-//    _selectTitleBody = [NSString stringWithFormat:@"key_word=%@",self.searchString];
-//    _selectTitleUrl = SearchCompanyByKey;
-    
     if (![self.searchString  isEqual: @""]){
-        NSString *body = [NSString stringWithFormat:@"key_word=%@",self.searchString];
+        NSString *body = [NSString stringWithFormat:@"%@=%@",_selectTitleBody,self.searchString];
         NSDictionary *opInfo = @{@"url":_selectTitleUrl,
-                                 @"body":_selectTitleBody};
+                                 @"body":body};
     
         _operation = [[DASearchInfo alloc] initWithDelegate:self opInfo:opInfo];
         [_operation executeOp];
@@ -106,15 +106,15 @@
 {
     switch (selectedScope) {
         case 0:
-            _selectTitleBody = [NSString stringWithFormat:@"key_word=%@",self.searchString];
+            _selectTitleBody = @"key_word";
             _selectTitleUrl = SearchCompanyByKey;
             break;
         case 1:
-            _selectTitleBody = [NSString stringWithFormat:@"key_word=%@&type=d",self.searchString];
+            _selectTitleBody = @"type=d&key_word";
             _selectTitleUrl = SearchAdviser;
             break;
         case 2:
-            _selectTitleBody = [NSString stringWithFormat:@"key_word=%@&type=t",self.searchString];
+            _selectTitleBody = @"type=t&key_word";
             _selectTitleUrl = SearchAdviser;
             break;
             
