@@ -51,11 +51,11 @@
     _pointAnnotation = [[MAPointAnnotation alloc] init];
     
     //设置显示的标注
-    _pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.search.longitude.doubleValue, self.search.latitude.doubleValue);
+    _pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.search.latitude.doubleValue, self.search.longitude.doubleValue);
     [_AmapView addAnnotation:_pointAnnotation];
     
     //设置标注的中心
-    _AmapView.centerCoordinate = CLLocationCoordinate2DMake(self.search.longitude.doubleValue, self.search.latitude.doubleValue);
+    _AmapView.centerCoordinate = CLLocationCoordinate2DMake(self.search.latitude.doubleValue, self.search.longitude.doubleValue);
 }
 
 #pragma 初始化数据
@@ -69,8 +69,8 @@
     
     //初始化应用外导航的经纬度
     CLLocationCoordinate2D coor;
-    coor.latitude = self.search.longitude.doubleValue;
-    coor.longitude =self.search.latitude.doubleValue;
+    coor.latitude = self.search.latitude.doubleValue;
+    coor.longitude =self.search.longitude.doubleValue;
     self.coordinate = coor;
 }
 

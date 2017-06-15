@@ -19,11 +19,14 @@
 @property(nonatomic, strong)   MAUserLocation       *currentUserLoaction;
 @property(nonatomic, strong)   MAPointAnnotation    *pointAnnotation;
 
+///用户位置
+@property(nonatomic, strong)   MAUserLocation       *userLocation;
 
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
 
 @property(nonatomic, strong)   AMapLocationManager  *locationManager;
 
 - (void)butClick;
+- (void)locationClick;
 
 @end

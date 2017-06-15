@@ -14,7 +14,7 @@
                 <outlet property="missionContact" destination="O92-CF-QA6" id="dDS-bu-Q2L"/>
                 <outlet property="missionCount" destination="fhy-8P-gvL" id="5Yq-pE-J8W"/>
                 <outlet property="missionCover" destination="pkP-1c-bOc" id="CYf-Tz-Evk"/>
-                <outlet property="missionDetails" destination="q1z-8e-m4f" id="sMq-oJ-y4h"/>
+                <outlet property="missionDetails" destination="afP-rr-SRd" id="fcS-9q-XTV"/>
                 <outlet property="missionIssuer" destination="GVw-x5-6Tu" id="smZ-UA-xCr"/>
                 <outlet property="missionTime" destination="WaP-zh-M63" id="PxR-jB-jBb"/>
                 <outlet property="missionTitle" destination="Bde-y7-n93" id="6FO-ct-yZl"/>
@@ -162,17 +162,19 @@
                                                 <constraint firstAttribute="height" constant="1" id="Yzs-hY-fbI"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1z-8e-m4f">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afP-rr-SRd">
                                             <rect key="frame" x="34" y="66.5" width="307" height="107.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="6kx-il-odH" firstAttribute="top" secondItem="q1z-8e-m4f" secondAttribute="bottom" constant="50" id="3oa-rX-naf"/>
+                                        <constraint firstItem="afP-rr-SRd" firstAttribute="top" secondItem="WhQ-mN-G9w" secondAttribute="bottom" constant="34" id="4hT-dH-wJk"/>
                                         <constraint firstAttribute="trailing" secondItem="O92-CF-QA6" secondAttribute="trailing" constant="34" id="5qo-v0-gDz"/>
+                                        <constraint firstAttribute="trailing" secondItem="afP-rr-SRd" secondAttribute="trailing" constant="34" id="6DD-OQ-2x0"/>
+                                        <constraint firstItem="afP-rr-SRd" firstAttribute="leading" secondItem="PTi-u6-p6P" secondAttribute="leading" constant="34" id="7qy-Wu-cYm"/>
                                         <constraint firstAttribute="bottom" secondItem="pkP-1c-bOc" secondAttribute="bottom" constant="10" id="9at-aA-8cs"/>
                                         <constraint firstItem="O92-CF-QA6" firstAttribute="top" secondItem="GVw-x5-6Tu" secondAttribute="bottom" constant="19" id="AeE-4p-SVq"/>
                                         <constraint firstItem="WhQ-mN-G9w" firstAttribute="leading" secondItem="PTi-u6-p6P" secondAttribute="leading" constant="20" id="I4L-Ax-GD9"/>
@@ -183,15 +185,13 @@
                                         <constraint firstItem="WhQ-mN-G9w" firstAttribute="top" secondItem="QLY-PU-3kN" secondAttribute="bottom" constant="6" id="WNj-Th-RoV"/>
                                         <constraint firstAttribute="trailing" secondItem="GVw-x5-6Tu" secondAttribute="trailing" constant="34" id="X8A-gA-LQr"/>
                                         <constraint firstAttribute="height" constant="315" id="avZ-YX-Lyb"/>
-                                        <constraint firstItem="q1z-8e-m4f" firstAttribute="top" secondItem="WhQ-mN-G9w" secondAttribute="bottom" constant="34" id="eVL-uI-eQt"/>
                                         <constraint firstItem="6kx-il-odH" firstAttribute="leading" secondItem="PTi-u6-p6P" secondAttribute="leading" constant="30" id="fDd-cL-Na3"/>
-                                        <constraint firstAttribute="trailing" secondItem="q1z-8e-m4f" secondAttribute="trailing" constant="34" id="iU9-0O-7Hb"/>
+                                        <constraint firstItem="6kx-il-odH" firstAttribute="top" secondItem="afP-rr-SRd" secondAttribute="bottom" constant="50" id="h7K-lb-pNQ"/>
                                         <constraint firstItem="QLY-PU-3kN" firstAttribute="top" secondItem="PTi-u6-p6P" secondAttribute="top" constant="6" id="ipu-Pt-DnE"/>
                                         <constraint firstAttribute="trailing" secondItem="6kx-il-odH" secondAttribute="trailing" constant="30" id="lTM-Z9-HeT"/>
                                         <constraint firstAttribute="bottom" secondItem="O92-CF-QA6" secondAttribute="bottom" constant="22" id="pH4-NH-JCX"/>
                                         <constraint firstItem="pkP-1c-bOc" firstAttribute="leading" secondItem="PTi-u6-p6P" secondAttribute="leading" constant="34" id="rB4-sg-gMN"/>
                                         <constraint firstItem="pkP-1c-bOc" firstAttribute="top" secondItem="6kx-il-odH" secondAttribute="bottom" constant="10" id="rx4-zb-5Kq"/>
-                                        <constraint firstItem="q1z-8e-m4f" firstAttribute="leading" secondItem="PTi-u6-p6P" secondAttribute="leading" constant="34" id="u4W-uz-JR1"/>
                                     </constraints>
                                 </view>
                             </subviews>

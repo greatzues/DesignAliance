@@ -120,6 +120,7 @@
 		821F2E561EACB7CF0098081F /* DABaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E551EACB7CF0098081F /* DABaseController.m */; };
 		821F2E5F1EACB9850098081F /* DABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E5E1EACB9850098081F /* DABaseModel.m */; };
 		821F2E811EACCC460098081F /* DABaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2E801EACCC460098081F /* DABaseOperation.m */; };
+		8220E6971EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */; };
 		822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3AE1EC173D400E6840E /* UIButton+countDown.m */; };
 		822FD3BD1EC1DE4400E6840E /* DARegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 822FD3BC1EC1DE4400E6840E /* DARegister.m */; };
 		823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823EE6EC1EB33BAB001B98B4 /* TabBarPages.plist */; };
@@ -406,6 +407,8 @@
 		821F2E711EACBD8E0098081F /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
 		821F2E7F1EACCC460098081F /* DABaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseOperation.h; sourceTree = "<group>"; };
 		821F2E801EACCC460098081F /* DABaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseOperation.m; sourceTree = "<group>"; };
+		8220E6951EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		822FD3AD1EC173D400E6840E /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		822FD3AE1EC173D400E6840E /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
 		822FD3BB1EC1DE4400E6840E /* DARegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARegister.h; sourceTree = "<group>"; };
@@ -950,6 +953,7 @@
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8220E6941EF2B14700D6BF57 /* UIViewControllerBackButtonHandler */,
 				82E88DB51EE408D500AF0137 /* YSTextInputKeyboard */,
 				82E88D971EE047D800AF0137 /* RoundImage */,
 				8212A8D61EBF05C700CBD43F /* JVFloatLabeledTextField */,
@@ -1067,6 +1071,15 @@
 				821F2E711EACBD8E0098081F /* URLDefine.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		8220E6941EF2B14700D6BF57 /* UIViewControllerBackButtonHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8220E6951EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.h */,
+				8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */,
+			);
+			path = UIViewControllerBackButtonHandler;
 			sourceTree = "<group>";
 		};
 		82AD196E1EB6D642007C36FE /* MyPage */ = {
@@ -1534,6 +1547,7 @@
 				187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */,
 				821732351EB446F7006B3387 /* DADesignNewsWidget.m in Sources */,
 				187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */,
+				8220E6971EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m in Sources */,
 				18397B9B1ED19B0200334AB3 /* DATalents.m in Sources */,
 				821732541EB58B1F006B3387 /* DADownload.m in Sources */,
 				8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */,
@@ -1629,7 +1643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1671,7 +1685,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1811,7 +1825,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1903,7 +1917,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1995,7 +2009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

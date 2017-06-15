@@ -15,4 +15,9 @@
 @property(nonatomic, strong) SearchModel    *model;
 @property(nonatomic, strong) MapPage        *mapPage;
 
+@property(nonatomic, strong)   NSMutableArray       *pointArray;
+
+@property(nonatomic, strong)   NSString *selectTitleUrl;
+@property(nonatomic, strong)   NSString *selectTitleBody;
+
 @end

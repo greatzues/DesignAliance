@@ -14,10 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel        *missionTitle;
 @property (weak, nonatomic) IBOutlet UILabel        *missionCount;
 @property (weak, nonatomic) IBOutlet UILabel        *missionTime;
-@property (weak, nonatomic) IBOutlet UILabel        *missionDetails;
 @property (weak, nonatomic) IBOutlet UILabel        *missionIssuer;
 @property (weak, nonatomic) IBOutlet UILabel        *missionContact;
 @property (weak, nonatomic) IBOutlet UIImageView    *missionCover;
+@property (weak, nonatomic) IBOutlet UITextView     *missionDetails;
 
 @property(nonatomic, strong) MissionModel           *model;
 

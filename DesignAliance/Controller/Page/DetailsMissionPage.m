@@ -33,7 +33,6 @@
     self.missionTitle.text = self.model.name;
     self.missionTime.text = [self dateToTime: self.model.time.stringValue];
     self.missionCount.text = self.model.count.stringValue;
-    self.missionDetails.numberOfLines = 6;
     self.missionDetails.text = self.model.details;
     self.missionIssuer.text = [NSString stringWithFormat:@"发布者：%@",self.model.issuer];
     self.missionContact.text = [NSString stringWithFormat:@"联系方式：%@",self.model.contact];
