@@ -15,6 +15,9 @@
     NSDictionary *dictData = [dict objectForKey:NetData];
     UserModel *info = [UserModel infoFromDict:dictData];
     
+    NSString *userMessage = [dict objectForKey:@"message"];
+    
+    
     [_delegate opSuccess:info]; //告诉代理登录成功
 }
 

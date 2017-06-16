@@ -59,6 +59,7 @@
 
 //VIP searchByKey
 #define SearchAdviser               BaseURL "VIP/Adviser/searchAdviser"
+#define ShowAllAdviser              BaseURL "VIP/Adviser/showAllAdviser"
 #define ShowDesignPersion           BaseURL "VIP/DesignPerson/showDesignPerson"
 #define SearchDesignTalents         BaseURL "VIP/DesignPerson/searchDesignPersonBySkill"
 

@@ -18,7 +18,7 @@
 
 @interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate>
 {
-    NSMutableDictionary *companyInfo;
+    
 }
 @end
 
@@ -29,7 +29,8 @@
     [self setNavigationRight:@"NavigationSquare.png"];
     [self initMap];
     [self initData];
-    companyInfo = [[NSMutableDictionary alloc] init];
+    _companyInfo = [[NSMutableDictionary alloc] init];
+    _pointArray = [NSMutableArray array];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +49,7 @@
 
 - (void)opSuccess:(id)data{
     [super opSuccess:data];
-    _pointArray = [[NSMutableArray alloc] init];
+    //_pointArray = [[NSMutableArray alloc] init];
     for(SearchModel * s in data){
         
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
@@ -56,7 +57,7 @@
         point.title = s.name;
         point.subtitle = s.desc;
         
-        [companyInfo setObject:s forKey:point.title];
+        [_companyInfo setObject:s forKey:point.title];
         
         [_pointArray addObject:point];
     }
@@ -134,7 +135,7 @@
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
     mapView.centerCoordinate = CLLocationCoordinate2DMake(view.annotation.coordinate.latitude,view.annotation.coordinate.longitude);
     [_mapView setZoomLevel:17.5 animated:YES];
-    self.search = [companyInfo objectForKey:view.annotation.title];
+    self.search = [_companyInfo objectForKey:view.annotation.title];
     BASE_INFO_FUN(view.annotation.title);
 }
 

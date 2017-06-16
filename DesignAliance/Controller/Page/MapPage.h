@@ -23,6 +23,7 @@
 @property(nonatomic, strong)   MAUserLocation       *userLocation;
 
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
+@property(nonatomic, strong)   NSMutableDictionary  *companyInfo;
 
 @property(nonatomic, strong)   AMapLocationManager  *locationManager;
 

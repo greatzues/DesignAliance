@@ -8,6 +8,7 @@
 
 #import "DABaseSearchPage.h"
 #import "SearchModel.h"
+//#import "AdviserModel.h"
 #import "MapPage.h"
 
 @interface SearchMapPage : DABaseSearchPage

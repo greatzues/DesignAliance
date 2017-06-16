@@ -50,6 +50,7 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
+    
     [[AppDelegate appDeg] showHomePage];
 }
 
