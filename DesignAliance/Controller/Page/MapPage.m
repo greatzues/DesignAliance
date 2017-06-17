@@ -101,17 +101,6 @@
     [self.navigationController pushViewController:page animated:YES];
 }
 
-////接受返回的参数
-//- (void)viewDidAppear:(BOOL)animated{
-//    
-//    if(!animated){
-//        return ;
-//    }
-//    
-//    [self.mapView selectAnnotation:_pointAnnotation animated:true];
-//    //[self mapView:self.mapView didSelectAnnotationView:_pointAnnotation];
-//}
-
 #pragma mark - MAMapViewDelegate
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation

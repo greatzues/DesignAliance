@@ -35,6 +35,8 @@
     [super viewDidLoad];
     [self initData];
     [self setNavigationRight:@"logout.png"];
+    
+    self.list = [NSMutableArray array];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,8 +54,13 @@
 }
 
 - (void)initData{
-    self.list = MyPageArray;
+    [_list addObjectsFromArray:MyPageArray];
     self.IconList = MyPageIconArray;
+    
+    _userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([_userGrade isEqualToString:@"2"]){
+        [self.list replaceObjectAtIndex:0 withObject:@"我的团队"];
+    }
     
     //添加头像按钮的监听事件
     [UserAvatar addTarget:self action:@selector(avatarPress:) forControlEvents:UIControlEventTouchUpInside];
@@ -113,7 +120,11 @@
         case 0:
         {
             //成为vip
-            [self alertView:@"该功能暂未开放！"];
+            if([_userGrade isEqualToString:@"2"]){
+                [self alertView:@"我的团队"];
+            }else{
+                [self alertView:@"联系我们成为VIP"];
+            }
         }
             break;
         case 1:

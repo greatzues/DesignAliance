@@ -19,10 +19,17 @@
 @implementation DADesignTalentsWidget
 
 - (void)viewDidLoad {
-    self.cellIdentifier = @"DesignTalentsCell";
-    self.listData = [[NSMutableArray alloc] init];
-    [super viewDidLoad];
-    _cellHeight = 109;
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        self.cellIdentifier = @"DesignTalentsCell";
+        self.listData = [[NSMutableArray alloc] init];
+        [super viewDidLoad];
+        _cellHeight = 109;
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    }else{
+        //后面再替换
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    }
 }
 
 

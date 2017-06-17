@@ -15,8 +15,9 @@
     __weak IBOutlet UILabel *UserSkill;
 }
 
-@property(strong, nonatomic) NSArray *list;
-@property(strong, nonatomic) NSArray *IconList;
+@property(strong, nonatomic) NSMutableArray *list;
+@property(strong, nonatomic) NSArray        *IconList;
+@property(strong, nonatomic) NSString       *userGrade;
 
 @property (nonatomic, strong) UserModel      *model;
 
