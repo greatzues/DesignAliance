@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsCompanyPage">
             <connections>
-                <outlet property="desc" destination="xMs-Jh-6CB" id="UVi-KI-7mc"/>
+                <outlet property="desc" destination="aIr-bI-OtH" id="LwK-ht-heS"/>
                 <outlet property="location" destination="GwV-aD-g31" id="eZg-0P-OWm"/>
                 <outlet property="manager" destination="bAb-pI-JaZ" id="VvF-UL-z8w"/>
                 <outlet property="mapView" destination="9ux-YX-WpU" id="wHL-AR-XQi"/>
@@ -125,24 +125,24 @@
                                                 <constraint firstAttribute="height" constant="1" id="01m-ds-jXk"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-Jh-6CB">
-                                            <rect key="frame" x="26" y="49" width="323" height="51"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-bI-OtH">
+                                            <rect key="frame" x="26" y="41" width="323" height="51"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="51" id="zUN-RG-wpv"/>
+                                                <constraint firstAttribute="height" constant="51" id="1eK-Rl-Rha"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="xMs-Jh-6CB" secondAttribute="trailing" constant="26" id="JeW-mj-W7R"/>
+                                        <constraint firstItem="aIr-bI-OtH" firstAttribute="leading" secondItem="e9L-fG-3MP" secondAttribute="leading" constant="26" id="B8t-SS-wI4"/>
                                         <constraint firstItem="76S-2W-MSP" firstAttribute="leading" secondItem="e9L-fG-3MP" secondAttribute="leading" id="JmA-5o-2BB"/>
-                                        <constraint firstItem="xMs-Jh-6CB" firstAttribute="leading" secondItem="e9L-fG-3MP" secondAttribute="leading" constant="26" id="a6K-og-Ju7"/>
+                                        <constraint firstItem="aIr-bI-OtH" firstAttribute="top" secondItem="Yex-ls-BHr" secondAttribute="bottom" constant="15" id="Xzt-1J-mrL"/>
                                         <constraint firstItem="Yex-ls-BHr" firstAttribute="leading" secondItem="e9L-fG-3MP" secondAttribute="leading" constant="26" id="aXJ-cx-adc"/>
                                         <constraint firstItem="Yex-ls-BHr" firstAttribute="top" secondItem="e9L-fG-3MP" secondAttribute="top" constant="9" id="eaP-Hd-6M5"/>
-                                        <constraint firstItem="xMs-Jh-6CB" firstAttribute="top" secondItem="76S-2W-MSP" secondAttribute="bottom" constant="15" id="qwl-hy-4Em"/>
+                                        <constraint firstAttribute="trailing" secondItem="aIr-bI-OtH" secondAttribute="trailing" constant="26" id="i9x-6O-PFZ"/>
                                         <constraint firstAttribute="height" constant="111" id="tAG-68-t8D"/>
                                         <constraint firstAttribute="trailing" secondItem="76S-2W-MSP" secondAttribute="trailing" id="tSe-nY-jvj"/>
                                         <constraint firstItem="76S-2W-MSP" firstAttribute="top" secondItem="Yex-ls-BHr" secondAttribute="bottom" constant="7" id="vg9-Yt-lt0"/>

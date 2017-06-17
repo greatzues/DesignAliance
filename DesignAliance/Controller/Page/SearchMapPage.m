@@ -12,6 +12,7 @@
 #import "MapPage.h"
 #import "UIViewController+BackButtonHandler.h" //导入拦截默认返回事件的类
 
+
 @interface SearchMapPage ()<UISearchResultsUpdating,UISearchBarDelegate>{
     NSString    *initSearchUrl;
 }
@@ -27,14 +28,18 @@
     [super viewDidLoad];
     _selectTitleBody = @"key_word";
     _selectTitleUrl = SearchCompanyByKey;
-    
 }
 
 - (void)initTableView{
     [super initTableView];
     
-    self.searchController.searchBar.scopeButtonTitles = @[@"设计公司",@"设计顾问",@"技术顾问"];
-    self.searchController.searchBar.delegate = self;
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        self.searchController.searchBar.scopeButtonTitles = @[@"设计公司",@"设计顾问",@"技术顾问"];
+        self.searchController.searchBar.delegate = self;
+    }
+    
+    
 }
 
 - (void)initData{
@@ -67,7 +72,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        //这里判断是由于在点击搜索框拿到焦点时，self.searchController.active为true，但此时self.searchListArry没有数据，会出现数组越界错误
+        if([self.searchListArry count] != 0){
+            self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        }else{
+            self.model = [self.dataListArry objectAtIndex:indexPath.row];
+        }
     }
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
@@ -162,7 +172,7 @@
     [super opSuccess:data];
     
 }
-
+//拦截默认返回pop操作，重写返回的方法
 - (BOOL)navigationShouldPopOnBackButton{
     self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     self.mapPage.pointArray = self.pointArray;

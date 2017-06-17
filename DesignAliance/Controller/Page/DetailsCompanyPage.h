@@ -14,12 +14,12 @@
 
 @interface DetailsCompanyPage : DABaseDetailsPage <MAMapViewDelegate, UIActionSheetDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *mapView;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *manager;
-@property (weak, nonatomic) IBOutlet UILabel *phone;
-@property (weak, nonatomic) IBOutlet UILabel *desc;
-@property (weak, nonatomic) IBOutlet UILabel *location;
+@property (strong, nonatomic) IBOutlet UIView   *mapView;
+@property (weak, nonatomic) IBOutlet UILabel    *name;
+@property (weak, nonatomic) IBOutlet UILabel    *manager;
+@property (weak, nonatomic) IBOutlet UILabel    *phone;
+@property (weak, nonatomic) IBOutlet UITextView *desc;
+@property (weak, nonatomic) IBOutlet UILabel    *location;
 
 @property (nonatomic,assign) CLLocationCoordinate2D coordinate;  //!< 要导航的坐标
 

@@ -15,8 +15,9 @@
     NSDictionary *dictData = [dict objectForKey:NetData];
     UserModel *info = [UserModel infoFromDict:dictData];
     
-    NSString *userMessage = [dict objectForKey:@"message"];
-    
+    NSString *userGrade = [dict objectForKey:@"message"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:userGrade forKey:@"userGrade"];
     
     [_delegate opSuccess:info]; //告诉代理登录成功
 }

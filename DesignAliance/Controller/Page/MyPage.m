@@ -165,6 +165,8 @@
 #pragma doRight action
 - (void)doRight:(id)sender{
     [LoginUtility quitLogin];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userGrade"];
+    
     LoginPage *page = [[LoginPage alloc] init];
     
     page.hidesBottomBarWhenPushed = YES;
