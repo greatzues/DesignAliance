@@ -75,9 +75,12 @@
     
     //初始化pop回去的地图组件
     self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    //[self.mapPage.mapView removeAnnotations:self.mapPage.pointArray]; 本来是想移除所有的标注，然后再加上去的，先把今天的代码推上去再说
     
-    //遍历搜索的结果，如果在下面的opSuccss中设置为数组setObject的话，那么这里返回的就是每一次搜索的结果，而不是全部结果
+    //先将原来的标注和数组清空，就可以只存储搜索的结果了
+    [self.mapPage.mapView removeAnnotations:self.mapPage.pointArray];
+    [self.mapPage.pointArray removeAllObjects];
+    
+    //遍历每一次搜索的结果，而不是全部结果
     for(SearchModel * s in _pointArray){
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
@@ -87,14 +90,16 @@
         [self.mapPage.companyInfo setObject:s forKey:point.title];
         [self.mapPage.pointArray addObject:point];
     }
-    [self.mapPage.mapView addAnnotations:self.mapPage.pointArray];
     
     //返回时中心点标注为刚刚点中的那个
-    MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
-    self.mapPage.mapView.centerCoordinate = CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue);
-    point.title = self.model.name;
-    point.subtitle = self.model.desc;
+    self.mapPage.pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue);
+    self.mapPage.pointAnnotation.title = self.model.name;
+    self.mapPage.pointAnnotation.subtitle = self.model.desc;
     
+    //全部添加到Annotations中，方便再次搜索一次清空
+    [self.mapPage.pointArray addObject:self.mapPage.pointAnnotation];
+    [self.mapPage.mapView addAnnotations:self.mapPage.pointArray];
+    [self.mapPage.mapView selectAnnotation:self.mapPage.pointAnnotation animated:YES];
     
     [self.navigationController popToViewController:self.mapPage animated:YES];
 
@@ -152,9 +157,8 @@
 - (void)opSuccess:(id)data{
     [self.searchListArry removeAllObjects];
     
-    //或许这里用setArray会更好一点，不然就会重复添加标注
-    [_pointArray addObjectsFromArray:data];
-    //[_pointArray setArray:data];
+    //用setArray，不然会重复添加标注
+    [_pointArray setArray:data];
     [super opSuccess:data];
     
 }

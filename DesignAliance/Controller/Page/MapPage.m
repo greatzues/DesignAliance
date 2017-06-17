@@ -107,7 +107,9 @@
 //    if(!animated){
 //        return ;
 //    }
-//
+//    
+//    [self.mapView selectAnnotation:_pointAnnotation animated:true];
+//    //[self mapView:self.mapView didSelectAnnotationView:_pointAnnotation];
 //}
 
 #pragma mark - MAMapViewDelegate
