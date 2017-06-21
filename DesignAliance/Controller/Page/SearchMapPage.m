@@ -15,6 +15,8 @@
 
 @interface SearchMapPage ()<UISearchResultsUpdating,UISearchBarDelegate>{
     NSString    *initSearchUrl;
+    MAMapPoint  point2;
+    CLLocationDistance distance;
 }
 
 @end
@@ -23,6 +25,7 @@
 
 -(void)viewDidLoad{
     _pointArray = [NSMutableArray array];
+    _distanceArray = [NSMutableArray array];
     initSearchUrl = SearchCompanyDefault;
     
     [super viewDidLoad];
@@ -57,7 +60,7 @@
     static NSString *flag=@"cell";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
     if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:flag];
     }
     if (self.searchController.active) {
         self.model = [self.searchListArry objectAtIndex:indexPath.row];
@@ -66,6 +69,8 @@
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
     [cell.textLabel setText:self.model.name];
+    [cell.detailTextLabel setText:[self.distanceArray objectAtIndex:indexPath.row]];
+    cell.imageView.image=[UIImage imageNamed:@"mapNormal.png"];
     return cell;
 }
 
@@ -95,7 +100,12 @@
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
         point.title = s.name;
-        point.subtitle = s.desc;
+        //point.subtitle = s.desc;
+        
+        //下面三行添加补习社距离，同时注释掉point.subtitle = s.desc
+        point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
+        distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+        point.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
         
         [self.mapPage.companyInfo setObject:s forKey:point.title];
         [self.mapPage.pointArray addObject:point];
@@ -104,7 +114,11 @@
     //返回时中心点标注为刚刚点中的那个
     self.mapPage.pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue);
     self.mapPage.pointAnnotation.title = self.model.name;
-    self.mapPage.pointAnnotation.subtitle = self.model.desc;
+    //self.mapPage.pointAnnotation.subtitle = self.model.desc;
+    
+    point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue));
+    distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+    self.mapPage.pointAnnotation.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
     
     //全部添加到Annotations中，方便再次搜索一次清空
     [self.mapPage.pointArray addObject:self.mapPage.pointAnnotation];
@@ -169,6 +183,15 @@
     
     //用setArray，不然会重复添加标注
     [_pointArray setArray:data];
+    
+    for(SearchModel * s in data){
+        point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
+        distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+        NSString *dis = [NSString stringWithFormat:@"距离您%f m",distance];
+        
+        [self.distanceArray addObject:dis];
+    }
+    
     [super opSuccess:data];
     
 }

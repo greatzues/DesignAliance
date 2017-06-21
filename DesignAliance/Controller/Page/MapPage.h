@@ -16,8 +16,9 @@
 
 @property(nonatomic, strong)   SearchModel          *search;
 @property(nonatomic, strong)   MAMapView            *mapView;
-@property(nonatomic, strong)   MAUserLocation       *currentUserLoaction;
 @property(nonatomic, strong)   MAPointAnnotation    *pointAnnotation;
+@property   MAMapPoint  point1;
+@property   MAMapPoint  point2;
 
 ///用户位置
 @property(nonatomic, strong)   MAUserLocation       *userLocation;

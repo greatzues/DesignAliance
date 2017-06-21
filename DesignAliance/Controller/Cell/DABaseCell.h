@@ -17,5 +17,6 @@ IBOutlet UILabel        *_titleLabel;
 
 - (void)initCell;
 - (void)setCellData:(DABaseModel *)info;
+- (NSString *)dateToTime:(NSString *)d;
 
 @end

@@ -22,4 +22,15 @@
     _titleLabel.text = info.name;
 }
 
+- (NSString *)dateToTime:(NSString *)d{
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    NSString * timeStampString = d;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeStampString doubleValue] / 1000];
+    
+    NSString *myDate = [objDateformat stringFromDate: date];
+    return myDate;
+}
+
 @end

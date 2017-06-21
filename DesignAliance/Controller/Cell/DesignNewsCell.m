@@ -25,8 +25,8 @@
 {
     [super setCellData:info];
     
-    _descLabel.numberOfLines = 2;
-    _descLabel.text = info.content; //到时再显示时间
+    _titleLabel.numberOfLines = 2;
+    _descLabel.text = [self dateToTime: info.time.stringValue];
     
     NSString *imageURL = [NSString stringWithFormat:ImageNews,info.cover];
 

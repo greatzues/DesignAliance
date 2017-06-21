@@ -173,7 +173,6 @@
 		82E88D8C1EDFBE5900AF0137 /* UserBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D831EDFBE5900AF0137 /* UserBackground@3x.png */; };
 		82E88D8D1EDFBE5900AF0137 /* UserTopBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D841EDFBE5900AF0137 /* UserTopBackground@3x.png */; };
 		82E88D8F1EDFC6B000AF0137 /* toHere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D8E1EDFC6B000AF0137 /* toHere@2x.png */; };
-		82E88D941EE0410D00AF0137 /* talentCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D911EE0410D00AF0137 /* talentCard@2x.png */; };
 		82E88D951EE0410D00AF0137 /* talentCard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D921EE0410D00AF0137 /* talentCard@3x.png */; };
 		82E88D961EE0410D00AF0137 /* talentCardLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88D931EE0410D00AF0137 /* talentCardLeft@2x.png */; };
 		82E88D9A1EE0482F00AF0137 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E88D991EE0482F00AF0137 /* UIImage+extension.m */; };
@@ -480,7 +479,6 @@
 		82E88D831EDFBE5900AF0137 /* UserBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserBackground@3x.png"; sourceTree = "<group>"; };
 		82E88D841EDFBE5900AF0137 /* UserTopBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserTopBackground@3x.png"; sourceTree = "<group>"; };
 		82E88D8E1EDFC6B000AF0137 /* toHere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toHere@2x.png"; sourceTree = "<group>"; };
-		82E88D911EE0410D00AF0137 /* talentCard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentCard@2x.png"; sourceTree = "<group>"; };
 		82E88D921EE0410D00AF0137 /* talentCard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentCard@3x.png"; sourceTree = "<group>"; };
 		82E88D931EE0410D00AF0137 /* talentCardLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talentCardLeft@2x.png"; sourceTree = "<group>"; };
 		82E88D981EE0482F00AF0137 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
@@ -1143,7 +1141,6 @@
 				82E88DA81EE2BB0100AF0137 /* talentName@2x.png */,
 				82E88DA91EE2BB0100AF0137 /* talentPhone@2x.png */,
 				82E88DAA1EE2BB0100AF0137 /* talentSkill@2x.png */,
-				82E88D911EE0410D00AF0137 /* talentCard@2x.png */,
 				82E88D921EE0410D00AF0137 /* talentCard@3x.png */,
 				82E88D931EE0410D00AF0137 /* talentCardLeft@2x.png */,
 			);
@@ -1382,7 +1379,6 @@
 				18397B9D1ED19CB300334AB3 /* DesignTalentsCell.xib in Resources */,
 				82E88D8C1EDFBE5900AF0137 /* UserBackground@3x.png in Resources */,
 				82E88DAF1EE2BB0100AF0137 /* talentSkill@2x.png in Resources */,
-				82E88D941EE0410D00AF0137 /* talentCard@2x.png in Resources */,
 				820CA81C1EB1CF99006832B5 /* NavigationBackBlack@2x.png in Resources */,
 				820CA81A1EB1CF99006832B5 /* NavBarWhite64@2x.png in Resources */,
 				82E88DB11EE3FA2B00AF0137 /* ForgetPasswordPage.xib in Resources */,

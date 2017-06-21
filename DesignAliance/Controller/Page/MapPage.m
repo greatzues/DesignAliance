@@ -16,7 +16,7 @@
 
 
 
-@interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate>
+@interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate, AMapLocationManagerDelegate>
 
 @end
 
@@ -53,7 +53,13 @@
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
         point.title = s.name;
-        point.subtitle = s.desc;
+        //point.subtitle = s.desc;
+        //距离面积计算
+        self.point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
+        
+        CLLocationDistance distance = MAMetersBetweenMapPoints(self.point1,self.point2);
+        
+        point.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
         
         [_companyInfo setObject:s forKey:point.title];
         
@@ -75,7 +81,9 @@
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
     
-
+    //初始化AMapLocationManager对象
+    self.locationManager = [[AMapLocationManager alloc] init];
+    self.locationManager.delegate = self;
     
     _mapView.delegate = self;
     _pointAnnotation = [[MAPointAnnotation alloc] init];
@@ -114,12 +122,9 @@
         }
         
         if([annotationView.annotation.title isEqualToString:@"当前位置"]){
-            //annotationView.image = [UIImage imageNamed:@"mapNormal"];
             return nil;
-        }else{
-            annotationView.image = [UIImage imageNamed:@"mapMark"];
         }
-        
+        annotationView.image = [UIImage imageNamed:@"mapMark"];
         //设置中心点偏移，使得标注底部中间点成为经纬度对应点
         annotationView.centerOffset = CGPointMake(0, -15);
         
@@ -153,5 +158,27 @@
 {
     [self alertView:@"定位错误，请检查网络后重试"];
 }
+
+#pragma mark 用户位置更新
+-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
+updatingLocation:(BOOL)updatingLocation
+{
+    if(updatingLocation)
+    {
+        //取出当前位置的坐标
+        self.point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude));
+//        NSLog(@"location:{lat:%f; lon:%f}", userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+    }
+}
+
+//这两个代理没效果
+-(void)viewDidDisappear:(BOOL)animated{
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.locationManager startUpdatingLocation];
+}
+
 
 @end

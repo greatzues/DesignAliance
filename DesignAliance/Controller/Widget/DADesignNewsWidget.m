@@ -19,6 +19,8 @@
     self.cellIdentifier = @"DesignNewsCell";
     self.listData = [[NSMutableArray alloc] init];
     [super viewDidLoad];
+    
+    _cellHeight= 197;
 }
 
 - (void)loadNewData

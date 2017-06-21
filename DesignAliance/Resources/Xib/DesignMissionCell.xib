@@ -11,21 +11,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DesignMissionCell" rowHeight="90" id="93q-Kt-Uxf" userLabel="DesignMissionCell" customClass="DesignMissionCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DesignMissionCell" rowHeight="118" id="93q-Kt-Uxf" userLabel="DesignMissionCell" customClass="DesignMissionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="93q-Kt-Uxf" id="eIb-Eo-4dV">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talentItemWindow.png" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Le-fWs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9N-4g-WoH">
-                        <rect key="frame" x="20" y="11" width="280" height="1.5"/>
+                        <rect key="frame" x="20" y="11" width="280" height="29.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-hW-Ivf">
-                        <rect key="frame" x="20" y="22.5" width="280" height="21"/>
+                        <rect key="frame" x="20" y="50.5" width="280" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="n7B-Uo-dI3"/>
                         </constraints>
@@ -37,9 +40,13 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="xfc-hW-Ivf" secondAttribute="bottom" constant="10" id="HlW-eR-kBN"/>
                     <constraint firstItem="xfc-hW-Ivf" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" constant="20" id="JIB-gx-fT1"/>
+                    <constraint firstItem="FTY-Le-fWs" firstAttribute="top" secondItem="eIb-Eo-4dV" secondAttribute="top" id="JlI-37-DJY"/>
                     <constraint firstItem="l9N-4g-WoH" firstAttribute="top" secondItem="eIb-Eo-4dV" secondAttribute="top" constant="11" id="Kps-3P-O2A"/>
+                    <constraint firstItem="FTY-Le-fWs" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" id="ML7-Wp-D3H"/>
                     <constraint firstItem="xfc-hW-Ivf" firstAttribute="top" secondItem="l9N-4g-WoH" secondAttribute="bottom" constant="10" id="Qfm-Jm-srY"/>
                     <constraint firstItem="l9N-4g-WoH" firstAttribute="leading" secondItem="eIb-Eo-4dV" secondAttribute="leading" constant="20" id="SGx-VN-3CO"/>
+                    <constraint firstAttribute="bottom" secondItem="FTY-Le-fWs" secondAttribute="bottom" id="XBs-Za-H7i"/>
+                    <constraint firstAttribute="trailing" secondItem="FTY-Le-fWs" secondAttribute="trailing" id="Y6e-MO-95v"/>
                     <constraint firstAttribute="trailing" secondItem="xfc-hW-Ivf" secondAttribute="trailing" constant="20" id="jcs-0R-WQG"/>
                     <constraint firstAttribute="trailing" secondItem="l9N-4g-WoH" secondAttribute="trailing" constant="20" id="kFl-ha-cNs"/>
                 </constraints>
@@ -48,7 +55,10 @@
                 <outlet property="_descLabel" destination="xfc-hW-Ivf" id="LKS-wB-o1a"/>
                 <outlet property="_titleLabel" destination="l9N-4g-WoH" id="jn5-sR-vVU"/>
             </connections>
-            <point key="canvasLocation" x="-43" y="-130"/>
+            <point key="canvasLocation" x="-43" y="-116"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="talentItemWindow.png" width="373" height="96"/>
+    </resources>
 </document>

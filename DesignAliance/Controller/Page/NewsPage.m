@@ -38,7 +38,6 @@
     self.cbs_headerColor = [UIColor whiteColor];
     self.cbs_titleSelectedColor = [UIColor blackColor];
     self.cbs_bottomLineColor = [UIColor blackColor];
-    //self.cbs_buttonHeight = 40;
     
     //先设置cbs_titleArray和cbs_viewArray再调用initSegment
     [self initSegment];

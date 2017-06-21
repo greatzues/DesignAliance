@@ -51,27 +51,22 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    
 }
 
 
@@ -106,6 +101,7 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
+    
     [LoginUtility quitLogin];
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];

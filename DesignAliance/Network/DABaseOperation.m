@@ -101,13 +101,21 @@
 }
 
 - (void)parseFail:(id)dict{
-    NSString *result = [[dict objectForKey:NetCode] stringValue];
+    //NSString *result = [[dict objectForKey:NetCode] stringValue];
     
-    if ([result isEqualToString:@"40000"]){
+//    if ([result isEqualToString:@"40000"]){
+//        [_delegate opFail:[dict objectForKey:NetMessage]];
+//        return ;
+//    }
+    
+    
+    @try{
         [_delegate opFail:[dict objectForKey:NetMessage]];
-        return ;
+    }@catch(NSException  *exception){
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+    }@finally{
+        [_delegate opFail:@"网络异常"];
     }
-    [_delegate opFail:[dict objectForKey:NetMessage]];
 }
 
 
