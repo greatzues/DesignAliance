@@ -171,7 +171,9 @@
 
 - (void)btnClick:(UIButton *)button
 {
-    [self.backView scrollRectToVisible:CGRectMake(button.tag*self.width, 0, self.backView.frame.size.width, self.backView.frame.size.height) animated:YES];
+    //将原来的CGRectMake中的第二个参数也就是距离顶部由原来0改为-cbs_buttonHeight之后修复点击顶部时表格上升问题
+    [self.backView scrollRectToVisible:CGRectMake(button.tag*self.width, -self.cbs_buttonHeight, self.backView.frame.size.width, self.backView.frame.size.height) animated:YES];
+    
     [self didSelectSegmentIndex:button.tag];
 }
 
@@ -216,6 +218,8 @@
 {
     if (scrollView == _backView) {
         [self correctHeader:scrollView];
+        //拿到对应ScrollView的横坐标，从而将其除以屏幕宽度，拿到对应的tab下标，就可以传递到didSelectSegmentIndex事件了
+        [self didSelectSegmentIndex:(scrollView.contentOffset.x/self.width)];
         [self initViewController:(scrollView.contentOffset.x/self.width)];
     }
 }

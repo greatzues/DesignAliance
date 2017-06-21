@@ -761,6 +761,7 @@
 			children = (
 				823EE6FC1EB37694001B98B4 /* DABasePage.h */,
 				823EE6FD1EB37694001B98B4 /* DABasePage.m */,
+				8293D1921EF531880017731F /* VipTeam */,
 				18FED9421ED94E6F00C5FE4E /* NormalPage */,
 				18FED9261ED9077700C5FE4E /* MyPage */,
 				18C2E28F1ED271BB00F75167 /* DetailsPage */,
@@ -1085,6 +1086,13 @@
 				8220E6961EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m */,
 			);
 			path = UIViewControllerBackButtonHandler;
+			sourceTree = "<group>";
+		};
+		8293D1921EF531880017731F /* VipTeam */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VipTeam;
 			sourceTree = "<group>";
 		};
 		82AD196E1EB6D642007C36FE /* MyPage */ = {

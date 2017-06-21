@@ -17,9 +17,7 @@
 
 
 @interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate>
-{
-    
-}
+
 @end
 
 @implementation MapPage
@@ -49,7 +47,7 @@
 
 - (void)opSuccess:(id)data{
     [super opSuccess:data];
-    //_pointArray = [[NSMutableArray alloc] init];
+    
     for(SearchModel * s in data){
         
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
@@ -74,10 +72,11 @@
     
     [_mapView setZoomLevel:14];
     
-//    _mapView.showsScale= YES;  //设置成NO表示不显示比例尺；YES表示显示比例尺
-//    
-//    _mapView.scaleOrigin= CGPointMake(_mapView.scaleOrigin.x, 60);  //设置比例尺位置
     _mapView.showsUserLocation = YES;
+    _mapView.userTrackingMode = MAUserTrackingModeFollow;
+    
+
+    
     _mapView.delegate = self;
     _pointAnnotation = [[MAPointAnnotation alloc] init];
     
@@ -114,8 +113,14 @@
             annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
         
-        annotationView.image = [UIImage imageNamed:@"mapMark"];
-        ///设置中心点偏移，使得标注底部中间点成为经纬度对应点
+        if([annotationView.annotation.title isEqualToString:@"当前位置"]){
+            //annotationView.image = [UIImage imageNamed:@"mapNormal"];
+            return nil;
+        }else{
+            annotationView.image = [UIImage imageNamed:@"mapMark"];
+        }
+        
+        //设置中心点偏移，使得标注底部中间点成为经纬度对应点
         annotationView.centerOffset = CGPointMake(0, -15);
         
         return annotationView;

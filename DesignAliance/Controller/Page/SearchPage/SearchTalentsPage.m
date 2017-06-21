@@ -12,14 +12,26 @@
 
 @implementation SearchTalentsPage
 
+
 - (void)initData{
-    _pageSize = 10;
-    NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
-    NSDictionary *opInfo = @{@"url":ShowDesignPersion,    //拿到10条新闻资讯
-                             @"body":body};
     
-    _operation = [[DATalents alloc] initWithDelegate:self opInfo:opInfo];
-    [_operation executeOp];
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        _pageSize = 10;
+        NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
+        NSDictionary *opInfo = @{@"url":ShowDesignPersion,    //拿到10条新闻资讯
+                                 @"body":body};
+        
+        _operation = [[DATalents alloc] initWithDelegate:self opInfo:opInfo];
+        [_operation executeOp];
+    }else{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:@"仅VIP可见" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 
