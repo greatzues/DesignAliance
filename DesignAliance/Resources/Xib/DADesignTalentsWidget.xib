@@ -20,9 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VIPRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-Uj-Pjm">
+                    <rect key="frame" x="100" y="216" width="174" height="234"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="174" id="7ha-oH-ta2"/>
+                        <constraint firstAttribute="height" constant="234" id="igP-x3-kuF"/>
+                    </constraints>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-LX-74W">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" red="0.93297141790000004" green="0.94516938920000004" blue="0.95287495850000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="x2B-Zt-ySg"/>
                         <outlet property="delegate" destination="-1" id="uOA-6Z-UL5"/>
@@ -33,8 +40,13 @@
                 <constraint firstAttribute="bottom" secondItem="rOZ-LX-74W" secondAttribute="bottom" id="9R8-O9-jGN"/>
                 <constraint firstAttribute="trailing" secondItem="rOZ-LX-74W" secondAttribute="trailing" id="Cfp-Tv-oS8"/>
                 <constraint firstItem="rOZ-LX-74W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Dk8-w0-Egz"/>
+                <constraint firstItem="iQd-Uj-Pjm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Fwn-f6-TPn"/>
+                <constraint firstItem="iQd-Uj-Pjm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fGd-HM-75c"/>
                 <constraint firstItem="rOZ-LX-74W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jGA-Gr-kLn"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="VIPRight.png" width="173" height="233"/>
+    </resources>
 </document>

@@ -10,6 +10,7 @@
 #import "SearchNewsPage.h"
 #import "SearchMissionPage.h"
 #import "SearchTalentsPage.h"
+#import "BecomeVipPage.h"
 
 @implementation NewsPage
 
@@ -60,8 +61,17 @@
             break;
         case 2:
         {
-            SearchTalentsPage *TalentsPage = [[SearchTalentsPage alloc] init];
-            self.page = TalentsPage;
+            NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+            if([userGrade isEqualToString:@"2"]){
+                SearchTalentsPage *TalentsPage = [[SearchTalentsPage alloc] init];
+                self.page = TalentsPage;
+            }else{
+                BecomeVipPage   *VipPage = [[BecomeVipPage alloc] init];
+                self.page = VipPage;
+            }
+            
+//            SearchTalentsPage *TalentsPage = [[SearchTalentsPage alloc] init];
+//            self.page = TalentsPage;
         }
             break;
         default:

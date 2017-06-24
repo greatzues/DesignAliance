@@ -50,14 +50,13 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
-    
     [[AppDelegate appDeg] showHomePage];
 }
 
 - (void)opFail:(NSString *)errorMessage{
     [LoginUtility quitLogin];
     [super opFail:errorMessage];
-    [self alertView:errorMessage];
+    //[self alertView:errorMessage];
 }
 
 

@@ -25,7 +25,7 @@
 {
     [super setCellData:info];
     
-    _titleLabel.numberOfLines = 2;
+    
     _descLabel.text = [self dateToTime: info.time.stringValue];
     
     NSString *imageURL = [NSString stringWithFormat:ImageNews,info.cover];

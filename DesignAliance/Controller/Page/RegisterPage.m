@@ -43,11 +43,12 @@
 
 //开启倒计时效果
 - (IBAction)openCountdown:(id)sender{
-    if([phoneNumber.text isEqualToString:@""]){
+    if([phoneNumber.text isEqualToString:@""]||phoneNumber.text.length!=11){
+        [self alertView:@"错误的手机号码"];
         return ;
     }
     
-    [getVericationCode startWithTime:60 title:VericationCodeTitle countDownTitle:@"s" mainColor:[UIColor colorWithRed:84/255.0 green:180/255.0 blue:98/255.0 alpha:1.0f] countColor:[UIColor grayColor]];
+    [getVericationCode startWithTime:60 title:VericationCodeTitle countDownTitle:@"s" mainColor:[UIColor whiteColor] countColor:[UIColor whiteColor]];
     
     //请求验证码
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andTemplate:VericationTemplate resultBlock:^(int msgId, NSError *error) {
@@ -88,8 +89,7 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [self alertView:@"注册失败，请检查网络后重试"];
-    [[self navigationController] popViewControllerAnimated:YES];
+    [super opFail:@"注册失败，请检查网络后重试"];
 }
 
 ////查询短信短信验证码状态

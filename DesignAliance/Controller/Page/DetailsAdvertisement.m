@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [self setTitle:self.model.name];
     [self initWebView];
-    [self setNavigationRight:@"share.png"];
+    //[self setNavigationRight:@"share.png"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,48 +70,48 @@
     [view removeFromSuperview];
 }
 
-#pragma share news
-- (void)doRight:(id)sender{
-    [self shareNews];
-}
-
-- (void)shareNews{
-    NSArray* imageArray = @[[NSString stringWithFormat:ImageNews,self.model.cover]];
-    
-    if (imageArray) {
-        
-        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"联系方式：%@",self.model.contact]
-                                         images:imageArray
-                                            url:[NSURL URLWithString:self.model.link]
-                                          title:self.model.name
-                                           type:SSDKContentTypeAuto];
-        
-        [ShareSDK showShareActionSheet:nil
-                                 items:nil
-                           shareParams:shareParams
-                   onShareStateChanged:^(SSDKResponseState state,
-                                         SSDKPlatformType platformType,
-                                         NSDictionary *userData,
-                                         SSDKContentEntity *contentEntity,
-                                         NSError *error,
-                                         BOOL end) {
-                       switch (state) {
-                           case SSDKResponseStateSuccess:
-                           {
-                               [self alertView:@"分享成功"];
-                               break;
-                           }
-                           case SSDKResponseStateFail:
-                           {
-                               [self alertView:@"分享失败"];
-                               break;
-                           }
-                           default:
-                               break;
-                       }
-                   }];
-    }
-}
+//#pragma share news
+//- (void)doRight:(id)sender{
+//    [self shareNews];
+//}
+//
+//- (void)shareNews{
+//    NSArray* imageArray = @[[NSString stringWithFormat:ImageNews,self.model.cover]];
+//    
+//    if (imageArray) {
+//        
+//        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+//        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"联系方式：%@",self.model.contact]
+//                                         images:imageArray
+//                                            url:[NSURL URLWithString:self.model.link]
+//                                          title:self.model.name
+//                                           type:SSDKContentTypeAuto];
+//        
+//        [ShareSDK showShareActionSheet:nil
+//                                 items:nil
+//                           shareParams:shareParams
+//                   onShareStateChanged:^(SSDKResponseState state,
+//                                         SSDKPlatformType platformType,
+//                                         NSDictionary *userData,
+//                                         SSDKContentEntity *contentEntity,
+//                                         NSError *error,
+//                                         BOOL end) {
+//                       switch (state) {
+//                           case SSDKResponseStateSuccess:
+//                           {
+//                               [self alertView:@"分享成功"];
+//                               break;
+//                           }
+//                           case SSDKResponseStateFail:
+//                           {
+//                               [self alertView:@"分享失败"];
+//                               break;
+//                           }
+//                           default:
+//                               break;
+//                       }
+//                   }];
+//    }
+//}
 
 @end

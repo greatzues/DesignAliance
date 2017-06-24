@@ -101,7 +101,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *flag=@"cell";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone; //点击Item之后透明背景
     return cell;
 }
 
@@ -141,7 +141,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
 #pragma 点击单元格之后的监听
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma 谓词搜索过滤

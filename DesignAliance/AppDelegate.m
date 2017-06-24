@@ -36,6 +36,12 @@
     
 }
 
+- (void)showLoginPage{
+    _loginPage = [[LoginPage alloc] init];
+    self.window.rootViewController = _loginPage;
+    [self.window makeKeyAndVisible];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = AMapKey;
@@ -107,9 +113,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
-        _loginPage = [[LoginPage alloc] init];
-        self.window.rootViewController = _loginPage;
-        [self.window makeKeyAndVisible];
+        [self showLoginPage];
         
     }];
     

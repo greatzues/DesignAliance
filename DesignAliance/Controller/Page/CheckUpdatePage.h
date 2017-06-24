@@ -9,5 +9,9 @@
 #import "DABaseMyPage.h"
 
 @interface CheckUpdatePage : DABaseMyPage
+@property (weak, nonatomic) IBOutlet UILabel *currentVersion;
+@property (weak, nonatomic) IBOutlet UILabel *latestVersion;
+@property (weak, nonatomic) IBOutlet UIButton *requireLatestVersion;
+@property (weak, nonatomic) IBOutlet UILabel *VersionNews;
 
 @end

@@ -12,5 +12,7 @@
 @interface DADesignTalentsWidget : DATableWidget
 
 @property(nonatomic, strong)   TalentsModel          *search;
+@property  IBOutlet UIImageView *TalentsPageNormalAcountBackground;
+
 
 @end

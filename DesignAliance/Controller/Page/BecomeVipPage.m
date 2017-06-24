@@ -8,30 +8,29 @@
 
 #import "BecomeVipPage.h"
 
-@interface BecomeVipPage ()
-
-@end
-
 @implementation BecomeVipPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        [self.BecomeVipButton setTitle:@"续费" forState:UIControlStateNormal];
+    }else{
+        [self.BecomeVipButton setTitle:@"联系我们成为VIP" forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)contactUs:(id)sender {
+    
+    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.phoneNumber]];
+    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
+    [self.view addSubview:callWebView];
 }
-*/
+
 
 @end

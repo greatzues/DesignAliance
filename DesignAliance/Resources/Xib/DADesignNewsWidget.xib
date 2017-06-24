@@ -29,7 +29,6 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.93297141790000004" green="0.94516938920000004" blue="0.95287495850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="e7P-a6-0dG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="377-hf-M9m"/>
                 <constraint firstAttribute="bottom" secondItem="e7P-a6-0dG" secondAttribute="bottom" constant="70" id="MIb-ap-lWy"/>

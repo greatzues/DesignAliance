@@ -53,12 +53,12 @@
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             <connections>
                                 <action selector="txt_DidEndOnExit:" destination="-1" eventType="editingDidEndOnExit" id="N4T-Xe-Uyb"/>
                             </connections>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eER-yG-sKj" customClass="JVFloatLabeledTextField">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eER-yG-sKj" customClass="JVFloatLabeledTextField">
                             <rect key="frame" x="54" y="145" width="264" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="pas-9x-3Tv"/>

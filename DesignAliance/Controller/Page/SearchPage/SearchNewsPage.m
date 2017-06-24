@@ -41,6 +41,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     if (self.searchController.active) {
         self.model = [self.searchListArry objectAtIndex:indexPath.row];
     }

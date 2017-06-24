@@ -8,9 +8,14 @@
 
 #import "DATableWidget.h"
 #import "NewsModel.h"
+#import "SDCycleScrollView.h"
 
-@interface DADesignNewsWidget : DATableWidget
+@interface DADesignNewsWidget : DATableWidget <SDCycleScrollViewDelegate>
 
 @property(nonatomic, strong)   NewsModel          *search;
+
+@property (nonatomic, strong)SDCycleScrollView  *cycleScrollView;
+@property (nonatomic, assign)BOOL               getAD;
+@property (nonatomic, strong)NSMutableArray     *AdlistData;
 
 @end

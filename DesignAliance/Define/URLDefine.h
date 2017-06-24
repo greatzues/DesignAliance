@@ -47,6 +47,8 @@
 #define GetUserInfo     BaseURL "Home/UserInfo/getUserInfo"
 #define GetCountup      BaseURL "Home/DesignMission/countUp"
 #define GetUserSuggest  BaseURL "Home/UserSuggest"
+#define GetAboutInfo    BaseURL "Home/About/getAboutInfo"
+#define CheckUpdate     BaseURL "Home/User/checkUpdate"
 
 //Company Post
 #define SearchCompanyDefault        BaseURL "Home/Company/searchCompanyLimit"

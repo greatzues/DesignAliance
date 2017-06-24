@@ -23,12 +23,12 @@
     if([userGrade isEqualToString:@"2"]){
         self.cellIdentifier = @"DesignTalentsCell";
         self.listData = [[NSMutableArray alloc] init];
+        
         [super viewDidLoad];
         _cellHeight = 109;
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     }else{
-        //后面再替换
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+        _tableView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.0f];
+        self.TalentsPageNormalAcountBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VIPRight.jpg"]];
     }
 }
 
@@ -84,7 +84,7 @@
     info = [self.listData objectAtIndex:indexPath.row];
     
     DABaseCell *cell = (DABaseCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         NSArray* Objects = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:tableView options:nil];
         
@@ -100,6 +100,7 @@
 //这个是item点击之后的监听
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DetailsTalentsPage *page = [[DetailsTalentsPage alloc] init];
     
     page.model = [self.listData objectAtIndex:indexPath.row];

@@ -11,6 +11,8 @@
 #import "UserModel.h"
 #import "DAUploadAvatarWidget.h"
 #import "UserInfoPage.h"
+#import "DAGetAboutInfo.h"
+#import "AboutInfoModel.h"
 
 #import "ModifyPasswordPage.h"
 #import "ContactUsPage.h"
@@ -33,10 +35,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initData];
     [self setNavigationRight:@"logout.png"];
-    
     self.list = [NSMutableArray array];
+    
+    _getAboutInfo = NO;
+    [self initData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,10 +50,6 @@
     [super viewDidUnload];
     self.list = nil;
     self.IconList = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self initData];
 }
 
 - (void)initData{
@@ -72,20 +71,41 @@
     [_operation executeOp];
 }
 
-- (void)opSuccess:(UserModel *)data{
+- (void)getMyPageData{
+    
+    NSDictionary *opInfo = @{@"url":GetAboutInfo,
+                             @"body":@""};
+    
+    _operation = [[DAGetAboutInfo alloc] initWithDelegate:self opInfo:opInfo];
+    [_operation executeOp];
+}
+
+
+- (void)opSuccess:(id)data{
     [super opSuccess:data];
-    self.model = data;
     
-    if(![self.model.name isEqual:[NSNull null]]){
-        [UserName setText:self.model.name];
+    if(_getAboutInfo){
+        _getAboutInfo = NO;
+        self.AboutInfoModel = data;
+        
+    }else{
+        self.model = data;
+        
+        if(![self.model.name isEqual:[NSNull null]]){
+            [UserName setText:self.model.name];
+        }
+        
+        if(![self.model.skill isEqual:[NSNull null]]){
+            [UserSkill setText:self.model.skill];
+        }
+        NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
+        
+        [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
+        
+        _getAboutInfo = YES;
+        //请求完UserInfo
+        [self getMyPageData];
     }
-    
-    if(![self.model.skill isEqual:[NSNull null]]){
-        [UserSkill setText:self.model.skill];
-    }
-    NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
-    
-    [UserAvatar sd_setBackgroundImageWithURL:[NSURL URLWithString:imageURL] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"userDefaultAvatar.png"]];
     
 }
 
@@ -93,6 +113,7 @@
     static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
     //实现cell复用
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
     }
@@ -116,49 +137,57 @@
 
 //cell的点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch ([indexPath row]) {
         case 0:
         {
             //成为vip
-            if([_userGrade isEqualToString:@"2"]){
-                [self alertView:@"我的团队"];
-            }else{
-                [self alertView:@"联系我们成为VIP"];
-            }
+            BecomeVipPage *page = [[BecomeVipPage alloc] init];
+            page.phoneNumber = self.AboutInfoModel.phone;
+            [self initToDetails:page];
         }
             break;
         case 1:
         {
             //修改密码
-            ModifyPasswordPage *modityPassword = [[ModifyPasswordPage alloc] init];
-            [self initToDetails:modityPassword];
+            ModifyPasswordPage *page = [[ModifyPasswordPage alloc] init];
+            [self initToDetails:page];
         }
             break;
         case 2:
         {
             //版本更新
-            [self alertView:@"请到App store下载最新版本！"];
+            CheckUpdatePage *page = [[CheckUpdatePage alloc] init];
+            [self initToDetails:page];
         }
             break;
         case 3:
         {
             //联系我们
-            ContactUsPage *modityPassword = [[ContactUsPage alloc] init];
-            [self initToDetails:modityPassword];
+            ContactUsPage *page = [[ContactUsPage alloc] init];
+            page.phoneNumber = self.AboutInfoModel.phone;
+            
+            [self initToDetails:page];
         }
             break;
         case 4:
         {
             //意见反馈
-            UserSuggestPage *modityPassword = [[UserSuggestPage alloc] init];
-            [self initToDetails:modityPassword];
+            UserSuggestPage *page = [[UserSuggestPage alloc] init];
+            [self initToDetails:page];
         }
             break;
         case 5:
         {
             //关于
-            AboutPage *modityPassword = [[AboutPage alloc] init];
-            [self initToDetails:modityPassword];
+            AboutPage *page = [[AboutPage alloc] init];
+            page.IntroduceUs = self.AboutInfoModel.brief;
+            page.OurSlogan= self.AboutInfoModel.slogan;
+            page.OurTarget= self.AboutInfoModel.target;
+            page.member = self.AboutInfoModel.member;
+            page.guidance = self.AboutInfoModel.guidance;
+            
+            [self initToDetails:page];
         }
             break;
         case 6:

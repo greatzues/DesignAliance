@@ -8,7 +8,8 @@
 
 #import "DABaseController.h"
 #import "DAActivityIndicator.h"
-
+#import "LoginPage.h"
+#import "AppDelegate.h"
 
 @implementation DABaseController
 
@@ -40,7 +41,19 @@
 
 - (void)opFail:(NSString *)errorMessage{
     BASE_ERROR_FUN(errorMessage);
-    [self showIndicator:errorMessage autoHide:YES afterDelay:YES];
+    //[self showIndicator:errorMessage autoHide:YES afterDelay:YES];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        if([errorMessage isEqualToString:LoginAnotherPlace]){
+            [[AppDelegate appDeg] showLoginPage];
+        }
+    }];
+    
+    
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)opSuccess:(id)data{

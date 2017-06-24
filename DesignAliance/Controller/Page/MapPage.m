@@ -90,11 +90,12 @@
     
     //添加定位按钮，后期更换文字为图片
     UIButton *locationBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    locationBtn.frame = CGRectMake(10, 10, 60, 40);//位置显示在顶部左边
-    [locationBtn setTitle:@"定位" forState:UIControlStateNormal];
-    [locationBtn setBackgroundColor:[UIColor blackColor]];
+    locationBtn.frame = CGRectMake(10, 10, 40, 40);//位置显示在顶部左边
+    [locationBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
+    [locationBtn setImage:[UIImage imageNamed:@"location.jpg"] forState:UIControlStateNormal];
     [locationBtn setTintColor:[UIColor whiteColor]];
     [locationBtn addTarget:self action:@selector(locationClick) forControlEvents:UIControlEventTouchUpInside];
+    
     [_mapView addSubview:locationBtn];
     
     //开启定位
@@ -124,9 +125,9 @@
         if([annotationView.annotation.title isEqualToString:@"当前位置"]){
             return nil;
         }
-        annotationView.image = [UIImage imageNamed:@"mapMark"];
+        annotationView.image = [UIImage imageNamed:@"mapMark.jpg"];
         //设置中心点偏移，使得标注底部中间点成为经纬度对应点
-        annotationView.centerOffset = CGPointMake(0, -15);
+        annotationView.centerOffset = CGPointMake(0, -5);
         
         return annotationView;
     }
@@ -156,6 +157,7 @@
 #pragma mark location fail
 - (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
 {
+    BASE_INFO_FUN(error);
     [self alertView:@"定位错误，请检查网络后重试"];
 }
 
@@ -167,7 +169,6 @@ updatingLocation:(BOOL)updatingLocation
     {
         //取出当前位置的坐标
         self.point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude));
-//        NSLog(@"location:{lat:%f; lon:%f}", userLocation.coordinate.latitude,userLocation.coordinate.longitude);
     }
 }
 

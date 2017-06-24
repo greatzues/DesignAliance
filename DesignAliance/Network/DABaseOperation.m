@@ -101,13 +101,15 @@
 }
 
 - (void)parseFail:(id)dict{
-    //NSString *result = [[dict objectForKey:NetCode] stringValue];
+    NSString *result = [[dict objectForKey:NetCode] stringValue];
     
-//    if ([result isEqualToString:@"40000"]){
-//        [_delegate opFail:[dict objectForKey:NetMessage]];
-//        return ;
-//    }
+    if ([result isEqualToString:@"40001"]){
+        return [_delegate opFail:LoginAnotherPlace];
+    }
     
+    if ([result isEqualToString:@"40000"]){
+        return [_delegate opFail:[dict objectForKey:NetMessage]];
+    }
     
     @try{
         [_delegate opFail:[dict objectForKey:NetMessage]];
@@ -156,16 +158,31 @@
         if (errorMessage.length <= 0) {
             errorMessage = [[NSString alloc] initWithFormat:@"ResponseCode:%ld",(long)_statusCode];
         }
+        @try {
+            [self parseFail:errorMessage];
+        } @catch (NSException *exception) {
+            NSLog(@"%s\n%@", __FUNCTION__, exception);
+        } @finally {
+            [_delegate opFail:@"网络异常"];
+        }
         
-        [self parseFail:errorMessage];
     }
+    
+    
     //下载完成后将连接和数据清空
     _connection = nil;
     _receiveDate = nil;
 }
 
 - (void)connection:(NSURLConnection *)aConn didFailWithError:(NSError *)error{
-    [self parseFail:[error localizedDescription]];
+    
+    @try {
+        [self parseFail:[error localizedDescription]];
+    } @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+    } @finally {
+        [_delegate opFail:@"网络异常"];
+    }
     
     _connection = nil;
     _receiveDate = nil;

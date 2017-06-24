@@ -90,7 +90,7 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [self alertView:@"修改密码失败，请检查网络后重试"];
+    [super opFail:@"修改密码失败，请检查网络后重试"];
 }
 
 //查询短信短信验证码状态

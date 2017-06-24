@@ -67,6 +67,14 @@
     self.desc.text    = self.search.desc;
     self.location.text= self.search.location;
     
+    if([self.search.locationConfirm isEqualToString:@"1"]){
+        self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
+    }
+    
+    if([self.search.businessConfirm isEqualToString:@"1"]){
+        self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
+    }
+    
     //初始化应用外导航的经纬度
     CLLocationCoordinate2D coor;
     coor.latitude = self.search.latitude.doubleValue;
@@ -88,7 +96,7 @@
             
             annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
             
-            annotationView.image = [UIImage imageNamed:@"mapMark"];
+            annotationView.image = [UIImage imageNamed:@"mapMark.jpg"];
             
             ///设置中心点偏移，使得标注底部中间点成为经纬度对应点
             annotationView.centerOffset = CGPointMake(0, -15);

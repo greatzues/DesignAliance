@@ -18,5 +18,6 @@
 
 + (AppDelegate *)appDeg;
 - (void)showHomePage;
+- (void)showLoginPage;
 @end
 

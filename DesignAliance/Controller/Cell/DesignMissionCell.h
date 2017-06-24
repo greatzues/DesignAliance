@@ -10,6 +10,8 @@
 
 @interface DesignMissionCell : DABaseCell{
     IBOutlet UILabel           *_descLabel;
+    
+    IBOutlet UILabel           *_timeLabel;
 }
 
 @end

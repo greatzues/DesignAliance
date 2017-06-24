@@ -8,6 +8,7 @@
 
 #import "DABasePage.h"
 #import "UserModel.h"
+#import "AboutInfoModel.h"
 
 @interface MyPage : DABasePage<UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UILabel        *UserName;
@@ -20,6 +21,10 @@
 @property(strong, nonatomic) NSString       *userGrade;
 
 @property (nonatomic, strong) UserModel      *model;
+
+@property (nonatomic, assign)BOOL               getAboutInfo;
+//@property (nonatomic, strong)NSMutableArray     *AboutInfoData;
+@property (nonatomic, strong)AboutInfoModel     *AboutInfoModel;
 
 - (void)initData;
 

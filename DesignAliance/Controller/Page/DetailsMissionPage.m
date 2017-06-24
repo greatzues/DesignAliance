@@ -22,7 +22,7 @@
     [super viewDidLoad];
     [self getCount];
     [self setTitle:@"设计任务"];
-    [self setNavigationRight:@"share.png"];
+    //[self setNavigationRight:@"share.png"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +30,7 @@
 }
 
 - (void)initMissionPage{
+    self.missionTitle.numberOfLines = 2;
     self.missionTitle.text = self.model.name;
     self.missionTime.text = [self dateToTime: self.model.time.stringValue];
     self.missionCount.text = self.model.count.stringValue;
@@ -56,48 +57,48 @@
     
 }
 
-#pragma share news
-- (void)doRight:(id)sender{
-    [self shareNews];
-}
-
-- (void)shareNews{
-    NSArray* imageArray = @[[NSString stringWithFormat:ImageMission,self.model.cover]];
-    
-    if (imageArray) {
-        
-        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        [shareParams SSDKSetupShareParamsByText:self.model.details
-                                         images:imageArray
-                                            url:[NSURL URLWithString:@"http://zuesblog.xyz/"]//后面记得改回来
-                                          title:self.model.name
-                                           type:SSDKContentTypeAuto];
-        
-        [ShareSDK showShareActionSheet:nil
-                                 items:nil
-                           shareParams:shareParams
-                   onShareStateChanged:^(SSDKResponseState state,
-                                         SSDKPlatformType platformType,
-                                         NSDictionary *userData,
-                                         SSDKContentEntity *contentEntity,
-                                         NSError *error,
-                                         BOOL end) {
-                       switch (state) {
-                           case SSDKResponseStateSuccess:
-                           {
-                               [self alertView:@"分享成功"];
-                               break;
-                           }
-                           case SSDKResponseStateFail:
-                           {
-                               [self alertView:@"分享失败"];
-                               break;
-                           }
-                           default:
-                               break;
-                       }
-                   }];
-    }
-}
+//#pragma share news
+//- (void)doRight:(id)sender{
+//    [self shareNews];
+//}
+//
+//- (void)shareNews{
+//    NSArray* imageArray = @[[NSString stringWithFormat:ImageMission,self.model.cover]];
+//    
+//    if (imageArray) {
+//        
+//        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+//        [shareParams SSDKSetupShareParamsByText:self.model.details
+//                                         images:imageArray
+//                                            url:[NSURL URLWithString:@"http://zuesblog.xyz/"]//后面记得改回来
+//                                          title:self.model.name
+//                                           type:SSDKContentTypeAuto];
+//        
+//        [ShareSDK showShareActionSheet:nil
+//                                 items:nil
+//                           shareParams:shareParams
+//                   onShareStateChanged:^(SSDKResponseState state,
+//                                         SSDKPlatformType platformType,
+//                                         NSDictionary *userData,
+//                                         SSDKContentEntity *contentEntity,
+//                                         NSError *error,
+//                                         BOOL end) {
+//                       switch (state) {
+//                           case SSDKResponseStateSuccess:
+//                           {
+//                               [self alertView:@"分享成功"];
+//                               break;
+//                           }
+//                           case SSDKResponseStateFail:
+//                           {
+//                               [self alertView:@"分享失败"];
+//                               break;
+//                           }
+//                           default:
+//                               break;
+//                       }
+//                   }];
+//    }
+//}
 
 @end

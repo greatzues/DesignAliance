@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel    *phone;
 @property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UILabel    *location;
+@property (weak, nonatomic) IBOutlet UIImageView    *businessConfirm;
+@property (weak, nonatomic) IBOutlet UIImageView    *locationConfirm;
 
 @property (nonatomic,assign) CLLocationCoordinate2D coordinate;  //!< 要导航的坐标
 

@@ -10,6 +10,7 @@
 
 @interface ContactUsPage : DABaseMyPage
 
-
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberText;
+@property (strong, nonatomic) NSString  *phoneNumber;
 
 @end

@@ -21,6 +21,9 @@
     info.latitude = [dict objectForKey:@"latitude"];
     info.longitude = [dict objectForKey:@"longitude"];
     
+    info.businessConfirm = [dict objectForKey:@"businessConfirm"];
+    info.locationConfirm = [dict objectForKey:@"locationConfirm"];
+    
     return info;
 }
 //只接收返回dict中dataList的键值对

@@ -19,6 +19,7 @@
 - (void)setCellData:(DABaseModel *)info
 {
     self.cellInfo = info;
+    _titleLabel.numberOfLines = 2;
     _titleLabel.text = info.name;
 }
 

@@ -98,6 +98,8 @@
 #define LoginTitle          @"登录设计联盟"
 #define AlertTip            @"提示"
 #define AlertTitle          @"确定"
+#define LoginAnotherPlace   @"账户在异地登录，若非本人操作，请修改密码重新登录"
+#define NetError            @"网络异常，请稍后重试"
 
 // 消息通知
 #define RegisterNotify(_name, _selector)                    \

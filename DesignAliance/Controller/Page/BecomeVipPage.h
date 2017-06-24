@@ -9,5 +9,8 @@
 #import "DABaseMyPage.h"
 
 @interface BecomeVipPage : DABaseMyPage
+@property (weak, nonatomic) IBOutlet UIButton *BecomeVipButton;
+
+@property (strong, nonatomic) NSString  *phoneNumber;
 
 @end

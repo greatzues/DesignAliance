@@ -25,6 +25,8 @@
     [super setCellData:info];
     _descLabel.text = [NSString stringWithFormat:@"%@次浏览",info.count.stringValue];
     
+    _timeLabel.text = [self dateToTime: info.time.stringValue];
+    
 }
 
 @end

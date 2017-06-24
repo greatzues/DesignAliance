@@ -57,7 +57,10 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [super opFail:errorMessage];
+    if([errorMessage isEqualToString:LoginAnotherPlace]){
+        [super opFail:errorMessage];
+    }
+
     [self.footer setTitle:errorMessage forState:MJRefreshStateIdle];
     [_tableView.mj_header endRefreshing];
     [_tableView.mj_footer endRefreshing];

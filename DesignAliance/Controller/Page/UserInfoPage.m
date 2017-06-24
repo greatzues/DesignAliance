@@ -309,11 +309,14 @@ static const int toolBarHeight = 44;
 }
 
 -(void)opSuccess:(id)data{
-    [self.navigationController popViewControllerAnimated:YES];
+    MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+    [page initData];
+    [self.navigationController popToViewController:page animated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [self alertView:@"修改信息出错，请检查网络后重试！"];
+    [super opFail:@"修改信息出错，请检查网络后重试！"];
 }
 
 @end

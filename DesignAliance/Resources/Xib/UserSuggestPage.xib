@@ -39,8 +39,8 @@
                                                 <constraint firstAttribute="height" constant="18" id="iIA-DP-3Ty"/>
                                                 <constraint firstAttribute="width" constant="57" id="nTw-nd-ALt"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入邮箱地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Atk-Zp-jXU" customClass="JVFloatLabeledTextField">
@@ -67,12 +67,12 @@
                                     <rect key="frame" x="0.0" y="78" width="375" height="200"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意见内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-rp-zs4">
-                                            <rect key="frame" x="22" y="13" width="70" height="18"/>
+                                            <rect key="frame" x="22" y="13" width="65.5" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="xro-4Y-PNN"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxY-Fs-nDI">
@@ -82,9 +82,10 @@
                                                 <constraint firstAttribute="height" constant="1" id="hPd-uu-m8S"/>
                                             </constraints>
                                         </view>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="没有意见" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-fw-jhh">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="留下您宝贵的意见" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-fw-jhh">
                                             <rect key="frame" x="17" y="52" width="348" height="139"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.87052112820000005" green="0.87062597269999997" blue="0.87048560379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -104,13 +105,14 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTm-Wk-dW3">
-                                    <rect key="frame" x="235" y="303" width="120" height="40"/>
+                                    <rect key="frame" x="20" y="303" width="335" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Cuf-nV-M6O"/>
-                                        <constraint firstAttribute="width" constant="120" id="O3P-50-GCk"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <state key="normal" title="确认" backgroundImage="login_button.png"/>
+                                    <state key="normal" title="确认" backgroundImage="VIPPageButtonBackground.png">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
                                         <action selector="UserSuggestButton:" destination="-1" eventType="touchUpInside" id="L1p-tX-lib"/>
                                     </connections>
@@ -122,6 +124,7 @@
                                 <constraint firstItem="PnX-hC-xbq" firstAttribute="top" secondItem="Amz-2j-LMW" secondAttribute="top" constant="18" id="Qaj-HV-7OO"/>
                                 <constraint firstAttribute="trailing" secondItem="cTm-Wk-dW3" secondAttribute="trailing" constant="20" id="gea-ZL-jLs"/>
                                 <constraint firstItem="PnX-hC-xbq" firstAttribute="leading" secondItem="Amz-2j-LMW" secondAttribute="leading" id="heg-FM-rzc"/>
+                                <constraint firstItem="cTm-Wk-dW3" firstAttribute="leading" secondItem="Amz-2j-LMW" secondAttribute="leading" constant="20" id="l1F-CK-cYz"/>
                                 <constraint firstItem="AQi-Ny-blL" firstAttribute="leading" secondItem="Amz-2j-LMW" secondAttribute="leading" id="op0-PZ-klj"/>
                                 <constraint firstItem="cTm-Wk-dW3" firstAttribute="top" secondItem="AQi-Ny-blL" secondAttribute="bottom" constant="25" id="pJy-Sr-exx"/>
                                 <constraint firstAttribute="trailing" secondItem="AQi-Ny-blL" secondAttribute="trailing" id="wOr-r7-5wB"/>
@@ -154,6 +157,6 @@
     </objects>
     <resources>
         <image name="DefaultBackground.png" width="375" height="666"/>
-        <image name="login_button.png" width="283" height="46"/>
+        <image name="VIPPageButtonBackground.png" width="299" height="33"/>
     </resources>
 </document>
