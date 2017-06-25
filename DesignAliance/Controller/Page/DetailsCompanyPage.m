@@ -67,12 +67,16 @@
     self.desc.text    = self.search.desc;
     self.location.text= self.search.location;
     
-    if([self.search.locationConfirm isEqualToString:@"1"]){
-        self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
-    }
     
-    if([self.search.businessConfirm isEqualToString:@"1"]){
-        self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        if([self.search.locationConfirm isEqualToString:@"1"]){
+            self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
+        }
+        
+        if([self.search.businessConfirm isEqualToString:@"1"]){
+            self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
+        }
     }
     
     //初始化应用外导航的经纬度

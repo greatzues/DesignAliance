@@ -106,7 +106,9 @@
         //下面三行添加补习社距离，同时注释掉point.subtitle = s.desc
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
-        point.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
+        int dis = distance/1000;
+        
+        point.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
         
         [self.mapPage.companyInfo setObject:s forKey:point.title];
         [self.mapPage.pointArray addObject:point];
@@ -119,7 +121,9 @@
     
     point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue));
     distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
-    self.mapPage.pointAnnotation.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
+    int dis = distance/1000;
+    
+    self.mapPage.pointAnnotation.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
     
     //全部添加到Annotations中，方便再次搜索一次清空
     [self.mapPage.pointArray addObject:self.mapPage.pointAnnotation];
@@ -188,7 +192,9 @@
     for(SearchModel * s in data){
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
-        NSString *dis = [NSString stringWithFormat:@"距离您%f m",distance];
+        int d = distance/1000;
+        
+        NSString *dis = [NSString stringWithFormat:@"距离您%d km",d];
         
         [self.distanceArray addObject:dis];
     }

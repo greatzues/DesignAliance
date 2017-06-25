@@ -30,7 +30,11 @@
 
 - (void)initWebView{
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight -NavBarHeight)];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.model.link]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.model.link]
+                             
+                                                  cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                             
+                                              timeoutInterval:15];
     [self.view addSubview: webView];
     [webView loadRequest:request];
     
@@ -68,6 +72,15 @@
     [self.activityIndicator stopAnimating];
     UIView *view = (UIView*)[self.view viewWithTag:108];
     [view removeFromSuperview];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:@"网络不给力，连接超时请稍后重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        [[self navigationController] popViewControllerAnimated:YES];
+        
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 //#pragma share news

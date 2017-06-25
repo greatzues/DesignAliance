@@ -25,6 +25,8 @@
     
     //初始化下拉刷新尾部
     self.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    [self.header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [self.footer setTitle:@"点击这里或上拉加载更多" forState:MJRefreshStateIdle];
     
     _tableView.mj_header = self.header;
     _tableView.mj_footer = self.footer;

@@ -53,10 +53,21 @@
     //请求验证码
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andTemplate:VericationTemplate resultBlock:^(int msgId, NSError *error) {
         if (error) {
-            NSLog(@"%@",error);
+            NSLog(@"------------》》》》%@",error);
         } else {
             //获得smsID
             NSLog(@"sms ID：%d",msgId);
+            
+            [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
+                if (dic) {
+                    NSLog(@"%@",dic);
+                    if([[dic objectForKey:@"sms_state"] isEqualToString:@"SUCCESS"]){
+                        NSLog(@"%@",[dic objectForKey:@"sms_state"]);
+                    }
+                } else {
+                    NSLog(@"%@",error);
+                }
+            }];
         }
     }];
 }
@@ -91,17 +102,6 @@
 - (void)opFail:(NSString *)errorMessage{
     [super opFail:@"注册失败，请检查网络后重试"];
 }
-
-////查询短信短信验证码状态
-//- (void)querySMSCode:(int)smsId{
-//    [BmobSMS querySMSCodeStateInBackgroundWithSMSId:smsId resultBlock:^(NSDictionary *dic, NSError *error) {
-//        if (dic) {
-//            NSLog(@"-------->>>>>>%@",dic);
-//        } else {
-//            NSLog(@"%@",error);
-//        }
-//    }];
-//}
 
 - (IBAction)backToLoginPage:(id)sender {
     [[self navigationController] popViewControllerAnimated:YES];

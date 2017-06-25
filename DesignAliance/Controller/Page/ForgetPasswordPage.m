@@ -47,21 +47,31 @@
         return ;
     }
     
-    [getVericationCode startWithTime:60 title:VericationCodeTitle countDownTitle:@"s" mainColor:[UIColor colorWithRed:84/255.0 green:180/255.0 blue:98/255.0 alpha:1.0f] countColor:[UIColor grayColor]];
+    [getVericationCode startWithTime:60 title:VericationCodeTitle countDownTitle:@"s" mainColor:[UIColor whiteColor] countColor:[UIColor whiteColor]];
     
     //请求验证码
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andTemplate:VericationTemplate resultBlock:^(int msgId, NSError *error) {
         if (error) {
-            NSLog(@"%@",error);
+            NSLog(@"------------》》》》%@",error);
         } else {
             //获得smsID
             NSLog(@"sms ID：%d",msgId);
+            
+            [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
+                if (dic) {
+                    NSLog(@"%@",dic);
+                    if([[dic objectForKey:@"sms_state"] isEqualToString:@"SUCCESS"]){
+                        NSLog(@"%@",[dic objectForKey:@"sms_state"]);
+                    }
+                } else {
+                    NSLog(@"%@",error);
+                }
+            }];
         }
     }];
 }
 //验证短信验证码
 - (IBAction)registerAccount:(id)sender {
-    [self alertView:@"test"];
     if(![passwordNumber.text isEqualToString:confirmNumber.text]){
         [self alertView:@"确认密码不一致，请重新输入"];
         return ;
@@ -93,16 +103,6 @@
     [super opFail:@"修改密码失败，请检查网络后重试"];
 }
 
-//查询短信短信验证码状态
-- (void)querySMSCode:(int)smsId{
-    [BmobSMS querySMSCodeStateInBackgroundWithSMSId:smsId resultBlock:^(NSDictionary *dic, NSError *error) {
-        if (dic) {
-            NSLog(@"-------->>>>>>%@",dic);
-        } else {
-            NSLog(@"%@",error);
-        }
-    }];
-}
 
 - (IBAction)backToLoginPage:(id)sender {
     [[self navigationController] popViewControllerAnimated:YES];

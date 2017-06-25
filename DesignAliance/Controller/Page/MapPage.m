@@ -58,8 +58,9 @@
         self.point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         
         CLLocationDistance distance = MAMetersBetweenMapPoints(self.point1,self.point2);
+        double dis = distance/1000;
         
-        point.subtitle = [NSString stringWithFormat:@"距离您%f m",distance];
+        point.subtitle = [NSString stringWithFormat:@"距离您%f km",dis];
         
         [_companyInfo setObject:s forKey:point.title];
         
@@ -157,8 +158,7 @@
 #pragma mark location fail
 - (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
 {
-    BASE_INFO_FUN(error);
-    [self alertView:@"定位错误，请检查网络后重试"];
+    [self alertView:@"自动定位异常，获取当前位置失败"];
 }
 
 #pragma mark 用户位置更新

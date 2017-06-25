@@ -11,6 +11,8 @@
 #import "SearchMissionPage.h"
 #import "SearchTalentsPage.h"
 #import "BecomeVipPage.h"
+#import "DAGetNotice.h"
+#import "WZLBadgeImport.h"
 
 @implementation NewsPage
 
@@ -22,6 +24,11 @@
     [self setNavigationRight:@"NavigationSquare.png"];
     [self setNavigationTitleImage:@"logo.png"];
     [self initColumnBar];
+    
+    //添加小红点，不过失败了
+    //[self.view showBadgeWithStyle:WBadgeStyleRedDot value:10 animationType:WBadgeAnimTypeShake];
+    
+    [self getNotice];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,8 +77,6 @@
                 self.page = VipPage;
             }
             
-//            SearchTalentsPage *TalentsPage = [[SearchTalentsPage alloc] init];
-//            self.page = TalentsPage;
         }
             break;
         default:
@@ -83,6 +88,18 @@
 -(void)doRight:(id)sender{
     self.page.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:self.page animated:YES];
+}
+
+- (void)getNotice{
+    NSDictionary *opInfo = @{@"url":GetNotice,
+                             @"body":@""};
+    
+    _operation = [[DAGetNotice alloc] initWithDelegate:self opInfo:opInfo];
+    [_operation executeOp];
+}
+
+- (void)opSuccess:(id)data{
+    NSLog(@"%@",data);
 }
 
 @end

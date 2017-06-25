@@ -30,11 +30,15 @@
 
 - (void)initWebView{
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight -NavBarHeight)];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.newsInfo.link]];
-    [self.view addSubview: webView];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.newsInfo.link]
+                             
+                                                  cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                             
+                                              timeoutInterval:15];
+    webView.delegate=self;//委托
     [webView loadRequest:request];
+    [self.view addSubview: webView];
     
-    [webView setDelegate:self];//委托
 }
 
 #pragma webView代理方法
@@ -64,9 +68,19 @@
 }
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    
     [self.activityIndicator stopAnimating];
     UIView *view = (UIView*)[self.view viewWithTag:108];
     [view removeFromSuperview];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:@"网络不给力，连接超时请稍后重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        [[self navigationController] popViewControllerAnimated:YES];
+        
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma share news

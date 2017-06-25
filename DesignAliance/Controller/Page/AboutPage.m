@@ -18,7 +18,7 @@
 
     self.TeamMateLabel.numberOfLines = 0;
     for (int i = 0 ; i < [self.member count]; i++){
-        self.TeamMateLabel.text = [NSString stringWithFormat:@"%@、%@",self.TeamMateLabel.text,[self.member objectAtIndex:i]];
+        self.TeamMateLabel.text = [NSString stringWithFormat:@"%@ %@",self.TeamMateLabel.text,[self.member objectAtIndex:i]];
     }
     
     self.guidanceLabel.numberOfLines = 0;

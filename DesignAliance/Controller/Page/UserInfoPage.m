@@ -312,7 +312,6 @@ static const int toolBarHeight = 44;
     MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     [page initData];
     [self.navigationController popToViewController:page animated:YES];
-    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)opFail:(NSString *)errorMessage{

@@ -157,6 +157,11 @@
 		82510D371EFE699A003CF6E5 /* DAGetAboutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D361EFE699A003CF6E5 /* DAGetAboutInfo.m */; };
 		82510D3A1EFEB85C003CF6E5 /* CheckUpdateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D391EFEB85C003CF6E5 /* CheckUpdateModel.m */; };
 		82510D3D1EFEBBC4003CF6E5 /* DACheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D3C1EFEBBC4003CF6E5 /* DACheckUpdate.m */; };
+		82510D401EFF425D003CF6E5 /* DAGetNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D3F1EFF425D003CF6E5 /* DAGetNotice.m */; };
+		82510D531EFF5203003CF6E5 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D521EFF5203003CF6E5 /* UIView+WZLBadge.m */; };
+		82510D571EFF5218003CF6E5 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D561EFF5218003CF6E5 /* CAAnimation+WAnimation.m */; };
+		82510D5C1EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D591EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.m */; };
+		82510D5D1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 82510D5B1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m */; };
 		82559C421EDE97CF008B149F /* codeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C3D1EDE97CF008B149F /* codeButton@2x.png */; };
 		82559C431EDE97CF008B149F /* leftOrange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C3E1EDE97CF008B149F /* leftOrange@2x.png */; };
 		82559C441EDE97CF008B149F /* loginWindow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82559C3F1EDE97CF008B149F /* loginWindow@2x.png */; };
@@ -481,6 +486,18 @@
 		82510D391EFEB85C003CF6E5 /* CheckUpdateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdateModel.m; sourceTree = "<group>"; };
 		82510D3B1EFEBBC4003CF6E5 /* DACheckUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACheckUpdate.h; sourceTree = "<group>"; };
 		82510D3C1EFEBBC4003CF6E5 /* DACheckUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACheckUpdate.m; sourceTree = "<group>"; };
+		82510D3E1EFF425D003CF6E5 /* DAGetNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGetNotice.h; sourceTree = "<group>"; };
+		82510D3F1EFF425D003CF6E5 /* DAGetNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGetNotice.m; sourceTree = "<group>"; };
+		82510D481EFF5077003CF6E5 /* WZLBadgeImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeImport.h; sourceTree = "<group>"; };
+		82510D511EFF5203003CF6E5 /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
+		82510D521EFF5203003CF6E5 /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
+		82510D541EFF520E003CF6E5 /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
+		82510D551EFF5218003CF6E5 /* CAAnimation+WAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+WAnimation.h"; sourceTree = "<group>"; };
+		82510D561EFF5218003CF6E5 /* CAAnimation+WAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+WAnimation.m"; sourceTree = "<group>"; };
+		82510D581EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WZLBadge.h"; sourceTree = "<group>"; };
+		82510D591EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WZLBadge.m"; sourceTree = "<group>"; };
+		82510D5A1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+WZLBadge.h"; sourceTree = "<group>"; };
+		82510D5B1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+WZLBadge.m"; sourceTree = "<group>"; };
 		82559C3D1EDE97CF008B149F /* codeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "codeButton@2x.png"; sourceTree = "<group>"; };
 		82559C3E1EDE97CF008B149F /* leftOrange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftOrange@2x.png"; sourceTree = "<group>"; };
 		82559C3F1EDE97CF008B149F /* loginWindow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginWindow@2x.png"; sourceTree = "<group>"; };
@@ -993,6 +1010,8 @@
 				82510D361EFE699A003CF6E5 /* DAGetAboutInfo.m */,
 				82510D3B1EFEBBC4003CF6E5 /* DACheckUpdate.h */,
 				82510D3C1EFEBBC4003CF6E5 /* DACheckUpdate.m */,
+				82510D3E1EFF425D003CF6E5 /* DAGetNotice.h */,
+				82510D3F1EFF425D003CF6E5 /* DAGetNotice.m */,
 			);
 			name = Operation;
 			path = Network;
@@ -1008,6 +1027,7 @@
 		821F2E251EAC4E5E0098081F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				82510D431EFF505F003CF6E5 /* WZLBadge */,
 				8220E6941EF2B14700D6BF57 /* UIViewControllerBackButtonHandler */,
 				82E88DB51EE408D500AF0137 /* YSTextInputKeyboard */,
 				82E88D971EE047D800AF0137 /* RoundImage */,
@@ -1167,6 +1187,55 @@
 			);
 			name = MyPage;
 			path = MyPgae;
+			sourceTree = "<group>";
+		};
+		82510D431EFF505F003CF6E5 /* WZLBadge */ = {
+			isa = PBXGroup;
+			children = (
+				82510D501EFF51CC003CF6E5 /* View */,
+				82510D4F1EFF51C0003CF6E5 /* Protocol */,
+				82510D4E1EFF51B3003CF6E5 /* CategorySupport */,
+				82510D4D1EFF51A3003CF6E5 /* BarItem */,
+				82510D481EFF5077003CF6E5 /* WZLBadgeImport.h */,
+			);
+			path = WZLBadge;
+			sourceTree = "<group>";
+		};
+		82510D4D1EFF51A3003CF6E5 /* BarItem */ = {
+			isa = PBXGroup;
+			children = (
+				82510D581EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.h */,
+				82510D591EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.m */,
+				82510D5A1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.h */,
+				82510D5B1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m */,
+			);
+			path = BarItem;
+			sourceTree = "<group>";
+		};
+		82510D4E1EFF51B3003CF6E5 /* CategorySupport */ = {
+			isa = PBXGroup;
+			children = (
+				82510D551EFF5218003CF6E5 /* CAAnimation+WAnimation.h */,
+				82510D561EFF5218003CF6E5 /* CAAnimation+WAnimation.m */,
+			);
+			path = CategorySupport;
+			sourceTree = "<group>";
+		};
+		82510D4F1EFF51C0003CF6E5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				82510D541EFF520E003CF6E5 /* WZLBadgeProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		82510D501EFF51CC003CF6E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82510D511EFF5203003CF6E5 /* UIView+WZLBadge.h */,
+				82510D521EFF5203003CF6E5 /* UIView+WZLBadge.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		82AD196E1EB6D642007C36FE /* MyPageWidget */ = {
@@ -1573,11 +1642,13 @@
 				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
+				82510D5D1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m in Sources */,
 				18397B951ED1997B00334AB3 /* DesignTalentsCell.m in Sources */,
 				187C45D91ED02206006B2EF9 /* FxJSON.m in Sources */,
 				821F2E561EACB7CF0098081F /* DABaseController.m in Sources */,
 				8217323A1EB466AB006B3387 /* DesignNewsCell.m in Sources */,
 				823EE7091EB37694001B98B4 /* HomePage.m in Sources */,
+				82510D5C1EFF5226003CF6E5 /* UIBarButtonItem+WZLBadge.m in Sources */,
 				82510D341EFE6558003CF6E5 /* AboutInfoModel.m in Sources */,
 				821F2E811EACCC460098081F /* DABaseOperation.m in Sources */,
 				8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */,
@@ -1613,6 +1684,7 @@
 				187C45E81ED043C5006B2EF9 /* DesignMissionCell.m in Sources */,
 				8212A8D11EBEF90600CBD43F /* RegisterPage.m in Sources */,
 				8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */,
+				82510D531EFF5203003CF6E5 /* UIView+WZLBadge.m in Sources */,
 				823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */,
 				18FED9411ED926C400C5FE4E /* DAModifyPassword.m in Sources */,
 				82E88DBB1EE44B9000AF0137 /* DetailsAdvertisement.m in Sources */,
@@ -1633,6 +1705,7 @@
 				82AD196B1EB61449007C36FE /* DAGetUserInfo.m in Sources */,
 				82E88D9A1EE0482F00AF0137 /* UIImage+extension.m in Sources */,
 				820C9CD51EC6BAD300CA4951 /* DetailsNewsPage.m in Sources */,
+				82510D571EFF5218003CF6E5 /* CAAnimation+WAnimation.m in Sources */,
 				823EE70D1EB37694001B98B4 /* NewsPage.m in Sources */,
 				821F2DEE1EAC4BF70098081F /* main.m in Sources */,
 				823EE70A1EB37694001B98B4 /* LoginPage.m in Sources */,
@@ -1646,6 +1719,7 @@
 				822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */,
 				8212A8E01EBF062000CBD43F /* JVFloatLabeledTextView.m in Sources */,
 				82E88DB81EE4093900AF0137 /* UIView+YSTextInputKeyboard.m in Sources */,
+				82510D401EFF425D003CF6E5 /* DAGetNotice.m in Sources */,
 				187C45E01ED035C5006B2EF9 /* MissionModel.m in Sources */,
 				821732351EB446F7006B3387 /* DADesignNewsWidget.m in Sources */,
 				82510D371EFE699A003CF6E5 /* DAGetAboutInfo.m in Sources */,

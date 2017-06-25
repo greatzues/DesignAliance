@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成为VIP，使用更多权限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzG-Xk-jAF">
-                    <rect key="frame" x="87.5" y="220" width="200" height="18"/>
+                    <rect key="frame" x="87.5" y="160" width="200" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="4PR-Hd-Y0u"/>
                         <constraint firstAttribute="height" constant="18" id="Qcu-Wm-tjt"/>
@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxv-zP-pJl">
-                    <rect key="frame" x="0.0" y="273" width="375" height="309"/>
+                    <rect key="frame" x="0.0" y="213" width="375" height="369"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIP特权" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-ir-2gp">
                             <rect key="frame" x="39" y="20" width="66" height="18"/>
@@ -131,7 +131,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd7-2y-pbS">
-                            <rect key="frame" x="39" y="276" width="297" height="33"/>
+                            <rect key="frame" x="39" y="264" width="297" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="vE9-SW-R8a"/>
                             </constraints>
@@ -179,11 +179,11 @@
                         <constraint firstItem="SyY-S4-bqO" firstAttribute="top" secondItem="Sxv-zP-pJl" secondAttribute="top" constant="59" id="5Rk-bs-1xe"/>
                         <constraint firstItem="SyY-S4-bqO" firstAttribute="leading" secondItem="krc-Xh-FAS" secondAttribute="trailing" constant="33" id="67q-rt-ElP"/>
                         <constraint firstItem="krc-Xh-FAS" firstAttribute="top" secondItem="PMR-ir-2gp" secondAttribute="bottom" constant="21" id="9Ke-Dl-xDz"/>
+                        <constraint firstItem="cd7-2y-pbS" firstAttribute="top" secondItem="SNv-s9-mez" secondAttribute="bottom" constant="50" id="APt-oT-zwp"/>
                         <constraint firstItem="TG3-HO-z2b" firstAttribute="leading" secondItem="SNv-s9-mez" secondAttribute="trailing" constant="33" id="G8k-AB-Knb"/>
                         <constraint firstItem="KkV-eO-OBs" firstAttribute="centerY" secondItem="fjg-7Q-2cI" secondAttribute="centerY" id="Hhg-B5-Mm3"/>
                         <constraint firstItem="uGr-Hv-yWD" firstAttribute="leading" secondItem="krc-Xh-FAS" secondAttribute="trailing" constant="33" id="IiC-zn-tDY"/>
                         <constraint firstItem="TGT-BH-9h6" firstAttribute="centerY" secondItem="uGr-Hv-yWD" secondAttribute="centerY" id="Ild-jb-aKm"/>
-                        <constraint firstAttribute="bottom" secondItem="cd7-2y-pbS" secondAttribute="bottom" id="MoR-Ho-JC9"/>
                         <constraint firstItem="PMR-ir-2gp" firstAttribute="leading" secondItem="Sxv-zP-pJl" secondAttribute="leading" constant="39" id="MtE-Gi-oJy"/>
                         <constraint firstItem="rmf-1p-eRc" firstAttribute="baseline" secondItem="TG3-HO-z2b" secondAttribute="baseline" id="NlY-w9-gCS"/>
                         <constraint firstItem="cd7-2y-pbS" firstAttribute="leading" secondItem="Sxv-zP-pJl" secondAttribute="leading" constant="39" id="OyZ-jd-8Gt"/>
@@ -211,7 +211,7 @@
                 <constraint firstItem="GzG-Xk-jAF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WYk-Ee-7qf"/>
                 <constraint firstAttribute="bottom" secondItem="Sxv-zP-pJl" secondAttribute="bottom" constant="85" id="cZY-Io-Lqo"/>
                 <constraint firstItem="Sxv-zP-pJl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dQl-TY-Jhe"/>
-                <constraint firstItem="GzG-Xk-jAF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="220" id="huq-UT-4QL"/>
+                <constraint firstItem="GzG-Xk-jAF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="160" id="huq-UT-4QL"/>
                 <constraint firstAttribute="trailing" secondItem="HQx-Zu-ubo" secondAttribute="trailing" id="qpi-Bt-sQ2"/>
                 <constraint firstAttribute="bottom" secondItem="HQx-Zu-ubo" secondAttribute="bottom" id="szv-XW-uYZ"/>
                 <constraint firstItem="HQx-Zu-ubo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wdz-UQ-Jgh"/>

@@ -8,6 +8,7 @@
 
 #import "CheckUpdatePage.h"
 #import "DACheckUpdate.h"
+#import "CheckUpdateModel.h"
 
 @implementation CheckUpdatePage
 
@@ -31,8 +32,15 @@
 }
 
 - (void)opSuccess:(id)data{
+    CheckUpdateModel    *model = [[CheckUpdateModel alloc] init];
+    model = data;
     
+    _currentVersion.text = model.version;
+    _latestVersion.text = model.version;
+    _VersionNews.text = model.versionInfo;
 }
 
+- (IBAction)getLatestVersion:(id)sender {
+}
 
 @end

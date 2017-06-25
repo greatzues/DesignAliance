@@ -77,28 +77,30 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-u0-i9W">
-                            <rect key="frame" x="49" y="164" width="277" height="33"/>
+                            <rect key="frame" x="49" y="130" width="277" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="cOs-eO-fls"/>
                             </constraints>
                             <state key="normal" title="获取最新版本" backgroundImage="VIPPageButtonBackground.png">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="getLatestVersion:" destination="-1" eventType="touchUpInside" id="OjV-NM-gf6"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-bk-S0K">
-                            <rect key="frame" x="52" y="50" width="271" height="102"/>
+                            <rect key="frame" x="52" y="50" width="271" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Btd-u0-i9W" firstAttribute="top" secondItem="nlP-bk-S0K" secondAttribute="bottom" constant="12" id="CVD-jR-R4W"/>
+                        <constraint firstItem="Btd-u0-i9W" firstAttribute="top" secondItem="nlP-bk-S0K" secondAttribute="bottom" constant="64" id="CVD-jR-R4W"/>
                         <constraint firstAttribute="trailing" secondItem="nlP-bk-S0K" secondAttribute="trailing" constant="52" id="GLO-op-e7q"/>
                         <constraint firstItem="zxO-hS-GnZ" firstAttribute="top" secondItem="CqX-vd-at4" secondAttribute="top" constant="20" id="NVD-Ic-HP1"/>
                         <constraint firstItem="Btd-u0-i9W" firstAttribute="leading" secondItem="CqX-vd-at4" secondAttribute="leading" constant="49" id="VNF-gT-eu1"/>
                         <constraint firstItem="nlP-bk-S0K" firstAttribute="top" secondItem="zxO-hS-GnZ" secondAttribute="bottom" constant="12" id="mLz-Zs-Jgs"/>
-                        <constraint firstAttribute="bottom" secondItem="Btd-u0-i9W" secondAttribute="bottom" id="ute-az-tbX"/>
                         <constraint firstAttribute="trailing" secondItem="Btd-u0-i9W" secondAttribute="trailing" constant="49" id="wff-V7-YbG"/>
                         <constraint firstItem="zxO-hS-GnZ" firstAttribute="leading" secondItem="CqX-vd-at4" secondAttribute="leading" constant="52" id="xTt-kR-H8W"/>
                         <constraint firstItem="nlP-bk-S0K" firstAttribute="leading" secondItem="CqX-vd-at4" secondAttribute="leading" constant="52" id="zIf-VK-aAd"/>

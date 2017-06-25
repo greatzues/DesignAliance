@@ -9,10 +9,6 @@
 #import "UserSuggestPage.h"
 #import "DAModifyPassword.h" //同样都是接收message字段
 
-@interface UserSuggestPage ()
-
-@end
-
 @implementation UserSuggestPage
 
 - (void)viewDidLoad {
@@ -34,5 +30,8 @@
     [_operation executeOp];
 }
 
+-(void)opSuccess:(id)data{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
