@@ -29,6 +29,8 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 
+
+
 @implementation MyPage
 @synthesize list = _list;
 @synthesize IconList = _IconList;

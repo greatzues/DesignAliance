@@ -71,6 +71,11 @@
         [self.listData removeAllObjects];
     }
     [self.listData addObjectsFromArray:data];
+    
+    //保存第一条人才ID
+    TalentsModel *model = [self.listData objectAtIndex:0];
+    NSInteger advice = [model.ID integerValue];
+    [[NSUserDefaults standardUserDefaults] setInteger:advice forKey:@"persionId"];
     [super opSuccess:data];
 }
 

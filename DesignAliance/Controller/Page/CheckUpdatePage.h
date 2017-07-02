@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentVersion;
 @property (weak, nonatomic) IBOutlet UILabel *latestVersion;
 @property (weak, nonatomic) IBOutlet UIButton *requireLatestVersion;
-@property (weak, nonatomic) IBOutlet UILabel *VersionNews;
+@property (weak, nonatomic) IBOutlet UITextView *VersionNews;
 
 @end

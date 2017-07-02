@@ -92,6 +92,12 @@
         [self.listData removeAllObjects];
     }
     [self.listData addObjectsFromArray:data];
+    
+    //保存第一条任务ID
+    MissionModel *model = [self.listData objectAtIndex:0];
+    NSInteger advice = [model.ID integerValue];
+    [[NSUserDefaults standardUserDefaults] setInteger:advice forKey:@"missionId"];
+    
     [super opSuccess:data];
 }
 

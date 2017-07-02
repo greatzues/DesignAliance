@@ -31,7 +31,7 @@
     NSString *imageURL = [NSString stringWithFormat:ImageNews,info.cover];
 
     [_imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"LittlePictureHolder.png"] options:SDWebImageRetryFailed];
-    
+
 }
 
 

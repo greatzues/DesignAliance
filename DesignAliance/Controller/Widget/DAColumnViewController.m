@@ -5,6 +5,8 @@
 //
 
 #import "DAColumnViewController.h"
+#import "WZLBadgeImport.h"
+
 
 @interface DAColumnViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIButton *segmentBtn;

@@ -59,9 +59,10 @@
         
         pageController.title = pageInfo.name;
         pageController.tabBarItem.image = [UIImage imageNamed:pageInfo.image];
+        
         [controllers addObject:navPage];
     }
-    
+
     return controllers;
 }
 

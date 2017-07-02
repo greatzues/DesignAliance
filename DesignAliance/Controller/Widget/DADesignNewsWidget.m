@@ -89,7 +89,15 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
         [self.listData removeAllObjects];
     }
     [self.listData addObjectsFromArray:data];
+    
+    //保存第一条资讯ID
+    NewsModel *model = [self.listData objectAtIndex:0];
+    NSInteger advice = [model.ID integerValue];
+    [[NSUserDefaults standardUserDefaults] setInteger:advice forKey:@"adviceId"];
+
     [super opSuccess:data];
+    
+    
 }
 
 
@@ -107,12 +115,14 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
     
     DABaseCell *cell = (DABaseCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     if (cell == nil) {
         NSArray* Objects = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:tableView options:nil];
         
         cell = [Objects objectAtIndex:0];
         [cell initCell];
     }
+    
     
     [cell setCellData:info];
     

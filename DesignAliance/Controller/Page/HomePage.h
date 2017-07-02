@@ -6,8 +6,15 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "DABasePage.h"
+#import "DABaseOperation.h"
 
-@interface HomePage : UITabBarController
+@interface HomePage : UITabBarController <UITabBarDelegate, DAOperationDelegate>{
+    UITabBarItem *secondItem;
+    DABaseOperation *_operation;
+    
+    NSNumber *adviceId;
+    NSNumber *missionId;
+    NSNumber *personId;
+}
 
 @end
