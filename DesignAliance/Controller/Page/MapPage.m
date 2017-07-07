@@ -17,7 +17,9 @@
 
 
 @interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate, AMapLocationManagerDelegate>
-
+{
+DetailsCompanyPage *detailsCompanyPage;
+}
 @end
 
 @implementation MapPage
@@ -144,7 +146,7 @@
 
 #pragma 标注气泡点击事件
 - (void)butClick{
-    DetailsCompanyPage *detailsCompanyPage = [[DetailsCompanyPage alloc] init];
+    detailsCompanyPage = [[DetailsCompanyPage alloc] init];
     detailsCompanyPage.search = self.search;
     [self initToDetails:detailsCompanyPage];
 }

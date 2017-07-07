@@ -60,7 +60,7 @@
     
     _userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
     if([_userGrade isEqualToString:@"2"]){
-        [self.list replaceObjectAtIndex:0 withObject:@"我的团队"];
+        [self.list replaceObjectAtIndex:0 withObject:@"续费"];
     }
     
     //添加头像按钮的监听事件

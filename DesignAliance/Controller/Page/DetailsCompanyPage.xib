@@ -18,7 +18,7 @@
                 <outlet property="manager" destination="bAb-pI-JaZ" id="VvF-UL-z8w"/>
                 <outlet property="mapView" destination="9ux-YX-WpU" id="wHL-AR-XQi"/>
                 <outlet property="name" destination="YFC-Ef-UBK" id="3SP-nX-Uiu"/>
-                <outlet property="phone" destination="rPW-YT-o2u" id="Vju-8V-KHd"/>
+                <outlet property="phone" destination="iVR-bf-bz7" id="OkF-uA-spy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -181,12 +181,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPW-YT-o2u">
-                                            <rect key="frame" x="151" y="34" width="194" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-e0-011">
                                             <rect key="frame" x="0.0" y="29" width="375" height="1"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -194,21 +188,34 @@
                                                 <constraint firstAttribute="height" constant="1" id="IDX-QB-6jd"/>
                                             </constraints>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-bf-bz7">
+                                            <rect key="frame" x="151" y="37" width="194" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14" id="ruK-8D-bq5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="电话号码">
+                                                <color key="titleColor" red="0.111846365" green="0.52463543420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="contactUs:" destination="-1" eventType="touchUpInside" id="hHt-99-GcS"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="iVR-bf-bz7" secondAttribute="bottom" constant="7" id="8zN-Ph-z1t"/>
                                         <constraint firstAttribute="bottom" secondItem="n0J-jJ-TCh" secondAttribute="bottom" constant="7" id="EC2-qm-0f2"/>
                                         <constraint firstItem="Vls-JE-ZnU" firstAttribute="top" secondItem="QRd-9W-45o" secondAttribute="top" constant="7" id="IpN-fe-7mh"/>
-                                        <constraint firstItem="rPW-YT-o2u" firstAttribute="leading" secondItem="n0J-jJ-TCh" secondAttribute="trailing" constant="10" id="R7r-Qm-ipg"/>
-                                        <constraint firstAttribute="bottom" secondItem="rPW-YT-o2u" secondAttribute="bottom" constant="7" id="Swc-JT-v8R"/>
                                         <constraint firstItem="n0J-jJ-TCh" firstAttribute="leading" secondItem="QRd-9W-45o" secondAttribute="leading" constant="26" id="WPN-99-QAK"/>
                                         <constraint firstItem="bAb-pI-JaZ" firstAttribute="leading" secondItem="Vls-JE-ZnU" secondAttribute="trailing" constant="10" id="YGj-aB-q8l"/>
                                         <constraint firstItem="bAb-pI-JaZ" firstAttribute="top" secondItem="QRd-9W-45o" secondAttribute="top" constant="7" id="YWk-dx-NsY"/>
                                         <constraint firstItem="9sc-e0-011" firstAttribute="top" secondItem="QRd-9W-45o" secondAttribute="top" constant="29" id="bo4-O2-JHF"/>
                                         <constraint firstItem="9sc-e0-011" firstAttribute="leading" secondItem="QRd-9W-45o" secondAttribute="leading" id="fPd-q6-g12"/>
                                         <constraint firstAttribute="trailing" secondItem="9sc-e0-011" secondAttribute="trailing" id="hCv-QH-W98"/>
+                                        <constraint firstItem="iVR-bf-bz7" firstAttribute="leading" secondItem="n0J-jJ-TCh" secondAttribute="trailing" constant="10" id="hJJ-Ya-T5Q"/>
                                         <constraint firstAttribute="trailing" secondItem="bAb-pI-JaZ" secondAttribute="trailing" constant="30" id="kKR-yX-y73"/>
-                                        <constraint firstAttribute="trailing" secondItem="rPW-YT-o2u" secondAttribute="trailing" constant="30" id="qI8-Vl-qA7"/>
+                                        <constraint firstAttribute="trailing" secondItem="iVR-bf-bz7" secondAttribute="trailing" constant="30" id="laS-zT-S29"/>
                                         <constraint firstItem="Vls-JE-ZnU" firstAttribute="leading" secondItem="QRd-9W-45o" secondAttribute="leading" constant="26" id="t88-s1-3eA"/>
                                         <constraint firstAttribute="height" constant="58" id="veR-uX-q4R"/>
                                     </constraints>

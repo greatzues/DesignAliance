@@ -13,7 +13,6 @@
 #import "DAGetNotice.h"
 #import "DAModifyPassword.h"
 #import "AppDelegate.h"
-#import "NoticeModel.h"
 
 
 @implementation HomePage

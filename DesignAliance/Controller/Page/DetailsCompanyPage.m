@@ -63,9 +63,9 @@
     
     self.name.text    = self.search.name;
     self.manager.text = self.search.manager;
-    self.phone.text   = self.search.phone;
     self.desc.text    = self.search.desc;
     self.location.text= self.search.location;
+    [self.phone setTitle:self.search.phone forState:UIControlStateNormal];
     
     
     NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
@@ -262,6 +262,13 @@
 {
     NSLog(@"ActionSheet - 取消了");
     [actionSheet removeFromSuperview];
+}
+
+- (IBAction)contactUs:(id)sender {
+    
+    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.search.phone]];
+    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
+    [self.view addSubview:callWebView];
 }
 
 @end

@@ -101,6 +101,8 @@
 }
 
 - (void)opSuccess:(id)data{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
     HomePage *page = [[HomePage alloc] init];
     self.window.rootViewController = page;
     [self.window makeKeyAndVisible];
