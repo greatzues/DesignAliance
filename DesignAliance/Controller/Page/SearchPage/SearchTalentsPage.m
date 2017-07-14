@@ -41,7 +41,12 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
     }
     if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        //这里判断是由于在点击搜索框拿到焦点时，self.searchController.active为true，但此时self.searchListArry没有数据，会出现数组越界错误
+        if([self.searchListArry count] != 0){
+            self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        }else{
+            self.model = [self.dataListArry objectAtIndex:indexPath.row];
+        }
     }
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
@@ -54,7 +59,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        //这里判断是由于在点击搜索框拿到焦点时，self.searchController.active为true，但此时self.searchListArry没有数据，会出现数组越界错误
+        if([self.searchListArry count] != 0){
+            self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        }else{
+            self.model = [self.dataListArry objectAtIndex:indexPath.row];
+        }
     }
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];

@@ -13,7 +13,6 @@
 @interface DADesignNewsWidget : DATableWidget <SDCycleScrollViewDelegate>
 
 @property(nonatomic, strong)   NewsModel          *search;
-
 @property (nonatomic, strong)SDCycleScrollView  *cycleScrollView;
 @property (nonatomic, assign)BOOL               getAD;
 @property (nonatomic, strong)NSMutableArray     *AdlistData;

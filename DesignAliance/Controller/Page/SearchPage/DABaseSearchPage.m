@@ -39,8 +39,6 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     
     self.skTableView.delegate = self;
     self.skTableView.dataSource = self;
-    //隐藏tableViewCell下划线
-    //    self.skTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
     //创建UISearchController
     self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
@@ -48,14 +46,8 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     self.searchController.delegate= self;
     self.searchController.searchResultsUpdater = self;
     
-    //包着搜索框外层的颜色
-    //self.searchController.searchBar.barTintColor = [UIColor yellowColor];
-    
     //提醒字眼
     self.searchController.searchBar.placeholder= @"请输入关键字搜索";
-    
-    //提前在搜索框内加入搜索词
-    //self.searchController.searchBar.text = @"设计";
     
     //搜索时，背景变暗色
     self.searchController.dimsBackgroundDuringPresentation = NO;
@@ -86,6 +78,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
 - (void)opFail:(NSString *)errorMessage{
     [super opFail:errorMessage];
+    self.searchController.active = NO;
 }
 
 //设置区域的行数
@@ -107,7 +100,6 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
 
 #pragma mark - UISearchControllerDelegate代理
-//测试UISearchController的执行过程
 
 - (void)willPresentSearchController:(UISearchController *)searchController
 {

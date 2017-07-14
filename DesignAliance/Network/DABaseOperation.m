@@ -50,18 +50,24 @@
     
     BASE_INFO_FUN(urlString);
     
-    if (body != nil) {
-        [request setHTTPMethod:HTTPPOST];
-        if ([body isKindOfClass:[NSString class]]) { //返回实例是否是参数的类实例
-            [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]]; //返回一个给data编码的对象
-            BASE_INFO_FUN(body);
-        }else{
-            [request setHTTPBody:body];//接受者的请求体
+    @try {
+        if (body != nil) {
+            [request setHTTPMethod:HTTPPOST];
+            if ([body isKindOfClass:[NSString class]]) { //返回实例是否是参数的类实例
+                [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]]; //返回一个给data编码的对象
+                BASE_INFO_FUN(body);
+            }else{
+                [request setHTTPBody:body];//接受者的请求体
+            }
+        }else {
+            [request setHTTPMethod:HTTPGET];
         }
-    }else {
-        [request setHTTPMethod:HTTPGET];
+        [request setTimeoutInterval:[self timeoutInteval]];
+        
+    } @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+        [_delegate opFail:[NSString stringWithFormat:@"数据请求错误：%@", exception]];
     }
-    [request setTimeoutInterval:[self timeoutInteval]];
     
     return request;
 }
@@ -101,6 +107,8 @@
 }
 
 - (void)parseFail:(id)dict{
+    @try{
+        
     NSString *result = [[dict objectForKey:NetCode] stringValue];
     
     if ([result isEqualToString:@"40001"]){
@@ -111,12 +119,11 @@
         return [_delegate opFail:[dict objectForKey:NetMessage]];
     }
     
-    @try{
+    
         [_delegate opFail:[dict objectForKey:NetMessage]];
-    }@catch(NSException  *exception){
+    }@catch (NSException *exception) {
         NSLog(@"%s\n%@", __FUNCTION__, exception);
-    }@finally{
-        [_delegate opFail:@"网络异常"];
+        [_delegate opFail:[NSString stringWithFormat:@"数据解析错误：%@", exception]];
     }
 }
 
@@ -124,24 +131,35 @@
 #pragma mark - NSURLConnectionDelegate methods
 //接受完http协议头，开始真正接受数据时调用此方法
 - (void)connection:(NSURLConnection *)aConnection didReceiveResponse:(NSURLResponse *)aResponse{
-    NSHTTPURLResponse *response = (NSHTTPURLResponse *)aResponse;
-    NSString *statusCode = [NSString stringWithFormat:@"%ld",(long)[response statusCode]];
-
-    _statusCode = [statusCode intValue]; //将字符串转化为整型
-    _receiveDate = [[NSMutableData alloc] init];
     
-    if(_statusCode == 200 || _statusCode == 206) { //这里我的服务器应该不会返回206
-        _totalLength = [response expectedContentLength];
+    @try {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)aResponse;
+        NSString *statusCode = [NSString stringWithFormat:@"%ld",(long)[response statusCode]];
+        
+        _statusCode = [statusCode intValue]; //将字符串转化为整型
+        _receiveDate = [[NSMutableData alloc] init];
+        
+        if(_statusCode == 200 || _statusCode == 206) { //这里我的服务器应该不会返回206
+            _totalLength = [response expectedContentLength];
+        }
+        
+        BASE_INFO_FUN(statusCode);
+    } @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+        [_delegate opFail:[NSString stringWithFormat:@"数据连接错误：%@", exception]];
     }
-    
-    BASE_INFO_FUN(statusCode);
 }
 
 //网络请求时，每接受一段数据就会调用此函数方法
 - (void)connection:(NSURLConnection *)aConn didReceiveData:(NSData *)data{
-    BASE_INFO_FUN(([NSString stringWithFormat:@"%lu", (unsigned long)data.length]));
-    [_receiveDate appendData:data];
-    [self parseProgress:_receiveDate.length];
+    @try {
+        BASE_INFO_FUN(([NSString stringWithFormat:@"%lu", (unsigned long)data.length]));
+        [_receiveDate appendData:data];
+        [self parseProgress:_receiveDate.length];
+    } @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+        [_delegate opFail:[NSString stringWithFormat:@"数据接收错误：%@", exception]];
+    }
     
 }
 
@@ -162,8 +180,7 @@
             [self parseFail:errorMessage];
         } @catch (NSException *exception) {
             NSLog(@"%s\n%@", __FUNCTION__, exception);
-        } @finally {
-            [_delegate opFail:@"网络异常"];
+            [_delegate opFail:[NSString stringWithFormat:@"数据加载错误：%@", exception]];
         }
         
     }
@@ -180,8 +197,7 @@
         [self parseFail:[error localizedDescription]];
     } @catch (NSException *exception) {
         NSLog(@"%s\n%@", __FUNCTION__, exception);
-    } @finally {
-        [_delegate opFail:@"网络异常"];
+        [_delegate opFail:[NSString stringWithFormat:@"处理异常错误错误：%@", exception]];
     }
     
     _connection = nil;

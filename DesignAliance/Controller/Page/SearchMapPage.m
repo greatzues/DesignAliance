@@ -46,7 +46,7 @@
 }
 
 - (void)initData{
-    _pageSize = 15;
+    _pageSize = 10;
     NSString *body = [NSString stringWithFormat:@"pageSize=%ld&pageNo=1",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":initSearchUrl,
                              @"body":body};
@@ -62,12 +62,20 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:flag];
     }
+    
     if (self.searchController.active) {
-        self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        //这里判断是由于在点击搜索框拿到焦点时，self.searchController.active为true，但此时self.searchListArry没有数据，会出现数组越界错误
+        if([self.searchListArry count] != 0){
+            self.model = [self.searchListArry objectAtIndex:indexPath.row];
+        }else{
+            self.model = [self.dataListArry objectAtIndex:indexPath.row];
+        }
     }
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
+    
+    
     [cell.textLabel setText:self.model.name];
     [cell.detailTextLabel setText:[self.distanceArray objectAtIndex:indexPath.row]];
     cell.imageView.image=[UIImage imageNamed:@"mapNormal.png"];
@@ -202,6 +210,8 @@
     [super opSuccess:data];
     
 }
+
+
 //拦截默认返回pop操作，重写返回的方法
 - (BOOL)navigationShouldPopOnBackButton{
     self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
