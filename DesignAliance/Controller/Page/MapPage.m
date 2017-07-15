@@ -13,7 +13,7 @@
 #import "CustomAnnotationView.h"
 #import <MapKit/MapKit.h>
 #import "DetailsCompanyPage.h"
-
+#import <CRToast/CRToast.h>
 
 
 @interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate, AMapLocationManagerDelegate>
@@ -108,6 +108,8 @@ DetailsCompanyPage *detailsCompanyPage;
 #pragma 导航右键点击事件监听
 - (void)doRight:(id)sender{
     SearchMapPage *page = [[SearchMapPage alloc] init];
+    
+    page.point1 = self.point1;
     page.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:page animated:YES];
 }
@@ -160,7 +162,11 @@ DetailsCompanyPage *detailsCompanyPage;
 #pragma mark location fail
 - (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
 {
-    [self alertView:@"自动定位异常，获取当前位置失败"];
+    self.ToastTitle = @"自动定位异常，获取当前位置失败";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    
+                                }];
 }
 
 #pragma mark 用户位置更新

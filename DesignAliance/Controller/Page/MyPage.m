@@ -50,8 +50,14 @@
 
 - (void)viewDidUnload{
     [super viewDidUnload];
+    
     self.list = nil;
     self.IconList = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setNavBarImage];
 }
 
 - (void)initData{

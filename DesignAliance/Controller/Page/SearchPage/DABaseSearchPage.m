@@ -35,7 +35,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 }
 
 - (void)initTableView{
-    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height)];
+    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height-84.0)];
     
     self.skTableView.delegate = self;
     self.skTableView.dataSource = self;
@@ -48,7 +48,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
     
     //提醒字眼
     self.searchController.searchBar.placeholder= @"请输入关键字搜索";
-    
+
     //搜索时，背景变暗色
     self.searchController.dimsBackgroundDuringPresentation = NO;
     

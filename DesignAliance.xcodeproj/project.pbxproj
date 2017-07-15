@@ -52,6 +52,7 @@
 		18FED9461ED9643000C5FE4E /* UserSuggestPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED9451ED9643000C5FE4E /* UserSuggestPage.xib */; };
 		18FED9491ED978D500C5FE4E /* UserInfoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED9481ED978D500C5FE4E /* UserInfoPage.m */; };
 		18FED94B1ED978F100C5FE4E /* UserInfoPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */; };
+		314516849C1B504C1DE54A37 /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1BD98A5CE14D36D08E1BB8 /* libPods-DesignAliance.a */; };
 		820C9CC61EC4110800CA4951 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC51EC4110800CA4951 /* CustomCalloutView.m */; };
 		820C9CC91EC412A800CA4951 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */; };
 		820C9CCD1EC4179500CA4951 /* mapNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820C9CCB1EC4179500CA4951 /* mapNormal@2x.png */; };
@@ -222,7 +223,6 @@
 		82E88DC61EE6ACDC00AF0137 /* AboutUsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC41EE6ACDC00AF0137 /* AboutUsBackground.png */; };
 		82E88DC71EE6ACDC00AF0137 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DC51EE6ACDC00AF0137 /* share@2x.png */; };
 		82E88DCD1EE6AE1400AF0137 /* AboutPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E88DCC1EE6AE1400AF0137 /* AboutPage.xib */; };
-		DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795BDE456E6989D296C79584 /* libPods-DesignAliance.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,7 +318,6 @@
 		18FED9471ED978D500C5FE4E /* UserInfoPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoPage.h; sourceTree = "<group>"; };
 		18FED9481ED978D500C5FE4E /* UserInfoPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoPage.m; sourceTree = "<group>"; };
 		18FED94A1ED978F100C5FE4E /* UserInfoPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoPage.xib; sourceTree = "<group>"; };
-		795BDE456E6989D296C79584 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE4E8047D5547320562CD7 /* Pods-DesignAliance.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.appstore.xcconfig"; sourceTree = "<group>"; };
 		820C9CC41EC4110800CA4951 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
 		820C9CC51EC4110800CA4951 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
@@ -572,6 +571,7 @@
 		9BEF5D47299BCB0437FD7990 /* Pods-DesignAliance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.release.xcconfig"; sourceTree = "<group>"; };
 		9C1FCE660E8813E24DE1D109 /* Pods-DesignAliance.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9F88045DD9109B213B45F2E /* Pods-DesignAliance.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.enterprise.xcconfig"; sourceTree = "<group>"; };
+		EB1BD98A5CE14D36D08E1BB8 /* libPods-DesignAliance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignAliance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7D26864F2A2E2478F900EE /* Pods-DesignAliance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignAliance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignAliance/Pods-DesignAliance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -584,7 +584,7 @@
 				8212A8C71EBEF72400CBD43F /* JavaScriptCore.framework in Frameworks */,
 				8212A8C51EBEF71B00CBD43F /* SystemConfiguration.framework in Frameworks */,
 				8212A89C1EB9BC0A00CBD43F /* Security.framework in Frameworks */,
-				DBB3FF7D698F209C0308808E /* libPods-DesignAliance.a in Frameworks */,
+				314516849C1B504C1DE54A37 /* libPods-DesignAliance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1322,7 +1322,7 @@
 				8212A8C61EBEF72400CBD43F /* JavaScriptCore.framework */,
 				8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */,
 				8212A89B1EB9BC0A00CBD43F /* Security.framework */,
-				795BDE456E6989D296C79584 /* libPods-DesignAliance.a */,
+				EB1BD98A5CE14D36D08E1BB8 /* libPods-DesignAliance.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

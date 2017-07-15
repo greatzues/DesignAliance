@@ -72,8 +72,8 @@
                                             <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-pd-c8u">
-                                            <rect key="frame" x="21" y="200" width="33" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-pd-c8u">
+                                            <rect key="frame" x="21" y="194" width="33" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GaK-0c-QSD">
-                                            <rect key="frame" x="60.5" y="202" width="38" height="12"/>
+                                            <rect key="frame" x="60.5" y="196" width="38" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="38" id="CdO-eP-0oP"/>
                                                 <constraint firstAttribute="height" constant="12" id="bW9-2h-Ljp"/>
@@ -104,7 +104,7 @@
                                         <constraint firstItem="8Uz-9U-QRd" firstAttribute="leading" secondItem="YFC-Ef-UBK" secondAttribute="trailing" constant="6.5" id="OFP-UQ-rhg"/>
                                         <constraint firstItem="GaK-0c-QSD" firstAttribute="leading" secondItem="nQo-pd-c8u" secondAttribute="trailing" constant="6.5" id="PSZ-On-8Lx"/>
                                         <constraint firstAttribute="trailing" secondItem="9ux-YX-WpU" secondAttribute="trailing" id="UNX-LI-FhY"/>
-                                        <constraint firstAttribute="bottom" secondItem="nQo-pd-c8u" secondAttribute="bottom" constant="9" id="VxY-iG-h3n"/>
+                                        <constraint firstAttribute="bottom" secondItem="nQo-pd-c8u" secondAttribute="bottom" constant="15" id="VxY-iG-h3n"/>
                                         <constraint firstAttribute="trailing" secondItem="Zw7-lo-jeb" secondAttribute="trailing" constant="10" id="h85-Te-zYj"/>
                                         <constraint firstItem="8Uz-9U-QRd" firstAttribute="centerY" secondItem="YFC-Ef-UBK" secondAttribute="centerY" id="jO4-o8-hAK"/>
                                         <constraint firstAttribute="height" constant="225" id="uq4-q8-tqu"/>

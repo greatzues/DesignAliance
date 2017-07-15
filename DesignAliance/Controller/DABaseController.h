@@ -16,6 +16,8 @@
     DAActivity          *_activity;
 }
 
+@property(nonatomic, strong) NSString *ToastTitle;
+
 - (void)showIndicator:(NSString *)tipMessage
              autoHide:(BOOL)hide
            afterDelay:(BOOL)delay;
@@ -28,5 +30,7 @@
 - (void)setNavBarImage;
 - (IBAction)doBack:(id)sender;
 - (IBAction)doRight:(id)sender;
+
+- (NSDictionary *)setToast;
 
 @end

@@ -4,61 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CRToast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-DesignAliance.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15D81351464FF5E020EFA40B200C2BD5</key>
+		<key>631D9AEB4EDDFE998DACBCE795514F28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23670C31A97052A2B2B93B445CBE9E8C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>439EB99D2C0AB11AD0A690A5319C5DBB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6019529EB3F2149AC2828E53CF8E6655</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>808F4A6E64EF9390CB9730F4EB442589</key>
+		<key>73C23AEC1D363D337906B23B84740675</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>91629E1725C13AEA64D44C46E4D9DA31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0FCB34AC1B4F742650176E75620E199</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA7BDDF07BA198C72572B6918FC939F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

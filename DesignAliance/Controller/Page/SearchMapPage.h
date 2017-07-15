@@ -22,4 +22,6 @@
 @property(nonatomic, strong)   NSString *selectTitleUrl;
 @property(nonatomic, strong)   NSString *selectTitleBody;
 
+@property   MAMapPoint  point1;
+
 @end

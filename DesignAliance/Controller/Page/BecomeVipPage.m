@@ -7,6 +7,7 @@
 //
 
 #import "BecomeVipPage.h"
+#import <CRToast/CRToast.h>
 
 @implementation BecomeVipPage
 
@@ -26,10 +27,13 @@
 }
 
 - (IBAction)contactUs:(id)sender {
-    
-    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.phoneNumber]];
-    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
-    [self.view addSubview:callWebView];
+    self.ToastTitle = @"正在调用通话功能，稍等片刻...";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.phoneNumber]];
+                                    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
+                                    [self.view addSubview:callWebView];
+                                }];
 }
 
 

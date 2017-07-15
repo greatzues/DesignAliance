@@ -12,7 +12,7 @@
 #import "UIButton+countDown.h"
 #import "DARegister.h"
 #import <BmobSDK/BmobSMS.h>
-
+#import <CRToast/CRToast.h>
 
 @implementation RegisterPage
 
@@ -74,7 +74,11 @@
 //验证短信验证码
 - (IBAction)registerAccount:(id)sender {
     if(![passwordNumber.text isEqualToString:confirmNumber.text]){
-        [self alertView:@"确认密码不一致，请重新输入"];
+        self.ToastTitle = @"密码不一致，请重新输入";
+        [CRToastManager showNotificationWithOptions:self.setToast
+                                    completionBlock:^{
+                                        return ;
+                                    }];
         return ;
     }
     
@@ -96,11 +100,19 @@
 }
 
 - (void)opSuccess:(id)data{
-    [[self navigationController] popViewControllerAnimated:YES];
+    self.ToastTitle = @"注册成功";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    [[self navigationController] popViewControllerAnimated:YES];
+                                }];
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [super opFail:@"注册失败，请检查网络后重试"];
+    self.ToastTitle = @"注册失败，请重试";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    
+                                }];
 }
 
 - (IBAction)backToLoginPage:(id)sender {

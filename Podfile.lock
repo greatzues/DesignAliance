@@ -7,6 +7,7 @@ PODS:
   - AMapSearch (5.1.0):
     - AMapFoundation (~> 1.2)
   - BmobSDK (2.1.7)
+  - CRToast (0.0.9)
   - MJRefresh (3.1.12)
   - MOBFoundation (2.2.19)
   - SDCycleScrollView (1.65):
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - AMapLocation
   - AMapSearch
   - BmobSDK
+  - CRToast (~> 0.0.7)
   - MJRefresh
   - MOBFoundation
   - SDCycleScrollView (~> 1.64)
@@ -61,12 +63,13 @@ SPEC CHECKSUMS:
   AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   AMapSearch: d4c924b929f433968669721a07b4bd57736f5f2a
   BmobSDK: 23cbfbde2a7cfaeb0c8a946953a266fe5211e7f6
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MOBFoundation: e962b2aee79e2b8f626e2d30c2f23e9f13e5331e
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   ShareSDK3: d271520113160eb24b31cd642b45b38fcd592d93
 
-PODFILE CHECKSUM: 755bb4fca3a9485e25eb347ff88c5322feb1ec08
+PODFILE CHECKSUM: 26428248c799622da792ad4918ca28e700a845a1
 
 COCOAPODS: 1.2.1

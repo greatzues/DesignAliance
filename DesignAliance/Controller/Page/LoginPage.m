@@ -13,6 +13,7 @@
 #import "LoginUtility.h"
 #import "RegisterPage.h"
 #import "ForgetPasswordPage.h"
+#import <CRToast/CRToast.h>
 
 @implementation LoginPage
 
@@ -50,13 +51,17 @@
 
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
-    [[AppDelegate appDeg] showHomePage];
+    
+    self.ToastTitle = @"登录成功";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    [[AppDelegate appDeg] showHomePage];
+                                }];
 }
 
 - (void)opFail:(NSString *)errorMessage{
     [LoginUtility quitLogin];
     [super opFail:errorMessage];
-    //[self alertView:errorMessage];
 }
 
 

@@ -10,12 +10,14 @@
 #import "DAActivityIndicator.h"
 #import "LoginPage.h"
 #import "AppDelegate.h"
+#import <CRToast/CRToast.h>
 
 @implementation DABaseController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavBarImage]; //这里是基类，可以把所有导航条都加上
+    self.ToastTitle = @"消息发送成功";
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -146,6 +148,23 @@
 
 - (void)hideIndicator{
     [_activity hide:YES];
+}
+
+- (NSDictionary *)setToast{
+    NSDictionary *options = @{
+                              kCRToastTextKey : self.ToastTitle,
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                              kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+                              kCRToastFontKey             : [UIFont fontWithName:@"HelveticaNeue-Light" size:16],
+                              kCRToastTextColorKey        : [UIColor whiteColor],
+                              kCRToastBackgroundColorKey  : [UIColor orangeColor],
+                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeSpring),
+                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeSpring),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionTop),
+                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionTop)
+                              };
+    
+    return options;
 }
 
 @end

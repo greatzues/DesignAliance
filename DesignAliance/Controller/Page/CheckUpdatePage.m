@@ -9,6 +9,7 @@
 #import "CheckUpdatePage.h"
 #import "DACheckUpdate.h"
 #import "CheckUpdateModel.h"
+#import <CRToast/CRToast.h>
 
 @implementation CheckUpdatePage
 
@@ -41,6 +42,11 @@
 }
 
 - (IBAction)getLatestVersion:(id)sender {
+    self.ToastTitle = @"当前已经是最新版本";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    
+                                }];
 }
 
 @end

@@ -22,4 +22,6 @@ pod 'ShareSDK3/ShareSDKPlatforms/SMS'
 pod 'ShareSDK3/ShareSDKConfigurationFile'
 pod 'ShareSDK3/ShareSDKExtension'
 
+pod 'CRToast', '~> 0.0.7'
+
 end

@@ -9,6 +9,7 @@
 #import "DetailsCompanyPage.h"
 #import <MapKit/MapKit.h>
 #import "CustomAnnotationView.h"
+#import <CRToast/CRToast.h>
 
 @implementation DetailsCompanyPage
 
@@ -265,10 +266,16 @@
 }
 
 - (IBAction)contactUs:(id)sender {
+
     
-    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.search.phone]];
-    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
-    [self.view addSubview:callWebView];
+    self.ToastTitle = @"正在调用通话功能，稍等片刻...";
+    
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.search.phone]];
+                                    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
+                                    [self.view addSubview:callWebView];
+                                }];
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "UIImage+extension.h"
 #import "DARegister.h"
 #import "MyPage.h"
-
+#import <CRToast/CRToast.h>
 #import "DAUploadAvatar.h"
 
 //相机返回的结果  如果结果为0 则获取相机成功  为1  则获取相机失败   下边会有说明
@@ -309,13 +309,23 @@ static const int toolBarHeight = 44;
 }
 
 -(void)opSuccess:(id)data{
-    MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    [page initData];
-    [self.navigationController popToViewController:page animated:YES];
+    self.ToastTitle = @"信息更新成功";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+                                    [page initData];
+                                    [self.navigationController popToViewController:page animated:YES];
+                                }];
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [super opFail:@"修改信息出错，请检查网络后重试！"];
+    self.ToastTitle = @"修改信息出错，请检查网络后重试！";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+                                    [page initData];
+                                    [self.navigationController popToViewController:page animated:YES];
+                                }];
 }
 
 @end

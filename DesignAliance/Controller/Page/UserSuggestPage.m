@@ -8,6 +8,7 @@
 
 #import "UserSuggestPage.h"
 #import "DAModifyPassword.h" //同样都是接收message字段
+#import <CRToast/CRToast.h>
 
 @implementation UserSuggestPage
 
@@ -31,7 +32,11 @@
 }
 
 -(void)opSuccess:(id)data{
-    [self.navigationController popViewControllerAnimated:YES];
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    [self.navigationController popViewControllerAnimated:YES];
+                                }];
+    
 }
 
 @end

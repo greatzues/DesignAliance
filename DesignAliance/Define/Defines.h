@@ -7,6 +7,14 @@
 //
 
 
+//#ifdef DEBUG
+//#define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+//#define LRLog(...) printf("%s: %s 第%d行: %s\n\n",[[NSString lr_stringDate] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+//
+//#else
+//#define LRLog(...)
+//#endif
+
 
 #if (DEBUG || TESTCASE)
 #define FxLog(format, ...) NSLog(format, ## __VA_ARGS__)

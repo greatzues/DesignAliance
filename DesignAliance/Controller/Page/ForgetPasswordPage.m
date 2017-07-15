@@ -12,7 +12,7 @@
 #import "UIButton+countDown.h"
 #import "DARegister.h"
 #import <BmobSDK/BmobSMS.h>
-
+#import <CRToast/CRToast.h>
 
 @implementation ForgetPasswordPage
 
@@ -96,11 +96,19 @@
 }
 
 - (void)opSuccess:(id)data{
-    [[self navigationController] popViewControllerAnimated:YES];
+    self.ToastTitle = @"找回密码成功";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                     [[self navigationController] popViewControllerAnimated:YES];
+                                }];
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    [super opFail:@"修改密码失败，请检查网络后重试"];
+    self.ToastTitle = @"找回密码失败，请重试";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    
+                                }];
 }
 
 

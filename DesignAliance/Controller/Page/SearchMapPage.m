@@ -46,7 +46,7 @@
 }
 
 - (void)initData{
-    _pageSize = 10;
+    _pageSize = 30;
     NSString *body = [NSString stringWithFormat:@"pageSize=%ld&pageNo=1",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":initSearchUrl,
                              @"body":body};
@@ -109,11 +109,10 @@
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
         point.title = s.name;
-        //point.subtitle = s.desc;
         
         //下面三行添加补习社距离，同时注释掉point.subtitle = s.desc
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
-        distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+        distance = MAMetersBetweenMapPoints(self.point1,point2);
         int dis = distance/1000;
         
         point.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
@@ -128,7 +127,7 @@
     //self.mapPage.pointAnnotation.subtitle = self.model.desc;
     
     point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue));
-    distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+    distance = MAMetersBetweenMapPoints(self.point1,point2);
     int dis = distance/1000;
     
     self.mapPage.pointAnnotation.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
@@ -199,7 +198,7 @@
     
     for(SearchModel * s in data){
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
-        distance = MAMetersBetweenMapPoints(self.mapPage.point1,point2);
+        distance = MAMetersBetweenMapPoints(self.point1,point2);
         int d = distance/1000;
         
         NSString *dis = [NSString stringWithFormat:@"距离您%d km",d];
