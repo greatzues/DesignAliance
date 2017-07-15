@@ -79,6 +79,9 @@
     self.backView.backgroundColor = self.cbs_backgroundColor;
     self.backView.bounces = NO;
     
+    //不让ScrollView捕获UItableView的事件，就可以解决数据不足一页无法下拉刷新的问题了
+    self.backView.contentSize = CGSizeMake(self.width*3, 0);
+    
     self.backView.delegate = self;
     [self.view addSubview:self.backView];
 }
