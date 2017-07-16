@@ -35,7 +35,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 }
 
 - (void)initTableView{
-    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height-84.0)];
+    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height-64.0)];
     
     self.skTableView.delegate = self;
     self.skTableView.dataSource = self;
@@ -103,27 +103,22 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 
 - (void)willPresentSearchController:(UISearchController *)searchController
 {
-    NSLog(@"willPresentSearchController");
 }
 
 - (void)didPresentSearchController:(UISearchController *)searchController
 {
-    NSLog(@"didPresentSearchController");
 }
 
 - (void)willDismissSearchController:(UISearchController *)searchController
 {
-    NSLog(@"willDismissSearchController");
 }
 
 - (void)didDismissSearchController:(UISearchController *)searchController
 {
-    NSLog(@"didDismissSearchController");
 }
 
 - (void)presentSearchController:(UISearchController *)searchController
 {
-    NSLog(@"presentSearchController");
 }
 
 #pragma 需要复写的方法

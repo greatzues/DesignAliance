@@ -41,8 +41,6 @@
         self.searchController.searchBar.scopeButtonTitles = @[@"设计公司",@"设计顾问",@"技术顾问"];
         self.searchController.searchBar.delegate = self;
     }
-    
-    
 }
 
 - (void)initData{
@@ -210,8 +208,17 @@
     
 }
 
+#pragma 在打开搜索界面时获得输入焦点
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self performSelector:@selector(setCorrectFocus) withObject:NULL afterDelay:0.8];
+}
 
-//拦截默认返回pop操作，重写返回的方法
+-(void) setCorrectFocus {
+    [self.searchController.searchBar becomeFirstResponder];
+}
+
+#pragma 拦截默认返回pop操作，重写返回的方法
 - (BOOL)navigationShouldPopOnBackButton{
     self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     self.mapPage.pointArray = self.pointArray;
