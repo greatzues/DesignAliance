@@ -127,7 +127,9 @@ DetailsCompanyPage *detailsCompanyPage;
             annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
         
+        //显示当前经纬度
         if([annotationView.annotation.title isEqualToString:@"当前位置"]){
+            annotationView.annotation.title = [NSString stringWithFormat:@"当前位置%f，%f",self.userLocation.coordinate.latitude,self.userLocation.coordinate.longitude];
             return nil;
         }
         annotationView.image = [UIImage imageNamed:@"mapMark.jpg"];
@@ -177,6 +179,8 @@ updatingLocation:(BOOL)updatingLocation
     {
         //取出当前位置的坐标
         self.point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude));
+        self.userLocation = userLocation;
+        
     }
 }
 

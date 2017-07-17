@@ -65,9 +65,12 @@
     self.name.text    = self.search.name;
     self.manager.text = self.search.manager;
     self.desc.text    = self.search.desc;
-    self.location.text= self.search.location;
     [self.phone setTitle:self.search.phone forState:UIControlStateNormal];
     
+    
+    
+    self.location.text= self.search.location;
+    self.location.numberOfLines = 0;   
     
     NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
     if([userGrade isEqualToString:@"2"]){

@@ -35,7 +35,7 @@ static NSString *const kReuseIdentifier = @"CellReuseIdentifier";
 }
 
 - (void)initTableView{
-    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height-64.0)];
+    self.skTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen  mainScreen].bounds.size.width ,[UIScreen  mainScreen].bounds.size.height)];
     
     self.skTableView.delegate = self;
     self.skTableView.dataSource = self;

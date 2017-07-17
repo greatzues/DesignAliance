@@ -44,7 +44,11 @@
 //开启倒计时效果
 - (IBAction)openCountdown:(id)sender{
     if([phoneNumber.text isEqualToString:@""]||phoneNumber.text.length!=11){
-        [self alertView:@"错误的手机号码"];
+        self.ToastTitle = @"请输入正确格式的手机号码";
+        [CRToastManager showNotificationWithOptions:self.setToast
+                                    completionBlock:^{
+                                        return;
+                                    }];
         return ;
     }
     
@@ -60,9 +64,12 @@
             
             [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
                 if (dic) {
-                    NSLog(@"%@",dic);
                     if([[dic objectForKey:@"sms_state"] isEqualToString:@"SUCCESS"]){
-                        NSLog(@"%@",[dic objectForKey:@"sms_state"]);
+                        self.ToastTitle = @"验证码已发送至您手机，请注意查收";
+                        [CRToastManager showNotificationWithOptions:self.setToast
+                                                    completionBlock:^{
+                                                        
+                                                    }];
                     }
                 } else {
                     NSLog(@"%@",error);
