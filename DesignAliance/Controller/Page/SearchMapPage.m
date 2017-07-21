@@ -31,6 +31,9 @@
     [super viewDidLoad];
     _selectTitleBody = @"key_word";
     _selectTitleUrl = SearchCompanyByKey;
+    
+    //初始化pop回去的地图组件
+    self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
 }
 
 - (void)initTableView{
@@ -97,57 +100,30 @@
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
     
-    @try {
-        //初始化pop回去的地图组件
-        self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-        
-        //先将原来的标注和数组清空，就可以只存储搜索的结果了
-        [self.mapPage.mapView removeAnnotations:self.mapPage.pointArray];
-        [self.mapPage.pointArray removeAllObjects];
-        
-        //遍历每一次搜索的结果，而不是全部结果
-        for(SearchModel * s in _pointArray){
-            MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
-            point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
-            point.title = s.name;
-            
-            //下面三行添加补习社距离，同时注释掉point.subtitle = s.desc
-            point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
-            distance = MAMetersBetweenMapPoints(self.point1,point2);
-            int dis = distance/1000;
-            
-            point.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
-            
-            [self.mapPage.companyInfo setObject:s forKey:point.title];
-            [self.mapPage.pointArray addObject:point];
-        }
-    } @catch (NSException *exception) {
-        NSLog(@"----------->>>>>>>11111%@", exception);
-    }
     
-    @try {
-        //返回时中心点标注为刚刚点中的那个
-        self.mapPage.pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue);
-        self.mapPage.pointAnnotation.title = self.model.name;
-        //self.mapPage.pointAnnotation.subtitle = self.model.desc;
+    //先将原来的标注和数组清空，就可以只存储搜索的结果了
+    [self.mapPage.mapView removeAnnotations:self.mapPage.pointArray];
+    [self.mapPage.pointArray removeAllObjects];
+    
+    //遍历每一次搜索的结果，而不是全部结果
+    for(SearchModel * s in _pointArray){
+        MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
+        point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
+        point.title = s.name;
         
-        point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(self.model.latitude.doubleValue, self.model.longitude.doubleValue));
+        point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.point1,point2);
         int dis = distance/1000;
+        point.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
         
-        self.mapPage.pointAnnotation.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
-        
-        //全部添加到Annotations中，方便再次搜索一次清空
-        [self.mapPage.pointArray addObject:self.mapPage.pointAnnotation];
-        [self.mapPage.mapView addAnnotations:self.mapPage.pointArray];
-        [self.mapPage.mapView selectAnnotation:self.mapPage.pointAnnotation animated:YES];
-        
-        [self.navigationController popToViewController:self.mapPage animated:YES];
-    } @catch (NSException *exception) {
-        NSLog(@"----------->>>>>>>22222%@", exception);
+        [self.mapPage.companyInfo setObject:s forKey:point.title];
+        [self.mapPage.pointArray addObject:point];
     }
     
-    
+
+    [self.mapPage.mapView addAnnotations:self.mapPage.pointArray];
+    [self.mapPage.mapView selectAnnotation:[self.mapPage.pointArray objectAtIndex:indexPath.row] animated:YES];
+    [self.navigationController popToViewController:self.mapPage animated:YES];
 
 }
 
@@ -207,6 +183,9 @@
     //用setArray，不然会重复添加标注
     [_pointArray setArray:data];
     
+    
+    
+    
     for(SearchModel * s in data){
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.point1,point2);
@@ -232,12 +211,8 @@
 }
 
 #pragma 拦截默认返回pop操作，重写返回的方法
-- (BOOL)navigationShouldPopOnBackButton{
-    self.mapPage =  [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.mapPage.pointArray = self.pointArray;
-    [self.navigationController popToViewController:self.mapPage animated:true];
-    
-    return YES;
-}
+//- (BOOL)navigationShouldPopOnBackButton{
+//    return YES;
+//}
 
 @end

@@ -63,25 +63,34 @@
 - (void)initData{
     
     self.name.text    = self.search.name;
-    self.manager.text = self.search.manager;
+    
     self.desc.text    = self.search.desc;
     [self.phone setTitle:self.search.phone forState:UIControlStateNormal];
-    
+    if(self.search.manager){
+        self.manager.text = self.search.manager;
+        
+        //放在这里是为了在显示设计顾问和技术顾问时候不出现认证图标
+        NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+        if([userGrade isEqualToString:@"2"]){
+            if([self.search.locationConfirm isEqualToString:@"1"]){
+                self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
+            }
+            
+            if([self.search.businessConfirm isEqualToString:@"1"]){
+                self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
+            }
+        }
+    }else{
+        self.managerTitle.text = @"";
+        self.manager.text = @"";
+        self.phoneTitle.text = @"联系方式：";
+    }
     
     
     self.location.text= self.search.location;
     self.location.numberOfLines = 0;   
     
-    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
-    if([userGrade isEqualToString:@"2"]){
-        if([self.search.locationConfirm isEqualToString:@"1"]){
-            self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
-        }
-        
-        if([self.search.businessConfirm isEqualToString:@"1"]){
-            self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
-        }
-    }
+    
     
     //初始化应用外导航的经纬度
     CLLocationCoordinate2D coor;
@@ -203,8 +212,8 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
-    NSLog(@"numberOfButtons == %ld",actionSheet.numberOfButtons);
-    NSLog(@"buttonIndex == %ld",buttonIndex);
+    NSLog(@"numberOfButtons == %ld",(long)actionSheet.numberOfButtons);
+    NSLog(@"buttonIndex == %ld",(long)buttonIndex);
     
     if (buttonIndex == 0) {
         

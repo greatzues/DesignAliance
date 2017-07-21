@@ -22,13 +22,13 @@
 
 ///用户位置
 @property(nonatomic, strong)   MAUserLocation       *userLocation;
+//@property   CLLocationCoordinate2D       *userLocation;
 
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
 @property(nonatomic, strong)   NSMutableDictionary  *companyInfo;
 
 @property(nonatomic, strong)   AMapLocationManager  *locationManager;
 
-- (void)butClick;
 - (void)locationClick;
 
 @end

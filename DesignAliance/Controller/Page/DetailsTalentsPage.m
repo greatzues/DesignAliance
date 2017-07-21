@@ -11,6 +11,7 @@
 #import "UIImage+extension.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <CRToast/CRToast.h>
 
 @implementation DetailsTalentsPage
 
@@ -27,15 +28,20 @@
 
 - (void)initPage{
     self.name.text = self.model.name;
-    self.sex.text = self.model.sex; //后面再转化时间戳
-    self.contact.text = self.model.phone;
-    self.desc.numberOfLines = 5;
-    self.desc.text = self.model.desc;
+    if([self.model.sex isEqualToString:@"m"]){
+        self.sex.text = @"男";
+    }else{
+        self.sex.text = @"女";
+    }
+    [self.contact setTitle:self.model.phone forState:UIControlStateNormal];
+    
     self.skill.text = self.model.skill;
+    self.desr.text = self.model.desc;
     self.education.text = self.model.education;
     
+    
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
-//    [self.avatar sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
+
     
     [self.avatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"LittlePictureHolder.png"] fillColor:[UIColor whiteColor]];
 }
@@ -83,5 +89,18 @@
 //                   }];
 //    }
 //}
+
+- (IBAction)contactUs:(id)sender {
+    
+    
+    self.ToastTitle = @"正在调用通话功能，稍等片刻...";
+    
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    UIWebView *callWebView = [[UIWebView alloc] init]; NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.model.phone]];
+                                    [callWebView loadRequest:[NSURLRequest requestWithURL:telURL]];
+                                    [self.view addSubview:callWebView];
+                                }];
+}
 
 @end

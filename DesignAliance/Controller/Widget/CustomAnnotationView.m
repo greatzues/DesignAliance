@@ -37,7 +37,8 @@
         //给calloutView赋值
         self.calloutView.title = self.annotation.title;
         self.calloutView.address = self.annotation.subtitle;
-        [self.calloutView.button addTarget:page action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.calloutView.button addTarget:page action:@selector(butClick:) forControlEvents:UIControlEventTouchUpInside];
+
         [self addSubview:self.calloutView];
         
     } else {

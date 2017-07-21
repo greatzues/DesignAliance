@@ -123,7 +123,8 @@
         [_delegate opFail:[dict objectForKey:NetMessage]];
     }@catch (NSException *exception) {
         NSLog(@"%s\n%@", __FUNCTION__, exception);
-        [_delegate opFail:[NSString stringWithFormat:@"数据解析错误：%@", exception]];
+        //[_delegate opFail:[NSString stringWithFormat:@"数据解析错误：%@", exception]];
+        [_delegate opFail:[dict objectForKey:@"服务连接异常，请重试！"]];
     }
 }
 

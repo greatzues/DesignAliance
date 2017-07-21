@@ -14,10 +14,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (weak, nonatomic) IBOutlet UILabel     *name;
 @property (weak, nonatomic) IBOutlet UILabel     *sex;
-@property (weak, nonatomic) IBOutlet UILabel     *contact;
+@property (weak, nonatomic) IBOutlet UIButton     *contact;
 @property (weak, nonatomic) IBOutlet UILabel     *education;
-@property (weak, nonatomic) IBOutlet UILabel     *skill;
-@property (weak, nonatomic) IBOutlet UILabel      *desc;
+@property (weak, nonatomic) IBOutlet UITextView  *skill;
+@property (weak, nonatomic) IBOutlet UITextView  *desr;
+
 
 @property (nonatomic, strong) TalentsModel       *model;
 

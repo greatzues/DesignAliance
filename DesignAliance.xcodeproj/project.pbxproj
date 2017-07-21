@@ -135,8 +135,10 @@
 		823EE70D1EB37694001B98B4 /* NewsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE7071EB37694001B98B4 /* NewsPage.m */; };
 		823EE7101EB37710001B98B4 /* DABaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE70F1EB37710001B98B4 /* DABaseCell.m */; };
 		823EE7131EB37724001B98B4 /* DABaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EE7121EB37724001B98B4 /* DABaseWidget.m */; };
+		8240D8CC1F21CA27009B582F /* bigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8240D8C91F21CA27009B582F /* bigger@2x.png */; };
+		8240D8CD1F21CA27009B582F /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8240D8CA1F21CA27009B582F /* location@2x.png */; };
+		8240D8CE1F21CA27009B582F /* smaller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8240D8CB1F21CA27009B582F /* smaller@2x.png */; };
 		8250B4371EAE216F000F037A /* DAFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250B4361EAE216F000F037A /* DAFileUtility.m */; };
-		82510D081EFB52D8003CF6E5 /* location@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82510D061EFB52D8003CF6E5 /* location@2x.jpg */; };
 		82510D091EFB52D8003CF6E5 /* mapMark@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82510D071EFB52D8003CF6E5 /* mapMark@2x.jpg */; };
 		82510D161EFD0CA9003CF6E5 /* AboutPageBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82510D101EFD0CA9003CF6E5 /* AboutPageBackground@2x.png */; };
 		82510D171EFD0CA9003CF6E5 /* AboutUsTextViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82510D111EFD0CA9003CF6E5 /* AboutUsTextViewBackground@2x.png */; };
@@ -458,9 +460,11 @@
 		823EE70F1EB37710001B98B4 /* DABaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseCell.m; sourceTree = "<group>"; };
 		823EE7111EB37724001B98B4 /* DABaseWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseWidget.h; sourceTree = "<group>"; };
 		823EE7121EB37724001B98B4 /* DABaseWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseWidget.m; sourceTree = "<group>"; };
+		8240D8C91F21CA27009B582F /* bigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bigger@2x.png"; sourceTree = "<group>"; };
+		8240D8CA1F21CA27009B582F /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		8240D8CB1F21CA27009B582F /* smaller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smaller@2x.png"; sourceTree = "<group>"; };
 		8250B4351EAE216F000F037A /* DAFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAFileUtility.h; sourceTree = "<group>"; };
 		8250B4361EAE216F000F037A /* DAFileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAFileUtility.m; sourceTree = "<group>"; };
-		82510D061EFB52D8003CF6E5 /* location@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "location@2x.jpg"; sourceTree = "<group>"; };
 		82510D071EFB52D8003CF6E5 /* mapMark@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mapMark@2x.jpg"; sourceTree = "<group>"; };
 		82510D101EFD0CA9003CF6E5 /* AboutPageBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutPageBackground@2x.png"; sourceTree = "<group>"; };
 		82510D111EFD0CA9003CF6E5 /* AboutUsTextViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutUsTextViewBackground@2x.png"; sourceTree = "<group>"; };
@@ -1262,7 +1266,9 @@
 		82AD198B1EB71C21007C36FE /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				82510D061EFB52D8003CF6E5 /* location@2x.jpg */,
+				8240D8C91F21CA27009B582F /* bigger@2x.png */,
+				8240D8CA1F21CA27009B582F /* location@2x.png */,
+				8240D8CB1F21CA27009B582F /* smaller@2x.png */,
 				82510D071EFB52D8003CF6E5 /* mapMark@2x.jpg */,
 				82E88D8E1EDFC6B000AF0137 /* toHere@2x.png */,
 				820C9CCB1EC4179500CA4951 /* mapNormal@2x.png */,
@@ -1478,6 +1484,7 @@
 				18C2E2EB1ED40FB700F75167 /* RegisterPage.xib in Resources */,
 				82510D301EFE61F4003CF6E5 /* DiLiRenZheng_heightlight@2x.png in Resources */,
 				189A1A401EDD5E6E0083484B /* UserTopBackground@2x.png in Resources */,
+				8240D8CE1F21CA27009B582F /* smaller@2x.png in Resources */,
 				82AD197E1EB6D662007C36FE /* vip@2x.png in Resources */,
 				82559C421EDE97CF008B149F /* codeButton@2x.png in Resources */,
 				820CA81F1EB1CF99006832B5 /* NavigationBell@2x.png in Resources */,
@@ -1499,7 +1506,6 @@
 				82E88D851EDFBE5900AF0137 /* about@3x.png in Resources */,
 				820CA81B1EB1CF99006832B5 /* NavigationBack@2x.png in Resources */,
 				82E88DAE1EE2BB0100AF0137 /* talentPhone@2x.png in Resources */,
-				82510D081EFB52D8003CF6E5 /* location@2x.jpg in Resources */,
 				820CA81D1EB1CF99006832B5 /* NavigationBar44@2x.png in Resources */,
 				820CA8021EB1CF90006832B5 /* MyIcon@2x.png in Resources */,
 				82510D1A1EFD0CA9003CF6E5 /* UpdatePageBackground@2x.png in Resources */,
@@ -1531,6 +1537,7 @@
 				82E88DB11EE3FA2B00AF0137 /* ForgetPasswordPage.xib in Resources */,
 				82E88D961EE0410D00AF0137 /* talentCardLeft@2x.png in Resources */,
 				82510D091EFB52D8003CF6E5 /* mapMark@2x.jpg in Resources */,
+				8240D8CD1F21CA27009B582F /* location@2x.png in Resources */,
 				823EE6ED1EB33BAB001B98B4 /* TabBarPages.plist in Resources */,
 				82559C4C1EDEE3EF008B149F /* background@3x.png in Resources */,
 				82E88DAD1EE2BB0100AF0137 /* talentName@2x.png in Resources */,
@@ -1552,6 +1559,7 @@
 				820CA8031EB1CF90006832B5 /* MyIconSelect@2x.png in Resources */,
 				82510D271EFD2983003CF6E5 /* VIPRight@2x.jpg in Resources */,
 				82AD19781EB6D662007C36FE /* contactUs@2x.png in Resources */,
+				8240D8CC1F21CA27009B582F /* bigger@2x.png in Resources */,
 				82559C521EDF0CBE008B149F /* logo@3x.png in Resources */,
 				82E88D881EDFBE5900AF0137 /* modifyPassword@3x.png in Resources */,
 				82A31F121EF01AA6007C17B2 /* InfoPlist.strings in Resources */,

@@ -144,10 +144,9 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指导单位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNF-Lv-ve8">
-                                    <rect key="frame" x="155.5" y="446" width="64" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合作、指导单位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNF-Lv-ve8">
+                                    <rect key="frame" x="134" y="446" width="107.5" height="21"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="64" id="ChV-76-qSg"/>
                                         <constraint firstAttribute="height" constant="21" id="rFa-lU-eVE"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>

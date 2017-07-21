@@ -19,6 +19,7 @@
 @interface MapPage() <MAMapViewDelegate, UIActionSheetDelegate, AMapLocationManagerDelegate>
 {
 DetailsCompanyPage *detailsCompanyPage;
+int zoomLevel;
 }
 @end
 
@@ -79,7 +80,8 @@ DetailsCompanyPage *detailsCompanyPage;
     
     [self.view addSubview:_mapView];
     
-    [_mapView setZoomLevel:14];
+    zoomLevel = 14;
+    [_mapView setZoomLevel:zoomLevel];
     
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
@@ -93,13 +95,31 @@ DetailsCompanyPage *detailsCompanyPage;
     
     //添加定位按钮，后期更换文字为图片
     UIButton *locationBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    locationBtn.frame = CGRectMake(10, 10, 40, 40);//位置显示在顶部左边
+    locationBtn.frame = CGRectMake(10, 10, 30, 30);//位置显示在顶部左边
     [locationBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
-    [locationBtn setImage:[UIImage imageNamed:@"location.jpg"] forState:UIControlStateNormal];
+    [locationBtn setImage:[UIImage imageNamed:@"location.png"] forState:UIControlStateNormal];
     [locationBtn setTintColor:[UIColor whiteColor]];
     [locationBtn addTarget:self action:@selector(locationClick) forControlEvents:UIControlEventTouchUpInside];
     
     [_mapView addSubview:locationBtn];
+    
+    UIButton *biggerBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    biggerBtn.frame = CGRectMake(ScreenWidth-35, ScreenHeight*0.65, 30, 30);//位置显示在顶部左边
+    [biggerBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
+    [biggerBtn setImage:[UIImage imageNamed:@"bigger.png"] forState:UIControlStateNormal];
+    [biggerBtn setTintColor:[UIColor whiteColor]];
+    [biggerBtn addTarget:self action:@selector(bigger) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_mapView addSubview:biggerBtn];
+    
+    UIButton *smallerBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    smallerBtn.frame = CGRectMake(ScreenWidth-35, ScreenHeight*0.65+31, 30, 30);//位置显示在顶部左边
+    [smallerBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
+    [smallerBtn setImage:[UIImage imageNamed:@"smaller.png"] forState:UIControlStateNormal];
+    [smallerBtn setTintColor:[UIColor whiteColor]];
+    [smallerBtn addTarget:self action:@selector(smaller) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_mapView addSubview:smallerBtn];
     
     //开启定位
     [self locationClick];
@@ -129,7 +149,7 @@ DetailsCompanyPage *detailsCompanyPage;
         
         //显示当前经纬度
         if([annotationView.annotation.title isEqualToString:@"当前位置"]){
-            annotationView.annotation.title = [NSString stringWithFormat:@"当前位置%f，%f",self.userLocation.coordinate.latitude,self.userLocation.coordinate.longitude];
+            annotationView.annotation.title = [NSString stringWithFormat:@"我:经度%f,纬度%f",self.userLocation.coordinate.longitude,self.userLocation.coordinate.latitude];
             return nil;
         }
         annotationView.image = [UIImage imageNamed:@"mapMark.jpg"];
@@ -143,13 +163,21 @@ DetailsCompanyPage *detailsCompanyPage;
 
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
     mapView.centerCoordinate = CLLocationCoordinate2DMake(view.annotation.coordinate.latitude,view.annotation.coordinate.longitude);
-    [_mapView setZoomLevel:17.5 animated:YES];
+    zoomLevel = 17.5;
+    [_mapView setZoomLevel:zoomLevel animated:YES];
     self.search = [_companyInfo objectForKey:view.annotation.title];
     BASE_INFO_FUN(view.annotation.title);
 }
 
-#pragma 标注气泡点击事件
-- (void)butClick{
+#pragma 标注气泡点击事件,在连续重复点击UIButton的时候，自动取消之前的操作，延时0.5s后执行实际的btnClickedOperations操作
+- (void)butClick:(UIButton *)sender{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(btnClickedOperations) object:nil];
+    
+    [self performSelector:@selector(btnClickedOperations) withObject:nil afterDelay:0.5];
+    
+}
+
+- (void)btnClickedOperations{
     detailsCompanyPage = [[DetailsCompanyPage alloc] init];
     detailsCompanyPage.search = self.search;
     [self initToDetails:detailsCompanyPage];
@@ -179,12 +207,14 @@ updatingLocation:(BOOL)updatingLocation
     {
         //取出当前位置的坐标
         self.point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude));
-        self.userLocation = userLocation;
-        
     }
 }
 
-//这两个代理没效果
+- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location{
+    self.userLocation = location;
+}
+
+#pragma 开启和关闭实时定位
 -(void)viewDidDisappear:(BOOL)animated{
     [self.locationManager stopUpdatingLocation];
 }
@@ -193,5 +223,20 @@ updatingLocation:(BOOL)updatingLocation
     [self.locationManager startUpdatingLocation];
 }
 
+
+#pragma 放大或者缩小
+- (void)bigger{
+    if(zoomLevel<=19){
+        zoomLevel++;
+        [self.mapView setZoomLevel:zoomLevel];
+    }
+}
+
+- (void)smaller{
+    if(zoomLevel>=3){
+        zoomLevel--;
+        [self.mapView setZoomLevel:zoomLevel];
+    }
+}
 
 @end

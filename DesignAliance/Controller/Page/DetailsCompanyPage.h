@@ -17,7 +17,9 @@
 @property (strong, nonatomic) IBOutlet UIView   *mapView;
 @property (weak, nonatomic) IBOutlet UILabel    *name;
 @property (weak, nonatomic) IBOutlet UILabel    *manager;
+@property (weak, nonatomic) IBOutlet UILabel    *managerTitle;
 @property (weak, nonatomic) IBOutlet UIButton    *phone;
+@property (weak, nonatomic) IBOutlet UILabel    *phoneTitle;
 @property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UILabel    *location;
 @property (weak, nonatomic) IBOutlet UIImageView    *businessConfirm;

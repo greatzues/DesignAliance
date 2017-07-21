@@ -6,16 +6,6 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-
-//#ifdef DEBUG
-//#define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
-//#define LRLog(...) printf("%s: %s 第%d行: %s\n\n",[[NSString lr_stringDate] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
-//
-//#else
-//#define LRLog(...)
-//#endif
-
-
 #if (DEBUG || TESTCASE)
 #define FxLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #else
@@ -85,7 +75,7 @@
 #define DADBFile            @"DesignAliance.db"
 
 //资讯页面
-#define TitleArray          @[@"设计资讯", @"设计任务", @"设计人才"]
+#define TitleArray          @[@"设计资讯", @"项目发布", @"设计/技术人才"]
 #define ViewArray           @[@"DADesignNewsWidget", @"DADesignMissionWidget", @"DADesignTalentsWidget"]
 
 //用户页面

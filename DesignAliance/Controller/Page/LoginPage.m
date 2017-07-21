@@ -52,11 +52,12 @@
 - (void)opSuccess:(UserModel *)data{
     [super opSuccess:data];
     
-    self.ToastTitle = @"登录成功";
-    [CRToastManager showNotificationWithOptions:self.setToast
-                                completionBlock:^{
-                                    [[AppDelegate appDeg] showHomePage];
-                                }];
+    [[AppDelegate appDeg] showHomePage];
+//    self.ToastTitle = @"登录成功";
+//    [CRToastManager showNotificationWithOptions:self.setToast
+//                                completionBlock:^{
+//                                    [[AppDelegate appDeg] showHomePage];
+//                                }];
 }
 
 - (void)opFail:(NSString *)errorMessage{
