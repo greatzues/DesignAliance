@@ -40,7 +40,7 @@ int zoomLevel;
 
 - (void)initData{
     
-    NSString *body = [NSString stringWithFormat:@"pageSize=%d",10];
+    NSString *body = [NSString stringWithFormat:@"pageSize=%d",30];
     NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
                              @"body":body};
     
@@ -95,7 +95,7 @@ int zoomLevel;
     
     //添加定位按钮，后期更换文字为图片
     UIButton *locationBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    locationBtn.frame = CGRectMake(10, 10, 30, 30);//位置显示在顶部左边
+    locationBtn.frame = CGRectMake(10, 10, 40, 40);//位置显示在顶部左边
     [locationBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
     [locationBtn setImage:[UIImage imageNamed:@"location.png"] forState:UIControlStateNormal];
     [locationBtn setTintColor:[UIColor whiteColor]];
@@ -104,7 +104,7 @@ int zoomLevel;
     [_mapView addSubview:locationBtn];
     
     UIButton *biggerBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    biggerBtn.frame = CGRectMake(ScreenWidth-35, ScreenHeight*0.65, 30, 30);//位置显示在顶部左边
+    biggerBtn.frame = CGRectMake(ScreenWidth-45, ScreenHeight*0.65, 40, 40);//位置显示在顶部左边
     [biggerBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
     [biggerBtn setImage:[UIImage imageNamed:@"bigger.png"] forState:UIControlStateNormal];
     [biggerBtn setTintColor:[UIColor whiteColor]];
@@ -113,7 +113,7 @@ int zoomLevel;
     [_mapView addSubview:biggerBtn];
     
     UIButton *smallerBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    smallerBtn.frame = CGRectMake(ScreenWidth-35, ScreenHeight*0.65+31, 30, 30);//位置显示在顶部左边
+    smallerBtn.frame = CGRectMake(ScreenWidth-45, ScreenHeight*0.65+41, 40, 40);//位置显示在顶部左边
     [smallerBtn setBackgroundColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
     [smallerBtn setImage:[UIImage imageNamed:@"smaller.png"] forState:UIControlStateNormal];
     [smallerBtn setTintColor:[UIColor whiteColor]];

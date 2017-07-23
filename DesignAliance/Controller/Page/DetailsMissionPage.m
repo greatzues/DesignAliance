@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getCount];
-    [self setTitle:@"设计任务"];
+    [self setTitle:self.model.name];
     //[self setNavigationRight:@"share.png"];
 }
 

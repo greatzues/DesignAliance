@@ -74,10 +74,14 @@
         if([userGrade isEqualToString:@"2"]){
             if([self.search.locationConfirm isEqualToString:@"1"]){
                 self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng_heightlight.png"];
+            }else{
+                self.locationConfirm.image = [UIImage imageNamed:@"DiLiRenZheng.png"];
             }
             
             if([self.search.businessConfirm isEqualToString:@"1"]){
                 self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng_heightlight.png"];
+            }else{
+                self.businessConfirm.image = [UIImage imageNamed:@"GongShangRenZheng.png"];
             }
         }
     }else{

@@ -42,10 +42,10 @@
                                     <rect key="frame" x="5" y="7" width="365" height="225"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ux-YX-WpU">
-                                            <rect key="frame" x="0.0" y="10" width="365" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="151"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="141" id="bAY-EV-cQS"/>
+                                                <constraint firstAttribute="height" constant="151" id="bAY-EV-cQS"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去这里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw7-lo-jeb">
@@ -115,7 +115,7 @@
                                         <constraint firstAttribute="height" constant="225" id="uq4-q8-tqu"/>
                                         <constraint firstItem="nQo-pd-c8u" firstAttribute="leading" secondItem="XsZ-R1-bGr" secondAttribute="leading" constant="21" id="xBp-nq-vSy"/>
                                         <constraint firstItem="9ux-YX-WpU" firstAttribute="leading" secondItem="XsZ-R1-bGr" secondAttribute="leading" id="xVR-MM-Fd3"/>
-                                        <constraint firstItem="9ux-YX-WpU" firstAttribute="top" secondItem="XsZ-R1-bGr" secondAttribute="top" constant="10" id="yO8-kR-JLe"/>
+                                        <constraint firstItem="9ux-YX-WpU" firstAttribute="top" secondItem="XsZ-R1-bGr" secondAttribute="top" id="yO8-kR-JLe"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9L-fG-3MP">
