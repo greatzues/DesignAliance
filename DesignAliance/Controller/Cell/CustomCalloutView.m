@@ -26,7 +26,6 @@
         self.backgroundColor = [UIColor clearColor];
         
         //初始化标题Label,如果添加缩略图，则用注释的代码代替下一行的代码
-        //self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5+70+5, 5, 120-8, 20)];
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 175, 20)];
         self.titleLabel.font = [UIFont systemFontOfSize:14];
         self.titleLabel.textColor =  [UIColor whiteColor];
@@ -34,7 +33,6 @@
         [self addSubview:self.titleLabel];
         
         //初始化地址Label，如果添加缩略图，则用注释的代码代替下一行的代码
-        //self.addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(5+70+5, 20, 120-8, 20*2)];
         self.addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 20, 190-8, 20*2)];
         self.addressLabel.font = [UIFont systemFontOfSize:12];
         self.addressLabel.numberOfLines = 0;

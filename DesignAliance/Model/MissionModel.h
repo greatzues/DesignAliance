@@ -6,26 +6,6 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-
-/*
- {
- "code": 20000,
- "message": "查询成功",
- "data": 1,
- "dataList": [
- {"id":1,
- "title":"App UI设计",
- "details":"设计一个app的界面。包括每个页面的布局和各个图标。",
- "count":25,
- "time":1493899749000,
- "cover":"4e0717729e499105430010e7.jpg",
- "issuer":"Clanner",
- "contact":"13692190638"
- }
- ]
- }
- */
-
 #import "DABaseModel.h"
 
 @interface MissionModel : DABaseModel

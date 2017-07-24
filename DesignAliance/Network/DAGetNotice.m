@@ -11,7 +11,7 @@
 @implementation DAGetNotice
 
 - (void)parseSuccess:(NSDictionary *)dict jsonString:(NSString *)jsonString{
-    NSDictionary *dictData = [dict objectForKey:NetData]; //直接拿到“data”的数组，回调给opSuccess方法
+    NSDictionary *dictData = [dict objectForKey:NetData];
     
     [_delegate opSuccess:dictData];
 }

@@ -65,8 +65,7 @@
         [request setTimeoutInterval:[self timeoutInteval]];
         
     } @catch (NSException *exception) {
-        NSLog(@"%s\n%@", __FUNCTION__, exception);
-        [_delegate opFail:[NSString stringWithFormat:@"数据请求错误：%@", exception]];
+        [_delegate opFail:@"服务连接异常(>_<)，请重试！"];
     }
     
     return request;
@@ -122,8 +121,6 @@
     
         [_delegate opFail:[dict objectForKey:NetMessage]];
     }@catch (NSException *exception) {
-        NSLog(@"%s\n%@", __FUNCTION__, exception);
-        //[_delegate opFail:[NSString stringWithFormat:@"数据解析错误：%@", exception]];
         [_delegate opFail:[dict objectForKey:@"服务连接异常(>_<)，请重试！"]];
     }
 }
@@ -146,8 +143,7 @@
         
         BASE_INFO_FUN(statusCode);
     } @catch (NSException *exception) {
-        NSLog(@"%s\n%@", __FUNCTION__, exception);
-        [_delegate opFail:[NSString stringWithFormat:@"数据连接错误：%@", exception]];
+        [_delegate opFail:@"服务连接异常(>_<)，请重试！"];
     }
 }
 
@@ -158,8 +154,7 @@
         [_receiveDate appendData:data];
         [self parseProgress:_receiveDate.length];
     } @catch (NSException *exception) {
-        NSLog(@"%s\n%@", __FUNCTION__, exception);
-        [_delegate opFail:[NSString stringWithFormat:@"数据接收错误：%@", exception]];
+        [_delegate opFail:@"服务连接异常(>_<)，请重试！"];
     }
     
 }
@@ -180,8 +175,7 @@
         @try {
             [self parseFail:errorMessage];
         } @catch (NSException *exception) {
-            NSLog(@"%s\n%@", __FUNCTION__, exception);
-            [_delegate opFail:[NSString stringWithFormat:@"数据加载错误：%@", exception]];
+            [_delegate opFail:@"网络连接异常(>_<)，请重试！"];
         }
         
     }
@@ -197,8 +191,7 @@
     @try {
         [self parseFail:[error localizedDescription]];
     } @catch (NSException *exception) {
-        NSLog(@"%s\n%@", __FUNCTION__, exception);
-        [_delegate opFail:[NSString stringWithFormat:@"处理异常错误错误：%@", exception]];
+        [_delegate opFail:@"服务连接异常(>_<)，请重试！"];
     }
     
     _connection = nil;

@@ -19,7 +19,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:userGrade forKey:@"userGrade"];
     
-    [_delegate opSuccess:info]; //告诉代理登录成功
+    [_delegate opSuccess:info];
 }
 
 @end

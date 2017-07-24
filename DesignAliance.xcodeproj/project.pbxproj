@@ -87,7 +87,6 @@
 		8212A8A41EBC487700CBD43F /* userDefaultAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8A31EBC487700CBD43F /* userDefaultAvatar@2x.png */; };
 		8212A8A71EBC4AEE00CBD43F /* MyDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */; };
 		8212A8A91EBC4FD400CBD43F /* MyDetailsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */; };
-		8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */; };
 		8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */; };
 		8212A8C51EBEF71B00CBD43F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */; };
 		8212A8C71EBEF72400CBD43F /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8212A8C61EBEF72400CBD43F /* JavaScriptCore.framework */; };
@@ -107,9 +106,7 @@
 		821732421EB4D446006B3387 /* DesignNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821732411EB4D446006B3387 /* DesignNewsCell.xib */; };
 		821732451EB4FBD7006B3387 /* DATableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 821732441EB4FBD7006B3387 /* DATableWidget.m */; };
 		821732471EB58209006B3387 /* DADesignNewsWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821732461EB58209006B3387 /* DADesignNewsWidget.xib */; };
-		8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821732491EB5859F006B3387 /* NewsMoreCell.m */; };
 		8217324C1EB585F4006B3387 /* NewsMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8217324B1EB585F4006B3387 /* NewsMoreCell.xib */; };
-		821732541EB58B1F006B3387 /* DADownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 821732511EB58B1F006B3387 /* DADownload.m */; };
 		821732551EB58B1F006B3387 /* DAGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 821732531EB58B1F006B3387 /* DAGlobal.m */; };
 		821946CD1EB23D6200EB68F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821946CC1EB23D6200EB68F3 /* Main.storyboard */; };
 		821F2DEE1EAC4BF70098081F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821F2DED1EAC4BF70098081F /* main.m */; };
@@ -366,8 +363,6 @@
 		8212A8A51EBC4AEE00CBD43F /* MyDetailsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailsPage.h; sourceTree = "<group>"; };
 		8212A8A61EBC4AEE00CBD43F /* MyDetailsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailsPage.m; sourceTree = "<group>"; };
 		8212A8A81EBC4FD400CBD43F /* MyDetailsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDetailsPage.xib; sourceTree = "<group>"; };
-		8212A8AA1EBC62A700CBD43F /* DAUploadAvatarWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAUploadAvatarWidget.h; sourceTree = "<group>"; };
-		8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatarWidget.m; sourceTree = "<group>"; };
 		8212A8AD1EBC6A4600CBD43F /* DAUploadAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAUploadAvatar.h; sourceTree = "<group>"; };
 		8212A8AE1EBC6A4600CBD43F /* DAUploadAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAUploadAvatar.m; sourceTree = "<group>"; };
 		8212A8C41EBEF71B00CBD43F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -401,11 +396,7 @@
 		821732431EB4FBD7006B3387 /* DATableWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATableWidget.h; sourceTree = "<group>"; };
 		821732441EB4FBD7006B3387 /* DATableWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATableWidget.m; sourceTree = "<group>"; };
 		821732461EB58209006B3387 /* DADesignNewsWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DADesignNewsWidget.xib; sourceTree = "<group>"; };
-		821732481EB5859F006B3387 /* NewsMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMoreCell.h; sourceTree = "<group>"; };
-		821732491EB5859F006B3387 /* NewsMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMoreCell.m; sourceTree = "<group>"; };
 		8217324B1EB585F4006B3387 /* NewsMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsMoreCell.xib; sourceTree = "<group>"; };
-		821732501EB58B1F006B3387 /* DADownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADownload.h; sourceTree = "<group>"; };
-		821732511EB58B1F006B3387 /* DADownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADownload.m; sourceTree = "<group>"; };
 		821732521EB58B1F006B3387 /* DAGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGlobal.h; sourceTree = "<group>"; };
 		821732531EB58B1F006B3387 /* DAGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAGlobal.m; sourceTree = "<group>"; };
 		821946CC1EB23D6200EB68F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -930,8 +921,6 @@
 		821F2E201EAC4DAB0098081F /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				821732501EB58B1F006B3387 /* DADownload.h */,
-				821732511EB58B1F006B3387 /* DADownload.m */,
 				821732521EB58B1F006B3387 /* DAGlobal.h */,
 				821732531EB58B1F006B3387 /* DAGlobal.m */,
 			);
@@ -1073,8 +1062,6 @@
 				821732301EB446F7006B3387 /* DADesignTalentsWidget.m */,
 				821732431EB4FBD7006B3387 /* DATableWidget.h */,
 				821732441EB4FBD7006B3387 /* DATableWidget.m */,
-				8212A8AA1EBC62A700CBD43F /* DAUploadAvatarWidget.h */,
-				8212A8AB1EBC62A700CBD43F /* DAUploadAvatarWidget.m */,
 				820C9CC71EC412A800CA4951 /* CustomAnnotationView.h */,
 				820C9CC81EC412A800CA4951 /* CustomAnnotationView.m */,
 			);
@@ -1090,8 +1077,6 @@
 				821732391EB466AB006B3387 /* DesignNewsCell.m */,
 				187C45E61ED043C5006B2EF9 /* DesignMissionCell.h */,
 				187C45E71ED043C5006B2EF9 /* DesignMissionCell.m */,
-				821732481EB5859F006B3387 /* NewsMoreCell.h */,
-				821732491EB5859F006B3387 /* NewsMoreCell.m */,
 				820C9CC41EC4110800CA4951 /* CustomCalloutView.h */,
 				820C9CC51EC4110800CA4951 /* CustomCalloutView.m */,
 				18397B931ED1997B00334AB3 /* DesignTalentsCell.h */,
@@ -1640,7 +1625,6 @@
 				18397BA51ED1A1CD00334AB3 /* DABaseSearchPage.m in Sources */,
 				82AD19871EB6FC64007C36FE /* DASearchInfo.m in Sources */,
 				18C2E2981ED2B8D400F75167 /* DetailsTalentsPage.m in Sources */,
-				8217324A1EB5859F006B3387 /* NewsMoreCell.m in Sources */,
 				18397BAB1ED1C55500334AB3 /* SearchMissionPage.m in Sources */,
 				821732371EB446F7006B3387 /* DADesignMissionWidget.m in Sources */,
 				82510D5D1EFF5226003CF6E5 /* UITabBarItem+WZLBadge.m in Sources */,
@@ -1715,7 +1699,6 @@
 				820CA7771EB03418006832B5 /* UserModel.m in Sources */,
 				8212A8E11EBF062000CBD43F /* NSString+TextDirectionality.m in Sources */,
 				8212A8AF1EBC6A4600CBD43F /* DAUploadAvatar.m in Sources */,
-				8212A8AC1EBC62A700CBD43F /* DAUploadAvatarWidget.m in Sources */,
 				823EE70C1EB37694001B98B4 /* MyPage.m in Sources */,
 				821732361EB446F7006B3387 /* DADesignTalentsWidget.m in Sources */,
 				822FD3AF1EC173D400E6840E /* UIButton+countDown.m in Sources */,
@@ -1728,7 +1711,6 @@
 				187C45DB1ED02206006B2EF9 /* FxJsonParser.m in Sources */,
 				8220E6971EF2B24F00D6BF57 /* UIViewController+BackButtonHandler.m in Sources */,
 				18397B9B1ED19B0200334AB3 /* DATalents.m in Sources */,
-				821732541EB58B1F006B3387 /* DADownload.m in Sources */,
 				8217322E1EB44560006B3387 /* DAColumnViewController.m in Sources */,
 				821732551EB58B1F006B3387 /* DAGlobal.m in Sources */,
 				187C45DD1ED02206006B2EF9 /* FxJsonWriter.m in Sources */,
@@ -1878,6 +1860,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G728JX76Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1886,12 +1869,14 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1902,6 +1887,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G728JX76Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1910,12 +1896,14 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -2018,6 +2006,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G728JX76Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2027,12 +2016,14 @@
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = AppStore;
 		};
@@ -2110,6 +2101,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G728JX76Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2119,12 +2111,13 @@
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Enterprise;
 		};
@@ -2202,6 +2195,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G728JX76Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2210,12 +2204,13 @@
 				);
 				GCC_PREFIX_HEADER = "DesignAliance/DesignAliance-Prefix.pch";
 				INFOPLIST_FILE = DesignAliance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = snowwolf.DesignAliance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = AdHoc;
 		};

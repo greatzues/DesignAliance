@@ -29,7 +29,6 @@
     NSString *oldPAssword = self.oldPassword.text;
     NSString *newPassword = self.nPassword.text;
     NSString *comfirmPassword = self.comfirmPassword.text;
-    NSString *comfirmCode = self.comfirmCode.text;
     
     if(![newPassword isEqualToString:comfirmPassword]){
         return ;

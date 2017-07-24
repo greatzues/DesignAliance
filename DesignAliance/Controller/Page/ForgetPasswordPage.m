@@ -52,10 +52,9 @@
     //请求验证码
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andTemplate:VericationTemplate resultBlock:^(int msgId, NSError *error) {
         if (error) {
-            NSLog(@"------------》》》》%@",error);
+            //NSLog(@"%@",error);
         } else {
-            //获得smsID
-            NSLog(@"sms ID：%d",msgId);
+            //NSLog(@"sms ID：%d",msgId);
             
             [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
                 if (dic) {
@@ -64,7 +63,7 @@
                         NSLog(@"%@",[dic objectForKey:@"sms_state"]);
                     }
                 } else {
-                    NSLog(@"%@",error);
+                    //NSLog(@"%@",error);
                 }
             }];
         }
@@ -80,9 +79,8 @@
     
     [BmobSMS verifySMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andSMSCode:VerificationCode.text resultBlock:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {
-            NSLog(@"%@",@"验证成功，可执行用户请求的操作");
+            //NSLog(@"%@",@"验证成功，可执行用户请求的操作");
         } else {
-            NSLog(@"%@",error);
             [self alertView:@"短信验证失败，请重新输入验证码"];
             return ;
         }

@@ -15,7 +15,7 @@
     NSDictionary *dictData = [dict objectForKey:NetData];
     UserModel *info = [UserModel infoFromDict:dictData];
     
-    [_delegate opSuccess:info]; //告诉代理登录成功
+    [_delegate opSuccess:info];
 }
 
 @end

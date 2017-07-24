@@ -9,7 +9,6 @@
 #import "MyPage.h"
 #import "DAGetUserInfo.h"
 #import "UserModel.h"
-#import "DAUploadAvatarWidget.h"
 #import "UserInfoPage.h"
 #import "DAGetAboutInfo.h"
 #import "AboutInfoModel.h"
@@ -104,6 +103,7 @@
         }
         
         if(![self.model.skill isEqual:[NSNull null]]){
+            UserSkill.numberOfLines = 0;
             [UserSkill setText:self.model.skill];
         }
         NSString *imageURL = [NSString stringWithFormat:ImageAvatar,self.model.avatar];
@@ -247,10 +247,10 @@
     if (imageArray) {
         
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        [shareParams SSDKSetupShareParamsByText:@"Share SDK http://www.mob.com/"
+        [shareParams SSDKSetupShareParamsByText:@"设计资源就在身边"
                                          images:imageArray
                                             url:[NSURL URLWithString:@"http://zuesblog.xyz/"]
-                                          title:@"分享标题"
+                                          title:@"设计联盟"
                                            type:SSDKContentTypeAuto];
         
         [ShareSDK showShareActionSheet:nil

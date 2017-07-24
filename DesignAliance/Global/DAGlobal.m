@@ -24,8 +24,7 @@
 - (id)init{
     self = [super init];
     if (self) {
-        //在这里做出初始化的操作,下面用小木推送来做示范
-//        self.push = [[MiPush alloc] init];
+
     }
     
     return self;

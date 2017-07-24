@@ -23,7 +23,6 @@
 @property (nonatomic, strong) UserModel      *model;
 
 @property (nonatomic, assign)BOOL               getAboutInfo;
-//@property (nonatomic, strong)NSMutableArray     *AboutInfoData;
 @property (nonatomic, strong)AboutInfoModel     *AboutInfoModel;
 
 - (void)initData;

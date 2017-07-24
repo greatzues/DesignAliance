@@ -30,7 +30,6 @@
     _skillLabel.text = info.skill;
     
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,info.avatar];
-//    [_imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"NewsDefault.png"] options:SDWebImageRetryFailed];
     
     [_imageView was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"LittlePictureHolder.png"] fillColor:[UIColor whiteColor]];
     

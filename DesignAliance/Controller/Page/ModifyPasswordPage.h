@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *nPassword;
 @property (weak, nonatomic) IBOutlet UITextField *comfirmPassword;
 
-@property (weak, nonatomic) IBOutlet UITextField *comfirmCode;
 @property (weak, nonatomic) IBOutlet UIButton *ModifyPasswordButton;
 
 @end

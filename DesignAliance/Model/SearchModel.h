@@ -6,28 +6,6 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-/*
- {
- "code": 20000,
- "message": "查询成功",
- "data": null,
- "dataList": [
-    {"id":34,
-    "name":"创智工业研发有限公司",
-    "location":"广东省江门市",
-    "manager":"伍生",
-    "phone":"18688553318",
-    "description":"机电一体化设计 工业产品设计 3D打印",
-    "latitude":"22.572781",
-    "longitude":"113.13496",
-    "businessConfirm":"2",
-    "locationConfirm":"1",
-    "keyWord":"机电一体化设计 工业产品设计 3D打印 创智"
- }
- ]
- }
- */
-
 #import "DABaseModel.h"
 
 @interface SearchModel : DABaseModel

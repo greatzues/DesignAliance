@@ -56,7 +56,6 @@ int zoomLevel;
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
         point.title = s.name;
-        //point.subtitle = s.desc;
         //距离面积计算
         self.point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         
@@ -82,6 +81,7 @@ int zoomLevel;
     
     zoomLevel = 14;
     [_mapView setZoomLevel:zoomLevel];
+    _mapView.rotateCameraEnabled= NO;
     
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;

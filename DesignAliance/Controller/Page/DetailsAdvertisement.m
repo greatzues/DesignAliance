@@ -65,7 +65,6 @@
     [self.activityIndicator stopAnimating];
     UIView *view = (UIView*)[self.view viewWithTag:108];
     [view removeFromSuperview];
-    NSLog(@"webViewDidFinishLoad");
 }
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {

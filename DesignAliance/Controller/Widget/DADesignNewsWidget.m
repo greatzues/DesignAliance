@@ -23,22 +23,43 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
 @implementation DADesignNewsWidget
 
 - (void)viewDidLoad {
-    
+    _cellHeight = 100;
+    _pageNo = 1;
+    _pageSize = 10;
     self.cellIdentifier = @"DesignNewsCell";
+    
     self.listData = [[NSMutableArray alloc] init];
-    
-    _getAD = YES;
     self.AdlistData = [[NSMutableArray alloc] init]; //初始化轮播图数组
-    [self getAdlistData];
     
-    [super viewDidLoad];
+    //初始化下拉刷新头部
+    self.header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHeader)];
     
-    _cellHeight= 100;
+    //初始化下拉刷新尾部
+    self.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    [self.header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [self.footer setTitle:@"点击这里或上拉加载更多" forState:MJRefreshStateIdle];
+    
+    _tableView.mj_header = self.header;
+    _tableView.mj_footer = self.footer;
+    [_tableView.mj_header beginRefreshing];
+    
+}
+
+- (void)refreshHeader{
+    _getAD = YES;
+    
+    [self loadNewData];
 }
 
 - (void)loadNewData
 {
-    _getAD = NO;
+    if(_getAD){
+        [self.AdlistData removeAllObjects];
+        
+        [self getAdlistData];
+        return ;
+    }
+    
     _pageNo = 1;
     
     NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
@@ -52,7 +73,6 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
 
 - (void)loadMoreData
 {
-    _getAD = NO;
     ++_pageNo;
     
     NSString *body = [NSString stringWithFormat:@"pageNo=%ld&pageSize=%ld",(long)_pageNo,(long)_pageSize];
@@ -82,6 +102,9 @@ static int CycleScrollViewHeight = 156; //定义轮播图高度
     if(_getAD){
         [self.AdlistData addObjectsFromArray:data];
         [self initCycleScrollView];//初始化轮播图
+        
+        _getAD = NO;
+        [self loadNewData];
         return ;
     }
     

@@ -25,37 +25,29 @@
 }
 
 - (void)initMap{
-    ///地图需要v4.5.0及以上版本才必须要打开此选项（v4.5.0以下版本，需要手动配置info.plist）
     [AMapServices sharedServices].enableHTTPS = YES;
     
-    ///初始化地图
     _AmapView = [[MAMapView alloc] initWithFrame:self.mapView.bounds];
     
-    ///把地图添加至mapView
     [self.mapView addSubview:_AmapView];
     
-    //隐藏指南针和比例尺
     self.AmapView.showsScale = NO;
     self.AmapView.showsCompass = NO;
     
-    //设置缩放大小
     [self.AmapView setZoomLevel:15];
     
-    ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
+    self.AmapView.scrollEnabled = NO;
+    
     _AmapView.showsUserLocation = YES;
     _AmapView.userTrackingMode = MAUserTrackingModeFollow;
     
-    //设置代理
     _AmapView.delegate = self;
     
-    //初始化点标记
     _pointAnnotation = [[MAPointAnnotation alloc] init];
     
-    //设置显示的标注
     _pointAnnotation.coordinate = CLLocationCoordinate2DMake(self.search.latitude.doubleValue, self.search.longitude.doubleValue);
     [_AmapView addAnnotation:_pointAnnotation];
     
-    //设置标注的中心
     _AmapView.centerCoordinate = CLLocationCoordinate2DMake(self.search.latitude.doubleValue, self.search.longitude.doubleValue);
 }
 
@@ -116,6 +108,10 @@
         {
             
             annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+            
+            if([annotationView.annotation.title isEqualToString:@"当前位置"]){
+                return nil;
+            }
             
             annotationView.image = [UIImage imageNamed:@"mapMark.jpg"];
             
