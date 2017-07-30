@@ -27,22 +27,23 @@
 }
 
 - (void)initPage{
-    self.name.text = self.model.name;
-    if([self.model.sex isEqualToString:@"m"]){
-        self.sex.text = @"男";
+    
+    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+    if([userGrade isEqualToString:@"2"]){
+        if([self.model.sex isEqualToString:@"m"]){self.sex.text = @"男";}else{self.sex.text = @"女";}
+        [self.contact setTitle:self.model.phone forState:UIControlStateNormal];
+        
     }else{
-        self.sex.text = @"女";
+        if([self.model.sex isEqualToString:@"m"]){self.contextLabel.text = @"男";}else{self.contextLabel.text = @"女";}
+        [self.contact setTitle:@"" forState:UIControlStateNormal];
+        self.contact.enabled = NO;
     }
-    [self.contact setTitle:self.model.phone forState:UIControlStateNormal];
     
-    self.skill.text = self.model.skill;
-    self.desr.text = self.model.desc;
+    
+    self.name.text = self.model.name;
     self.education.text = self.model.education;
-    
-    
+    self.desr.text = self.model.desc;
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
-
-    
     [self.avatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"LittlePictureHolder.png"] fillColor:[UIColor whiteColor]];
 }
 

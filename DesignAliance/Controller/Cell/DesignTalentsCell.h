@@ -12,6 +12,8 @@
     IBOutlet UIImageView       *_imageView;
     IBOutlet UILabel           *_phoneLabel;
     IBOutlet UILabel           *_skillLabel;
+    IBOutlet UIImageView       *_twoImageView; //左边第二张图标
+    IBOutlet UIImageView       *_threeImageView; //左边第三张小图标
     
 }
 
