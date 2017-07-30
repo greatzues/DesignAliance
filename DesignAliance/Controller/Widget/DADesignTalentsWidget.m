@@ -19,17 +19,23 @@
 @implementation DADesignTalentsWidget
 
 - (void)viewDidLoad {
-    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
-    if([userGrade isEqualToString:@"2"]){
-        self.cellIdentifier = @"DesignTalentsCell";
-        self.listData = [[NSMutableArray alloc] init];
-        
-        [super viewDidLoad];
-        _cellHeight = 109;
-    }else{
-        _tableView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.0f];
-        self.TalentsPageNormalAcountBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VIPRight.jpg"]];
-    }
+//    NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
+//    if([userGrade isEqualToString:@"2"]){
+//        self.cellIdentifier = @"DesignTalentsCell";
+//        self.listData = [[NSMutableArray alloc] init];
+//        
+//        [super viewDidLoad];
+//        _cellHeight = 109;
+//    }else{
+//        _tableView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.0f];
+//        self.TalentsPageNormalAcountBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VIPRight.jpg"]];
+//    }
+    
+    self.cellIdentifier = @"DesignTalentsCell";
+    self.listData = [[NSMutableArray alloc] init];
+    
+    [super viewDidLoad];
+    _cellHeight = 109;
 }
 
 

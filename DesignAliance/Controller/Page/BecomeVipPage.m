@@ -16,9 +16,10 @@
     
     NSString *userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
     if([userGrade isEqualToString:@"2"]){
-        [self.BecomeVipButton setTitle:@"续费" forState:UIControlStateNormal];
+        self.VipType.text = @"已认证为企业用户";
+        [self.BecomeVipButton setTitle:@"企业疑问咨询" forState:UIControlStateNormal];
     }else{
-        [self.BecomeVipButton setTitle:@"联系我们成为VIP" forState:UIControlStateNormal];
+        [self.BecomeVipButton setTitle:@"申请表格" forState:UIControlStateNormal];
     }
 }
 

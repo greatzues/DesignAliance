@@ -16,7 +16,6 @@
 #import "ModifyPasswordPage.h"
 #import "ContactUsPage.h"
 #import "BecomeVipPage.h"
-#import "CheckUpdatePage.h"
 #import "AboutPage.h"
 #import "UserSuggestPage.h"
 #import "LoginUtility.h"
@@ -62,11 +61,6 @@
 - (void)initData{
     [_list addObjectsFromArray:MyPageArray];
     self.IconList = MyPageIconArray;
-    
-    _userGrade = [[NSUserDefaults standardUserDefaults] objectForKey:@"userGrade"];
-    if([_userGrade isEqualToString:@"2"]){
-        [self.list replaceObjectAtIndex:0 withObject:@"续费"];
-    }
     
     //添加头像按钮的监听事件
     [UserAvatar addTarget:self action:@selector(avatarPress:) forControlEvents:UIControlEventTouchUpInside];
@@ -147,47 +141,35 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch ([indexPath row]) {
+//        case 0:
+//        {
+//            BecomeVipPage *page = [[BecomeVipPage alloc] init];
+//            page.phoneNumber = self.AboutInfoModel.phone;
+//            [self initToDetails:page];
+//        }
+//            break;
         case 0:
         {
-            //成为vip
-            BecomeVipPage *page = [[BecomeVipPage alloc] init];
-            page.phoneNumber = self.AboutInfoModel.phone;
+            ModifyPasswordPage *page = [[ModifyPasswordPage alloc] init];
             [self initToDetails:page];
         }
             break;
         case 1:
         {
-            //修改密码
-            ModifyPasswordPage *page = [[ModifyPasswordPage alloc] init];
-            [self initToDetails:page];
-        }
-            break;
-        case 2:
-        {
-            //版本更新
-            CheckUpdatePage *page = [[CheckUpdatePage alloc] init];
-            [self initToDetails:page];
-        }
-            break;
-        case 3:
-        {
-            //联系我们
             ContactUsPage *page = [[ContactUsPage alloc] init];
             page.phoneNumber = self.AboutInfoModel.phone;
             
             [self initToDetails:page];
         }
             break;
-        case 4:
+        case 2:
         {
-            //意见反馈
             UserSuggestPage *page = [[UserSuggestPage alloc] init];
             [self initToDetails:page];
         }
             break;
-        case 5:
+        case 3:
         {
-            //关于
             AboutPage *page = [[AboutPage alloc] init];
             page.IntroduceUs = self.AboutInfoModel.brief;
             page.OurSlogan= self.AboutInfoModel.slogan;
@@ -198,9 +180,8 @@
             [self initToDetails:page];
         }
             break;
-        case 6:
+        case 4:
         {
-            //分享应用
             [self shareApp];
         }
             break;

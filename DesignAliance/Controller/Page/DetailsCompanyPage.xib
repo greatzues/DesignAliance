@@ -19,7 +19,7 @@
                 <outlet property="managerTitle" destination="Vls-JE-ZnU" id="WjD-Sc-efS"/>
                 <outlet property="mapView" destination="9ux-YX-WpU" id="wHL-AR-XQi"/>
                 <outlet property="name" destination="YFC-Ef-UBK" id="3SP-nX-Uiu"/>
-                <outlet property="phone" destination="iVR-bf-bz7" id="OkF-uA-spy"/>
+                <outlet property="phone" destination="iVR-bf-bz7" id="5IS-DE-Fa0"/>
                 <outlet property="phoneTitle" destination="n0J-jJ-TCh" id="37y-82-32D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,7 +36,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsP-Fn-e5T">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="460"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsZ-R1-bGr">
                                     <rect key="frame" x="5" y="7" width="365" height="225"/>
@@ -235,7 +235,7 @@
                                 <constraint firstItem="QRd-9W-45o" firstAttribute="top" secondItem="e9L-fG-3MP" secondAttribute="bottom" id="Qao-jX-GRD"/>
                                 <constraint firstItem="XsZ-R1-bGr" firstAttribute="leading" secondItem="AsP-Fn-e5T" secondAttribute="leading" constant="5" id="RWN-ew-cAX"/>
                                 <constraint firstAttribute="trailing" secondItem="QRd-9W-45o" secondAttribute="trailing" id="ola-Ur-Kue"/>
-                                <constraint firstAttribute="height" constant="432" id="otH-eq-yV5"/>
+                                <constraint firstAttribute="height" constant="460" id="otH-eq-yV5"/>
                                 <constraint firstItem="e9L-fG-3MP" firstAttribute="top" secondItem="XsZ-R1-bGr" secondAttribute="bottom" constant="14" id="pmh-TQ-mgM"/>
                                 <constraint firstItem="e9L-fG-3MP" firstAttribute="leading" secondItem="AsP-Fn-e5T" secondAttribute="leading" id="qdD-sR-bOO"/>
                             </constraints>
