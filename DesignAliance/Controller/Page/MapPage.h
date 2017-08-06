@@ -21,7 +21,7 @@
 @property   MAMapPoint  point2;
 
 ///用户位置
-@property(nonatomic, strong)   MAUserLocation       *userLocation;
+@property(nonatomic, strong)   CLLocation       *userLocation;
 
 @property(nonatomic, strong)   NSMutableArray       *pointArray;
 @property(nonatomic, strong)   NSMutableDictionary  *companyInfo;

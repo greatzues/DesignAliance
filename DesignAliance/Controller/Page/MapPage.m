@@ -39,7 +39,6 @@ int zoomLevel;
 }
 
 - (void)initData{
-    
     NSString *body = [NSString stringWithFormat:@"pageSize=%d",30];
     NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
                              @"body":body};
@@ -60,9 +59,9 @@ int zoomLevel;
         self.point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         
         CLLocationDistance distance = MAMetersBetweenMapPoints(self.point1,self.point2);
-        double dis = distance/1000;
+        int dis = distance/1000;
         
-        point.subtitle = [NSString stringWithFormat:@"距离您%f km",dis];
+        point.subtitle = [NSString stringWithFormat:@"距离您%d km",dis];
         
         [_companyInfo setObject:s forKey:point.title];
         
@@ -120,9 +119,6 @@ int zoomLevel;
     [smallerBtn addTarget:self action:@selector(smaller) forControlEvents:UIControlEventTouchUpInside];
     
     [_mapView addSubview:smallerBtn];
-    
-    //开启定位
-    [self locationClick];
 }
 
 #pragma 导航右键点击事件监听
@@ -188,6 +184,7 @@ int zoomLevel;
 {
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
+    
 }
 #pragma mark location fail
 - (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
@@ -210,7 +207,7 @@ updatingLocation:(BOOL)updatingLocation
     }
 }
 
-- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location{
+- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode{
     self.userLocation = location;
 }
 
