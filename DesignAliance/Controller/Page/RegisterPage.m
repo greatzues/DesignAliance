@@ -57,21 +57,27 @@
     //请求验证码
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andTemplate:VericationTemplate resultBlock:^(int msgId, NSError *error) {
         if (error) {
-            //NSLog(@"%@",error);
+            self.ToastTitle = @"验证码发送失败，请重试";
+            [CRToastManager showNotificationWithOptions:self.setToast
+                                        completionBlock:^{
+                                            
+                                        }];
         } else {
-            //NSLog(@"sms ID：%d",msgId);
-            
             [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
                 if (dic) {
-                    if([[dic objectForKey:@"sms_state"] isEqualToString:@"SUCCESS"]){
-                        self.ToastTitle = @"验证码已发送至您手机，请注意查收";
+                    if([[dic objectForKey:@"sms_state"] isEqualToString:@"SENDING"]){
+                        self.ToastTitle = @"验证码已发送，请留意新短信";
                         [CRToastManager showNotificationWithOptions:self.setToast
                                                     completionBlock:^{
                                                         
                                                     }];
                     }
                 } else {
-                    //NSLog(@"%@",error);
+                    self.ToastTitle = @"验证码发送失败，请重试";
+                    [CRToastManager showNotificationWithOptions:self.setToast
+                                                completionBlock:^{
+                                                    
+                                                }];
                 }
             }];
         }
@@ -79,6 +85,9 @@
 }
 //验证短信验证码
 - (IBAction)registerAccount:(id)sender {
+    
+    userRegister.enabled = false;
+    
     if(![passwordNumber.text isEqualToString:confirmNumber.text]){
         self.ToastTitle = @"密码不一致，请重新输入";
         [CRToastManager showNotificationWithOptions:self.setToast
@@ -91,17 +100,18 @@
     
     [BmobSMS verifySMSCodeInBackgroundWithPhoneNumber:phoneNumber.text andSMSCode:VerificationCode.text resultBlock:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {
-            //NSLog(@"%@",@"验证成功，可执行用户请求的操作");
+            
+            NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",phoneNumber.text,passwordNumber.text];
+            NSDictionary *opInfo = @{@"url":Register,
+                                     @"body":body};
+            _operation = [[DARegister alloc] initWithDelegate:self opInfo:opInfo];
+            [_operation executeOp];
         } else {
-            return [self alertView:@"短信验证失败，请重新输入验证码"];
+            userRegister.enabled = true;
+            return [self alertView:@"注册信息错误，请检查后重试"];
         }
     }];
-    
-    NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",phoneNumber.text,passwordNumber.text];
-    NSDictionary *opInfo = @{@"url":Register,
-                             @"body":body};
-    _operation = [[DARegister alloc] initWithDelegate:self opInfo:opInfo];
-    [_operation executeOp];
+
 }
 
 - (void)opSuccess:(id)data{
@@ -113,10 +123,10 @@
 }
 
 - (void)opFail:(NSString *)errorMessage{
-    self.ToastTitle = @"注册失败，请重试";
+    self.ToastTitle = errorMessage;
     [CRToastManager showNotificationWithOptions:self.setToast
                                 completionBlock:^{
-                                    
+                                    userRegister.enabled = true;
                                 }];
 }
 

@@ -10,7 +10,7 @@
 #import "UserModel.h"
 
 
-@interface UserInfoPage : DABaseMyPage 
+@interface UserInfoPage : DABaseMyPage
 
 @property (nonatomic, strong) UserModel      *model;
 

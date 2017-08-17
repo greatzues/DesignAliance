@@ -55,6 +55,7 @@
 - (void)initData{
     
     self.name.text    = self.search.name;
+    self.name.numberOfLines = 2;
     
     self.desc.text    = self.search.desc;
     [self.phone setTitle:self.search.phone forState:UIControlStateNormal];
@@ -84,8 +85,7 @@
     
     
     self.location.text= self.search.location;
-    self.location.numberOfLines = 0;   
-    
+    self.location.numberOfLines = 2;
     
     
     //初始化应用外导航的经纬度

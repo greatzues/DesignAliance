@@ -28,27 +28,28 @@
                             <constraint firstAttribute="width" constant="9" id="blg-Kq-C4b"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdB-oG-Bol">
-                        <rect key="frame" x="32" y="26" width="65" height="59.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdB-oG-Bol">
+                        <rect key="frame" x="32" y="23" width="65" height="65"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="65" id="cuG-zA-0q5"/>
                             <constraint firstAttribute="width" constant="65" id="xCe-Vx-RYZ"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talentName.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ykg-kY-v7Z">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talentName.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ykg-kY-v7Z">
                         <rect key="frame" x="107" y="26" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="13" id="Tmi-So-I5K"/>
                             <constraint firstAttribute="height" constant="13" id="t3C-2b-k27"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-hE-z1m">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-hE-z1m">
                         <rect key="frame" x="107" y="49" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="fOM-RP-bir"/>
                             <constraint firstAttribute="width" constant="13" id="m8a-xF-4py"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-Dc-kCH">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-Dc-kCH">
                         <rect key="frame" x="107" y="70" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="4WC-ed-Ooz"/>
@@ -99,8 +100,7 @@
                     <constraint firstItem="bDz-Fi-udj" firstAttribute="leading" secondItem="jsq-hE-z1m" secondAttribute="trailing" constant="12" id="sPV-p3-adL"/>
                     <constraint firstItem="tEv-Dc-kCH" firstAttribute="leading" secondItem="zdB-oG-Bol" secondAttribute="trailing" constant="10" id="tQ3-q7-fz0"/>
                     <constraint firstItem="4zJ-Dd-mpn" firstAttribute="leading" secondItem="cJx-9x-EF7" secondAttribute="leading" constant="7" id="vz9-pd-v3Q"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="zdB-oG-Bol" secondAttribute="bottom" constant="15" id="wCr-NH-ZP4"/>
-                    <constraint firstItem="zdB-oG-Bol" firstAttribute="top" secondItem="cJx-9x-EF7" secondAttribute="topMargin" constant="18" id="wOb-J0-dYo"/>
+                    <constraint firstItem="zdB-oG-Bol" firstAttribute="top" secondItem="cJx-9x-EF7" secondAttribute="topMargin" constant="15" id="wOb-J0-dYo"/>
                     <constraint firstItem="jsq-hE-z1m" firstAttribute="top" secondItem="Ykg-kY-v7Z" secondAttribute="bottom" constant="10" id="xsB-wy-1TL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bDz-Fi-udj" secondAttribute="trailing" constant="20" id="zpY-b1-vFU"/>
                 </constraints>

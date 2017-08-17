@@ -230,7 +230,7 @@
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
         [shareParams SSDKSetupShareParamsByText:@"设计资源就在身边"
                                          images:imageArray
-                                            url:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/设计联盟/id1262883750"]
+                                            url:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/%E8%AE%BE%E8%AE%A1%E8%81%94%E7%9B%9F/id1262883750?mt=8"]
                                           title:@"设计联盟"
                                            type:SSDKContentTypeAuto];
         

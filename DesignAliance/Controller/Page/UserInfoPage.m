@@ -45,11 +45,12 @@ static const int toolBarHeight = 44;
 }
 
 
+
+
 - (void)initData{
     self.topUserInfoTable.delegate      = self;
     self.topUserInfoTable.dataSource    = self;
     self.userDescription.delegate       = self;
-    //self.userSkill.delegate             = self;
     
     if(![self.model.education isEqual:[NSNull null]]){
         self.userEducation.text = self.model.education;
@@ -194,6 +195,7 @@ static const int toolBarHeight = 44;
             
             [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
                 textField.placeholder = @"请输入你喜欢的名字";
+                textField.borderStyle = UITextBorderStyleNone;
             }];
             
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -322,9 +324,7 @@ static const int toolBarHeight = 44;
     self.ToastTitle = @"修改信息出错，请检查网络后重试！";
     [CRToastManager showNotificationWithOptions:self.setToast
                                 completionBlock:^{
-                                    MyPage  *page = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-                                    [page initData];
-                                    [self.navigationController popToViewController:page animated:YES];
+                                    
                                 }];
 }
 
