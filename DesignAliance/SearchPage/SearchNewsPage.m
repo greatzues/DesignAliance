@@ -9,12 +9,14 @@
 #import "SearchNewsPage.h"
 #import "DANews.h"
 #import "DetailsNewsPage.h"
+#import "DABaseCell.h"
+
 
 @implementation SearchNewsPage
 
 - (void)initData{
     _pageSize = 10;
-    NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
+    NSString *body = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,30];
     NSDictionary *opInfo = @{@"url":NewsURL,    //拿到10条新闻资讯
                              @"body":body};
     
@@ -24,10 +26,19 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *flag=@"cell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
+    //static NSString *flag=@"cell";
+    //UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:flag];
+
+    static NSString *flag=@"DesignNewsCell";
+    DABaseCell *cell = (DABaseCell*)[tableView dequeueReusableCellWithIdentifier:flag];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
+        //cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
+        NSArray* Objects = [[NSBundle mainBundle] loadNibNamed:flag owner:tableView options:nil];
+
+        cell = [Objects objectAtIndex:0];
+        [cell initCell];
     }
     if (self.searchController.active) {
         //这里判断是由于在点击搜索框拿到焦点时，self.searchController.active为true，但此时self.searchListArry没有数据，会出现数组越界错误
@@ -40,10 +51,16 @@
     else{
         self.model = [self.dataListArry objectAtIndex:indexPath.row];
     }
-    [cell.textLabel setText:self.model.name];
+    //[cell.textLabel setText:self.model.name];
+    
+    [cell setCellData:self.model];
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
@@ -68,7 +85,6 @@
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     [super updateSearchResultsForSearchController:searchController];
-    
     if (![self.searchString  isEqual: @""]){
         NSString *body = [NSString stringWithFormat:@"advice_title=%@",self.searchString];
         NSDictionary *opInfo = @{@"url":SearchDesignNew,   //按照关键字查找文章

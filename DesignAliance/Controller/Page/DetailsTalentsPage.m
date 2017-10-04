@@ -41,55 +41,13 @@
     
     
     self.name.text = self.model.name;
+    self.name.numberOfLines = 2;
     self.education.text = self.model.education;
     self.desr.text = self.model.desc;
     NSString *imageURL = [NSString stringWithFormat:ImageTalents,self.model.avatar];
     [self.avatar was_setCircleImageWithUrlString:imageURL placeholder:[UIImage imageNamed:@"LittlePictureHolder.png"] fillColor:[UIColor whiteColor]];
 }
 
-//#pragma share news
-//- (void)doRight:(id)sender{
-//    [self shareNews];
-//}
-//
-//- (void)shareNews{
-//    NSArray* imageArray = @[[NSString stringWithFormat:ImageTalents,self.model.avatar]];
-//    
-//    if (imageArray) {
-//        
-//        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-//        [shareParams SSDKSetupShareParamsByText:self.model.skill
-//                                         images:imageArray
-//                                            url:[NSURL URLWithString:@"http://zuesblog.xyz/"] //后面记得修改
-//                                          title:self.model.name
-//                                           type:SSDKContentTypeAuto];
-//        
-//        [ShareSDK showShareActionSheet:nil
-//                                 items:nil
-//                           shareParams:shareParams
-//                   onShareStateChanged:^(SSDKResponseState state,
-//                                         SSDKPlatformType platformType,
-//                                         NSDictionary *userData,
-//                                         SSDKContentEntity *contentEntity,
-//                                         NSError *error,
-//                                         BOOL end) {
-//                       switch (state) {
-//                           case SSDKResponseStateSuccess:
-//                           {
-//                               [self alertView:@"分享成功"];
-//                               break;
-//                           }
-//                           case SSDKResponseStateFail:
-//                           {
-//                               [self alertView:@"分享失败"];
-//                               break;
-//                           }
-//                           default:
-//                               break;
-//                       }
-//                   }];
-//    }
-//}
 
 - (IBAction)contactUs:(id)sender {
     

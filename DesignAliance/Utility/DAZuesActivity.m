@@ -6,9 +6,9 @@
 //  Copyright © 2017年 zues. All rights reserved.
 //
 
-#import "DAActivity.h"
+#import "DAZuesActivity.h"
 
-@implementation DAActivity
+@implementation DAZuesActivity
 
 - (id)initWithView:(UIView *)view{
     self = [self initWithFrame:view.bounds];

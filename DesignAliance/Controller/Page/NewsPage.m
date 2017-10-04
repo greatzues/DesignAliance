@@ -38,8 +38,9 @@
     
     self.cbs_Type = CBSSegmentHeaderTypeScroll;
     self.cbs_headerColor = [UIColor whiteColor];
-    self.cbs_titleSelectedColor = [UIColor blackColor];
-    self.cbs_bottomLineColor = [UIColor blackColor];
+    self.cbs_titleColor = [UIColor colorWithRed:54.0f/255.0f green:54.0f/255.0f blue:54.0f/255.0f alpha:1.0];
+    self.cbs_titleSelectedColor = [UIColor colorWithRed:32.0f/255.0f green:160.0f/255.0f blue:255.0f/255.0f alpha:1.0];
+    self.cbs_bottomLineColor = [UIColor colorWithRed:32.0f/255.0f green:160.0f/255.0f blue:255.0f/255.0f alpha:1.0];
     
     //先设置cbs_titleArray和cbs_viewArray再调用initSegment
     [self initSegment];

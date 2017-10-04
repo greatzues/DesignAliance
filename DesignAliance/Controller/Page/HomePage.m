@@ -39,7 +39,7 @@
 }
 
 - (void)addTabControllers{
-    //self.tabBar.tintColor = [UIColor redColor]; //设置顶部选中的字体颜色
+    //self.tabBar.tintColor = [UIColor blueColor]; //设置顶部选中的字体颜色
     self.viewControllers = [PageModel pageControllers]; //设置底部导航栏
 }
 

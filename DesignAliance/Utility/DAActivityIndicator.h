@@ -26,7 +26,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DAActivity.h"
+#import "DAZuesActivity.h"
 
 @protocol DAActivityDelegate;
 
@@ -68,7 +68,7 @@ typedef enum {
  *   indicator view.
  * - If also the detailsLabelText property is set then another label is placed below the first label.
  */
-@interface DAActivityIndicator : DAActivity {
+@interface DAActivityIndicator : DAZuesActivity {
     
     DAActivityMode mode;
     DAActivityAnimation animationType;

@@ -65,7 +65,7 @@
         [request setTimeoutInterval:[self timeoutInteval]];
         
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务6连接异常(>_<)，请重试！");
     }
     
     return request;
@@ -121,7 +121,7 @@
     
         [_delegate opFail:[dict objectForKey:NetMessage]];
     }@catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务5连接异常(>_<)，请重试！");
     }
 }
 
@@ -143,7 +143,7 @@
         
         BASE_INFO_FUN(statusCode);
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务1连接异常(>_<)，请重试！");
     }
 }
 
@@ -154,7 +154,7 @@
         [_receiveDate appendData:data];
         [self parseProgress:_receiveDate.length];
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务2连接异常(>_<)，请重试！");
     }
     
 }
@@ -175,7 +175,7 @@
         @try {
             [self parseFail:errorMessage];
         } @catch (NSException *exception) {
-            BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+            BASE_INFO_FUN(@"服务3连接异常(>_<)，请重试！");
         }
         
     }
@@ -191,7 +191,7 @@
     @try {
         [self parseFail:[error localizedDescription]];
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务4连接异常(>_<)，请重试！");
     }
     
     _connection = nil;

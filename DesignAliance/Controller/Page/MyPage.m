@@ -223,7 +223,7 @@
 }
 
 - (void)shareApp{
-    NSArray* imageArray = @[[UIImage imageNamed:@"logo.png"]];
+    NSArray* imageArray = @[[UIImage imageNamed:@"poster.png"]];
     
     if (imageArray) {
         

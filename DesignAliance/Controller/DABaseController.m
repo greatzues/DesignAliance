@@ -119,8 +119,8 @@
 
 #pragma mark - Activity methods
 
-- (DAActivity *)showActivityInView:(UIView *)view{
-    DAActivity *activity = [[DAActivityIndicator alloc] initWithView:view];
+- (DAZuesActivity *)showActivityInView:(UIView *)view{
+    DAZuesActivity *activity = [[DAActivityIndicator alloc] initWithView:view];
     CGRect frame = view.bounds; //边界矩形，在坐标系中描述试图的位置和大小
     
     activity.frame = frame;

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DABaseOperation.h"
-#import "DAActivity.h"
+#import "DAZuesActivity.h"
 
 //设置顶部导航栏的动作和图片
 @interface DABaseController : UIViewController <DAOperationDelegate> {
     DABaseOperation     *_operation;
-    DAActivity          *_activity;
+    DAZuesActivity          *_activity;
 }
 
 @property(nonatomic, strong) NSString *ToastTitle;
