@@ -13,6 +13,7 @@
 #import "LoginUtility.h"
 #import "RegisterPage.h"
 #import "ForgetPasswordPage.h"
+#import <CRToast/CRToast.h>
 
 @implementation LoginPage
 
@@ -59,15 +60,17 @@
     [super opFail:errorMessage];
 }
 
-
 - (BOOL)checkValidate{
     BOOL validate = YES;
     
     if (username.text.length <= 0 || password.text.length <= 0) {
         validate = NO;
         [self showIndicator:LoginCheckTip autoHide:YES afterDelay:YES];
+        self.ToastTitle = @"账户和密码不能为空";
+        [CRToastManager showNotificationWithOptions:self.setToast
+                                    completionBlock:^{}];
+        
     }
-    
     return validate;
 }
 

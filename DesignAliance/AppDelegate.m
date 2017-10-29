@@ -30,18 +30,16 @@
 }
 
 - (void)showHomePage{
-    HomePage *page = [[HomePage alloc] init];
-    self.window.rootViewController = page;
+    _homePage = [[HomePage alloc] init];
+    self.window.rootViewController = _homePage;
     [self.window makeKeyAndVisible];
     
 }
 
 - (void)showLoginPage{
-    _loginPage = [[LoginPage alloc] init];
     self.window.rootViewController = _loginPage;
     [self.window makeKeyAndVisible];
 }
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = AMapKey;
@@ -58,6 +56,9 @@
 
 
 - (void)autoLogin{
+    _loginPage = [[LoginPage alloc] init];
+    _homePage = [[HomePage alloc] init];
+    
     DABaseOperation *_operation;
     NSString *U = [LoginUtility readUserName];
     NSString *P = [LoginUtility readPassWord];
@@ -67,7 +68,7 @@
         
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         
-        _loginPage = [[LoginPage alloc] init];
+        
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_loginPage];
         self.window.rootViewController = navController;
         
@@ -84,8 +85,7 @@
 - (void)opSuccess:(id)data{
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
         
-    HomePage *page = [[HomePage alloc] init];
-    self.window.rootViewController = page;
+    self.window.rootViewController = _homePage;
     [self.window makeKeyAndVisible];
 }
 

@@ -65,7 +65,7 @@
         [request setTimeoutInterval:[self timeoutInteval]];
         
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务6连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器连接异常(>_<)，请重试！");
     }
     
     return request;

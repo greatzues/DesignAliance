@@ -22,7 +22,7 @@
 #define BaseHost        @"http://"
 #define BasePort        @""
 #else
-#define BaseHost        @"http://119.29.14.160"
+#define BaseHost        @"http://123.207.93.107"
 #define BasePort        @":80"
 #endif
 

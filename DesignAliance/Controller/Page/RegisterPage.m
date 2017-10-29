@@ -72,12 +72,6 @@
                                                         
                                                     }];
                     }
-                } else {
-                    self.ToastTitle = @"验证码发送失败，请重试";
-                    [CRToastManager showNotificationWithOptions:self.setToast
-                                                completionBlock:^{
-                                                    
-                                                }];
                 }
             }];
         }

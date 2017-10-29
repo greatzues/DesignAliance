@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,15 +59,7 @@
         } else {
             [BmobSMS querySMSCodeStateInBackgroundWithSMSId:msgId resultBlock:^(NSDictionary *dic, NSError *error) {
                 if (dic) {
-                    if([[dic objectForKey:@"sms_state"] isEqualToString:@"SENDING"]){
-                        self.ToastTitle = @"验证码已发送，请留意新短信";
-                        [CRToastManager showNotificationWithOptions:self.setToast
-                                                    completionBlock:^{
-                                                        
-                                                    }];
-                    }
-                } else {
-                    self.ToastTitle = @"验证码发送失败，请重试";
+                    self.ToastTitle = @"验证码已发送，请留意新短信";
                     [CRToastManager showNotificationWithOptions:self.setToast
                                                 completionBlock:^{
                                                     
@@ -96,7 +87,7 @@
         if (isSuccessful) {
             
             NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",phoneNumber.text,passwordNumber.text];
-            NSDictionary *opInfo = @{@"url":Register,
+            NSDictionary *opInfo = @{@"url":ForgetPassword,
                                      @"body":body};
             _operation = [[DARegister alloc] initWithDelegate:self opInfo:opInfo];
             [_operation executeOp];
