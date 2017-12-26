@@ -1389,6 +1389,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
 						};
 					};
 					821F2E011EAC4BF70098081F = {

@@ -65,7 +65,7 @@
         [request setTimeoutInterval:[self timeoutInteval]];
         
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务器连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕");
     }
     
     return request;
@@ -85,6 +85,12 @@
     
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]; //在这里解析数据
     NSMutableDictionary *dict = [FxJsonUtility jsonValueFromString:jsonString]; //将数据放到字典里面
+    
+    if([dict isKindOfClass: [NSString class]]){
+        [self parseFail:dict];
+        _receiveDate = nil;
+        return ;
+    }
     
     NSString *result = [[dict objectForKey:NetCode] stringValue]; //将自动转化的NSDecimalNumber转化为NSString
     
@@ -107,6 +113,11 @@
 
 - (void)parseFail:(id)dict{
     @try{
+    
+    //应该是返回的是一个NSString，但是这里却是用了objectForKey来取值，导致出现[NSCFString objectForKey]的错误
+    if([dict isKindOfClass: [NSString class]]){
+        return [_delegate opFail:[dict objectForKey:dict]];
+    }
         
     NSString *result = [[dict objectForKey:NetCode] stringValue];
     
@@ -121,7 +132,7 @@
     
         [_delegate opFail:[dict objectForKey:NetMessage]];
     }@catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务5连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕");
     }
 }
 
@@ -143,7 +154,7 @@
         
         BASE_INFO_FUN(statusCode);
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务1连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕");
     }
 }
 
@@ -154,7 +165,7 @@
         [_receiveDate appendData:data];
         [self parseProgress:_receiveDate.length];
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务2连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕");
     }
     
 }
@@ -175,7 +186,7 @@
         @try {
             [self parseFail:errorMessage];
         } @catch (NSException *exception) {
-            BASE_INFO_FUN(@"服务3连接异常(>_<)，请重试！");
+            BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕！");
         }
         
     }
@@ -191,7 +202,7 @@
     @try {
         [self parseFail:[error localizedDescription]];
     } @catch (NSException *exception) {
-        BASE_INFO_FUN(@"服务4连接异常(>_<)，请重试！");
+        BASE_INFO_FUN(@"服务器竟然不理我(>_<)，好可怕");
     }
     
     _connection = nil;

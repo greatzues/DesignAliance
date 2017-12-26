@@ -19,8 +19,8 @@
 
 //上线记得要将Host和Port改回来
 #if ProductType == 0
-#define BaseHost        @"http://"
-#define BasePort        @""
+#define BaseHost        @"http://123.207.93.107"
+#define BasePort        @":80"
 #else
 #define BaseHost        @"http://123.207.93.107"
 #define BasePort        @":80"

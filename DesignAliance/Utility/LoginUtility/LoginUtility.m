@@ -26,6 +26,8 @@
     // 获取对应Key里保存的用户名和密码
     NSString *myUsername = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
     // 显示
+    NSLog(@"----->>%@",myUsername);
+    
     return myUsername;
 }
 

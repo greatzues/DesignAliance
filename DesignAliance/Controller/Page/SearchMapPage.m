@@ -49,7 +49,7 @@
 }
 
 - (void)initData{
-    _pageSize = 30;
+    _pageSize = 60;
     NSString *body = [NSString stringWithFormat:@"pageSize=%ld&pageNo=1",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":initSearchUrl,
                              @"body":body};
@@ -183,9 +183,6 @@
     //用setArray，不然会重复添加标注
     [_pointArray setArray:data];
     
-    
-    
-    
     for(SearchModel * s in data){
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.point1,point2);
@@ -209,10 +206,5 @@
 -(void) setCorrectFocus {
     [self.searchController.searchBar becomeFirstResponder];
 }
-
-#pragma 拦截默认返回pop操作，重写返回的方法
-//- (BOOL)navigationShouldPopOnBackButton{
-//    return YES;
-//}
 
 @end

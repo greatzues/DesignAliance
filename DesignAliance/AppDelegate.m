@@ -29,47 +29,31 @@
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
-- (void)showHomePage{
-    _homePage = [[HomePage alloc] init];
-    self.window.rootViewController = _homePage;
-    [self.window makeKeyAndVisible];
-    
-}
-
-- (void)showLoginPage{
-    self.window.rootViewController = _loginPage;
-    [self.window makeKeyAndVisible];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self autoLogin];
     [AMapServices sharedServices].apiKey = AMapKey;
     [Bmob registerWithAppKey:BombKey];
     
     [self initShareSDK];
 
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    [self autoLogin];
-    
     return YES;
     
 }
 
 
 - (void)autoLogin{
-    _loginPage = [[LoginPage alloc] init];
-    _homePage = [[HomePage alloc] init];
+    DABaseOperation *operation;
     
-    DABaseOperation *_operation;
+    self.loginPage = [[LoginPage alloc] initWithNibName:@"LoginPage" bundle:nil];
+    self.homePage = [[HomePage alloc] init];
+    
     NSString *U = [LoginUtility readUserName];
     NSString *P = [LoginUtility readPassWord];
     
     
     if([U isEqualToString:@""] && [P isEqualToString:@""]){
-        
-        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        
-        
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_loginPage];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.loginPage];
         self.window.rootViewController = navController;
         
         return [self.window makeKeyAndVisible];
@@ -78,14 +62,14 @@
     NSString *body = [NSString stringWithFormat:@"phone=%@&password=%@",U,P];
     NSDictionary *opInfo = @{@"url":LoginURL,
                              @"body":body};
-    _operation = [[DALogin alloc] initWithDelegate:self opInfo:opInfo];
-    [_operation executeOp];
+    operation = [[DALogin alloc] initWithDelegate:self opInfo:opInfo];
+    [operation executeOp];
 }
 
 - (void)opSuccess:(id)data{
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
         
-    self.window.rootViewController = _homePage;
+    self.window.rootViewController = self.homePage;
     [self.window makeKeyAndVisible];
 }
 
@@ -156,6 +140,17 @@
                  break;
          }
      }];
+}
+
+- (void)showHomePage{
+    self.window.rootViewController = self.homePage;
+    [self.window makeKeyAndVisible];
+    
+}
+
+- (void)showLoginPage{
+    self.window.rootViewController = self.loginPage;
+    [self.window makeKeyAndVisible];
 }
 
 @end

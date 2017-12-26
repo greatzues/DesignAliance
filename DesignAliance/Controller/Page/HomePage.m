@@ -7,13 +7,13 @@
 //
 
 #import "HomePage.h"
-#import "PageModel.h"//
+#import "PageModel.h"
 #import "WZLBadgeImport.h"
 #import "DABaseOperation.h"
 #import "DAGetNotice.h"
 #import "DAModifyPassword.h"
 #import "AppDelegate.h"
-
+#import <CRToast/CRToast.h>
 
 @implementation HomePage
 
@@ -27,8 +27,6 @@
 }
 
 - (void)viewDidLoad {
-    self.title = LoginTitle;
-    
     [self getNotice];
     
     [super viewDidLoad];
@@ -39,7 +37,6 @@
 }
 
 - (void)addTabControllers{
-    //self.tabBar.tintColor = [UIColor blueColor]; //设置顶部选中的字体颜色
     self.viewControllers = [PageModel pageControllers]; //设置底部导航栏
 }
 
@@ -49,7 +46,6 @@
         [secondItem clearBadge];
     }
 }
-
 
 - (void)getNotice{
     _operation = [[DABaseOperation alloc] init];
@@ -61,6 +57,7 @@
     [_operation executeOp];
 }
 
+//getNotice方法好像没有效果
 - (void)opSuccess:(id)data{
     if([data isKindOfClass:[NSString class]]){
         return;
@@ -79,18 +76,19 @@
     [self modifyNotice];
 }
 
+//本来想用来判断是否异地登录的，但是好像这里
 - (void)opFail:(NSString *)errorMessage{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        if([errorMessage isEqualToString:LoginAnotherPlace]){
-            [[AppDelegate appDeg] showLoginPage];
-        }
-    }];
-    
-    
-    [alert addAction:okAction];
-    [self presentViewController:alert animated:YES completion:nil];
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:AlertTip message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:AlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//        if([errorMessage isEqualToString:LoginAnotherPlace]){
+//            [[AppDelegate appDeg] showLoginPage];
+//        }
+//    }];
+//
+//
+//    [alert addAction:okAction];
+//    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)modifyNotice{
