@@ -114,9 +114,9 @@
 - (void)parseFail:(id)dict{
     @try{
     
-    //应该是返回的是一个NSString，但是这里却是用了objectForKey来取值，导致出现[NSCFString objectForKey]的错误
+    //应该是返回的是一个NSString，但是这里却是用了objectForKey来取值，导致出现[NSCFString objectForKey]的错误,因为返回的是500的错误，这里我采用重新连接的方式，将网络重新连上
     if([dict isKindOfClass: [NSString class]]){
-        return [_delegate opFail:[dict objectForKey:dict]];
+        [self executeOp];
     }
         
     NSString *result = [[dict objectForKey:NetCode] stringValue];
