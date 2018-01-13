@@ -1,4 +1,4 @@
-//
+	//
 //  MapPage.m
 //  DesignAliance
 //
@@ -28,10 +28,12 @@ int zoomLevel;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationRight:@"NavigationSquare.png"];
-    [self initMap];
-    [self initData];
     _companyInfo = [[NSMutableDictionary alloc] init];
     _pointArray = [NSMutableArray array];
+    
+    [self initMap];
+    
+    [self initData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +41,7 @@ int zoomLevel;
 }
 
 - (void)initData{
-    NSString *body = [NSString stringWithFormat:@"pageSize=%d",30];
+    NSString *body = [NSString stringWithFormat:@"pageSize=%d",72]; //以后肯定要修改这里的数字，这里时因为后台接口设计错误了
     NSDictionary *opInfo = @{@"url":SearchCompanyDefault,
                              @"body":body};
     
@@ -50,8 +52,32 @@ int zoomLevel;
 - (void)opSuccess:(id)data{
     [super opSuccess:data];
     
-    for(SearchModel * s in data){
+    NSMutableArray       *arrayTemp = [NSMutableArray array];;
+    MAMapPoint      pointTemp1;
+    MAMapPoint      pointTemp2;
+    SearchModel     *s1;
+    SearchModel     *s2;
+    
+    [arrayTemp setArray:data];
+    //冒泡排序实现按照空间距离从近到远排序
+    for (int i = 1; i < arrayTemp.count; i++) {
         
+        for (int j = 0; j < arrayTemp.count - i; j++) {
+            s1 = arrayTemp[j];
+            s2 = arrayTemp[j+1];
+            pointTemp1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s1.latitude.doubleValue, s1.longitude.doubleValue));
+            pointTemp2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s2.latitude.doubleValue, s2.longitude.doubleValue));
+            
+            double  d1 = MAMetersBetweenMapPoints(self.point1,pointTemp1);
+            double  d2 = MAMetersBetweenMapPoints(self.point1,pointTemp2);
+            if (d1>d2) {
+                [arrayTemp exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+            }
+        }
+    }
+    SearchModel *s;
+
+    for(SearchModel *s in arrayTemp){
         MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
         point.coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
         point.title = s.name;
@@ -69,6 +95,14 @@ int zoomLevel;
     }
     
     [_mapView addAnnotations:_pointArray];
+    s = arrayTemp[0];
+     _mapView.centerCoordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
+    
+    self.ToastTitle = @"已自动为您定位到最近的设计资源";
+    [CRToastManager showNotificationWithOptions:self.setToast
+                                completionBlock:^{
+                                    
+                                }];
 }
 
 - (void)initMap{
@@ -162,7 +196,6 @@ int zoomLevel;
     zoomLevel = 17.5;
     [_mapView setZoomLevel:zoomLevel animated:YES];
     self.search = [_companyInfo objectForKey:view.annotation.title];
-    BASE_INFO_FUN(view.annotation.title);
 }
 
 #pragma 标注气泡点击事件,在连续重复点击UIButton的时候，自动取消之前的操作，延时0.5s后执行实际的btnClickedOperations操作
@@ -186,14 +219,10 @@ int zoomLevel;
     _mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     
 }
-#pragma mark location fail
+#pragma mark location fail 定位失败监听
 - (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
 {
-    self.ToastTitle = @"自动定位异常，获取当前位置失败";
-    [CRToastManager showNotificationWithOptions:self.setToast
-                                completionBlock:^{
-                                    
-                                }];
+
 }
 
 #pragma mark 用户位置更新

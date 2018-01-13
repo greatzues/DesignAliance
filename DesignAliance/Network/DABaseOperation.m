@@ -116,6 +116,10 @@
     
     //应该是返回的是一个NSString，但是这里却是用了objectForKey来取值，导致出现[NSCFString objectForKey]的错误,因为返回的是500的错误，这里我采用重新连接的方式，将网络重新连上
     if([dict isKindOfClass: [NSString class]]){
+        //为了防止网络加载缓慢和网络终端，在请求新数据时添加网络检查
+        if([dict isEqualToString:@"Could not connect to the server."]){
+            return [_delegate opFail:@"网络连接错误，请检查后重新登录"];
+        }
         [self executeOp];
     }
         

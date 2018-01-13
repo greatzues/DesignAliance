@@ -143,6 +143,7 @@
 }
 
 - (void)showHomePage{
+    self.homePage = [[HomePage alloc] init];
     self.window.rootViewController = self.homePage;
     [self.window makeKeyAndVisible];
     

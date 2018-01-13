@@ -49,7 +49,7 @@
 }
 
 - (void)initData{
-    _pageSize = 60;
+    _pageSize = 72;
     NSString *body = [NSString stringWithFormat:@"pageSize=%ld&pageNo=1",(long)_pageSize];
     NSDictionary *opInfo = @{@"url":initSearchUrl,
                              @"body":body};
@@ -183,7 +183,33 @@
     //用setArray，不然会重复添加标注
     [_pointArray setArray:data];
     
-    for(SearchModel * s in data){
+    if(_pointArray == nil || _pointArray.count == 0){
+        return;
+    }
+    
+    MAMapPoint      pointTemp1;
+    MAMapPoint      pointTemp2;
+    SearchModel     *s1;
+    SearchModel     *s2;
+    //冒泡排序实现按照空间距离从近到远排序
+    for (int i = 1; i < _pointArray.count; i++) {
+        
+        for (int j = 0; j < _pointArray.count - i; j++) {
+            s1 = _pointArray[j];
+            s2 = _pointArray[j+1];
+            pointTemp1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s1.latitude.doubleValue, s1.longitude.doubleValue));
+            pointTemp2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s2.latitude.doubleValue, s2.longitude.doubleValue));
+            
+            double  d1 = MAMetersBetweenMapPoints(self.point1,pointTemp1);
+            double  d2 = MAMetersBetweenMapPoints(self.point1,pointTemp2);
+            if (d1>d2) {
+                [_pointArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+            }
+        }
+    }
+    
+    
+    for(SearchModel  *s in _pointArray){
         point2 = MAMapPointForCoordinate(CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue));
         distance = MAMetersBetweenMapPoints(self.point1,point2);
         int d = distance/1000;
@@ -193,8 +219,7 @@
         [self.distanceArray addObject:dis];
     }
     
-    [super opSuccess:data];
-    
+    [super opSuccess:_pointArray];
 }
 
 #pragma 在打开搜索界面时获得输入焦点
